@@ -1,0 +1,11 @@
+{
+  "scene_id": "scene_001_metal_corridor",
+  "condition_id": "condition_003_lowtexture_dark_dynamic",
+  "route_id": "route_01_loop",
+  "method_name": "method_example",
+  "runtime_sec": 0.0,
+  "peak_vram_mb": 0.0,
+  "peak_ram_mb": 0.0,
+  "success": false,
+  "notes": "Fill with actual evaluation output."
+}

@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Industrial Evaluation Summary",
+  "type": "object",
+  "required": [
+    "scene_id",
+    "condition_id",
+    "route_id",
+    "method_name",
+    "runtime_sec",
+    "success"
+  ],
+  "properties": {
+    "scene_id": {
+      "type": "string"
+    },
+    "condition_id": {
+      "type": "string"
+    },
+    "route_id": {
+      "type": "string"
+    },
+    "method_name": {
+      "type": "string"
+    },
+    "runtime_sec": {
+      "type": "number",
+      "minimum": 0
+    },
+    "peak_vram_mb": {
+      "type": "number",
+      "minimum": 0
+    },
+    "peak_ram_mb": {
+      "type": "number",
+      "minimum": 0
+    },
+    "success": {
+      "type": "boolean"
+    },
+    "tracking": {
+      "type": "object",
+      "properties": {
+        "ate_rmse": {
+          "type": "number",
+          "minimum": 0
+        },
+        "ate_mean": {
+          "type": "number",
+          "minimum": 0
+        },
+        "rpe_translation_rmse": {
+          "type": "number",
+          "minimum": 0
+        },
+        "rpe_rotation_rmse_deg": {
+          "type": "number",
+          "minimum": 0
+        },
+        "track_loss_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "lost_duration_sec": {
+          "type": "number",
+          "minimum": 0
+        },
+        "relocalization_success_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "mapping": {
+      "type": "object",
+      "properties": {
+        "chamfer_distance": {
+          "type": "number",
+          "minimum": 0
+        },
+        "accuracy": {
+          "type": "number",
+          "minimum": 0
+        },
+        "completeness": {
+          "type": "number",
+          "minimum": 0
+        },
+        "precision_at_5cm": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "recall_at_5cm": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "rendering": {
+      "type": "object",
+      "properties": {
+        "psnr": {
+          "type": "number"
+        },
+        "ssim": {
+          "type": "number"
+        },
+        "lpips": {
+          "type": "number"
+        }
+      }
+    },
+    "robustness": {
+      "type": "object",
+      "properties": {
+        "dynamic_contamination_ratio": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "map_corruption_ratio_dynamic_region": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

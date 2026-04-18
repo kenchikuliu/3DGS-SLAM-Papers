@@ -1,0 +1,6 @@
+{
+  "method_name": "method_example",
+  "version": "0.1.0",
+  "sensor_mode": "rgbd_imu",
+  "notes": "Fill with your exact benchmark configuration."
+}
