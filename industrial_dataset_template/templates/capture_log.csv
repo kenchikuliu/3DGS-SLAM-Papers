@@ -1,0 +1,4 @@
+scene_id,condition_id,route_id,start_time,end_time,sensor_rig_id,operator_id,avg_lux,min_lux,texture_level,illumination_level,dynamic_level,dynamic_agent_types,dynamic_agent_count,loop_closure,notes
+scene_001_metal_corridor,condition_001_lowtexture_normal_static,route_01_loop,,,,sensor_rig_01,operator_01,,,,low,normal,static,,0,true,
+scene_001_metal_corridor,condition_002_lowtexture_dark_static,route_01_loop,,,,sensor_rig_01,operator_01,,,,low,dark,static,,0,true,
+scene_001_metal_corridor,condition_003_lowtexture_dark_dynamic,route_01_loop,,,,sensor_rig_01,operator_01,,,,low,dark,medium_dynamic,"pedestrian;agv",2,true,

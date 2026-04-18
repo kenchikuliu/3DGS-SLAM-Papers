@@ -1,0 +1,30 @@
+{
+  "scene_id": "scene_001_metal_corridor",
+  "condition_id": "condition_003_lowtexture_dark_dynamic",
+  "route_id": "route_01_loop",
+  "sensor_rig_id": "sensor_rig_01",
+  "operator_id": "operator_01",
+  "capture_date": "2026-04-18",
+  "trajectory_type": "loop",
+  "route_length_m": 42.5,
+  "loop_closure": true,
+  "texture_level": "low",
+  "illumination_level": "dark",
+  "dynamic_level": "medium_dynamic",
+  "avg_lux": 18.0,
+  "min_lux": 6.0,
+  "feature_count_mean": 165.0,
+  "laplacian_variance_mean": 21.4,
+  "dynamic_agent_types": [
+    "pedestrian",
+    "agv"
+  ],
+  "dynamic_agent_count": 2,
+  "dynamic_mask_coverage_mean": 0.17,
+  "contains_reflective_surfaces": true,
+  "contains_glass": false,
+  "contains_smoke_or_steam": false,
+  "contains_repetitive_structure": true,
+  "ground_truth_type": "laser_scan_registration",
+  "notes": "Low-texture metal cabinet corridor with one AGV crossing twice and one pedestrian occlusion event."
+}
