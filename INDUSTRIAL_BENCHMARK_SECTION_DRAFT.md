@@ -1,5 +1,7 @@
 # Industrial Benchmark Section Draft
 
+Citation note: this draft should be cited using papers already present in this repository and, when needed, references explicitly cited by those papers. It is not intended to be supported by unrelated external sources.
+
 ## 1. Benchmark Motivation
 
 Existing SLAM and 3DGS-SLAM benchmarks mainly emphasize generic indoor or outdoor reconstruction quality, while the operational conditions encountered in industrial inspection, plant maintenance, warehouse autonomy, and equipment-room navigation are substantially harsher. In particular, three degradation factors appear repeatedly in real deployments: large textureless surfaces, low and spatially non-uniform illumination, and dynamic interference caused by personnel, AGVs, forklifts, doors, or moving machinery. Although these factors have been discussed separately across prior SLAM, dense mapping, low-light reconstruction, and dynamic-scene papers, they are rarely integrated into a single controlled benchmark tailored to industrial deployment.

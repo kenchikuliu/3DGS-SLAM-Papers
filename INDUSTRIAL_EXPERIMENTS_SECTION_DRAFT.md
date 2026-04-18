@@ -1,5 +1,7 @@
 # Industrial Experiments Section Draft
 
+Citation note: baseline framing, metric justification, and benchmark protocol claims in this draft should be traced back to repository papers first, and only then expanded through their explicit reference lists if needed.
+
 ## 1. Experimental Goals
 
 The experiments are designed to answer four questions.

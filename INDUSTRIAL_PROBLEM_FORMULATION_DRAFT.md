@@ -1,5 +1,7 @@
 # Industrial Problem Formulation Draft
 
+Citation note: the claims in this draft should be grounded in papers already collected in this repository and, when historical or metric origins are needed, in references explicitly cited by those papers.
+
 ## 1. Task Definition
 
 We consider an embodied agent equipped with calibrated multimodal sensors operating in a complex industrial environment that contains three dominant degradation factors: texture scarcity, low and spatially varying illumination, and dynamic interference from moving objects or agents. Given a time-ordered sensor stream

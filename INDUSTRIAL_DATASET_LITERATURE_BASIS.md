@@ -1,5 +1,19 @@
 # Industrial Dataset Literature Basis
 
+## Citation Scope Constraint
+
+This note follows a strict citation-scope constraint.
+
+All design arguments in the industrial dataset and benchmark drafts should be grounded in:
+
+1. papers already collected in this repository
+2. survey notes and source notes derived from those papers
+3. reference chains explicitly cited by those papers
+
+This means the intended literature basis is repository-first, not open-ended web search.
+
+If a benchmark claim, metric choice, or dataset design decision cannot be justified by the repository papers or their explicit reference lists, it should not be introduced as a core claim in the paper draft without being marked as an extension to be verified later.
+
 ## Purpose
 
 This note explains which parts of the industrial complex environment dataset design were informed by the paper collection already organized in this repository.
