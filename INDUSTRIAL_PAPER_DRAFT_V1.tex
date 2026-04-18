@@ -1,0 +1,140 @@
+\documentclass[10pt,twocolumn]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage[numbers]{natbib}
+
+\title{Industrial Complex-Environment Benchmark for 3DGS-SLAM Under Textureless, Low-Light, and Dynamic Conditions}
+
+\author{Author Names Omitted for Draft}
+
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Recent 3D Gaussian Splatting based SLAM systems have improved dense mapping, reconstruction fidelity, and rendering quality, but their evaluation is still dominated by generic academic benchmarks that do not adequately reflect industrial deployment conditions \cite{GSSLAM2024,PhotoSLAM2024,GaussianSLAM2024,SplaTAM2024}. In practical industrial environments, three degradation factors frequently co-occur: large textureless surfaces, low and spatially varying illumination, and dynamic interference from personnel, vehicles, doors, and moving machinery. Existing works have addressed parts of this problem, including dense 3DGS-SLAM, low-light visual degradation, and dynamic-scene Gaussian SLAM \cite{LLGaussianMap2024,DynaGSLAM2024,WildGSSLAM2024}, yet these factors are rarely integrated into a unified benchmark targeted at industrial operation. To address this gap, we present an industrial complex-environment benchmark for SLAM and 3DGS-based mapping systems. The benchmark organizes representative industrial scenes under controlled texture, illumination, and dynamic condition levels, and provides trajectory ground truth, condition-aware metadata, and optional dynamic annotations and reference geometry. We define three evaluation tracks covering tracking robustness, dense mapping quality, and degradation-aware robustness analysis.
+\end{abstract}
+
+\section{Introduction}
+
+Simultaneous localization and mapping has long served as a core capability for robotic navigation, inspection, and scene reconstruction. More recently, 3D Gaussian Splatting based SLAM systems have substantially improved the quality of dense scene representation by coupling camera tracking with explicit Gaussian-based mapping and high-fidelity rendering. Representative systems such as GS-SLAM, Photo-SLAM, Gaussian-SLAM, and SplaTAM demonstrate that 3DGS-based representations can support accurate localization together with dense reconstruction and view synthesis, making them increasingly relevant to downstream robotic and industrial tasks \cite{GSSLAM2024,PhotoSLAM2024,GaussianSLAM2024,SplaTAM2024}.
+
+However, the environments emphasized in many current evaluations remain substantially cleaner than those encountered in industrial deployment. Real industrial sites often contain long metal corridors, storage aisles, equipment-room passages, and AGV traffic areas with repeated structure, weak local texture, partial reflections, hard shadows, and intermittent occlusion. These conditions stress both classical SLAM systems and recent dense 3DGS-based methods.
+
+Several threads in the current literature already expose parts of this gap. Work on texture-poor or challenging SLAM environments shows that repeated structure and weak appearance remain important failure sources for localization and mapping \cite{TexturelessORB2024}. Low-light and photometric-degradation oriented work further suggests that darkness should be treated as a measurable condition rather than a vague scene label \cite{LLGaussianMap2024}. In parallel, dynamic-scene Gaussian SLAM papers demonstrate that moving agents and non-static content are not merely a nuisance for tracking, but also a direct source of map contamination \cite{DynaGSLAM2024,WildGSSLAM2024}. Taken together, these papers indicate that industrial failure should be analyzed along multiple coupled degradation axes rather than with a single average accuracy number.
+
+Despite this progress, existing evaluations are still fragmented \cite{LoopSplat2024,GSLoc2024}. What remains missing is a condition-aware industrial benchmark that jointly measures textureless structure, illumination degradation, and dynamic disturbance under a unified protocol. Such a benchmark is necessary if 3DGS-SLAM is to be evaluated not only as an academic reconstruction system, but as a candidate technology for industrial inspection, plant maintenance, warehouse autonomy, and equipment-room navigation.
+
+In this work, we address this gap by designing an industrial complex-environment benchmark for SLAM and 3DGS-based mapping systems. The benchmark organizes representative industrial scenes under structured condition labels, including texture level, illumination level, and dynamic level, and pairs them with trajectory ground truth, synchronized sensor data, and optional dynamic annotations and reconstruction references.
+
+\paragraph{Contributions.}
+Our main contributions are:
+\begin{itemize}[leftmargin=1.2em]
+    \item We define an industrial complex-environment benchmark centered on texture scarcity, illumination degradation, and dynamic interference.
+    \item We design a condition-aware data and metadata protocol with trajectory ground truth and optional dynamic and geometric annotations.
+    \item We propose a three-track evaluation suite that separates tracking quality, mapping quality, and degradation-aware robustness analysis.
+\end{itemize}
+
+\section{Related Work}
+
+\subsection{3DGS-SLAM Systems}
+
+Recent progress in 3D Gaussian Splatting has significantly influenced the design of dense SLAM systems. Representative methods such as GS-SLAM, Photo-SLAM, Gaussian-SLAM, and SplaTAM show that Gaussian-based scene representations can support joint camera tracking, dense mapping, and high-fidelity rendering within a unified system pipeline \cite{GSSLAM2024,PhotoSLAM2024,GaussianSLAM2024,SplaTAM2024}. Later systems such as LoopSplat further indicate that the 3DGS-SLAM landscape is expanding toward stronger loop handling and improved system robustness \cite{LoopSplat2024}.
+
+\subsection{SLAM Under Hard Visual Conditions}
+
+A separate line of work highlights that robust SLAM in challenging environments remains unresolved even before dense Gaussian mapping is considered. Studies on textureless environments show that long corridors, repeated structures, and weak local appearance can severely degrade tracking reliability and map consistency \cite{TexturelessORB2024}. Low-light and photometric degradation oriented papers show that darkness should not be treated as a vague scene description, but rather as a measurable source of image-quality loss and downstream reconstruction difficulty \cite{LLGaussianMap2024}.
+
+\subsection{Dynamic Gaussian SLAM}
+
+Dynamic environments introduce an additional challenge that is particularly relevant to industrial deployment. Recent Gaussian-based methods including DynaGSLAM and WildGS-SLAM demonstrate growing attention to this problem \cite{DynaGSLAM2024,WildGSSLAM2024}. These works show that dynamic content affects not only camera tracking, but also the integrity of the resulting dense map.
+
+\subsection{Localization And Robotics Relevance}
+
+GSLoc demonstrates that 3DGS representations can serve as dense maps for visual localization, especially in settings where sparse feature matching becomes unreliable \cite{GSLoc2024}. This is directly relevant to industrial environments, where mapping systems are often used in support of navigation, inspection, and autonomous operation rather than only offline visualization.
+
+\section{Benchmark Design}
+
+Existing SLAM and 3DGS-SLAM benchmarks mainly emphasize generic indoor or outdoor reconstruction quality, while the operational conditions encountered in industrial inspection, plant maintenance, warehouse autonomy, and equipment-room navigation are substantially harsher. In particular, three degradation factors appear repeatedly in real deployments: large textureless surfaces, low and spatially non-uniform illumination, and dynamic interference caused by personnel, AGVs, forklifts, doors, or moving machinery.
+
+To address this gap, we design an industrial complex environment benchmark that targets three failure dimensions simultaneously: texture scarcity, photometric degradation, and dynamic disturbance. The benchmark is intended not only for trajectory estimation, but also for dense mapping, reconstruction fidelity, and dynamic-region robustness analysis.
+
+The benchmark is built around four design principles: explicit degradations, reproducibility, joint tracking and mapping support, and condition-aware reporting.
+
+\begin{table}[t]
+    \centering
+    \caption{Dataset composition placeholder. Replace with final collected statistics.}
+    \begin{tabular}{lcccc}
+        \toprule
+        Scene & Texture & Light & Dynamic & Routes \\
+        \midrule
+        Metal corridor & Low & Normal/Dark & Low & -- \\
+        Storage aisle & Low & Dark & Medium & -- \\
+        Equipment room & Medium & Mixed & Low & -- \\
+        AGV corridor & Low & Normal/Dark & High & -- \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:dataset_composition}
+\end{table}
+
+\section{Problem Formulation}
+
+We consider an embodied agent equipped with calibrated multimodal sensors operating in a complex industrial environment that contains three dominant degradation factors: texture scarcity, low and spatially varying illumination, and dynamic interference from moving objects or agents. Given a time-ordered sensor stream, the goal is to estimate a camera or robot trajectory and, optionally, a scene representation that supports geometric reconstruction, dense mapping, or view synthesis.
+
+Each sequence is associated with a condition tuple
+\begin{equation}
+    c = (\tau, \lambda, \delta),
+\end{equation}
+where $\tau$, $\lambda$, and $\delta$ denote texture level, illumination level, and dynamic level, respectively.
+
+Tracking quality is evaluated through global trajectory error, local relative drift, and explicit failure behavior such as track-loss count, lost duration, relocalization failure, and loop-closure failure. Mapping quality is evaluated against reference geometry through metrics such as Chamfer distance, accuracy, and completeness, and optionally through photometric metrics when the method supports rendering.
+
+\section{Experiments}
+
+We evaluate methods on the proposed industrial complex-environment benchmark using three tracks: tracking, mapping, and robustness. Tracking quality is measured by ATE, RPE, track-loss statistics, relocalization success, and loop-closure success \cite{GSSLAM2024,SplaTAM2024,GSLoc2024}. Mapping quality is measured by Chamfer distance, accuracy, completeness, and optional rendering metrics for methods that support view synthesis \cite{GSSLAM2024,SplaTAM2024,GaussianSLAM2024}. Robustness is evaluated by grouping performance over texture, illumination, and dynamic condition levels, and by measuring dynamic contamination in reconstructed maps \cite{TexturelessORB2024,LLGaussianMap2024,DynaGSLAM2024,WildGSSLAM2024}.
+
+\subsection{Benchmark Tracks}
+
+\paragraph{Industrial-Track.}
+ATE, RPE, lost count, lost duration ratio, relocalization success, and loop-closure success.
+
+\paragraph{Industrial-Map.}
+Chamfer distance, accuracy, completeness, optional PSNR, optional SSIM, and optional LPIPS.
+
+\paragraph{Industrial-Robust.}
+Success rate by condition, grouped trajectory quality by condition, grouped map quality by condition, and dynamic contamination ratio.
+
+\begin{table*}[t]
+    \centering
+    \caption{Main experiment table placeholder. Replace with final benchmark numbers.}
+    \begin{tabular}{lcccccccc}
+        \toprule
+        Method & ATE & RPE & Chamfer & Accuracy & Completeness & PSNR & SSIM & LPIPS \\
+        \midrule
+        Baseline A & -- & -- & -- & -- & -- & -- & -- & -- \\
+        Baseline B & -- & -- & -- & -- & -- & -- & -- & -- \\
+        Proposed protocol & -- & -- & -- & -- & -- & -- & -- & -- \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:main_results}
+\end{table*}
+
+\section{Conclusion}
+
+We proposed a condition-aware industrial benchmark for SLAM and 3DGS-based mapping systems. The benchmark targets three deployment-critical degradation axes: texture scarcity, illumination degradation, and dynamic interference. By pairing structured condition metadata with trajectory ground truth, optional dynamic annotations, and dense reconstruction references, the benchmark supports unified evaluation of tracking, mapping, and degradation robustness.
+
+\bibliographystyle{plainnat}
+\bibliography{industrial_paper_refs}
+
+\end{document}
