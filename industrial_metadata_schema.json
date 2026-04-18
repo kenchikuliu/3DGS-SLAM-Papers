@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Industrial Complex Dataset Metadata",
+  "type": "object",
+  "required": [
+    "scene_id",
+    "condition_id",
+    "route_id",
+    "sensor_rig_id",
+    "capture_date",
+    "trajectory_type",
+    "loop_closure",
+    "texture_level",
+    "illumination_level",
+    "dynamic_level",
+    "avg_lux",
+    "min_lux"
+  ],
+  "properties": {
+    "scene_id": {
+      "type": "string"
+    },
+    "condition_id": {
+      "type": "string"
+    },
+    "route_id": {
+      "type": "string"
+    },
+    "sensor_rig_id": {
+      "type": "string"
+    },
+    "operator_id": {
+      "type": "string"
+    },
+    "capture_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "trajectory_type": {
+      "type": "string",
+      "enum": [
+        "straight",
+        "loop",
+        "turn_heavy",
+        "occlusion_route",
+        "custom"
+      ]
+    },
+    "route_length_m": {
+      "type": "number",
+      "minimum": 0
+    },
+    "loop_closure": {
+      "type": "boolean"
+    },
+    "texture_level": {
+      "type": "string",
+      "enum": [
+        "high",
+        "medium",
+        "low",
+        "extreme_low"
+      ]
+    },
+    "illumination_level": {
+      "type": "string",
+      "enum": [
+        "normal",
+        "dim",
+        "dark",
+        "extreme_dark",
+        "mixed_hard_shadow"
+      ]
+    },
+    "dynamic_level": {
+      "type": "string",
+      "enum": [
+        "static",
+        "low_dynamic",
+        "medium_dynamic",
+        "high_dynamic"
+      ]
+    },
+    "avg_lux": {
+      "type": "number",
+      "minimum": 0
+    },
+    "min_lux": {
+      "type": "number",
+      "minimum": 0
+    },
+    "feature_count_mean": {
+      "type": "number",
+      "minimum": 0
+    },
+    "laplacian_variance_mean": {
+      "type": "number",
+      "minimum": 0
+    },
+    "dynamic_agent_types": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dynamic_agent_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "dynamic_mask_coverage_mean": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "contains_reflective_surfaces": {
+      "type": "boolean"
+    },
+    "contains_glass": {
+      "type": "boolean"
+    },
+    "contains_smoke_or_steam": {
+      "type": "boolean"
+    },
+    "contains_repetitive_structure": {
+      "type": "boolean"
+    },
+    "ground_truth_type": {
+      "type": "string",
+      "enum": [
+        "mocap",
+        "total_station",
+        "laser_scan_registration",
+        "reference_map_alignment",
+        "other"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}
