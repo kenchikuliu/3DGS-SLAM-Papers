@@ -1,0 +1,321 @@
+{
+  "source_markdown_count": 815,
+  "node_count": 983,
+  "edge_count": 11264,
+  "hyperedge_count": 12,
+  "top_relations": [
+    {
+      "relation": "evaluates_with",
+      "count": 5361
+    },
+    {
+      "relation": "references",
+      "count": 4364
+    },
+    {
+      "relation": "belongs_to",
+      "count": 815
+    },
+    {
+      "relation": "shares_data_with",
+      "count": 701
+    },
+    {
+      "relation": "semantically_similar_to",
+      "count": 11
+    },
+    {
+      "relation": "conceptually_related_to",
+      "count": 5
+    },
+    {
+      "relation": "rationale_for",
+      "count": 4
+    },
+    {
+      "relation": "cites",
+      "count": 3
+    }
+  ],
+  "top_file_types": [
+    {
+      "file_type": "document",
+      "count": 842
+    },
+    {
+      "file_type": "concept",
+      "count": 68
+    },
+    {
+      "file_type": "method",
+      "count": 27
+    },
+    {
+      "file_type": "dataset",
+      "count": 15
+    },
+    {
+      "file_type": "hyperedge",
+      "count": 12
+    },
+    {
+      "file_type": "metric",
+      "count": 10
+    },
+    {
+      "file_type": "paper",
+      "count": 9
+    }
+  ],
+  "top_categories": [
+    {
+      "category": "General",
+      "count": 501
+    },
+    {
+      "category": "Unknown",
+      "count": 144
+    },
+    {
+      "category": "SLAM",
+      "count": 68
+    },
+    {
+      "category": "Robotics",
+      "count": 65
+    },
+    {
+      "category": "SLAM-Supplement",
+      "count": 37
+    }
+  ],
+  "top_nodes": [
+    {
+      "id": "metric_ate",
+      "label": "ATE",
+      "file_type": "concept",
+      "category": "",
+      "degree": 815,
+      "source_file": "0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md"
+    },
+    {
+      "id": "concept_reconstruction",
+      "label": "Reconstruction",
+      "file_type": "concept",
+      "category": "",
+      "degree": 802,
+      "source_file": "0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md"
+    },
+    {
+      "id": "metric_spl",
+      "label": "SPL",
+      "file_type": "concept",
+      "category": "",
+      "degree": 794,
+      "source_file": "0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md"
+    },
+    {
+      "id": "concept_3d_gaussian_splatting",
+      "label": "3D Gaussian Splatting",
+      "file_type": "concept",
+      "category": "",
+      "degree": 761,
+      "source_file": "0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md"
+    },
+    {
+      "id": "concept_imu_integration",
+      "label": "IMU Integration",
+      "file_type": "concept",
+      "category": "",
+      "degree": 753,
+      "source_file": "0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md"
+    },
+    {
+      "id": "metric_iou",
+      "label": "IoU",
+      "file_type": "concept",
+      "category": "",
+      "degree": 750,
+      "source_file": "0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md"
+    },
+    {
+      "id": "concept_nerf",
+      "label": "NeRF",
+      "file_type": "concept",
+      "category": "",
+      "degree": 734,
+      "source_file": "0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md"
+    },
+    {
+      "id": "metric_accuracy",
+      "label": "Accuracy",
+      "file_type": "concept",
+      "category": "",
+      "degree": 652,
+      "source_file": "0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md"
+    },
+    {
+      "id": "metric_psnr",
+      "label": "PSNR",
+      "file_type": "concept",
+      "category": "",
+      "degree": 601,
+      "source_file": "0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md"
+    },
+    {
+      "id": "metric_ssim",
+      "label": "SSIM",
+      "file_type": "concept",
+      "category": "",
+      "degree": 599,
+      "source_file": "0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md"
+    },
+    {
+      "id": "metric_lpips",
+      "label": "LPIPS",
+      "file_type": "concept",
+      "category": "",
+      "degree": 531,
+      "source_file": "0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md"
+    },
+    {
+      "id": "category_general",
+      "label": "General",
+      "file_type": "concept",
+      "category": "",
+      "degree": 501,
+      "source_file": "0181_[General]_GSStream 3D Gaussian Splatting based Volumetric Scene Strea.md"
+    },
+    {
+      "id": "concept_slam",
+      "label": "SLAM",
+      "file_type": "concept",
+      "category": "",
+      "degree": 392,
+      "source_file": "0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md"
+    },
+    {
+      "id": "metric_rpe",
+      "label": "RPE",
+      "file_type": "concept",
+      "category": "",
+      "degree": 331,
+      "source_file": "0009_[SLAM]_RTG-SLAM Real-time 3D Reconstruction at Scale using Gaussian Splattin.md"
+    },
+    {
+      "id": "concept_navigation",
+      "label": "Navigation",
+      "file_type": "concept",
+      "category": "",
+      "degree": 297,
+      "source_file": "0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md"
+    }
+  ],
+  "top_documents": [
+    {
+      "id": "paper_2402_13255",
+      "label": "2402.13255",
+      "category": "Unknown",
+      "out_degree": 25,
+      "source_file": "2402.13255.md"
+    },
+    {
+      "id": "paper_2405_05526",
+      "label": "2405.05526",
+      "category": "Unknown",
+      "out_degree": 25,
+      "source_file": "2405.05526.md"
+    },
+    {
+      "id": "paper_2410_12262",
+      "label": "2410.12262",
+      "category": "Unknown",
+      "out_degree": 25,
+      "source_file": "2410.12262.md"
+    },
+    {
+      "id": "paper_0149_slam_supplement_arxiv",
+      "label": "`arXiv`",
+      "category": "SLAM-Supplement",
+      "out_degree": 24,
+      "source_file": "0149_[SLAM-Supplement]_`arXiv`.md"
+    },
+    {
+      "id": "paper_2405_01333",
+      "label": "2405.01333",
+      "category": "Unknown",
+      "out_degree": 24,
+      "source_file": "2405.01333.md"
+    },
+    {
+      "id": "paper_2506_18678",
+      "label": "2506.18678",
+      "category": "Unknown",
+      "out_degree": 24,
+      "source_file": "2506.18678.md"
+    },
+    {
+      "id": "paper_2510_23988",
+      "label": "2510.23988",
+      "category": "Unknown",
+      "out_degree": 24,
+      "source_file": "2510.23988.md"
+    },
+    {
+      "id": "paper_2602_04251",
+      "label": "2602.04251",
+      "category": "Unknown",
+      "out_degree": 24,
+      "source_file": "2602.04251.md"
+    },
+    {
+      "id": "paper_0482_general_worldmirror_universal_3d_world_reconstruction_with_any_prio",
+      "label": "WorldMirror Universal 3D World Reconstruction with Any-Prio",
+      "category": "General",
+      "out_degree": 23,
+      "source_file": "0482_[General]_WorldMirror Universal 3D World Reconstruction with Any-Prio.md"
+    },
+    {
+      "id": "paper_2512_03422",
+      "label": "2512.03422",
+      "category": "Unknown",
+      "out_degree": 23,
+      "source_file": "2512.03422.md"
+    },
+    {
+      "id": "paper_2406_16850",
+      "label": "2406.16850",
+      "category": "Unknown",
+      "out_degree": 22,
+      "source_file": "2406.16850.md"
+    },
+    {
+      "id": "paper_2601_05738",
+      "label": "2601.05738",
+      "category": "Unknown",
+      "out_degree": 22,
+      "source_file": "2601.05738.md"
+    },
+    {
+      "id": "paper_0041_slam_vings_mono_visual_inertial_gaussian_splatting_monocular_slam_in_large_s",
+      "label": "VINGS-Mono Visual-Inertial Gaussian Splatting Monocular SLAM in Large S",
+      "category": "SLAM",
+      "out_degree": 21,
+      "source_file": "0041_[SLAM]_VINGS-Mono Visual-Inertial Gaussian Splatting Monocular SLAM in Large S.md"
+    },
+    {
+      "id": "paper_0046_slam_hier_slam_neuro_symbolic_semantic_slam_with_a_hierarchically_categoric",
+      "label": "Hier-SLAM++ Neuro-Symbolic Semantic SLAM with a Hierarchically Categoric",
+      "category": "SLAM",
+      "out_degree": 21,
+      "source_file": "0046_[SLAM]_Hier-SLAM++ Neuro-Symbolic Semantic SLAM with a Hierarchically Categoric.md"
+    },
+    {
+      "id": "paper_0051_slam_stamics_splat_track_and_map_with_integrated_consistency_and_semanti",
+      "label": "STAMICS Splat, Track And Map with Integrated Consistency and Semanti",
+      "category": "SLAM",
+      "out_degree": 21,
+      "source_file": "0051_[SLAM]_STAMICS Splat, Track And Map with Integrated Consistency and Semanti.md"
+    }
+  ]
+}

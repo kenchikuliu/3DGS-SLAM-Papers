@@ -1,0 +1,51 @@
+﻿id,label,category,out_degree,source_file
+paper_2402_13255,2402.13255,Unknown,25,2402.13255.md
+paper_2405_05526,2405.05526,Unknown,25,2405.05526.md
+paper_2410_12262,2410.12262,Unknown,25,2410.12262.md
+paper_0149_slam_supplement_arxiv,`arXiv`,SLAM-Supplement,24,0149_[SLAM-Supplement]_`arXiv`.md
+paper_2405_01333,2405.01333,Unknown,24,2405.01333.md
+paper_2506_18678,2506.18678,Unknown,24,2506.18678.md
+paper_2510_23988,2510.23988,Unknown,24,2510.23988.md
+paper_2602_04251,2602.04251,Unknown,24,2602.04251.md
+paper_0482_general_worldmirror_universal_3d_world_reconstruction_with_any_prio,WorldMirror Universal 3D World Reconstruction with Any-Prio,General,23,0482_[General]_WorldMirror Universal 3D World Reconstruction with Any-Prio.md
+paper_2512_03422,2512.03422,Unknown,23,2512.03422.md
+paper_2406_16850,2406.16850,Unknown,22,2406.16850.md
+paper_2601_05738,2601.05738,Unknown,22,2601.05738.md
+paper_0041_slam_vings_mono_visual_inertial_gaussian_splatting_monocular_slam_in_large_s,VINGS-Mono Visual-Inertial Gaussian Splatting Monocular SLAM in Large S,SLAM,21,0041_[SLAM]_VINGS-Mono Visual-Inertial Gaussian Splatting Monocular SLAM in Large S.md
+paper_0046_slam_hier_slam_neuro_symbolic_semantic_slam_with_a_hierarchically_categoric,Hier-SLAM++ Neuro-Symbolic Semantic SLAM with a Hierarchically Categoric,SLAM,21,0046_[SLAM]_Hier-SLAM++ Neuro-Symbolic Semantic SLAM with a Hierarchically Categoric.md
+paper_0051_slam_stamics_splat_track_and_map_with_integrated_consistency_and_semanti,"STAMICS Splat, Track And Map with Integrated Consistency and Semanti",SLAM,21,"0051_[SLAM]_STAMICS Splat, Track And Map with Integrated Consistency and Semanti.md"
+paper_0062_slam_vtgaussian_slam_rgbd_slam_for_large_scale_scenes_with_splatting_view_tied_3d,VTGaussian-SLAM RGBD SLAM for Large Scale Scenes with Splatting View-Tied 3D,SLAM,21,0062_[SLAM]_VTGaussian-SLAM RGBD SLAM for Large Scale Scenes with Splatting View-Tied 3D.md
+paper_0154_slam_supplement_arxiv,`arXiv`,SLAM-Supplement,21,0154_[SLAM-Supplement]_`arXiv`.md
+paper_2503_09447,2503.09447,Unknown,21,2503.09447.md
+paper_2601_05738v1,2601.05738v1,Unknown,21,2601.05738v1.md
+paper_0004_slam_gaussian_slam_photo_realistic_dense_slam_with_gaussian_splatting,Gaussian-SLAM Photo-realistic Dense SLAM with Gaussian Splatting,SLAM,20,0004_[SLAM]_Gaussian-SLAM Photo-realistic Dense SLAM with Gaussian Splatting.md
+paper_0014_slam_loopsplat_loop_closure_by_registering_3d_gaussian_splats,"LoopSplat Loop Closure by Registering 3D Gaussian Splats,",SLAM,20,"0014_[SLAM]_LoopSplat Loop Closure by Registering 3D Gaussian Splats,.md"
+paper_0018_slam_glc_slam_gaussian_splatting_slam_with_efficient_loop_closure,GLC-SLAM Gaussian Splatting SLAM with Efficient Loop Closure,SLAM,20,0018_[SLAM]_GLC-SLAM Gaussian Splatting SLAM with Efficient Loop Closure.md
+paper_0066_slam_lego_slam_language_embedded_gaussian_optimization_slam,LEGO-SLAM Language-Embedded Gaussian Optimization SLAM,SLAM,20,0066_[SLAM]_LEGO-SLAM Language-Embedded Gaussian Optimization SLAM.md
+paper_0072_slam_vigs_slam_visual_inertial_gaussian_splatting_slam,VIGS-SLAM Visual Inertial Gaussian Splatting SLAM,SLAM,20,0072_[SLAM]_VIGS-SLAM Visual Inertial Gaussian Splatting SLAM.md
+paper_0150_slam_supplement_arxiv,`arXiv`,SLAM-Supplement,20,0150_[SLAM-Supplement]_`arXiv`.md
+paper_2402_08125,2402.08125,Unknown,20,2402.08125.md
+paper_2502_05752,2502.05752,Unknown,20,2502.05752.md
+paper_2510_12749,2510.12749,Unknown,20,2510.12749.md
+paper_2511_23221,2511.23221,Unknown,20,2511.23221.md
+paper_2512_09411,2512.09411,Unknown,20,2512.09411.md
+paper_2603_21055,2603.21055,Unknown,20,2603.21055.md
+paper_3664647_3680696,3664647.3680696,Unknown,20,3664647.3680696.md
+paper_0006_slam_neds_slam_a_novel_neural_explicit_dense_semantic_slam_framework_using,NEDS-SLAM A Novel Neural Explicit Dense Semantic SLAM Framework using,SLAM,19,0006_[SLAM]_NEDS-SLAM A Novel Neural Explicit Dense Semantic SLAM Framework using.md
+paper_0008_slam_cg_slam_efficient_dense_rgb_d_slam_in_a_consistent_uncertainty_aware,CG-SLAM Efficient Dense RGB-D SLAM in a Consistent Uncertainty-aware,SLAM,19,0008_[SLAM]_CG-SLAM Efficient Dense RGB-D SLAM in a Consistent Uncertainty-aware.md
+paper_0011_slam_mg_slam_structure_gaussian_slam_with_manhattan_world_hypothesis,MG-SLAM Structure Gaussian SLAM with Manhattan World Hypothesis,SLAM,19,0011_[SLAM]_MG-SLAM Structure Gaussian SLAM with Manhattan World Hypothesis.md
+paper_0013_slam_ig_slam_instant_gaussian_slam,IG-SLAM Instant Gaussian SLAM,SLAM,19,0013_[SLAM]_IG-SLAM Instant Gaussian SLAM.md
+paper_0033_slam_hi_slam2_geometry_aware_gaussian_slam_for_fast_monocular_scene_recons,HI-SLAM2 Geometry-Aware Gaussian SLAM for Fast Monocular Scene Recons,SLAM,19,0033_[SLAM]_HI-SLAM2 Geometry-Aware Gaussian SLAM for Fast Monocular Scene Recons.md
+paper_0039_slam_panoslam_panoptic_3d_scene_reconstruction_via_gaussian_slam,PanoSLAM Panoptic 3D Scene Reconstruction via Gaussian SLAM,SLAM,19,0039_[SLAM]_PanoSLAM Panoptic 3D Scene Reconstruction via Gaussian SLAM.md
+paper_0057_slam_gsff_slam_3d_semantic_gaussian_splatting_slam_via_feature_field,GSFF-SLAM 3D Semantic Gaussian Splatting SLAM via Feature Field,SLAM,19,0057_[SLAM]_GSFF-SLAM 3D Semantic Gaussian Splatting SLAM via Feature Field.md
+paper_0117_robotics_dream_slam_dreaming_the_unseen_for_active_slam_in_dynamic_environments,Dream-SLAM Dreaming the Unseen for Active SLAM in Dynamic Environments,Robotics,19,0117_[Robotics]_Dream-SLAM Dreaming the Unseen for Active SLAM in Dynamic Environments.md
+paper_0144_slam_supplement_arxiv,`arXiv`,SLAM-Supplement,19,0144_[SLAM-Supplement]_`arXiv`.md
+paper_0160_slam_supplement_iros,`IROS`,SLAM-Supplement,19,0160_[SLAM-Supplement]_`IROS`.md
+paper_0272_general_scalable_adaptation_of_3d_geometric_foundation_models_via_we,Scalable Adaptation of 3D Geometric Foundation Models via We,General,19,0272_[General]_Scalable Adaptation of 3D Geometric Foundation Models via We.md
+paper_0367_general_off_the_grid_detection_of_primitives_for_feed_forward_3d_ga,Off The Grid Detection of Primitives for Feed-Forward 3D Ga,General,19,0367_[General]_Off The Grid Detection of Primitives for Feed-Forward 3D Ga.md
+paper_0581_general_fiducial_marker_splatting_for_high_fidelity_robotics_simulat,Fiducial Marker Splatting for High-Fidelity Robotics Simulat,General,19,0581_[General]_Fiducial Marker Splatting for High-Fidelity Robotics Simulat.md
+paper_2312_06741,2312.06741,Unknown,19,2312.06741.md
+paper_2403_07494,2403.07494,Unknown,19,2403.07494.md
+paper_2411_12185,2411.12185,Unknown,19,2411.12185.md
+paper_2503_12572,2503.12572,Unknown,19,2503.12572.md
+paper_2510_22600,2510.22600,Unknown,19,2510.22600.md

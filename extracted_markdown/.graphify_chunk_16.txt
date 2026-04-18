@@ -1,0 +1,22 @@
+0444_[General]_DentalSplat Dental Occlusion Novel View Synthesis from Spar.md
+0449_[General]_Object-Aware 4D Human Motion Generation.md
+0453_[General]_DrivingScene A Multi-Task Online Feed-Forward 3D Gaussian S.md
+0458_[General]_Region-Adaptive Learned Hierarchical Encoding for 3D Gaussia.md
+0459_[General]_DynaPose4D High-Quality 4D Dynamic Content Generation via P.md
+0460_[General]_DynamicTree Interactive Real Tree Animation via Sparse Voxe.md
+0476_[General]_GauSSmart Enhanced 3D Reconstruction through 2D Foundation.md
+0488_[General]_LTGS Long-Term Gaussian Scene Chronology From Sparse View U.md
+0513_[General]_Proxy-GS Efficient 3D Gaussian Splatting via Proxy Mesh.md
+0528_[General]_Seeing Through Reflections Advancing 3D Scene Reconstructio.md
+0538_[General]_Zero-Shot Visual Grounding in 3D Gaussians via View Retrieva.md
+0541_[General]_GS-Scale Unlocking Large-Scale 3D Gaussian Splatting Traini.md
+0544_[General]_FMGS-Avatar Mesh-Guided 2D Gaussian Splatting with Foundati.md
+0548_[General]_Beyond Averages Open-Vocabulary 3D Scene Understanding with.md
+0560_[General]_Visibility-Aware Language Aggregation for Open-Vocabulary Se.md
+0568_[General]_MarkSplatter Generalizable Watermarking for 3D Gaussian Spl.md
+0577_[General]_ColorGS High-fidelity Surgical Scene Reconstruction with Co.md
+0584_[General]_Image-Conditioned 3D Gaussian Splat Quantization.md
+0586_[General]_Zero-shot Volumetric CT Super-Resolution using 3D Gaussian S.md
+0595_[General]_Distilled-3DGSDistilled 3D Gaussian Splatting.md
+0635_[General]_GR-Gaussian Graph-Based Radiative Gaussian Splatting for Sp.md
+0646_[General]_RaGS Unleashing 3D Gaussian Splatting from 4D Radar and Mon.md

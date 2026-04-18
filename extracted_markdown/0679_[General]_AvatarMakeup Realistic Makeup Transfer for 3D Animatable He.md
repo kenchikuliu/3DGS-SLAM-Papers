@@ -1,0 +1,390 @@
+# AvatarMakeup: Realistic Makeup Transfer for 3D Animatable Head
+
+Avatars
+
+Yiming Zhong , Xiaolin Zhangâ  , Ligang Liu , Yao Zhao , and Yunchao Weiâ 
+
+AbstractâSimilar to facial beautification in real life, 3D virtual avatars require personalized customization to enhance their visual appeal, yet this area remains insufficiently explored. Although current 3D Gaussian editing methods can be adapted for facial makeup purposes, these methods fail to meet the fundamental requirements for achieving realistic makeup effects: 1) ensuring a consistent appearance during drivable expressions, 2) preserving the identity throughout the makeup process, and 3) enabling precise control over fine details. To address these, we propose a specialized 3D makeup method named AvatarMakeup, leveraging a pretrained diffusion model to transfer makeup patterns from a single reference photo of any individual. We adopt a coarse-to-fine idea to first maintain the consistent appearance and identity, and then to refine the details. In particular, the diffusion model is employed to generate makeup images as supervision. Due to the uncertainties in diffusion process, the generated images are inconsistent across different viewpoints and expressions. Therefore, we propose a Coherent Duplication method to coarsely apply makeup to the target while ensuring consistency across dynamic and multiview effects. Coherent Duplication optimizes a global UV map by recoding the averaged facial attributes among the generated makeup images. By querying the global UV map, it easily synthesizes coherent makeup guidance from arbitrary views and expressions to optimize the target avatar. Given the coarse makeup avatar, we further enhance the makeup by incorporating a Refinement Module into the diffusion model to achieve high makeup quality. Experiments demonstrate that AvatarMakeup achieves state-of-the-art makeup transfer quality and consistency throughout animation.
+
+Index Termsâ3D avatars, makeup transfer, avatars editing
+
+## I. INTRODUCTION
+
+R ECENTLY, 3D representations using Gaussian Splat-ting [1](3DGS) have attracted significant attention for avt n te their highly realistic rendering quality and remarkable realtime efficiency. Researchers have developed animatable 3D avatar models [2], [3] based on Gaussian Splatting. These methods enable dynamic, lifelike character animations with high fidelity, facilitating applications in virtual reality, gaming, and immersive environments. Like real-world preferences, users in 3D avatar applications increasingly seek beautification and makeup customization options to enhance and personalize their virtual presence.
+
+Existing models [4]â[17] have achieved considerable success in facial beautification and editing within 2D avatars.
+
+For example, Generative Adversarial Network (GAN)-based approaches [5]â[16] demonstrate high robustness and generalizability across various makeup styles. Stable-Makeup [17] achieves high fidelity makeup transfer. It constructs a comprehensive dataset encompassing diverse makeup styles and finetunes a pretrained diffusion model.
+
+However, these models are limited to facial editing within 2D images due to the lack of paired 3D makeup datasets. Fully extending the facial makeup application of 3D avatars remains challenging. An attemptable approach to address this task is to utilize the previous 3D Gaussian editing methods. Particularly, Geneavatar [18] generates consistent makeup information by 3DMM-based 3DGAN [19] and subsequently optimizes a NeRF-represented avatar. Nevertheless, the GAN generator struggles to fit intricate and creative makeup details, and Geneavatar also falls short in achieving real-time rendering. GaussianEditor [20], DGE Editor [21] and TIP-Editor [22] proposed for the representation of Gaussian Splatting [1] have made strides in editing 3D Gaussian objects and scenes by leveraging textual instructions to guide modifications. Unfortunately, these methods have two key limitations for 3D facial makeup: 1) These methods are limited to editing static representations and cannot achieve the dynamic makeup effects required for animatable human faces. 2) The primary objective of facial makeup transfer is to preserve the identity of the target character, yet these methods fail to account for this crucial aspect.
+
+Therefore, we conduct makeup transfer by addressing the limiatations. We believe that makeup transfer for 3D avatars should meet two fundamental requirements: 1) Facial makeup should be extended to be applied on rigged avatars for animation purpose; 2) Facial makeup requires precise control over the details to achieve beautiful and refined looks while preserving the identity of the original individuals. In this paper, we present a novel framework named AvatarMakeup to execute makeup transfer for rigged 3D Gaussian avatars from 2D makeup methods. To make up animatable avatars, our method inherits the animation module from recent works on reconstructing rigged gaussian avatars [2], [3]. Specifically, those works establish binding connections between 3D Gaussians and FLAME mesh [23] to make 3D gaussian kernels uniformly distributed over the surface of the mesh. Therefore, 3D gaussian avatars can be animated by adjusting the FLAME parameters. To precisely control the makeup details, unlike previous methods [20] using textual descriptions to edit facial makeup, our methods derived makeover details from a reference image from any person. We believe that facial editing guided by image-based conditioning offers a more refined and natural approach compared to language-based conditioning.
+
+<!-- image-->  
+Fig. 1: 3D makeup transfer examples generated by AvatarMakeup. We improve the quality of makeup transfer by employing a coarse-to-fine strategy. Examples show that under multi-view and animation conditions, our method generates high-quality and consistent makeup effects while maintaining the identity.
+
+Intuitively, we adopt a coarse-to-fine strategy to first maintain consistent appearance and identity and then refine the details. The strategy intuitively imitates the process akin to how a human would apply makeup. The process begins with applying base makeup and then delicate makeup. We leverage Stable-Makeup to transfer makeup patterns from a single reference photo of any individual. In practice, Stable-Makeup generates novel-view and various expression makeup images as supervision. This supervision information is employed to guide the makeup process of 3D avatars. Due to the inherent uncertainty in the diffusion process, the images generated by Stable-Makeup often exhibit inconsistencies, resulting in artifacts when driving avatars with extreme poses and expressions. To address this, we propose a novel Coherent Duplication method that coarsely applies makeup to the target while maintaining consistency across dynamic and multiview effects. In detail, given the generated images, our method utilizes the bonded mesh to create a global UV map, which captures and records the basic facial patterns. This enables a consistent representation of facial features across various poses and expressions, ensuring more coherent and accurate makeup application. By querying the constructed UV map, Coherent Duplication synthesizes coarse yet consistent makeup images from novel viewpoints and expressions with ease. These images serve as supervision to optimize the Gaussian avatars, effectively balancing quality and consistency during animation.
+
+Building upon the coarse makeup, we further propose a Refinement Module into the 3D makeup process to enrich the avatars with intricate makeup details. Specifically, we introduce noise with a small timestamp during the diffusion process. This approach not only eliminates blurred details but also ensures the consistency of the base makeup. As a result, the optimized avatars achieve high-quality makeup while maintaining consistency throughout animation. The outcomes of the proposed AvatarMakeup method are demonstrated in Fig 1.
+
+In summary, our contributions are as follows:
+
+â¢ This paper proposes AvatarMakeup, a novel framework to apply makeover transfer to animatable head avatars. The method precisely transfers makeup styles from any
+
+person to the target avatars.
+
+â¢ We present a Coherent Duplication method that utilizes the mesh bonded to 3D gaussians to provide consistent makeover information across diverse viewpoints and expressions.
+
+â¢ Experimental results show that our AvatarMakeup achieves state-of-the-art performance, reflected in the transferring quality and multi-view consistency.
+
+## II. RELATED WORKS
+
+## A. 3D Animatable Avatars
+
+The advancement of animatable avatar reconstruction primarily relies on the progress made in different representation, with parametric frameworks like SMPL [24] and FLAME [23] serving as foundational tools. Face2face [25] pioneers the direction toward digital avatars through real-time facial tracking and realistic face reenactment. Then many methods use mesh to represent the avatars in 3D space. PIFu [26]and PIFuHD [27] introduce pixel-aligned implicit functions to reconstruct clothed humans from single images. ARCH [28] and ARCH++ [29] extend this by incorporating animatable parametric models, enabling pose-aware reconstruction of clothed avatars. For head avatars, HiFace [30] disentangles static and dynamic facial details for high-fidelity reconstruction, while Vid2Avatar [31] reconstructs animatable head avatars from monocular video via neural rendering. Neural Radiance Field (NeRF) [32] restores the avatarsâs information implicitly and enables capturing high-frequency avatar details. HumanNeRF [33] first to extend NeRF to dynamic humans using SMPL-guided deformation fields, enabling free-viewpoint rendering of moving subjects from monocular video. InstantAvatar [34] accelerates training via hash encoding while maintaining animatable properties through learned deformation fields. Gafni et al. [35] developed a NeRF conditioned on an expression vector from monocular videos. Grassal et al. [36] enhanced FLAME by subdividing it and adding offsets to improve its geometry, allowing for a dynamic texture created by an expression-dependent texture field. IMavatar [37] constructs a 3D animatable head avatar utilizing neural implicit functions, creating a mapping from observed space to canonical space through iterative root-finding. HeadNeRF [38] implements a
+
+<!-- image-->  
+Fig. 2: Illustration of AvatarMakeup. AvatarMakeup takes a reconstructed avatar and a reference makeup image as input and employs a coarse-to-fine pipeline to gradually apply the makeup to the target avatar. (1) In the coarse stage, we propose Coherent Duplication methods to generate consistent guidance images. (2) In the refinement stage, AvatarMakeup refines the base makeup by integrating a refinement strategy into the Stable-Makeup model. (3) The Coherent Duplication method uses FLAME mesh to construct a global UV map. By querying the UV map, we can easily generate coherent guidance images from arbitrary views and expressions.
+
+NeRF-based parametric head model incorporating 2D neural rendering for improved efficiency. INSTA [39] deforms query points to a canonical space by finding the nearest triangle on a FLAME mesh and combining this with InstantNGP [40] to achieve fast rendering. After 3D Gaussian Splatting(3DGS) [1] occurred, the representation benefits avatar reconstruction with real-time rendering and fine-grained details. On the one hand, many methods animate avatars by decoding facial latents to 3D Gaussians based on animation parameters. HeadGas [41] extend 3D Gaussians with per-Gaussian basis of latent features to control expressions. NPGA [42] introduces dynamic modules to deform 3D Gaussians and a detail network to generate fine-grained details. On the other hand, GaussianAvatars [2] and SplattingAvatar [3] built a consistent correspondence between 3D Gaussians and mesh triangles explicitly. In this paper, we use representations corresponding to 3DGS, and our methods utilize GaussianAvatars as the 3D representations in our framework.
+
+## B. Image Editing
+
+To satisfy customized manipulation to a given image, many methods are proposed for image editing using textual instructions. Stable-Diffusion [43] edits specific regions by masking and prompting. DreamBooth [44] fine-tunes SD on 3â5 images of a subject to generate personalized edits. ControlNet [45] adds spatial conditioning to diffusion models via parallel residual connections, Enabling precise structural edits. Prompt-to-Prompt (P2P) [46] manipulate cross-attention maps between source and target prompts to guide edits. Uni-ControlNet [47] unifies adapters for global/local control. OmniEdit [48] utilize Multimodal large language model (MLLM) to guide image editing. FreeEdit [49] supports mask-free reference editing by extracting multi-level features via U-Net and injecting them into denoising networks. MIGE [50] proposes a unified multimodal editing framework, which combines CLIP semantic features and VAE visual tokens, processed by LLMs for crossattention guidance in diffusion. An essential task in image editing is Makeup Transfer, where textual instructions are insufficient to describe the facial makeup accurately. Early image makeup transfer methods [5]â[16], [51]â[53] first utilize facial landmark extraction and detection to preprocess the face image. Then neural networks are employed to transfer various makeup styles. Methods based on two optimization methods, $i . e .$ , Generative Adversarial Networks(GANs) [54] and Diffusion Model [55].GAN-based methods have long been utilized in the makeup transfer task. Beauty-GAN [5] relies on pixel-level Histogram Matching and employs several loss functions to train its primary network. PSGAN [6] focuses on transferring makeup between images exhibiting different facial expressions, specifically targeting designated facial areas. CPM [8] incorporates patterns into the makeup transfer process to transcend basic color transfer. SCGAN [7] utilizes a part-specific style encoder to differentiate makeup styles for various components. Lastly, RamGAN [9] aims to maintain consistency in makeup applications by integrating a regionaware morphing module. Recently, diffusion-based methods have demonstrated their capability in real-world makeup transfer. Stable-Makeup [17] is based on a diffusion framework with multiple controls. It utilizes a Detail-Preserving Makeup Encoder to extract the makeup details, Content and Structural Control Modules to maintain the avatarâs identity and Makeup Cross-attention Layers to align the features of the identity embeddings and the makeup embeddings. In this paper, we lift a pretrained Stable-Makup model to 3D avatars to enable 3D makeup transfer.
+
+<!-- image-->  
+Fig. 3: Illustration of the inconsistency during optimization. (a) shows that the mouth is deformed in the guidance image, which is generated by Stable-Makeup. Therefore, directly using these guidance images to optimize the avatars will blur the makeup details. In (b), when optimizing the avatars directly, the teethâ identity will be destroyed during animation. On the contrary, our method adds two proposed strategies and preserves the teethâ identity effectively.
+
+## III. PRELIMINARY
+
+## A. GaussianAvatars
+
+Our makeup model, i.e., AvatarMakeup, is developed based on 3D models of characters constructed by GaussianAvatars [2]. GaussianAvatars employs 3D Gaussian Splatting [1] as representation to produce high-fidelity human faces.
+
+Since the original 3D Gaussian Splatting (3DGS) models are static, GaussianAvatars integrates 3D Gaussian splats with the FLAME [23] mesh by binding Gaussian kernels to mesh triangles, enabling dynamic expressions and movements. Concretely, a kernel of 3D Gaussian splatting is represented as $\langle \mu , s , q , r \rangle$ , where $\pmb { \mu } \in \mathbb { R } ^ { 3 }$ denotes the position vector, $s \in \mathbb { R } ^ { 3 }$ is the scaling vector, $\pmb q \in \mathbb { R } ^ { 4 }$ (corrected dimension for quaternion) represents the quaternion, and $\textbf { \textit { r } } \in \ \mathbb { R } ^ { 3 \times 3 }$ corresponds to the rotation matrix. As for a FLAME mesh triangle, let T be the mean position of the triangle vertices, a rotation matrix R describes the orientation of the triangle, and a scalar k by the mean length of one of the edges and its perpendicular to denote the scales of the triangle. According to the relative position of $\pmb { \mu }$ and triangles, GaussianAvatars bind every gaussian kernel to the nearest triangle. When the target face is rigged to another expression, the position of the kernel is updated following the movement of the bound triangle following Eq. (1), (2) and (3).
+
+$$
+\pmb { r } ^ { \prime } = \pmb { R } \pmb { r } ,
+$$
+
+$$
+\pmb { \mu } ^ { \prime } = k \pmb { R } \pmb { \mu } + \pmb { T } ,\tag{1}
+$$
+
+(2)
+
+$$
+{ \boldsymbol { s } } ^ { \prime } = k { \boldsymbol { s } }\tag{3}
+$$
+
+The rendering process is a standard 3DGS rendering, which computes the color of a pixel by blending all Gaussians overlapping the pixel following Eq. (4).
+
+$$
+C = \sum _ { i = 1 } { c _ { i } \alpha _ { i } ^ { \prime } \prod _ { j = 1 } ^ { i - 1 } { \left( 1 - \alpha _ { j } ^ { \prime } \right) } }\tag{4}
+$$
+
+## B. Stable-Makeup
+
+In this paper, we use Stable-Makeup to generate makeup guidance to supervise the target avatars. Stable-Makeup [17] introduces a diffusion-based approach for robust real-world makeup transfer. At its core, Stable-Makeup leverages a pretrained diffusion model and incorporates three key innovations to enable precise makeup transfer while preserving the identity of the original avatars. First, given a reference makeup image $I _ { m }$ and an original image of the target avatar $I _ { t } ,$ , Stable-Makeup extracts multi-scale makeup details from $I _ { m }$ using a Detail-Preserving Makeup Encoder. This encoder employs a pre-trained CLIP [56] model to extract features from multiple layers, which are concatenated and processed by self-attention to capture local and global makeup features, preserving finegrained makeup details. Second, Stable-Makeup proposes Makeup Cross-Attention Layers to align the makeup embeddings with the source imageâs facial structure. Third, Stable-Makeup employs Content and Structural Control Modules based on ControlNet [45] to maintain the $I _ { t } { ' } s$ identity. The content encoder preserves pixel-level consistency of $I _ { t } ,$ while the structural encoder introduces facial structure control using dense lines derived from facial landmarks. These modules are formulated as
+
+$$
+y _ { c } = \mathcal { F } ( x ; \Theta ) + \mathcal { Z } \left( \mathcal { F } \left( x + \mathcal { Z } ( c ; \Theta _ { z 1 } ) ; \Theta _ { c } \right) ; \Theta _ { z 2 } \right) ,\tag{5}
+$$
+
+where $\mathcal { F }$ is the U-Net, Î are frozen weights, $\Theta _ { c }$ are trainable ControlNet weights, and Z denotes zero-convolution layers. This design ensures that the generated image $I _ { t }$ retains the
+
+identity of the source. During training, the loss function of Stable-Makeup extends the standard diffusion objective:
+
+$$
+\mathcal { L } _ { S M } = \mathbb { E } _ { x _ { 0 } , t , \epsilon } \left[ \left\| \epsilon - \epsilon _ { \theta } \left( x _ { t } , t , c _ { i } , c _ { e } , c _ { m } \right) \right\| _ { 2 } ^ { 2 } \right] ,\tag{6}
+$$
+
+where $c _ { i } , c _ { e } , c _ { m }$ are content, structural, and makeup conditioning inputs, respectively. This forces the model to ensure the identity of $I _ { t }$ and makeup patterns of $I _ { m }$
+
+## IV. THE PROPOSED METHOD
+
+In this section, we present AvatarMakeup for transferring the makeup patterns from an individualâs face to 3D avatars. Since previous methods like GaussianEditor use textual instructions for editing, we conduct experiments using textual instructions to guide the makeup transfer and find that it results in lowquality effects. The comparison results are shown in Sec. V-C. On the contrary, we believe that transferring makeup from a single reference image of any individual provides more rich and precise makeup details. Given the reference image, we lift a diffusion-based model, $i . e .$ , Stable-Makeup, to 3D space. Recent methods, $e . g .$ ., Score Distillation Sampling(SDS) [57] and DreamLCM [58] provide a feasible way to achieve this, which utilizes the guidance images generated by Stable-Makeup. However, the images generated by the diffusion models are inconsistent with the target avatars, resulting in the artifacts shown in Fig. 3(a). Innovatively, we adopt a coarse-to-fine idea to first apply base makeup to the avatars and then enhance the details. The coarse stage employs a global UV map to ensure consistent makeup effects, effectively avoiding artifacts typically caused by diffusion models. The overall structure of AvatarMakeup is illustrated in Fig 2. The Base Makeup stage, illustrated in Fig 2(1), takes as input an animatable avatar generated by GaussianAvatars [2]. We propose a Coherent Duplication method in Sec IV-A to generate highly consistent base makeup. With the Coherent Duplication stage, the avatarsâ makeup is consistent across multiple viewpoints and expressions. The refinement stage is shown in Fig 2(2). Input the optimized avatars from the coarse stage, we integrate a Refinement Module to generate refined guidance with richer makeup details in Sec. IV-B.
+
+## A. Coherent Duplication
+
+In this subsection, we aim to utilize Stable-Makeupâs advanced image makeup transfer ability and handle the inconsistency issue in previous methods. Previous methods such as DreamFusion [57] use a differentiable renderer to render images of target avatars. They optimize avatars based on the discrepancy between rendered images and guidance images which are generated by image generation methods. However, the guidance images generated by Stable-Makeup differ from the original avatars and other genereated guidance images. Therefore, directly using the guidance to optimize avatars leads to inconsistency. As shown in Fig 3(a) and (b), the guidance images generated by Stable-Makeup show a misaligned facial contour with the original avatar image and missing teeth. The misalignment not only inevitably introduces noisy artifacts but also destroys the integrity of the avatarâs inner structure, e.g., teeth, tongue, during optimization. Besides, the inconsistency between the guidance images causes oversmooth makeup. Conventional methods utilize a UV map to record the texture of a mesh-based head. Despite the fact that the UV map falls short in rendering high-detailed textures, the UV map retains consistent textures, avoiding the above issues. Inspired by this, we design a two-stage training strategy. In the coarse stage, we generate base makeup using a proposed Coherent Duplication (CD) module, which utilizes a global UV map to maintain the consistency of the target appearance.
+
+Particularly, given rendered facial images of 3DGS I along with a reference makeup image, we first use the Stable-Makeup network $\mathcal { F } _ { \theta }$ , parameterized by Î¸, to generate guidance images $I _ { \theta } .$ . We experimentally find that Stable-Makeup generates detailed makeup images and the makeup aligns well with the facial region when target avatars are under canonical expressions. We then render images after driving the avatars to canonical expressions and utilize the rendered images to generate coherent guidance images. Notably, using a single view guidance image to generate the UV map causes defects due to facial occlusion. We fill the global UV map by accumulating N-view guidance images. We denote the guidance images with canonical expression as $I _ { \theta } ^ { c a n o }$ . Secondly, we map each pixel (H, W ) of $I _ { \theta } ^ { c a n o } ( H , W )$ to the pixels on the UV map $( h , w )$ , where $( h , w )$ and (H, W ) denote the pixel position. Here, we use a mesh renderer to directly render the mapping images, denoted as $I _ { m a p }$ . Given $I _ { \theta } ^ { c a n o }$ and $I _ { m a p } ,$ , we then optimize the UV map formulated following Eq. (7).
+
+$$
+\begin{array} { r } { I _ { U V } ( h , w ) = \sum _ { i = 1 } ^ { N } \frac { 1 } { | S _ { i } | } \sum _ { H , W } I _ { \theta } ^ { c a n o _ { i } } ( H , W ) , w h e r e ( H , W ) \in S _ { i } ) , } \end{array}\tag{7}
+$$
+
+where $I ( h , w )$ represents the RGB values of each pixel, and $S _ { i } ~ = ~ \{ ( H , W ) ~ | ~ I _ { m a p } ( H , W ) ~ = ~ ( h , w ) \}$ . Since the UV map remains constant, it provides global makeup details. By querying the UV map, we then render coherent guidance images $I _ { U V }$ across multiple viewpoints and expressions. In practice, we can easily obtain $I _ { U V }$ using the mesh renderer. We use the coherent guidance images to optimize the avatar, resulting in highly consistent makeup effects. However, the UV map has limited resolution, which leads to low-quality makeup effects. Besides, the details in the eyes and the hair region are blurred. Therefore, we employ several strategies to enhance facial details in Section IV-B.
+
+Overall, the coarse stage training utilizes Coherent Duplication module to generate base makeup for the avatars, ensuring both (1) makeup consistency during animation and (2) provision of coherent priors for the subsequent refinement module.
+
+## B. Detail Refinement
+
+Since the base makeup generated by Coherent Duplication exhibits spatial consistency but suffers from limited visual quality, we propose a Detail Refinement (DR) module in the refinement stage training to enhance makeup details while maintaining geometric coherence. This module utilizes the base makeup as structural priors to guide the refinement process. The core idea of the proposed module is to leverage the priors to preserve consistency and forward Stable-Makeup for generating refined makeup guidance. Formally, let ËI denote the base makeup rendered from coarsely optimized avatars, and $I _ { m }$ represent the reference makeup image. Stable-Makeup proceeds with the diffusion process to obtain the refined guidance images ${ \hat { I } } _ { \theta } .$ In the diffusion process, we integrate the refinement module by injecting noise at small timestamps t. Crucially, $\hat { I } _ { \theta }$ preserves structural consistency while significantly enhancing makeup details. Finally, we optimize the avatars using these refined guidance images, achieving highfidelity makeup avatars.
+
+During optimization, we assume that the 3D Gaussians are optimally distributed on the FLAME mesh to express all kinds of poses and expressions. Consequently, we freeze the Gaussian attributes {x, r, s}, i.e., position, rotation, scale, and only optimize the parameters of the feature f and opacity $\alpha$ . This preserves the avatarâs geometric structure while eliminating the need for adaptive density control [1]. Moreover, the coherent guidance images generated in the Coherent Duplication method and these sections both exhibit blurred facial details in two aspects: 1) Due to the rendering process of 3D Gaussians which is accumulating multiple 3D gaussians, the facial color in the same position may vary across different viewpoints and expressions. 2) Directly optimizing avatars destroys facial details in non-makeup region, disadvantages in preserving the identity of the avatars, $e . g .$ , the details of the teeth are destroyed during optimization in Fig. 3(b). We propose two strategies to enhance facial details. For the first issue, we generate guidance images covering multiple viewpoints and expressions. For the second issue, we employ a face-parsing model [59] to create precise masks that isolate the makeup regions for optimization. We further introduce restirction loss to supervise non-makeup region of target avatars with the identity-preserving images rendered from the original avatars. For each rendered image $I _ { r } ,$ , we obtain the corresponding guidance image $I _ { G } ,$ , mask image M and identity image $I _ { I D }$ under consistent viewpoint and expression conditions. In particular, in Coherent Duplication, $I _ { G } { = } I _ { U V }$ while in Detail Refinement, $I _ { r } { = } \hat { I }$ and $I _ { G } { = } \hat { I } _ { \theta }$ . Consequently, in both CD and DR modules, we supervised the makeup details with $\mathcal { L } _ { 1 }$ loss and LPIPS loss in Eq. (8).
+
+$$
+{ \mathcal { L } } _ { \mathrm { m a k e u p } } = { \mathcal { L } } _ { 1 } { \big ( } M \odot I _ { G } , M \odot I _ { r } { \big ) } + { \mathcal { L } } _ { \mathrm { L P I P S } } { \big ( } M \odot I _ { G } , M \odot I _ { r } { \big ) } .\tag{8}
+$$
+
+We then employ the restriction loss, $i . e .$ , Eq. (9), to preserve the identity, i.e., the non-makeup region.
+
+$$
+\mathcal { L } _ { \mathrm { R e s } } = \mathcal { L } _ { 1 } \big ( ( 1 - M ) \odot I _ { I D } , ( 1 - M ) \odot I _ { r } \big ) .\tag{9}
+$$
+
+The total loss is in Eq. (10).
+
+$$
+\begin{array} { r } { \mathcal { L } = \lambda _ { 1 } \mathcal { L } _ { m a k e u p } + \lambda _ { 2 } \mathcal { L } _ { \mathrm { R e s } } , } \end{array}\tag{10}
+$$
+
+where $\lambda _ { 1 }$ and $\lambda _ { 2 }$ are loss weights.
+
+## V. EXPERIMENTS
+
+## A. Implementation
+
+The proposed AvatarMakeup method leverages wellconstructed gaussian avatars from GaussianAvatars [2]. StableMakeup [17] serves as the guidance model for the image makeup transfer process. In the base makeup stage, the resolution of the UV map is set to 256Ã256. We use 16 differentview fuidance images under canonical expression to fill the UV map. For the Detail Refinement module, we linearly sample timestamps tâ [20, 400] for the forward diffusion process. In both stages, we render images at a resolution of 512Ã512 to align with the standard input requirements of Stable-Makeup and the face-parsing model [59]. When using Stable-Makeup to generate guidance, we configure the inference steps to 50 in the base makeup stage to generate high-quality makeup and 5 in the refinement stage to execute fast refinement. We obtain guidance images with 5,000 different expressions and viewpoints in the base makeup stage and 3,000 in the refinement stage to maintain high-quality makeup results during animation. To enable sufficient training, the overall transfer process consists of 13,000 iterations, with 10,000 steps allocated to the first stage and the remaining 3,000 steps dedicated to the refinement stage. During optimization, we set the loss weights $\lambda _ { 1 } = \lambda _ { 2 } = 1 0 . 0$ and use the Adam [61] optimizer for gradient descent. We set $s h = 0$ in practice and the learning rate to 1e â 3 to optimize the opacity and feature properties of 3D gaussians.
+
+<!-- image-->  
+Fig. 4: Qualitative comparision between our methods and ClipFace [60]. On the one hand, we can see that our methods successfully tranfer fine-grained makeup details to the target avatars, while ClipFace totally fail to maintain the identity and makeup information. On the other hand, our methods preserves the identity better than ClipFace. The ClipFace generates characters look like the avatars in the reference image, while our method preserve the identity of the target avatar.
+
+## B. Evaluation Settings
+
+Datasets. We utilize two datasets for evaluation, i.e., NeRSemble [62] dataset and LADN [63] dataset to obtain reconstructed 3D avatars and reference makeup images, respectively.
+
+â¢ NeRSemble [62] records 11 video sequences for each avatar. Each frame of the sequences contains 16 camera views surrounding the avatar. The first 10 sequences are obtained by asking the participants to perform the expression following the instructions. Particularly, the $1 1 ^ { \hat { t } h }$ video sequence is a free-play sequence. We sample expressions in the first 10 video sequences for training and the $1 1 ^ { t h }$ sequence for evaluation. During evaluation, we select 9 avatars from the dataset and reconstruct using GaussianAvatars [64] methods.
+
+<table><tr><td rowspan="2"></td><td colspan="4">multi-view DINO-Iâ</td><td colspan="4">animation DINO-Iâ</td></tr><tr><td> $0 ^ { \circ }$ </td><td> $4 5 ^ { \circ }$ </td><td> $- 4 5 ^ { \circ }$ </td><td>average</td><td> $0 ^ { \circ }$ </td><td> $4 5 ^ { \circ }$ </td><td> $- 4 5 ^ { \circ }$ </td><td>average</td></tr><tr><td>ClipFace [60]</td><td>0.381</td><td>0.339</td><td>0.338</td><td>0.353</td><td>0.363</td><td>0.316</td><td>0.332</td><td>0.337</td></tr><tr><td>Ours</td><td>0.726</td><td>0.620</td><td>0.626</td><td>0.656</td><td>0.695</td><td>0.590</td><td>0.596</td><td>0.627</td></tr></table>
+
+(a) Multi-view DINO-I metric and Animation DINO-I metric.
+<table><tr><td></td><td>FIDâ</td><td>KIDâ</td><td>GPT-4o(MS)â</td><td>GPT-4o(MQ)â</td><td>GPT-4o(IP)â</td></tr><tr><td>ClipFace</td><td>160.6</td><td>0.155</td><td>3.64</td><td>2.38</td><td>3.48</td></tr><tr><td>Ours</td><td>152.0</td><td>0.130</td><td>4.04</td><td>3.78</td><td>4.98</td></tr></table>
+
+(b) FID, KID and AIME metric.
+
+TABLE I: Quantitative comparison with the baseline. We can see that AvatarMakeup surpassed the existing baselines in numerical results, demonstrating the superiority of our methods in makeup quality.
+<table><tr><td rowspan="2"></td><td colspan="4">DINO-Iâ</td><td colspan="4">CLIP-Iâ</td></tr><tr><td> $0 ^ { \circ }$ </td><td> $4 5 ^ { \circ }$ </td><td> $- 4 5 ^ { \circ }$ </td><td>average</td><td> $0 ^ { \circ }$ </td><td> $4 5 ^ { \circ }$ </td><td> $- 4 5 ^ { \circ }$ </td><td>average</td></tr><tr><td>Vanilla</td><td>0.698</td><td>0.585</td><td>0.591</td><td>0.625</td><td>0.656</td><td>0.608</td><td>0.617</td><td>0.627</td></tr><tr><td>w/o Coherent Duplication</td><td>0.700</td><td>0.568</td><td>0.572</td><td>0.613</td><td>0.644</td><td>0.606</td><td>0.592</td><td>0.614</td></tr><tr><td>w/o Detail Refinement</td><td>0.692</td><td>0.582</td><td>0.579</td><td>0.618</td><td>0.634</td><td>0.595</td><td>0.588</td><td>0.606</td></tr><tr><td>full</td><td>0.726</td><td>0.620</td><td>0.626</td><td>0.656</td><td>0.678</td><td>0.619</td><td>0.626</td><td>0.641</td></tr></table>
+
+(a) Multi-view Makeup Transfer.
+<table><tr><td></td><td colspan="4">DINO-Iâ</td><td colspan="4">CLIP-Iâ</td></tr><tr><td></td><td> $0 ^ { \circ }$ </td><td> $4 5 ^ { \circ }$ </td><td> $- 4 5 ^ { \circ }$ </td><td>average</td><td> $0 ^ { \circ }$ </td><td> $4 5 ^ { \circ }$ </td><td> $- 4 5 ^ { \circ }$ </td><td>average</td></tr><tr><td>Vanilla</td><td>0.671</td><td>0.561</td><td>0.569</td><td>0.600</td><td>0.644</td><td>0.612</td><td>0.602</td><td>0.619</td></tr><tr><td>w/o Coherent Duplication</td><td>0.672</td><td>0.548</td><td>0.554</td><td>0.591</td><td>0.640</td><td>0.606</td><td>0.591</td><td>0.612</td></tr><tr><td>w/o Detail Refinement</td><td>0.658</td><td>0.553</td><td>0.550</td><td>0.587</td><td>0.625</td><td>0.594</td><td>0.579</td><td>0.600</td></tr><tr><td>full</td><td>0.695</td><td>0.590</td><td>0.596</td><td>0.627</td><td>0.664</td><td>0.621</td><td>0.610</td><td>0.632</td></tr></table>
+
+(b) Animation Makeup Transfer.  
+TABLE II: We conducted ablation experiments on each module. The results demonstrate that each module contributes effectively to the overall makeup effects.
+
+â¢ LADN [63] contains real-world makeup images containing simple and complicated makeup patterns. We randomly select 50 images as reference makeup images for quantitative comparison.
+
+Criteria. Since this is the first work to achieve makeup transfer to 3D Gaussian avatars, we adapt evaluation criteria from relevant 3D Gaussian editing and 2D image editing methods, $e . g .$ , , Stable-Makeup [17] and ClipFace [60]. Specifically, we use the following metrics to evaluate makeup transfer quality and identity preservation:
+
+â¢ DINO-I [65]: It utilizes a DINO backbone to extract dense features and calculates the cosine similarity between the features of the target image and the makeup image.
+
+â¢ Frechet Inception Distance (FID) [66] Â´ : It quantifies the similarity between the generated and real image distributions using the Frechet distance in the feature Â´ space of a pretrained Inception-v3 network [67].
+
+â¢ Kernel Inception Distance (KID) [68]: It measures the squared Maximum Mean Discrepancy (MMD) between feature distributions using an unbiased polynomial kernel.
+
+â¢ AI-Assisted Makeup Evaluation (AIME). This proposed metric leverages advanced Multimodal Large Language Models (MLLMs), e.g., GPT-4o [69], to provide a nuanced assessment of both makeup transfer quality and identity preservation. Specifically, we concatenate the original rendered image, the reference makeup image, and the makeup-transferred image together in the width dimension into one example. Subsequently, we feed the example to gpt-4o and ask it to score it from 1 to 5 in the following aspects: 1) makeup similarity to judge the fidelity of the generated makeup to the reference makeup ; 2) makeup quality to evaluate the makeup transfer quality;
+
+3) identity preservation to evaluate structural consistency with the original avatars.
+
+For both FID and KID, we calculate the similarity between the reference makeup images and the rendered images from the target avatars. We conduct experiments to evaluate the quanti-
+
+Front View
+
+Side View
+
+Front View
+
+Side View
+
+Front View
+
+Side View
+
+<!-- image-->  
+Avatars  
+Ref -Makeup  
+AvatarMakeup  
+GaussianEditor  
+TIP-Editor
+
+Fig. 5: Qualitative Comparison. GaussianEditor [20] alters the face color but generates low-quality eye shadow. TIP-Editor [22] struggles to preserve the identity of the original avatars while generating incorrect makeup colors, such as the mismatched lips color in the first row and the face color in the second row. In contrast, AvatarMakeup accurately transfers makeup details while preserving the avatarâs identity. Besides, AvatarMakeup supports animations, which are not available in the baseline methods.
+
+tative results of 3D makeup transfer under two settings: Multiview Makeup Transfer to evaluate the makeup consistency under multi-view condition, and Animation Makeup Transfer to evaluate makeup consistency under both multi-expression and multi-view conditions. For the former, we evaluate the results under canonical expression for each avatar rendered from three specific views, with azimuth angles set to 45Â°, 0Â°, and -45Â°, and the elevation angle fixed at 0Â°. For the latter, we randomly sample 5 FLAME parameters on the 11th video sequence in NeRSemble dataset for each subject. In this case, the facial expressions are randomly sampled from a distribution distinct from the training set, representing novel, unseen expressions during evaluation. For each expression, we render images from the same viewpoints as in the Multi-view Makeup configuration. We conduct qualitative comparisons to demonstrate the high makeup quality of our method.
+
+Baselines. We evaluate quantitative and qualitative results using different baselines. For quantitative results, we
+
+<!-- image-->  
+Reference Makeup  
+Different Viewpoints with Various Expressions
+
+Fig. 6: Additional makeup results generated using AvatarMakeup. Given a real-world reference makeup, our methods can transfer the makeup pattern to the target 3D avatars with fine-grained details, while maintaining the original identity. Besides, under animation and multiview condition, the makeup maintains high-quality with negligible artifacts. Zooming in is recommended to observe the high-resolution details.
+
+train AvatarMakeup and ClipFace [60]. ClipFace generates 3D avatars by combining a StyleGAN-based network and FLAME-based mesh. The method enables avatars editing by minimizing the CLIP loss between the target avatars and the text instructions. Additionally, avatars can be animated by FLAME parameters. To achieve makeup transfer, we first employ GAN inversion to train ClipFace with specific avatars. We then utilize the CLIP loss between the target avatars and the reference makeup images to optimize the avatars. Since the FLAME parameter are constant during optimization, ClipFace can preserve the avatarsâ geometric structure.
+
+For qualitative evaluation, we choose GaussianEditor [20] and TIP-Editor [22] as the baseline methods. We do not compare with DGE [21] since the method does not generate reasonable effects in our experiments. Crucially, the baseline methods and our methods use different conditions to control the transferring process. Our method takes the reference makeup images as the condition. GaussianEditor uses textural instructions, and TIP-Editor achieves makeup transfer using both text and reference images as condition. For a fair comparison, we preprocess the baselines before evaluation as follows:
+
+â¢ GaussianEditor. Given textual instructions, GaussianEditor edit 3D gaussians using image editing methods such as Instruct Pixel2pixel [70]. Therefore, we use GPT-4o [71] to generate textual descriptions for the reference makeup. Specifically, for each reference makeup image, we input the image and the prompt âdescribe the detailed facial makeup in the image in one sentenceâ to gpt-4o. We then use the output sentence by gpt-4o, along with the rendered images of the target avatars achieve to apply GaussianEditor to generate makeup transfer results.
+
+â¢ TIP-Editor. TIP-Editor combines textual instructions and image condition to generate both semantic and lowlevel features, allowing for accurate editing. Given the rendered images denoted as <src> and reference makeup images denoted as <ref>, we integrate the images into the following sentence âa photo of a <src> person with <ref> makeup styleâ as prompt. We then input the prompt into TIP-Editor to execute makeup transfer.
+
+## C. Comparisons
+
+Qualitative Results. The qualitative experiments results are shown in Fig. 5. We compare our methods with GaussianEditor and TIP-Editor by displaying makeup effects in the front view and a randomly sampled view. Our method shows superiority in two aspects. On the one hand, our results exhibit high-quality makeup transfer results. We can see that in the third row, GaussianEditor does not transfer the eye shadow and alters the face color, and TIP-Editor generates incorrect lip color. In the fifth row, GaussianEditor generates very light makeup, and TIP-Editor generates noisy artifacts, destroying the makeup pattern. In contrast, AvatarMakeup generates delicate makeup without artifacts. On the other hand, our results maintain the avatarâs identity. For example, all the examples show that TIP-Editor tends to generate the identity of the reference makeup. AvatarMakeup preserves the identity of the original avatars. In the comparison between AvatarMakeup and ClipFace shown in Fig. 4, we can see that ClipFace diffuses makeup to all facial regions while our methods accurately align the makeup with specific facial regions. Moreover, GaussianEditor and TIP-Editor can handle only static avatars. We further display more generated results under multiview condition and animation conditions, shown in Fig. 6.
+
+Quantitative Results. We conduct quantitative experiments by calculating the four metrics comparing our methods and ClipFace [60]. The results are shown in Tab I. We can see that AvatarMakeup outperforms ClipFace in the DINO-I metric. Remarkably, AvatarMakeup achieves 65.6% in DINO-I metric, which is a 30.3% huge improvement than ClipFace, indicating that AvatarMakeup generates high-fidelity makeup to reference makeup. Besides, AvatarMakeup scores lower FID(152.0) and KID(0.130) than ClipFace. This reflects that our method generates more realistic makeup images close to real-world images. Beyond traditional comparisons using visual metrics, we further evaluate our AIME metric to judge makeup transfer with human preference. The results show that in all three aspects, AvatarMakeup gets higher scores than ClipFace. Notably, Avatar Makeup has 3.78 MQ quality, compared to 2.38 in ClipFace. The improvement demonstrates that AvatarMakeup generates high-quality makeup effects. Overall, the quantitative results demonstrate that AvatarMakeup has superior makeup transfer quality than state-of-the-art methods.
+
+## D. Ablation Study
+
+We first explore the effect of coherent duplicate modules by removing the module while keeping the rest of the experimental setup. Secondly, we explore the effect of the coarse stage. Concretely, we evaluate the makeup on the avatars optimized without the refinement stage. We design a vanilla version that directly optimizes the avatars using guidance images generated by Stable-Makeup. Table II shows the ablation results. The results show lower CLIP-I score(-3.4% in Multi-view Makeup Transfer(MT) and -2.4% in Animation MT) and DINO-I score(-2.6% in Multi-view MT and -2.3% in Animation MT) after deleting the Coherent Duplication module. The numerical decrease exists when deleting the Detail Refinement module or in the Vanilla version, which demonstrates that every module is effective in generating consistent and high-quality makeup effects.
+
+## VI. CONCLUSION
+
+We proposed AvatarMakeup, a 3D makeup transfer method that ensures consistent appearance during animations, preserves identity, and enables fine detail control. By combining a pretrained diffusion model with a coarse-to-fine strategy, our approach uses Coherent Duplication to achieve multiview and dynamic consistency and a Refinement Module for enhanced makeup quality. Experimental results demonstrate that AvatarMakeup outperforms existing methods in both quality and consistency, providing a robust solution for realistic 3D avatar customization.
+
+[1] B. Kerbl, G. Kopanas, T. Leimkuhler, and G. Drettakis, â3d gaussian Â¨ splatting for real-time radiance field rendering,â ACM Transactions on Graphics (ToG), vol. 42, no. 4, pp. 1â14, 2023.
+
+[2] S. Qian, T. Kirschstein, L. Schoneveld, D. Davoli, S. Giebenhain, and M. NieÃner, âGaussianavatars: Photorealistic head avatars with rigged 3d gaussians,â in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), June 2024, pp. 20 299â20 309.
+
+[3] Z. Shao, Z. Wang, Z. Li, D. Wang, X. Lin, Y. Zhang, M. Fan, and Z. Wang, âSplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting,â in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024.
+
+[4] M. Khan, M. Jia, X. Zhang, E. Yu, and K. Musial-Gabrys, âInstaface: Identity-preserving facial editing with single image inference,â arXiv preprint arXiv:2502.20577, 2025.
+
+[5] T. Li, R. Qian, C. Dong, S. Liu, Q. Yan, W. Zhu, and L. Lin, âBeautygan: Instance-level facial makeup transfer with deep generative adversarial network,â in Proceedings of the 26th ACM international conference on Multimedia, 2018, pp. 645â653.
+
+[6] W. Jiang, S. Liu, C. Gao, J. Cao, R. He, J. Feng, and S. Yan, âPsgan: Pose and expression robust spatial-aware gan for customizable makeup transfer,â in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2020, pp. 5194â5202.
+
+[7] H. Deng, C. Han, H. Cai, G. Han, and S. He, âSpatially-invariant stylecodes controlled makeup transfer,â in Proceedings of the IEEE/CVF Conference on computer vision and pattern recognition, 2021, pp. 6549â 6557.
+
+[8] T. Nguyen, A. T. Tran, and M. Hoai, âLipstick ainât enough: beyond color matching for in-the-wild makeup transfer,â in Proceedings of the IEEE/CVF Conference on computer vision and pattern recognition, 2021, pp. 13 305â13 314.
+
+[9] J. Xiang, J. Chen, W. Liu, X. Hou, and L. Shen, âRamgan: Region attentive morphing gan for region-level makeup transfer,â in European Conference on Computer Vision. Springer, 2022, pp. 719â735.
+
+[10] Q. Gu, G. Wang, M. T. Chiu, Y.-W. Tai, and C.-K. Tang, âLadn: Local adversarial disentangling network for facial makeup and de-makeup,â in Proceedings of the IEEE/CVF International conference on computer vision, 2019, pp. 10 481â10 490.
+
+[11] S. Liu, W. Jiang, C. Gao, R. He, J. Feng, B. Li, and S. Yan, âPsgan++: robust detail-preserving makeup transfer and removal,â IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 44, no. 11, pp. 8538â8551, 2021.
+
+[12] Z. Wan, H. Chen, J. An, W. Jiang, C. Yao, and J. Luo, âFacial attribute transformers for precise and robust makeup transfer,â in Proceedings of the IEEE/CVF winter conference on applications of computer vision, 2022, pp. 1717â1726.
+
+[13] Q. Yan, C. Guo, J. Zhao, Y. Dai, C. C. Loy, and C. Li, âBeautyrec: Robust, efficient, and component-specific makeup transfer,â in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2023, pp. 1102â1110.
+
+[14] Z. Sun, Y. Chen, and S. Xiong, âSsat ++: A semantic-aware and versatile makeup transfer network with local color consistency constraint,â IEEE Transactions on Neural Networks and Learning Systems, 2023.
+
+[15] R. Kips, P. Gori, M. Perrot, and I. Bloch, âCa-gan: Weakly supervised color aware gan for controllable makeup transfer,â in Computer Visionâ ECCV 2020 Workshops: Glasgow, UK, August 23â28, 2020, Proceedings, Part III 16. Springer, 2020, pp. 280â296.
+
+[16] C. Yang, W. He, Y. Xu, and Y. Gao, âElegant: Exquisite and locally editable gan for makeup transfer,â in European Conference on Computer Vision. Springer, 2022, pp. 737â754.
+
+[17] Y. Zhang, L. Wei, Q. Zhang, Y. Song, J. Liu, H. Li, X. Tang, Y. Hu, and H. Zhao, âStable-makeup: When real-world makeup transfer meets diffusion model,â 2024. [Online]. Available: https: //arxiv.org/abs/2403.07764
+
+[18] C. Bao, Y. Zhang, Y. Li, X. Zhang, B. Yang, H. Bao, M. Pollefeys, G. Zhang, and Z. Cui, âGeneavatar: Generic expression-aware volumetric head avatar editing from a single image,â in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), June 2024, pp. 8952â8963.
+
+[19] J. Sun, X. Wang, L. Wang, X. Li, Y. Zhang, H. Zhang, and Y. Liu, âNext3d: Generative neural texture rasterization for 3d-aware head avatars,â in CVPR, 2023.
+
+[20] Y. Chen, Z. Chen, C. Zhang, F. Wang, X. Yang, Y. Wang, Z. Cai, L. Yang, H. Liu, and G. Lin, âGaussianeditor: Swift and controllable 3d editing with gaussian splatting,â in Proceedings of the IEEE/CVF
+
+conference on computer vision and pattern recognition, 2024, pp. 21 476â21 485.
+
+[21] M. Chen, I. Laina, and A. Vedaldi, âDge: Direct gaussian 3d editing by consistent multi-view editing,â arXiv preprint arXiv:2404.18929, 2024.
+
+[22] J. Zhuang, D. Kang, Y.-P. Cao, G. Li, L. Lin, and Y. Shan, âTip-editor: An accurate 3d editor following both text-prompts and image-prompts,â ACM Transactions on Graphics (TOG), vol. 43, no. 4, pp. 1â12, 2024.
+
+[23] T. Li, T. Bolkart, M. J. Black, H. Li, and J. Romero, âLearning a model of facial shape and expression from 4D scans,â ACM Transactions on Graphics, (Proc. SIGGRAPH Asia), vol. 36, no. 6, pp. 194:1â194:17, 2017. [Online]. Available: https://doi.org/10.1145/3130800.3130813
+
+[24] M. Loper, N. Mahmood, J. Romero, G. Pons-Moll, and M. J. Black, âSmpl: A skinned multi-person linear model,â in Seminal Graphics Papers: Pushing the Boundaries, Volume 2, 2023, pp. 851â866.
+
+[25] J. Thies, M. Zollhofer, M. Stamminger, C. Theobalt, and M. NieÃner, âFace2face: Real-time face capture and reenactment of rgb videos,â in Proceedings of the IEEE conference on computer vision and pattern recognition, 2016, pp. 2387â2395.
+
+[26] S. Saito, Z. Huang, R. Natsume, S. Morishima, A. Kanazawa, and H. Li, âPifu: Pixel-aligned implicit function for high-resolution clothed human digitization,â in Proceedings of the IEEE/CVF international conference on computer vision, 2019, pp. 2304â2314.
+
+[27] S. Saito, T. Simon, J. Saragih, and H. Joo, âPifuhd: Multi-level pixelaligned implicit function for high-resolution 3d human digitization,â in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, 2020, pp. 84â93.
+
+[28] Z. Huang, Y. Xu, C. Lassner, H. Li, and T. Tung, âArch: Animatable reconstruction of clothed humans,â in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2020, pp. 3093â3102.
+
+[29] T. He, Y. Xu, S. Saito, S. Soatto, and T. Tung, âArch++: Animationready clothed human reconstruction revisited,â in Proceedings of the IEEE/CVF international conference on computer vision, 2021, pp. 11 046â11 056.
+
+[30] Z. Chai, T. Zhang, T. He, X. Tan, T. Baltrusaitis, H. Wu, R. Li, S. Zhao, C. Yuan, and J. Bian, âHiface: High-fidelity 3d face reconstruction by learning static and dynamic details,â in Proceedings of the IEEE/CVF International Conference on Computer Vision, 2023, pp. 9087â9098.
+
+[31] C. Guo, T. Jiang, X. Chen, J. Song, and O. Hilliges, âVid2avatar: 3d avatar reconstruction from videos in the wild via self-supervised scene decomposition,â in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2023, pp. 12 858â12 868.
+
+[32] B. Mildenhall, P. P. Srinivasan, M. Tancik, J. T. Barron, R. Ramamoorthi, and R. Ng, âNerf: Representing scenes as neural radiance fields for view synthesis,â Communications of the ACM, vol. 65, no. 1, pp. 99â106, 2021.
+
+[33] M. IsÂ¸Ä±k, M. Runz, M. Georgopoulos, T. Khakhulin, J. Starck, Â¨ L. Agapito, and M. NieÃner, âHumanrf: High-fidelity neural radiance fields for humans in motion,â ACM Transactions on Graphics (TOG), vol. 42, no. 4, pp. 1â12, 2023. [Online]. Available: https://doi.org/10.1145/3592415
+
+[34] T. Jiang, X. Chen, J. Song, and O. Hilliges, âInstantavatar: Learning avatars from monocular video in 60 seconds,â in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2023, pp. 16 922â16 932.
+
+[35] G. Gafni, J. Thies, M. Zollhofer, and M. NieÃner, âDynamic neural radiance fields for monocular 4d facial avatar reconstruction,â in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2021, pp. 8649â8658.
+
+[36] P.-W. Grassal, M. Prinzler, T. Leistner, C. Rother, M. NieÃner, and J. Thies, âNeural head avatars from monocular rgb videos,â in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), June 2022, pp. 18 653â18 664.
+
+[37] Y. Zheng, V. F. Abrevaya, M. C. Buhler, X. Chen, M. J. Black, and Â¨ O. Hilliges, âIm avatar: Implicit morphable head avatars from videos,â in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2022, pp. 13 545â13 555.
+
+[38] Y. Hong, B. Peng, H. Xiao, L. Liu, and J. Zhang, âHeadnerf: A real-time nerf-based parametric head model,â in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2022, pp. 20 374â20 384.
+
+[39] W. Zielonka, T. Bolkart, and J. Thies, âInstant volumetric head avatars,â in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2023, pp. 4574â4584.
+
+[40] T. Muller, A. Evans, C. Schied, and A. Keller, âInstant neural graphics Â¨ primitives with a multiresolution hash encoding,â ACM Transactions on Graphics (ToG), vol. 41, no. 4, pp. 1â15, 2022.
+
+[41] H. Dhamo, Y. Nie, A. Moreau, J. Song, R. Shaw, Y. Zhou, and E. Perez- Â´ Pellitero, âHeadgas: Real-time animatable head avatars via 3d gaussian splatting,â in European Conference on Computer Vision. Springer, 2024, pp. 459â476.
+
+[42] S. Giebenhain, T. Kirschstein, M. Runz, L. Agapito, and M. NieÃner, Â¨ âNpga: Neural parametric gaussian avatars,â in SIGGRAPH Asia 2024 Conference Papers, 2024, pp. 1â11.
+
+[43] R. Rombach, A. Blattmann, D. Lorenz, P. Esser, and B. Ommer, âHighresolution image synthesis with latent diffusion models,â 2021.
+
+[44] N. Ruiz, Y. Li, V. Jampani, Y. Pritch, M. Rubinstein, and K. Aberman, âDreambooth: Fine tuning text-to-image diffusion models for subjectdriven generation,â in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, 2023, pp. 22 500â22 510.
+
+[45] L. Zhang, A. Rao, and M. Agrawala, âAdding conditional control to text-to-image diffusion models,â 2023.
+
+[46] A. Hertz, R. Mokady, J. Tenenbaum, K. Aberman, Y. Pritch, and D. Cohen-Or, âPrompt-to-prompt image editing with cross attention control,â arXiv preprint arXiv:2208.01626, 2022.
+
+[47] S. Zhao, D. Chen, Y.-C. Chen, J. Bao, S. Hao, L. Yuan, and K.-Y. K. Wong, âUni-controlnet: All-in-one control to text-to-image diffusion models,â Advances in Neural Information Processing Systems, 2023.
+
+[48] C. Wei, Z. Xiong, W. Ren, X. Du, G. Zhang, and W. Chen, âOmniedit: Building image editing generalist models through specialist supervision,â in The Thirteenth International Conference on Learning Representations, 2024.
+
+[49] R. He, K. Ma, L. Huang, S. Huang, J. Gao, X. Wei, J. Dai, J. Han, and S. Liu, âFreeedit: Mask-free reference-based image editing with multimodal instruction,â arXiv preprint arXiv:2409.18071, 2024.
+
+[50] X. Tian, W. Li, B. Xu, Y. Yuan, Y. Wang, and H. Shen, âMige: A unified framework for multimodal instruction-based image generation and editing,â arXiv preprint arXiv:2502.21291, 2025.
+
+[51] J.-Y. Zhu, T. Park, P. Isola, and A. A. Efros, âUnpaired image-to-image translation using cycle-consistent adversarial networks,â in Proceedings of the IEEE international conference on computer vision, 2017, pp. 2223â2232.
+
+[52] H. Chang, J. Lu, F. Yu, and A. Finkelstein, âPairedcyclegan: Asymmetric style transfer for applying and removing makeup,â in Proceedings of the IEEE conference on computer vision and pattern recognition, 2018, pp. 40â48.
+
+[53] S. Hu, X. Liu, Y. Zhang, M. Li, L. Y. Zhang, H. Jin, and L. Wu, âProtecting facial privacy: Generating adversarial identity masks via stylerobust makeup transfer,â in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2022, pp. 15 014â15 023.
+
+[54] I. J. Goodfellow, J. Pouget-Abadie, M. Mirza, B. Xu, D. Warde-Farley, S. Ozair, A. Courville, and Y. Bengio, âGenerative adversarial nets,â in Proceedings of the 27th International Conference on Neural Information Processing Systems - Volume 2, ser. NIPSâ14. Cambridge, MA, USA: MIT Press, 2014, p. 2672â2680.
+
+[55] J. Ho, A. Jain, and P. Abbeel, âDenoising diffusion probabilistic models,â in Proceedings of the 34th International Conference on Neural Information Processing Systems, ser. NIPS â20. Red Hook, NY, USA: Curran Associates Inc., 2020.
+
+[56] A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal, G. Sastry, A. Askell, P. Mishkin, J. Clark, G. Krueger, and I. Sutskever, âLearning transferable visual models from natural language supervision,â 2021. [Online]. Available: https://arxiv.org/abs/2103.00020
+
+[57] B. Poole, A. Jain, J. T. Barron, and B. Mildenhall, âDreamfusion: Textto-3d using 2d diffusion,â arXiv, 2022.
+
+[58] Y. Zhong, X. Zhang, Y. Zhao, and Y. Wei, âDreamlcm: Towards high quality text-to-3d generation via latent consistency model,â in Proceedings of the 32nd ACM International Conference on Multimedia, ser. MM â24. New York, NY, USA: Association for Computing Machinery, 2024, p. 1731â1740. [Online]. Available: https://doi.org/10.1145/3664647.3680709
+
+[59] C. Yu, C. Gao, J. Wang, G. Yu, C. Shen, and N. Sang, âBisenet v2: Bilateral network with guided aggregation for realtime semantic segmentation,â Int. J. Comput. Vision, vol. 129, no. 11, p. 3051â3068, Nov. 2021. [Online]. Available: https: //doi.org/10.1007/s11263-021-01515-2
+
+[60] S. Aneja, J. Thies, A. Dai, and M. NieÃner, âClipface: Text-guided editing of textured 3d morphable models,â in ACM SIGGRAPH 2023 Conference Proceedings, 2023, pp. 1â11.
+
+[61] D. P. Kingma and J. Ba, âAdam: A method for stochastic optimization,â arXiv preprint arXiv:1412.6980, 2014.
+
+[62] T. Kirschstein, S. Qian, S. Giebenhain, T. Walter, and M. NieÃner, âNersemble: Multi-view radiance field reconstruction of human heads,â
+
+ACM Trans. Graph., vol. 42, no. 4, jul 2023. [Online]. Available: https://doi.org/10.1145/3592455
+
+[63] Q. Gu, G. Wang, M. T. Chiu, Y.-W. Tai, and C.-K. Tang, âLadn: Local adversarial disentangling network for facial makeup and de-makeup,â 2019. [Online]. Available: https://arxiv.org/abs/1904.11272
+
+[64] S. Qian, T. Kirschstein, L. Schoneveld, D. Davoli, S. Giebenhain, and M. NieÃner, âGaussianavatars: Photorealistic head avatars with rigged 3d gaussians,â in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2024, pp. 20 299â20 309.
+
+[65] M. Oquab, T. Darcet, T. Moutakanni, H. V. Vo, M. Szafraniec, V. Khalidov, P. Fernandez, D. Haziza, F. Massa, A. El-Nouby, R. Howes, P.-Y. Huang, H. Xu, V. Sharma, S.-W. Li, W. Galuba, M. Rabbat, M. Assran, N. Ballas, G. Synnaeve, I. Misra, H. Jegou, J. Mairal, P. Labatut, A. Joulin, and P. Bojanowski, âDinov2: Learning robust visual features without supervision,â 2023.
+
+[66] M. Heusel, H. Ramsauer, T. Unterthiner, B. Nessler, and S. Hochreiter, âGans trained by a two time-scale update rule converge to a local nash equilibrium,â Advances in neural information processing systems, vol. 30, 2017.
+
+[67] C. Szegedy, V. Vanhoucke, S. Ioffe, J. Shlens, and Z. Wojna, âRethinking the inception architecture for computer vision,â in Proceedings of the IEEE conference on computer vision and pattern recognition, 2016, pp. 2818â2826.
+
+[68] M. Binkowski, D. J. Sutherland, M. Arbel, and A. Gretton, âDemysti- Â´ fying mmd gans,â arXiv preprint arXiv:1801.01401, 2018.
+
+[69] A. Hurst, A. Lerer, A. P. Goucher, A. Perelman, A. Ramesh, A. Clark, A. Ostrow, A. Welihinda, A. Hayes, A. Radford et al., âGpt-4o system card,â arXiv preprint arXiv:2410.21276, 2024.
+
+[70] T. Brooks, A. Holynski, and A. A. Efros, âInstructpix2pix: Learning to follow image editing instructions,â in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, 2023, pp. 18 392â18 402.
+
+[71] OpenAI, J. Achiam, and e. a. Steven Adler, âGpt-4 technical report,â 2024. [Online]. Available: https://arxiv.org/abs/2303.08774

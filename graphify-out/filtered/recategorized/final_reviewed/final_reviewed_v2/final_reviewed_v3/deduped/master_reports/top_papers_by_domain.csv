@@ -1,0 +1,61 @@
+﻿rank,domain,year,label,source_file,degree,alias_count
+1,SLAM,2026,FeatureSLAM: Feature-Enriched 3D Gaussian Splatting SLAM in Real Time,2601.05738.md,8,1
+2,SLAM,2024,How NeRFs and 3D Gaussian Splatting are Reshaping SLAM: a Survey,2402.13255.md,7,0
+3,SLAM,2025,MCN-SLAM: Multi-Agent Collaborative Neural SLAM with Hybrid Implicit Neural Scene Representation,2506.18678.md,6,0
+4,SLAM,2023,GI-SLAM Gaussian-Inertial SLAM,0050_[SLAM]_GI-SLAM Gaussian-Inertial SLAM.md,5,1
+5,SLAM,2024,Customizable Perturbation Synthesis for Robust SLAM Benchmarking,2402.08125.md,5,0
+6,SLAM,2024,From Perfect to Noisy World Simulation: Customizable Embodied Multi-modal Perturbations for SLAM Robustness Benchmarking,2406.16850.md,5,0
+7,SLAM,2026,"Towards Next-Generation SLAM: A Survey on 3DGS-SLAM Focusing on Performance, Robustness, and Future Directions",2602.04251.md,5,0
+8,SLAM,2025,VTGaussian-SLAM RGBD SLAM for Large Scale Scenes with Splatting View-Tied 3D,0062_[SLAM]_VTGaussian-SLAM RGBD SLAM for Large Scale Scenes with Splatting View-Tied 3D.md,5,0
+9,SLAM,2026,VarSplat: Uncertainty-aware 3D Gaussian Splatting for Robust RGB-D SLAM,2603.09673.md,4,1
+10,SLAM,2024,SLAM3R: Real-Time Dense Scene Reconstruction from Monocular RGB Videos,2412.09401v3 (2).md,4,0
+11,SLAM,2024,GLC-SLAM Gaussian Splatting SLAM with Efficient Loop Closure,0018_[SLAM]_GLC-SLAM Gaussian Splatting SLAM with Efficient Loop Closure.md,4,0
+12,SLAM,2024,Gaussian-SLAM Photo-realistic Dense SLAM with Gaussian Splatting,0004_[SLAM]_Gaussian-SLAM Photo-realistic Dense SLAM with Gaussian Splatting.md,4,0
+13,SLAM,2024,IG-SLAM Instant Gaussian SLAM,0013_[SLAM]_IG-SLAM Instant Gaussian SLAM.md,4,0
+14,SLAM,2024,"LoopSplat Loop Closure by Registering 3D Gaussian Splats,","0014_[SLAM]_LoopSplat Loop Closure by Registering 3D Gaussian Splats,.md",4,0
+15,SLAM,2024,NeRF and Gaussian Splatting SLAM in the Wild,2412.03263.md,3,0
+16,SLAM,2025,Deblur Gaussian Splatting SLAM,2503.12572.md,3,0
+17,SLAM,2025,Large-Scale Gaussian Splatting SLAM,2505.09915.md,3,0
+18,SLAM,2025,S3LAM: Surfel Splatting SLAM for Geometrically Accurate Tracking and Mapping,2507.20854.md,3,0
+19,SLAM,2025,Gaussian-plus-SDF SLAM: High-fidelity 3D Reconstruction at 150+ fps,2509.11574.md,3,0
+20,SLAM,2025,Robust 3DGS-based SLAM via Adaptive Kernel Smoothing,2511.23221.md,3,0
+1,Robotics,2024,ActiveSplat High-Fidelity Scene Reconstruction through Active Gaussian S,0102_[Robotics]_ActiveSplat High-Fidelity Scene Reconstruction through Active Gaussian S.md,9,1
+2,Robotics,2024,Benchmarking Neural Radiance Fields for Autonomous Robots: An Overview,2405.05526.md,9,0
+3,Robotics,2023,HGS-Planner Hierarchical Planning Framework for Active Scene Reconstruct,0100_[Robotics]_HGS-Planner Hierarchical Planning Framework for Active Scene Reconstruct.md,7,1
+4,Robotics,2025,What Is The Best 3D Scene Representation for Robotics? From Geometric to Foundation Models,2512.03422.md,7,0
+5,Robotics,2024,DynamicGSG Dynamic 3D Gaussian Scene Graphs for Environment Adaptation,0140_[Robotics]_DynamicGSG Dynamic 3D Gaussian Scene Graphs for Environment Adaptation.md,5,1
+6,Robotics,2024,RT-GuIDE Real-Time Gaussian splatting for Information-Driven Explorat,0101_[Robotics]_RT-GuIDE Real-Time Gaussian splatting for Information-Driven Explorat.md,5,1
+7,Robotics,2024,3D Gaussian Splatting in Robotics: A Survey,2410.12262.md,5,0
+8,Robotics,2025,A Survey on Collaborative SLAM with 3D Gaussian Splatting,2510.23988.md,5,0
+9,Robotics,2023,GSLoc Visual Localization with 3D Gaussian Splatting,0128_[Robotics]_GSLoc Visual Localization with 3D Gaussian Splatting.md,4,1
+10,Robotics,2024,LoGS Visual Localization via Gaussian Splatting with Fewer Traini,0129_[Robotics]_LoGS Visual Localization via Gaussian Splatting with Fewer Traini.md,4,1
+11,Robotics,2023,Renderable Neural Radiance Map for Visual Navigation,2303.00304.md,4,0
+12,Robotics,2024,NeRFs in Robotics: A Survey,2405.01333.md,4,0
+13,Robotics,2024,Multi-robot autonomous 3D reconstruction using Gaussian splatting with Semantic guidance,2412.02249.md,4,0
+14,Robotics,2025,PINGS: Gaussian Splatting Meets Distance Fields within a Point-Based Implicit Neural Map,2502.05752.md,4,0
+15,Robotics,2025,Dream-SLAM Dreaming the Unseen for Active SLAM in Dynamic Environments,0117_[Robotics]_Dream-SLAM Dreaming the Unseen for Active SLAM in Dynamic Environments.md,4,0
+16,Robotics,2023,GaussNav Gaussian Splatting for Visual Navigation,0097_[Robotics]_GaussNav Gaussian Splatting for Visual Navigation.md,4,0
+17,Robotics,2023,NeRF-Enhanced Outpainting for Faithful Field-of-View Extrapolation,2309.13240.md,3,0
+18,Robotics,2024,Active Neural Mapping at Scale,2409.20276.md,3,0
+19,Robotics,2026,3DGSNav Enhancing Vision-Language Model Reasoning for Object Navigat,0116_[Robotics]_3DGSNav Enhancing Vision-Language Model Reasoning for Object Navigat.md,3,0
+20,Robotics,2025,GSVisLoc Generalizable Visual Localization for Gaussian Splatting Sce,0137_[Robotics]_GSVisLoc Generalizable Visual Localization for Gaussian Splatting Sce.md,3,0
+1,General,2024,SSR-GS Separating Specular Reflection in Gaussian Splatting,0204_[General]_SSR-GS Separating Specular Reflection in Gaussian Splatting.md,18,1
+2,General,2024,DM-CFO A Diffusion Model for Compositional 3D Tooth Generat,0209_[General]_DM-CFO A Diffusion Model for Compositional 3D Tooth Generat.md,17,1
+3,General,2021,Multimodal-Prior-Guided Importance Sampling for Hierarchical,0213_[General]_Multimodal-Prior-Guided Importance Sampling for Hierarchical.md,15,1
+4,General,2024,EmbedTalk Triplane-Free Talking Head Synthesis using Embedd,0193_[General]_EmbedTalk Triplane-Free Talking Head Synthesis using Embedd.md,14,1
+5,General,2025,FTSplat Feed-forward Triangle Splatting Network,0201_[General]_FTSplat Feed-forward Triangle Splatting Network.md,13,1
+6,General,2024,DSA-SRGS Super-Resolution Gaussian Splatting for Dynamic Sp,0207_[General]_DSA-SRGS Super-Resolution Gaussian Splatting for Dynamic Sp.md,12,1
+7,General,2024,Active View Selection with Perturbed Gaussian Ensemble for T,0197_[General]_Active View Selection with Perturbed Gaussian Ensemble for T.md,11,1
+8,General,2024,Transforming Omnidirectional RGB-LiDAR data into 3D Gaussian,0200_[General]_Transforming Omnidirectional RGB-LiDAR data into 3D Gaussian.md,10,1
+9,General,2024,Scalable Adaptation of 3D Geometric Foundation Models via We,0272_[General]_Scalable Adaptation of 3D Geometric Foundation Models via We.md,6,0
+10,General,2025,WorldMirror Universal 3D World Reconstruction with Any-Prio,0482_[General]_WorldMirror Universal 3D World Reconstruction with Any-Prio.md,6,0
+11,General,2025,GaussTwin Unified Simulation and Correction with Gaussian S,0205_[General]_GaussTwin Unified Simulation and Correction with Gaussian S.md,5,1
+12,General,2024,NVSim Novel View Synthesis Simulator for Large Scale Indoor,0454_[General]_NVSim Novel View Synthesis Simulator for Large Scale Indoor.md,4,0
+13,General,2026,Off The Grid Detection of Primitives for Feed-Forward 3D Ga,0367_[General]_Off The Grid Detection of Primitives for Feed-Forward 3D Ga.md,4,0
+14,General,2025,3D Gaussian Flats Hybrid 2D3D Photometric Scene Reconstruc,0536_[General]_3D Gaussian Flats Hybrid 2D3D Photometric Scene Reconstruc.md,3,0
+15,General,2021,Accurate and Complete Surface Reconstruction from 3D Gaussia,0556_[General]_Accurate and Complete Surface Reconstruction from 3D Gaussia.md,3,0
+16,General,2025,Chorus Multi-Teacher Pretraining for Holistic 3D Gaussian S,0358_[General]_Chorus Multi-Teacher Pretraining for Holistic 3D Gaussian S.md,3,0
+17,General,2026,FlowHOI Flow-based Semantics-Grounded Generation of Hand-Ob,0257_[General]_FlowHOI Flow-based Semantics-Grounded Generation of Hand-Ob.md,3,0
+18,General,2025,G3Splat Geometrically Consistent Generalizable Gaussian Spl,0360_[General]_G3Splat Geometrically Consistent Generalizable Gaussian Spl.md,3,0
+19,General,2024,GALA Guided Attention with Language Alignment for Open Voca,0594_[General]_GALA Guided Attention with Language Alignment for Open Voca.md,3,0
+20,General,2024,GSPlane Concise and Accurate Planar Reconstruction via Stru,0469_[General]_GSPlane Concise and Accurate Planar Reconstruction via Stru.md,3,0

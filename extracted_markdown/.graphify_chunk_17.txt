@@ -1,0 +1,12 @@
+0650_[General]_Learning Efficient and Generalizable Human Representation wi.md
+0653_[General]_MVG4D Image Matrix-Based Multi-View and Motion Generation f.md
+0662_[General]_PCR-GS COLMAP-Free 3D Gaussian Splatting via Pose Co-Regula.md
+0666_[General]_Dark-EvGS Event Camera as an Eye for Radiance Field in the.md
+0670_[General]_RTR-GS 3D Gaussian Splatting for Inverse Rendering with Rad.md
+0672_[General]_LighthouseGS Indoor Structure-aware 3D Gaussian Splatting f.md
+0675_[General]_3DGS_LSRLarge_Scale Relocation for Autonomous Driving Based.md
+0677_[General]_InterGSEdit Interactive 3D Gaussian Splatting Editing with.md
+0683_[General]_GDGS 3D Gaussian Splatting Via Geometry-Guided Initializati.md
+2506.21420.md
+2509.00433.md
+2602.20807.md

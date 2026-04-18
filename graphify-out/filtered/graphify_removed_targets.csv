@@ -1,0 +1,26 @@
+﻿id,label,file_type,coverage,reason,source_file
+metric_ate,ATE,concept,0.9679,generic_label,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+concept_reconstruction,Reconstruction,concept,0.9525,generic_label,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+metric_spl,SPL,concept,0.943,generic_label,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+concept_3d_gaussian_splatting,3D Gaussian Splatting,concept,0.9038,generic_label,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+concept_imu_integration,IMU Integration,concept,0.8943,high_doc_coverage,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+metric_iou,IoU,concept,0.8907,generic_label,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+concept_nerf,NeRF,concept,0.8717,generic_label,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+metric_accuracy,Accuracy,concept,0.7743,generic_label,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+metric_psnr,PSNR,concept,0.7138,generic_label,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+metric_ssim,SSIM,concept,0.7114,generic_label,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+metric_lpips,LPIPS,concept,0.6306,generic_label,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+category_general,General,concept,0.595,high_doc_coverage,0181_[General]_GSStream 3D Gaussian Splatting based Volumetric Scene Strea.md
+concept_slam,SLAM,concept,0.4656,generic_label,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+metric_rpe,RPE,concept,0.3931,high_doc_coverage,0009_[SLAM]_RTG-SLAM Real-time 3D Reconstruction at Scale using Gaussian Splattin.md
+concept_navigation,Navigation,concept,0.3527,generic_label,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+concept_lidar,LiDAR,concept,0.272,high_doc_coverage,0011_[SLAM]_MG-SLAM Structure Gaussian SLAM with Manhattan World Hypothesis.md
+dataset_replica,Replica,concept,0.247,high_doc_coverage,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+concept_semantic_mapping,Semantic Mapping,concept,0.1591,generic_label,0005_[SLAM]_SGS-SLAM Semantic Gaussian Splatting For Neural Dense SLAM.md
+concept_visual_localization,Visual Localization,concept,0.133,generic_label,0002_[SLAM]_Photo-SLAM Real-time Simultaneous Localization and Photorealistic Mappi.md
+metric_ate_rmse,ATE RMSE,concept,0.1295,generic_label,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+category_slam,SLAM,concept,0.0808,generic_label,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+concept_3DGS_c2,3D Gaussian Splatting,concept,0.0083,generic_label,0100_[Robotics]_HGS-Planner Hierarchical Planning Framework for Active Scene Reconstruct.md
+method_3DGS,3D Gaussian Splatting,concept,0.0071,generic_label,0047_[SLAM]_FGS-SLAM Fourier-based Gaussian Splatting for Real-time SLAM with Sparse and Dense Map.md
+metric_ATE,ATE RMSE,concept,0.0024,generic_label,0047_[SLAM]_FGS-SLAM Fourier-based Gaussian Splatting for Real-time SLAM with Sparse and Dense Map.md
+metric_SPL,SPL,concept,0.0012,generic_label,0079_[Robotics]_GaussNav Gaussian Splatting for Visual Navigation.md

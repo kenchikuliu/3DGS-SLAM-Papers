@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local runtime state
+.playwright-mcp/
+download_log.txt
+mineru_log.txt
+mineru_run_stdout.log
+mineru_run_stderr.log
+
+# Raw source corpus
+*.pdf
+
+# GitHub hard limit blockers
+2603.21055.pdf
+0359_[General]_Animate Any Character in Any World with 4D Gaussian Voxels.pdf
+0049_[SLAM]_DynaGSLAM Real-Time Gaussian-Splatting SLAM for Online Rendering, Trac.pdf

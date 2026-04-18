@@ -1,0 +1,22 @@
+0204_[General]_SSR-GS Separating Specular Reflection in Gaussian Splatting.md
+0219_[General]_HeroGS Hierarchical Guidance for Robust 3D Gaussian Splatti.md
+0226_[General]_Prune Wisely, Reconstruct Sharply Compact 3D Gaussian Splat.md
+0244_[General]_Spatial-Temporal State Propagation Autoregressive Model for.md
+0294_[General]_Radioactive 3D Gaussian Ray Tracing for Tomographic Reconstr.md
+0296_[General]_PSGS Text-driven Panorama Sliding Scene Generation via Gaus.md
+0299_[General]_Self-Supervised Slice-to-Volume Reconstruction with Gaussian.md
+0353_[General]_WorldWarp Propagating 3D Geometry with Asynchronous Video D.md
+0355_[General]_SplatBright Generalizable Low-Light Scene Reconstruction fr.md
+0358_[General]_Chorus Multi-Teacher Pretraining for Holistic 3D Gaussian S.md
+0361_[General]_FLEG Feed-Forward Language Embedded Gaussian Splatting from.md
+0373_[General]_Spherical Voronoi Directional Appearance as a Differentiabl.md
+0377_[General]_Nexels Neurally-Textured Surfels for Real-Time Novel View S.md
+0406_[General]_PEGS Physics-Event Enhanced Large Spatiotemporal Motion Rec.md
+0407_[General]_SPAGS Sparse-View Articulated Object Reconstruction from Si.md
+0410_[General]_Gradient-Driven Natural Selection for Compact 3D Gaussian Sp.md
+0417_[General]_GEN3D Generating Domain-Free 3D Scenes from a Single Image.md
+0424_[General]_Neo Real-Time On-Device 3D Gaussian Splatting with Reuse-an.md
+0427_[General]_3D Gaussian and Diffusion-Based Gaze Redirection.md
+0428_[General]_RealisticDreamer Guidance Score Distillation for Few-shot G.md
+0440_[General]_3D Gaussian Point Encoders.md
+0443_[General]_Improving Multi-View Reconstruction via Texture-Guided Gauss.md

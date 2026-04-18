@@ -1,0 +1,23 @@
+[
+  {
+    "domain": "SLAM",
+    "paper_count": 162,
+    "top_dataset": "ScanNet",
+    "top_metric": "Recall",
+    "top_concept": "Pose Graph Optimization"
+  },
+  {
+    "domain": "Robotics",
+    "paper_count": 97,
+    "top_dataset": "ScanNet",
+    "top_metric": "Recall",
+    "top_concept": "Pose Graph Optimization"
+  },
+  {
+    "domain": "General",
+    "paper_count": 514,
+    "top_dataset": "ScanNet",
+    "top_metric": "Chamfer",
+    "top_concept": "3D Gaussian Splatting (Kerbl et al. 2023)"
+  }
+]

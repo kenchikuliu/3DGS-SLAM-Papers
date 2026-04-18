@@ -1,0 +1,1730 @@
+<!-- page 1 -->
+JOURNAL OF LATEX CLASS FILES, VOL. 14, NO. 8, AUGUST 2021
+1
+A Mixed-Primitive-based Gaussian Splatting
+Method for Surface Reconstruction
+Haoxuan Qu, Yujun Cai, Hossein Rahmani, Ajay Kumar, Junsong Yuan, and Jun Liu
+Abstract—Recently, Gaussian Splatting (GS) has received a lot
+of attention in surface reconstruction. However, while 3D objects
+can be of complex and diverse shapes in the real world, existing
+GS-based methods only limitedly use a single type of splatting
+primitive (Gaussian ellipse or Gaussian ellipsoid) to represent
+object surfaces during their reconstruction. In this paper, we
+highlight that this can be insufficient for object surfaces to be
+represented in high quality. Thus, we propose a novel framework
+that, for the first time, enables Gaussian Splatting to incorporate
+multiple types of (geometrical) primitives during its surface
+reconstruction process. Specifically, in our framework, we first
+propose a compositional splatting strategy, enabling the splatting
+and rendering of different types of primitives in the Gaussian
+Splatting pipeline. In addition, we also design our framework
+with a mixed-primitive-based initialization strategy and a vertex
+pruning mechanism to further promote its surface representation
+learning process to be well executed leveraging different types
+of primitives. Extensive experiments show the efficacy of our
+framework and its accurate surface reconstruction performance.
+Index Terms—Surface reconstruction, Gaussian Splatting,
+Mixed-types of primitives
+I. INTRODUCTION
+S
+URFACE reconstruction aims to accurately reconstruct
+3D object surfaces from multi-view RGB images. It is
+a fundamental task in 3D computer vision, and it is relevant
+to various applications, such as virtual reality [1] and content
+generation [2]. In recent years, to perform accurate surface
+reconstruction, various Neural-Radiance-Field-based (NeRF-
+based) surface reconstruction methods have been proposed
+[3]–[5]. Yet, these methods typically rely on a computationally
+intensive volume rendering scheme. This often leads these
+methods to have a long training time [6], hindering their usage
+in real-world applications.
+More recently, thanks to its much shorter training time,
+Gaussian Splatting [7] has been explored as an attractive
+alternative to NeRF, and many Gaussian-Splatting-based (GS-
+based) surface reconstruction methods have been proposed
+[8]–[10]. Specifically, while Gaussian Splatting originally
+represents the 3D scene with 3D Gaussian ellipsoids, in
+surface reconstruction, to better conform to object surfaces,
+many recent GS-based methods often instead equip Gaussian
+H. Qu, H. Rahmani, and J. Liu are with Lancaster University, United
+Kingdom. Y. Cai is from The University of Queensland, Australia. A. Kumar
+is from The Hong Kong Polytechnic University, China. J. Yuan is from
+University at Buffalo, United States of America.
+E-mail: h.qu5@lancaster.ac.uk, yujun.cai@uq.edu.au, h.rahmani@lancaster.a
+c.uk, ajay.kumar@polyu.edu.hk, jsyuan@ buffalo.edu, j.liu81@lancaster.ac.uk
+Manuscript received April 19, 2021; revised August 16, 2021.
+(Corresponding author: Jun Liu.)
+Fig. 1.
+(a) Illustration of the three different types of splatting primitives
+our framework uses. (b) Illustration of object surfaces reconstructed by 2D-
+GS [9] and our MP-GS framework. As shown, only leveraging Gaussian
+ellipses as the primitive, 2D-GS can fail to accurately reconstruct object
+surfaces. In contrast, MP-GS, based on mixed types of primitives, enhances
+the reconstruction quality of object surfaces. More qualitative results are in
+Fig. 4 and supplementary. (Best viewed in color.)
+Splatting with planer Gaussian ellipses [8]–[10]. By doing so,
+these GS-based methods combine the efficiency advantage of
+Gaussian Splatting and the surface alignment advantage of
+Gaussian ellipses, and have achieved good performance in
+surface reconstruction. The GS-based surface reconstruction
+methods have then received a great deal of research attention
+[8]–[11].
+Nevertheless, we argue that the GS-based methods solely
+utilizing planer Gaussian ellipses may still be sub-optimal in
+performing accurate surface reconstruction. This is because,
+in real-life scenarios, objects can be of complex and diverse
+shapes. In this case, the Gaussian ellipse formulated by radial
+fading from a single point (as shown in Fig. 1(a)), with its
+shape only limitedly controlled by its covariance, can fail to
+consistently well-represent the surfaces of different objects
+with different shapes [12]. Indeed, as shown in Fig. 1(b), for
+2D-GS [9] as a commonly used GS-based surface reconstruc-
+tion method, only using 2D Gaussian ellipses, it can fail to
+reconstruct surfaces of different 3D objects in high quality.
+The above implies that in Gaussian Splatting, relying solely
+on point-centered Gaussian ellipses—and thus restricting the
+fading pattern to point-centered fading—can result in sub-
+optimal surface reconstruction performance.
+In fact, as shown in previous reconstruction works predating
+the advent of Gaussian Splatting [13]–[15], relying solely
+on points as 0-dimensional simplices and formulating only
+point-centered primitives is often insufficient for accurately
+representing the shapes of many objects. Instead, line-segment-
+centered and triangle-centered primitives, respectively corre-
+sponding to line segments and triangles as 1-dimensional and
+arXiv:2507.11321v1  [cs.CV]  15 Jul 2025
+
+<!-- page 2 -->
+JOURNAL OF LATEX CLASS FILES, VOL. 14, NO. 8, AUGUST 2021
+2
+2-dimensional simplices, are also beneficial. For example, as
+shown in [13], [14], to accurately represent the shape of plants,
+especially over their sub-areas with long and thin structures
+such as their twigs, the line-segment-centered primitive is often
+regarded as a more fitting representation primitive compared
+to the point-centered one. Meanwhile, as shown in [15], to
+accurately represent human joints such as the knee, rather
+than only utilizing point-centered representation primitives,
+additional utilization of line-segment-centered and triangle-
+centered primitives can generally lead to improved represen-
+tation quality.
+Inspired by the above, in addition to (point-centered) Gaus-
+sian ellipses, we aim to also design Gaussian Splatting with
+line-segment-centered and triangle-centered splatting primi-
+tives. As shown in Fig. 1(a), these two types of primitives
+can respectively perform line-segment-centered and triangle-
+centered fading. Based on such design, Gaussian Splatting
+can then simultaneously utilize mixed types of primitives
+with different geometrical shapes and various fading patterns,
+resulting in its more accurate reconstruction of object surfaces.
+However, achieving the above goal can be non-trivial due
+to the following challenges: (1) While the splatting of Gaus-
+sian ellipses can be straightforward following existing math
+formulas [16], these formulas only work for elliptical or
+ellipsoidal primitives. This leads the splatting of the other
+two non-elliptical primitives (i.e., the line-segment-centered
+and triangle-centered primitives) to be still challenging. (2)
+Meanwhile, with the mixed types of primitives, how to uti-
+lize them together effectively in Gaussian Splatting is also
+difficult. To handle the above challenges, in this work, we
+propose Mixed Primitive-based Gaussian Splatting (MP-GS),
+a novel framework that for the first time, enables Gaussian
+Splatting to seamlessly incorporate both non-elliptical and
+elliptical primitives during its surface reconstruction process.
+By collaboratively using different types of splatting primitives
+with varying shapes and diverse fading patterns, MP-GS
+enables a more accurate reconstruction of object surfaces.
+Below, we outline our MP-GS framework. Besides, in the
+rest of this work, for simplicity, we call the line-segment-
+centered primitives “Gaussian lines”, and the triangle-centered
+primitives “Gaussian triangles”.
+Overall, to perform Gaussian Splatting based on mixed
+types of primitives, MP-GS first needs to enable the splatting
+of those newly-introduced non-elliptical primitives including
+“Gaussian lines” and “Gaussian triangles”. To achieve this,
+we observe that, both the line segment and the triangle can
+be represented as the composition of their vertices. Inspired
+by this, in MP-GS, rather than performing splatting over
+the two non-elliptical primitives each as a whole which can
+be difficult, we instead propose a strategy to perform such
+splatting in a compositional manner via the following three
+steps. Specifically, given a viewpoint, to splat a “Gaussian
+line” or a “Gaussian triangle” onto its corresponding image
+plane, we first splat the primitive’s “vertices” onto the image
+plane leveraging the well-established point-based splatting
+technique [7], [16]. Next, on the image plane, we re-sketch
+the “Gaussian line” from its two splatted “vertices” or the
+“Gaussian triangle” from its three splatted “vertices”. Finally,
+in MP-GS, we design a modified α-blending function, by
+which image rendering can be performed over the re-sketched
+“Gaussian lines” and “Gaussian triangles”, in a similar manner
+as the original Gaussian ellipses.
+Through the above process, we can successfully splat and
+render “Gaussian lines” and “Gaussian triangles”. However,
+the above process alone does not fully support a mixed-
+primitive-based learning procedure for Gaussian Splatting.
+This is because, besides splatting and rendering as the key
+steps, the learning procedure of Gaussian Splatting also con-
+tains other steps. Among these steps, some of them, like
+the initialization and pruning steps, are also incompatible
+with the mixed-primitive-based nature of MP-GS. To tackle
+this issue, in MP-GS, we also propose two other designs:
+a mixed-primitive-based initialization strategy and a vertex
+pruning mechanism. By integrating these designs, our MP-GS
+framework finally enables Gaussian Splatting to be seamlessly
+and effectively performed in a mixed-primitive-based manner,
+allowing for more accurate representation and reconstruction
+of object surfaces.
+The contributions of our work are as follows. 1) We propose
+MP-GS, a novel framework for surface reconstruction. To the
+best of our knowledge, this is the first effort that enables
+Gaussian Splatting to perform splatting based on mixed types
+of primitives during its surface reconstruction process. 2) We
+introduce several designs in MP-GS to enable the splatting and
+rendering of non-elliptical primitives, while also to facilitate
+the effective execution of the other steps in Gaussian Splat-
+ting in a mixed-primitive-based manner. 3) MP-GS achieves
+superior performance on the evaluated benchmarks.
+II. RELATED WORK
+Surface reconstruction has garnered significant research at-
+tention [3]–[5], [8]–[10], [17]–[38] due to its extensive real-
+world applications. Initially, this task was primarily tackled
+using multi-view stereo techniques, broadly classified into
+depth map estimation and merging [18], [39], voxel grid
+optimization [40], [41], and feature point growing methods
+[17], [42]. Over time, the exploration of neural rendering
+[43] has gained momentum, and many NeRF-based surface
+reconstruction methods were then developed, such as NeuS
+[3], Geo-NeuS [5], and Neuralangelo [4]. Despite the increased
+effort, a key weakness of NeRF-based methods can be that,
+to perform accurate surface reconstruction, they generally
+demand a computationally heavy volume rendering procedure.
+This can suffer these methods from a long training time [6],
+[10], and thus limit their usage in many real-life scenarios.
+In light of this, more recently, motivated by the high
+efficiency of Gaussian Splatting, many GS-based surface re-
+construction methods have been proposed. Huang et al. [9]
+replaced 3D Gaussian ellipsoids with 2D Gaussian ellipses
+and introduced a ray-splat intersection scheme for perspective-
+accurate splatting. Yu et al. [19] formulated a Gaussian
+Opacity Field, enabling direct surface extraction via identi-
+fying the level-set of the formulated field. Later, Chen et
+al. [10] proposed to further enhance planar-based Gaussian
+Splatting with techniques including unbiased depth rendering
+and single/multi-view regularization.
+
+<!-- page 3 -->
+JOURNAL OF LATEX CLASS FILES, VOL. 14, NO. 8, AUGUST 2021
+3
+Existing GS-based surface reconstruction methods typically
+rely on a single type of primitive—either planar Gaussian
+ellipses or 3D Gaussian ellipsoids. Likewise, GS-based meth-
+ods in other tasks [7], [44]–[50] generally adhere to this
+convention, using only primitives with point-centered fading
+patterns, such as Gaussian ellipsoids, to represent the 3D
+scene. Differently, in this work, for the first time, we propose
+a GS-based surface reconstruction framework that supports
+mixed types of (elliptical and non-elliptical) primitives with
+diverse fading patterns and geometric shapes.
+III. BACKGROUND ON GAUSSIAN SPLATTING
+Gaussian Splatting explicitly represents the 3D scene (ob-
+ject) as a set of Gaussian distributions. In specific, in the set,
+Gaussian Splatting defines each Gaussian with the following
+properties: (1) its center point µ ∈R3, (2) its covariance
+matrix Σ ∈R3×3, (3) its opacity α ∈R1, and (4) its spherical
+harmonic (SH) coefficients cSH ∈R3×(k+1)2 representing
+its view-dependent color, where k denotes the order of SH.
+Notably, to keep the covariance matrix Σ positive semi-definite
+throughout learning, Gaussian Splatting further expresses Σ as
+Σ = RSST RT , where R ∈R3×3 and S ∈R3×3 respectively
+are the orthogonal rotation matrix and the diagonal scale
+matrix of the Gaussian.
+With each Gaussian in the set defined in the above way,
+to perform image rendering over a given viewpoint, Gaussian
+Splatting first splats (projects) each Gaussian in the set onto
+the image plane corresponding to the viewpoint following the
+formulas in [16] as:
+µ2D = (PWµ)[: 2], Σ2D = (JWΣW T JT )[: 2, : 2]
+(1)
+where µ2D ∈R2 is the center point of the projected Gaussian
+distribution, Σ2D ∈R2×2 is the covariance matrix of the
+projected Gaussian distribution, W is the viewing transfor-
+mation matrix, P is the projective transformation matrix, and
+J is the Jacobian of the affine approximation of the projective
+transformation. After that, to perform rendering on the image
+plane, Gaussian Splatting conducts α-blending. Specifically,
+taking the rendering of the RGB image as an example, for
+each pixel p of the image, Gaussian Splatting renders its RGB
+color C(p) through α-blending as:
+C(p) =
+M
+X
+i=1
+ciγi
+i−1
+Y
+j=1
+(1 −γj),
+where γi = αie−1
+2 (p−µ2D
+i
+)T (Σ2D
+i
+)−1(p−µ2D
+i
+))
+(2)
+where M is the number of projected Gaussians that overlap
+the pixel p, ci is the color of the i-th Gaussian calculated
+from the Gaussian’s SH coefficient, αi is the opacity of the
+i-th Gaussian, and µ2D
+i
+and Σ2D
+i
+respectively denote the
+center point and the covariance matrix of the i-th projected
+Gaussian. Notably, the α-blending function in Eq. 2 can be
+used for more than rendering RGB images. In fact, simply
+via replacing ci in Eq. 2 with other characteristics of the
+Gaussian, the function can also be used to render other types of
+images such as the depth map [10], [51]. Meanwhile, also note
+that, no matter using 3D Gaussian ellipsoids or 2D Gaussian
+ellipses to represent the 3D scene (object), Gaussian Splatting
+can consistently perform rendering using the above equations.
+Indeed, as mentioned in existing surface reconstruction works
+[8], [9], to perform Gaussian Splatting leveraging 2D Gaussian
+ellipses and thus enable them to better conform to object
+surfaces, a simple way (that we also follow in this work) is to
+just fix the last column of the scale matrix S for each Gaussian
+to be a zero column vector.
+IV. PROPOSED METHOD
+Given a batch of images of a 3D object along with their
+corresponding viewpoints, surface reconstruction aims to re-
+construct the object’s surface. To handle this task, recently,
+Gaussian-Splatting-based (GS-based) methods, due to their
+accuracy and fast training speed, have attracted lots of research
+attention [8]–[10]. Yet, we here argue that existing GS-based
+methods can still result in sub-optimal representations of
+object surfaces, as shown in Fig. 1(b). This is because, real-
+world 3D objects can be of complex and diverse shapes.
+However, existing GS-based methods typically rely on only a
+single type of primitive (e.g., the Gaussian ellipse) to represent
+object surfaces. This may be insufficient for capturing the full
+complexity of diverse object shapes.
+To tackle this problem, in this work, we propose a novel
+MP-GS framework, which can for the first time, enable
+Gaussian Splatting to represent object surfaces by using mixed
+types of primitives including Gaussian ellipses, “Gaussian
+lines”, and “Gaussian triangles” collaboratively. Specifically,
+in MP-GS, we first propose a compositional splatting strategy
+(as described in Sec. IV-A). Leveraging this strategy, we
+enable the splatting of the non-elliptical primitives including
+“Gaussian lines” and “Gaussian triangles”, and correspond-
+ingly allow the rendering of these primitives. After that,
+to further promote the learning procedure of MP-GS to be
+well executed in a mixed-primitive-based manner, we propose
+two additional adjustments to the typical Gaussian splatting
+pipeline in MP-GS, respectively editing its initialization and
+pruning steps (as introduced in Sec. IV-B).
+A. Compositional Splatting Strategy
+To perform mixed-primitive-based Gaussian Splatting in the
+proposed MP-GS. the pre-requisite is to enable the splatting
+of the newly introduced non-elliptical primitives, including
+“Gaussian lines” and “Gaussian triangles”. Yet, unlike the
+splatting of Gaussian ellipses, which can be done follow-
+ing established math formulas [16], the splatting of either
+“Gaussian line” or “Gaussian triangle” as a whole, with no
+existing splatting formulas, presents a challenge. To address
+this challenge, inspired by that both line segments and triangles
+can be regarded as the composition of their vertices, in MP-
+GS, we propose a compositional splatting strategy for enabling
+the splatting and subsequent rendering of “Gaussian lines” and
+“Gaussian triangles”. To ease understanding, below, we first
+explain how the (compositional) splatting and rendering of
+“Gaussian triangles” is performed in MP-GS. We then discuss
+the splatting and rendering of “Gaussian lines” at the end of
+this section. Specifically, to compositional splat and render a
+
+<!-- page 4 -->
+JOURNAL OF LATEX CLASS FILES, VOL. 14, NO. 8, AUGUST 2021
+4
+“Gaussian triangle”, we modify the typical Gaussian Splatting
+procedure of Gaussian ellipses via the following four steps.
+Step (1): Primitive formulation (definition). Firstly, dif-
+ferent from the Gaussian ellipse which only has a single center
+point, the “Gaussian triangle” has three distinct “vertices”.
+This makes defining a “Gaussian triangle” also only with a
+single center point µ to be inadequate. Considering this, to
+properly define a “Gaussian triangle”, we replace the original
+center point property µ of the Gaussian ellipse with a set
+of three parameters including µ1 ∈R3, µ2 ∈R2, and
+µ3 ∈R2. Specifically here, for the first “vertex” of the
+“Gaussian triangle”, we store its 3D coordinate directly in
+µ1. Yet, for the second and third “vertices”, we leverage the
+fact that all three vertices of a triangle lie on the same plane,
+which, in our “Gaussian triangle” case, can be fully determined
+by µ1 and the rotation matrix R of the “Gaussian triangle”.
+Exploiting this property, to avoid redundancy, we store the
+second and third “vertices” in R2 using µ2 and µ3 rather
+than using full 3D coordinates. Notably, with µ1 and R, we
+can reconstruct the 3D coordinates of the second and third
+“vertices” µ3D
+2
+∈R3 and µ3D
+3
+∈R3 from µ2 and µ3 simply
+as follows:
+µ3D
+2
+= µ1 + µ2[0] × (R[:, 0])T + µ2[1] × (R[:, 1])T
+µ3D
+3
+= µ1 + µ3[0] × (R[:, 0])T + µ3[1] × (R[:, 1])T
+(3)
+For the rest properties of the “Gaussian triangle” primi-
+tive—including the covariance matrix Σ, the SH coefficients
+cSH, and the opacity α—we retain the same definitions as
+those well-established for Gaussian ellipses. Notably, for the
+covariance matrix Σ, here to reduce parameter overhead, we
+only store a single copy of it for the “Gaussian triangle”,
+and we let all three vertices of the triangle share the same
+covariance matrix. With the properties of the “Gaussian trian-
+gle” properly defined in the above way, we describe how we
+perform splatting and rendering over it below.
+Step (2): Compositional splatting. Given a viewpoint, we
+aim to splat each “Gaussian triangle” onto the viewpoint’s
+image plane, feasibly in a compositional manner. To achieve
+this, we point out that, it is enough to splat the “vertices” of
+the “Gaussian triangle” alongside their covariance matrix onto
+the image plane in a way similar to Eq. 1 as:
+µ2D
+1
+= (PWµ1)[: 2], µ2D
+2
+= (PWµ3D
+2 )[: 2],
+µ2D
+3
+= (PWµ3D
+3 )[: 2], Σ2D = (JWΣW T JT )[: 2, : 2]
+(4)
+With these elements splatted, below, we discuss how they
+can be used to properly re-sketch and render the “Gaussian
+triangle” on the image plane.
+Step (3): Re-sketching on the image plane. After obtaining
+µ2D
+1 , µ2D
+2 , µ2D
+3 , and Σ2D, here, we aim to use them to re-
+sketch the boundary of the “Gaussian triangle” on the image
+plane. As shown in Fig. 2 from (a) to (c), this is achieved
+in two sub-steps, via first formulating the boundary ellipses
+of the “Gaussian triangle” in step (3.1), followed by pairwise
+connecting these ellipses and finally deriving the boundary of
+the “Gaussian triangle” in step (3.2).
+Step (3.1): Boundary ellipse formulation. Here, we first
+formulate the boundary ellipse centered at each “vertex” of
+the “Gaussian triangle” (i.e., the yellow ellipse centered at
+each “vertex” in Fig. 2(b)). In specific, we define the boundary
+ellipse as the ellipse whose contour is formulated by the set of
+points with Gaussian value to be
+1
+255. According to Gaussian
+Splatting [7], to avoid numerical instability, the Gaussian
+values of points outside this ellipse are truncated to zero.
+Thus, the contour of this boundary ellipse can be regarded
+as the “boundary” of its corresponding Gaussian distribution
+in Gaussian Splatting. With the three boundary ellipses of the
+“Gaussian triangle” acquired here in step (3.1), we can then
+use parts of their contours below in step (3.2) to form parts of
+the boundary of the “Gaussian triangle” (i.e., the solid-red-line
+part in Fig. 2(c)).
+Specifically, to form the contour of the boundary ellipse
+centered at the i-th “vertex” of the “Gaussian triangle”, de-
+noting µ2D
+i
+= (xµi, yµi) and Σ2D as a symmetric matrix to
+be Σ2D =
+aΣ
+bΣ
+bΣ
+cΣ
+
+, we have the contour formed as the
+following (with the derivation provided in supplementary):
+{(x, y)|gct
+i = 0}, where gct
+i =
+
+−2 ln 255 +
+cΣ(xµi −x)2 + aΣ(yµi −y)2 + bΣ(xµi −x)(yµi −y)
+aΣcΣ −(bΣ)2
+
+(5)
+Via Eq. 5, given a “Gaussian triangle”, we can form all its
+three boundary ellipses, each centered at one of its “vertex”.
+Step (3.2): Common tangent line measurement. At this
+point, we have acquired the contour functions of the three
+boundary ellipses. Yet, for the parts of the boundary of
+the “Gaussian triangle” that connect its different boundary
+ellipses, i.e., the common tangent lines between each pair of
+boundary ellipses shown by the dotted red lines in Fig. 2(c),
+we still haven’t derived them. Here, to completely re-sketch
+the “Gaussian triangle” on the image plane, we discuss how
+we calculate the common tangent line between each pair of
+boundary ellipses. Notably, though this problem may sound
+complex at first glance, we highlight that, from the dual-
+ity perspective, calculating the common tangent line of two
+(boundary) ellipses is equivalent to calculating the intersection
+of two dual (boundary) ellipses [52]. Considering this, we
+show below that the common tangent line between each pair
+of boundary ellipses can be easily calculated in O(1) time
+complexity through the following four stages:
+Firstly, for every boundary ellipse, we can easily find from
+Eq. 5 that, its corresponding contour function gct
+i
+is actually
+in the form of:
+gct
+i = aix2 + bixy + ciy2 + dix + eiy + fi = 0
+(6)
+where coefficients including ai, bi, ci, di, ei, and fi are all
+obtained through basic arithmetic operations from µ2D
+i
+and
+Σ2D
+i
+(more details are provided in supplementary).
+Next, based on gct
+i
+in the form in Eq. 6, using the duality
+derivation in projective geometry [52], we can build the dual
+
+<!-- page 5 -->
+JOURNAL OF LATEX CLASS FILES, VOL. 14, NO. 8, AUGUST 2021
+5
+Fig. 2. Illustration of the re-sketching and rendering of the “Gaussian triangle” primitive on the image plane. Specifically, as shown from (a) to (c), via steps
+(3.1) and (3.2) introduced in Sec. IV-A, we first enable the boundary of the “Gaussian triangle” to be re-sketched on the image plane. After that, as shown in
+(d), with the fading parameter γ re-defined for the “Gaussian triangle” over its different (sub-)areas, we enable the “Gaussian triangle” to properly join the
+α-blending rendering process of Gaussian Splatting. (Best viewed in color.)
+boundary ellipse function gdual
+i
+corresponding to gct
+i
+as:
+gdual
+i
+=
+ −1
+4(ei)2 + cf
+
+x2 + (1
+2diei −bifi)xy
++
+ −1
+4(di)2 + aifi
+
+y2 + (−cidi + 1
+2biei)x
++ (1
+2biei −aiei)y −1
+4(bi)2 + aici = 0
+(7)
+After formulating gdual
+i
+, to find the common tangent line be-
+tween, for example, the first and second boundary ellipses of a
+“Gaussian triangle”, we need only determine the intersections
+of their corresponding dual boundary ellipses, by solving a
+system of two binary quadratic functions which holds closed-
+form solutions:
+(
+gdual
+1
+= 0
+gdual
+2
+= 0
+(8)
+Finally, after finding the interactions of the two dual ellipses
+through solving Eq. 8, denoting (xs, ys) one such derived
+interaction point, based on the duality property [52], a common
+tangent line between the first and second boundary ellipses can
+then be derived simply as:
+xs × x + ys × y + 1 = 0
+(9)
+Notably, since Eq. 8 is a system of quadratic functions,
+through Eq. 8 and 9, we could acquire multiple plausible
+common tangent lines. In this case, to properly represent the
+boundary of the “Gaussian triangle” connecting its first and
+second boundary ellipses, as shown in Fig. 2, we select the
+common tangent line from the plausible ones that is farthest
+from the third “vertex” of the “Gaussian triangle”. Denoting
+the chosen line as xc
+s × x + yc
+s × y + 1 = 0, to facilitate the
+later rendering process, we here further derive the point of
+tangency t1
+1,2 between the chosen line and the first boundary
+ellipse via solving the following equation system:
+(
+xc
+s × x + yc
+s × y + 1 = 0
+gct
+1 = 0
+(10)
+Here, since the line is a tangent line of the ellipse, we
+definitely can get one and only one real solution from solving
+Eq. 10. Similarly, we can also derive the point of tangency
+t2
+1,2 between the line and the second boundary ellipse.
+With the above process repeated three times (i.e., performed
+over every pair of boundary ellipses), we can finally also
+acquire other points including t1
+1,3, t3
+1,3, t2
+2,3, and t3
+2,3. With
+these points, we prepare the “Gaussian triangle” on the image
+plane ready for rendering, as discussed below.
+Step (4): Rendering on the image plane. To properly
+render a “Gaussian triangle” during the α-blending rendering
+process of Gaussian Splatting, as shown in Eq. 2, we need
+to formulate its color c and its fading parameter γ. Among
+these parameters, for the color c that is independent of the
+primitive’s geometric shape, we use the same formulation for
+both the Gaussian ellipse and “Gaussian triangle” primitives,
+based on SH coefficient calculation. Yet, for γ that is shape-
+relevant and originally defined in Eq. 2 based on the shape of
+Gaussian ellipse, we need to redefine γ for it to align with the
+shape of “Gaussian triangle”. Specifically, given a pixel p of
+the image, depending on where the pixel p overlaps with the
+“Gaussian triangle”, over three different situations, we define
+its corresponding γ in three different ways below.
+To facilitate the later explanation, we first introduce some
+notations relevant to the current “Gaussian triangle”. Specifi-
+cally, we denote △the triangle formed by the three vertices
+{µ2D
+1 , µ2D
+2 , µ2D
+3 }. Besides, we denote □1,2 the quadrangle
+formed by the four vertices {µ2D
+1 , µ2D
+2 , t2
+1,2, t1
+1,2}, □1,3 the
+quadrangle formed by the four vertices {µ2D
+1 , µ2D
+3 , t3
+1,3, t1
+1,3},
+and □2,3
+the quadrangle formed by the four vertices
+{µ2D
+2 , µ2D
+3 , t3
+2,3, t2
+2,3}.
+(i) The inner situation. The first situation happens if p lies
+inside the triangle △(i.e., in the purple area in Fig. 2(d)).
+Notably, no fading is expected in this inner area and we thus
+simply set γ = α, where α is the opacity property of the
+“Gaussian triangle” itself.
+(ii) The vertex situation. The second situation happens if
+p lies in the green areas in Fig. 2(d) (i.e., neither in the
+triangle △, nor in one of the quadrangles including □1,2, □1,3,
+and □2,3). In this case, denote the “vertex” of the “Gaussian
+triangle” that is nearest to p the j-th “vertex” of the “Gaussian
+triangle”. It can be observed from Fig. 1(a) that, the fading of
+the “Gaussian triangle” at p is then just equivalent to the fading
+of the Gaussian ellipse centered at µ2D
+j . In light of this, similar
+to Eq. 2, we define γ under this situation as:
+γ = αe−1
+2 (p−µ2D
+j
+)T (Σ2D)−1(p−µ2D
+j
+))
+(11)
+(iii) The edge situation. The third situation happens if p
+lies in □1,2, □1,3, or □2,3 (i.e., the blue areas in Fig. 2(d)). In
+this case, to ensure the fading within the “Gaussian triangle”
+to transit smoothly and naturally across its different sub-areas
+
+<!-- page 6 -->
+JOURNAL OF LATEX CLASS FILES, VOL. 14, NO. 8, AUGUST 2021
+6
+(across different situations), we adopt a simple yet effective
+way to define the fading parameter γ as follows.
+Specifically, consider the case where p lies in □1,2 first.
+Here, denote e1 the edge of □1,2 connecting µ2D
+1
+and t1
+1,2,
+and e2 the edge of □1,2 connecting µ2D
+2
+and t2
+1,2. Then let
+pe1 and pe2 respectively be points on e1 and e2, such that p
+lies on the line segment between pe1 and pe2 and:
+η = αe−1
+2 (pe1−µ2D
+1
+)T (Σ2D)−1(pe1−µ2D
+1
+))
+= αe−1
+2 (pe2−µ2D
+2
+)T (Σ2D)−1(pe2−µ2D
+2
+))
+(12)
+We then set γ = η. Above we discuss how we measure γ
+when p lies in □1,2. The same procedure can be applied when
+p lies in □1,3 or □2,3. Intuitively, this definition of the fading
+parameter γ in the edge situation ensures that the value of γ
+for pixel p matches those assigned to the corresponding edge
+points pe1 and pe2. This thus preserves a smooth and coherent
+transition of the fading effect across the different sub-areas
+(i.e., across different situations) of the “Gaussian triangle”.
+Meanwhile, it also yields a natural and gradual fading pattern
+within each individual quadrangle—□1,2, □1,3, and □2,3.
+In summary, via the above four (bold) steps, given a
+“Gaussian triangle” in the 3D space, we can splat it onto
+the image plane, and corresponding render it through the α-
+blending function with γ redefined above.
+Splatting and rendering of the “Gaussian line”. Above we
+introduce how we perform splatting and rendering over the
+“Gaussian triangle”. Here, we highlight that, the splatting and
+rendering of the “Gaussian line” can be achieved similarly, ex-
+cept in the following three places. (1) Firstly, during primitive
+formulation (definition), for the “Gaussian line” with only two
+“vertices”, we can discard µ3 and only define it with µ1 and
+µ2 to represent its “vertices”. (2) Secondly, for the “Gaussian
+line”, note that its two boundary ellipses are simultaneously
+connected by two common tangent lines. Hence, to properly
+re-sketch its boundary, after deriving the plausible common
+tangent lines between its two boundary ellipses through Eq. 8
+and 9, from these candidates, we retain both common tangent
+lines that do not intersect each other in the middle, rather
+than retaining only one. (3) Finally, since a line segment has
+no inner area, during the rendering of the “Gaussian line”, we
+only need to consider the vertex and edge situations, but not
+the inner situation.
+With the rest process conducted similarly to the above
+process over the “Gaussian triangle”, leveraging the composi-
+tional splatting strategy, we can also enable the splatting and
+rendering of the “Gaussian line” primitive. We also illustrate
+the splatting and rendering of the “Gaussian line” primitive in
+more detail in supplementary.
+B. Mixed Primitive-based Learning Procedure
+Above, we discuss how we use a compositional splatting
+strategy within our framework to splat and render the “Gaus-
+sian line” and “Gaussian triangle” primitives.
+However, the above strategy alone cannot fully support the
+learning procedure of Gaussian Splatting to be performed
+in a mixed-primitive-based manner. This is because, beyond
+splatting and rendering as core steps, the learning procedure
+of Gaussian Splatting also involves other steps. Some of
+these steps—such as initialization and pruning—are originally
+designed in the typical Gaussian Splatting pipeline under the
+assumption that only a single type of primitive is present. As a
+result, directly incorporating these steps in their original form
+into our framework, with mixed types of primitives, can lead to
+incompatibilities, resulting in sub-optimal surface reconstruc-
+tion performance. To tackle this problem, in our framework,
+we further adjust the typical Gaussian Splatting pipeline over
+its initialization and pruning steps. These adjustments then can
+better facilitate the mixed-primitive-based learning procedure
+in our MP-GS framework. Below, we describe these two steps
+in their adjusted forms one by one.
+The initialization step. To ensure effective learning, it is
+important to initialize the learning procedure at a good starting
+point. The existing GS-based surface reconstruction methods
+[8], [9] smartly use the COLMAP point cloud as the prior
+information to formulate the starting point of its learning
+procedure. Specifically, they initialize a set of Gaussian el-
+lipses each centered at a point in the COLMAP point cloud.
+However, though achieving good performance, this initial-
+ization strategy implicitly assumes every splatting primitive
+to be point-centered, which is not the case for “Gaussian
+lines” and “Gaussian triangles”. This makes the usage of this
+initialization strategy in MP-GS improper. In light of this, we
+here aim to propose MP-GS with a new mixed primitive-based
+initialization strategy.
+To achieve this, assume that points in the COLMAP point
+cloud have been clustered into subsets, each containing 1-3
+points and meeting the criteria of close proximity and simi-
+lar colors. For each subset, based on the number of points it
+has, we can then easily use it to initialize either the Gaussian
+ellipse with a single center point, the “Gaussian line” with two
+“vertices”, or the “Gaussian triangle” with three “vertices”.
+Note that here, we expect each subset of points to hold similar
+colors since as mentioned in Sec. IV-A, for each primitive, we
+only store it with a single copy of SH color coefficient cSH
+for parameter saving.
+Considering the above, the challenge of equipping MP-GS
+with a proper initialization strategy now reduces to proposing
+a strategy that can cluster points in the COLMAP point cloud
+according to the above-specified criteria. Specifically, we find
+that, an effective way to perform such clustering involves
+the following two steps: (1) Firstly, we input all points from
+the COLMAP point cloud into a distance-based hierarchical
+clustering algorithm [53] to generate a rooted clustering tree.
+Based on the algorithm, in this tree, each leaf node represents
+a single-point subset, while each non-leaf node represents the
+union of its child nodes’ subsets. Meanwhile, for each node in
+the tree, the points in its corresponding subset are guaranteed
+to be of close proximity. (2) Next, we perform a breadth-
+first search (BFS) on the tree. During the BFS, a node is
+outputted if none of its ancestor nodes have been outputted,
+its subset contains 1-3 points, and the points in the subset
+have similar colors. After completing the search in step (2),
+the collection of outputted tree nodes then allows us to cluster
+COLMAP points into subsets that meet the above-specified
+criteria. These point subsets can then be used to initialize the
+
+<!-- page 7 -->
+JOURNAL OF LATEX CLASS FILES, VOL. 14, NO. 8, AUGUST 2021
+7
+TABLE I
+RESULTS ON DTU. WE REPORT CHAMFER DISTANCE IN MILLIMETERS. LOWER CHAMFER DISTANCE INDICATES BETTER PERFORMANCE.
+Method
+Scene Index
+Mean↓
+24
+37
+40
+55
+63
+65
+69
+83
+97
+105
+106
+110
+114
+118
+122
+NeRF [54]
+1.90
+1.60
+1.85
+0.58
+2.28
+1.27
+1.47
+1.67
+2.05
+1.07
+0.88
+2.53
+1.06
+1.15
+0.96
+1.49
+VolSDF [55]
+1.14
+1.26
+0.81
+0.49
+1.25
+0.70
+0.72
+1.29
+1.18
+0.70
+0.66
+1.08
+0.42
+0.61
+0.55
+0.86
+NeuS [3]
+1.00
+1.37
+0.93
+0.43
+1.10
+0.65
+0.57
+1.48
+1.09
+0.83
+0.52
+1.20
+0.35
+0.49
+0.54
+0.84
+Neuralangelo [4]
+0.37
+0.72
+0.35
+0.35
+0.87
+0.54
+0.53
+1.29
+0.97
+0.73
+0.47
+0.74
+0.32
+0.41
+0.43
+0.61
+3D-GS [7]
+2.14
+1.53
+2.08
+1.68
+3.49
+2.21
+1.43
+2.07
+2.22
+1.75
+1.79
+2.55
+1.53
+1.52
+1.50
+1.96
+SuGaR [11]
+1.47
+1.33
+1.13
+0.61
+2.25
+1.71
+1.15
+1.63
+1.62
+1.07
+0.79
+2.45
+0.98
+0.88
+0.79
+1.33
+GaussianSurfels [8]
+0.66
+0.93
+0.54
+0.41
+1.06
+1.14
+0.85
+1.29
+1.53
+0.79
+0.82
+1.58
+0.45
+0.66
+0.53
+0.88
+2D-GS [9]
+0.48
+0.91
+0.39
+0.39
+1.01
+0.83
+0.81
+1.36
+1.27
+0.76
+0.70
+1.40
+0.40
+0.76
+0.52
+0.80
+GOF [19]
+0.50
+0.82
+0.37
+0.37
+1.12
+0.74
+0.73
+1.18
+1.29
+0.68
+0.77
+0.90
+0.42
+0.66
+0.49
+0.74
+GS2Mesh [22]
+0.59
+0.79
+0.70
+0.38
+0.78
+1.00
+0.69
+1.25
+0.96
+0.59
+0.50
+0.68
+0.37
+0.50
+0.46
+0.68
+GeoFieldSplat [30]
+0.40
+0.59
+0.39
+0.38
+0.72
+0.59
+0.65
+1.08
+0.93
+0.59
+0.50
+0.67
+0.34
+0.47
+0.40
+0.58
+Ours
+0.31
+0.50
+0.28
+0.27
+0.74
+0.53
+0.46
+0.92
+0.62
+0.47
+0.44
+0.48
+0.28
+0.32
+0.31
+0.46
+various types of primitives in our framework, providing a good
+starting point for its mixed-primitive-based learning procedure.
+We also include a pseudo-code algorithm about the above-
+introduced strategy in supplementary.
+The pruning step. In the original Gaussian Splatting which
+uses only point-centered primitives, during the learning pro-
+cedure, only primitive-level pruning is performed (e.g., when
+the opacity of a primitive is very low). Yet, in our framework
+which involves primitives with varying numbers of “vertices”,
+we find that vertex-level pruning is sometimes also needed,
+e.g., in sub-areas of an object where “Gaussian triangles”
+are not necessary, and “Gaussian lines” and Gaussian ellipses
+with less number of “vertices” are enough. Hence, in our
+framework, whenever performing primitive-level pruning, we
+also perform vertex-level pruning.
+In specific, in our framework, based on the current shape of
+the primitive, we perform the following three types of vertex-
+level pruning: (1) Firstly, for a “Gaussian triangle” primitive,
+if its three “vertices” are all close to each other, this implies
+that the primitive can no longer need to retain all three of its
+“vertices”. Hence, we prune its µ2 and µ3, and convert this
+primitive into a Gaussian ellipse centered at µ1. (2) Next, for
+a “Gaussian triangle” primitive, suppose its three “vertices”
+are not close to each other, but instead almost lie on the same
+line. In that case, we convert this “Gaussian triangle” into a
+“Gaussian line”. (3) Lastly, for a “Gaussian line” primitive,
+if its two “vertices” are close to each other, similar to in (1),
+we prune its µ2 and reduce it to a Gaussian ellipse centered
+at µ1. Via the above, we enable the pruning of unnecessary
+“vertices” in the primitives during our framework’s learning
+procedure. However, we emphasize that this pruning will not
+reduce our framework’s surface representation to contain only
+point-centered Gaussian ellipses. This is because, alongside
+the pruning step, the original densification mechanism of
+Gaussian Splatting is also integrated into our framework, by
+which our MP-GS framework can clone and split a steady
+stream of new “Gaussian triangles” and “Gaussian lines” if
+necessary.
+In summary, by incorporating the above steps in their
+adjusted forms into our MP-GS framework, we ensure their
+compatibility with our framework, allowing our framework
+to seamlessly perform the learning procedure of Gaussian
+Splatting in a mixed-primitive-based manner.
+C. Overall Training and Testing
+In MP-GS, during training, we follow a similar process as
+the existing GS-based surface reconstruction methods [8], [10],
+except for the initialization and pruning steps, where we adopt
+the edited version introduced in Sec. IV-B. During testing,
+following [9], [10], we first render depth images from the
+learned surface representation. However, here, when splatting
+and rendering non-ellipical primitives, we depart from stan-
+dard Gaussian Splatting and instead apply the compositional
+splatting strategy introduced in Sec. IV-A. After the splatting
+and rendering process, as in [9], [10], we use the rendered
+depth images to finally reconstruct the object surface via the
+TSDF algorithm [56].
+V. EXPERIMENTS
+To evaluate the surface reconstruction performance of our
+framework, we conduct experiments on 2 datasets including
+the DTU dataset and the Tanks&Temples dataset.
+DTU [57] is a dataset popularly used in surface reconstruc-
+tion. On this dataset, following existing surface reconstruction
+methods [8], [9], [19], we evaluate our framework on a total of
+15 scenes. Also following [8], [9], [19], we use the Chamfer
+distance as the metric for evaluation.
+Tanks&Temples [58] is another dataset that is commonly used
+in surface reconstruction. Following [8], [9], we evaluate on 6
+scenes on this dataset and use the F1 score as the evaluation
+metric.
+A. Implementation Details
+We conduct our experiments on an RTX 6000 Ada GPU
+and develop our code based on [7], [9], [10]. During training,
+we use the same loss functions and loss weights as 2D-GS [9].
+Moreover, for fair comparison, we set the training iterations for
+all scenes to be 30,000. For the newly introduced parameters
+µ1, µ2, and µ3, we set their initial learning rates to 2e-
+4. Moreover, following [9], [19], we down-sample the input
+image with factor 2.
+During the initialization step, we consider points within a
+subset to have similar colors if their maximum pairwise color
+difference, measured using the L2 distance as described in
+[59], is below ωcolor. In our framework, we set ωcolor to
+5. Moreover, during the pruning step of our framework, we
+
+<!-- page 8 -->
+JOURNAL OF LATEX CLASS FILES, VOL. 14, NO. 8, AUGUST 2021
+8
+TABLE II
+RESULTS ON THE TANKS&TEMPLES DATASET. WE REPORT F1 SCORE. HIGHER F1 SCORE INDICATES BETTER PERFORMANCE.
+Method
+Scene Name
+Mean↑
+Barn
+Caterpillar
+Courthouse
+Ignatius
+Meetingroom
+Truck
+NeuS [3]
+0.29
+0.29
+0.17
+0.83
+0.24
+0.45
+0.38
+Geo-NeuS [5]
+0.33
+0.26
+0.12
+0.72
+0.20
+0.45
+0.35
+Neuralangelo [4]
+0.70
+0.36
+0.28
+0.89
+0.32
+0.48
+0.50
+3D-GS [7]
+0.13
+0.08
+0.09
+0.04
+0.01
+0.19
+0.09
+SuGaR [11]
+0.14
+0.16
+0.08
+0.33
+0.15
+0.26
+0.19
+2D-GS [9]
+0.36
+0.23
+0.13
+0.44
+0.16
+0.26
+0.30
+GOF [19]
+0.51
+0.41
+0.28
+0.68
+0.28
+0.59
+0.46
+Ours
+0.66
+0.44
+0.21
+0.81
+0.33
+0.66
+0.52
+regard a set of “vertices” as being close to one another if their
+maximum pairwise L2 distance is below ωdist, where ωdist
+is set to 0.5 in our framework. Additionally, we determine
+whether the three “vertices” of a “Gaussian triangle” are nearly
+collinear by checking if the absolute value of the Pearson
+correlation coefficient computed from these “vertices” exceeds
+ωpear. In our framework, ωpear is set to 0.9.
+Furthermore, during the densification process of our frame-
+work, when a “Gaussian triangle” is cloned or split into two
+new “Gaussian triangles”, following how µ is assigned to
+each new Gaussian ellipse during the densification process of
+typical Gaussian Splatting [7], µ1 is assigned to each new
+“Gaussian triangles” in the same manner. Additionally, we
+assign both the new cloned/split “Gaussian triangles” with the
+same parameters µ2 and µ3 as the original “Gaussian triangle”.
+Moreover, when a “Gaussian line” is cloned or split, we assign
+µ1 and µ2 to each new “Gaussian line” in the same way as
+how we assign µ1 and µ2 to each new “Gaussian triangle” as
+described above.
+B. Experimental Results
+Quantitive Results. In Tab. I and Tab. II, we compare
+our method with existing surface reconstruction methods.
+As shown, our method consistently achieves the best mean
+performance on both datasets, showing its effectiveness.
+Qualitative Results. We also show some qualitative results
+on the DTU dataset in Fig. 4. Additionally, in fig. 4, we also
+illustrate the proportion of three types of primitives—Gaussian
+ellipses, “Gaussian lines”, and “Gaussian triangles”—within
+the learned representations of our MP-GS framework across
+different scenes. As shown, 2D-GS [9], a commonly used
+GS-based surface reconstruction method that relies solely on
+Gaussian ellipses with limited shape control [12], struggles to
+achieve high-quality object surface reconstruction. In contrast,
+our MP-GS framework introduces “Gaussian lines” to better
+represent long, thin structures, and “Gaussian triangles” to im-
+prove the reconstruction of relatively flat, smooth surfaces (due
+to their non-fading flat component in the middle, as shown in
+Fig. 1). The adaptive use of these newly introduced primitives
+significantly enhances our framework’s reconstruction quality
+compared to 2D-GS.
+For example, in the window sub-areas of the scene shown
+in Fig. 4(a) and the scissor blade sub-areas of the scene
+shown in Fig. 4(b), which contain numerous long and thin
+structures, our MP-GS framework effectively utilizes a large
+proportion of “Gaussian line” primitives to represent these sub-
+areas, as shown in Fig. 3(a) and (b), enabling more precise
+representation. Meanwhile, in the scene shown in Fig. 4(c),
+2D-GS exhibits holes in surface areas that should be relatively
+smooth and flat. In contrast, as shown in Fig. 3(c), our MP-
+GS framework successfully reconstructs these regions using a
+large proportion of “Gaussian triangles”. These results further
+demonstrate the effectiveness of our approach in improving
+surface reconstruction quality.
+Fig. 3.
+Illustration on where “Gaussian triangles”, “Gaussian lines”, and
+Gaussian ellipses are distributed in our framework’s reconstructions. Red dots
+show the positions of “Gaussian triangles”, green dots show the positions of
+“Gaussian lines”, blue dots show the positions of Gaussian ellipses. For clarity,
+we down-sample before illustrating and display.
+C. Ablation Studies
+We conduct extensive ablation experiments on the DTU
+dataset, and report the Chamfer distance averaged over all the
+scenes.
+Impact of the non-elliptical primitives. In our framework,
+besides Gaussian ellipses, we additionally introduce Gaussian
+Splatting with non-elliptical primitives including “Gaussian
+lines” and “Gaussian triangles”. To evaluate the efficacy of
+these two non-elliptical primitives, we test two variants. In
+the first variant (w/o “Gaussian lines”), we perform Gaus-
+sian Splatting in our framework only with Gaussian ellipses
+and “Gaussian triangles”, while in the second variant (w/o
+“Gaussian triangles”), we involve our framework with only
+Gaussian ellipses and “Gaussian lines”. As shown in Tab. III,
+our framework outperforms both these two variants, showing
+the importance of both types of non-elliptical primitives in our
+framework for accurately reconstructing object surfaces.
+Impact of the proposed mixed primitive-based initial-
+ization strategy. In our framework, to ensure compatibility
+between the initialization step in the learning procedure of
+Gaussian Splatting and the mixed-primitive-based nature of
+
+<!-- page 9 -->
+JOURNAL OF LATEX CLASS FILES, VOL. 14, NO. 8, AUGUST 2021
+9
+TABLE III
+EVALUATION ON THE NON-ELLIPTICAL PRIMITIVES.
+Method
+Chamfer distance ↓
+w/o “Gaussian lines”
+0.61
+w/o “Gaussian triangles”
+0.64
+MP-GS
+0.46
+our framework, we propose a new mixed primitive-based
+initialization strategy (with proposed initialization strategy).
+To validate its efficacy, we test a variant. In this variant (w/o
+proposed initialization strategy), we do not apply the proposed
+initialization strategy. Instead, inspired by the typical Gaussian
+Splatting pipeline, we initialize a set of primitives, each
+centered at a point in the COLMAP point cloud and assigned
+a random primitive type. As shown in Tab. IV, even without
+employing the proposed initialization strategy, our framework
+can still outperform the state-of-the-art method GeoFieldSplat
+[30], while employing the mixed-primitive-based initialization
+strategy further improves our framework’s performance.
+TABLE IV
+EVALUATION ON THE PROPOSED MIXED PRIMITIVE-BASED
+INITIALIZATION STRATEGY.
+Method
+Chamfer distance ↓
+GeoFieldSplat [30]
+0.58
+w/o proposed initialization strategy
+0.56
+with proposed initialization strategy
+0.46
+Impact of the vertex pruning mechanism. In our framework,
+to eliminate unnecessary “vertices” from the splatting primi-
+tives and thus refine the Gaussian Splatting representations
+into less messy ones, we propose a new vertex pruning
+mechanism (with vertex pruning). To validate the efficacy of
+this mechanism, we test a variant (w/o vertex pruning) in
+which we remove the vertex pruning mechanism from our
+framework. As shown in Tab. V, our framework involving
+the vertex pruning mechanism performs better than this vari-
+ant. Additionally, we observe that, compared to this variant,
+our framework can reduce the average storage size required
+to store vertex coordinates by 24%. The above shows the
+advantage of performing vertex-level pruning in addition to
+primitive-level pruning in our framework.
+TABLE V
+EVALUATION ON THE VERTEX PRUNING MECHANISM.
+Method
+Chamfer distance ↓
+w/o vertex pruning
+0.53
+with vertex pruning
+0.46
+Time analysis. Similar to existing GS-based surface recon-
+struction approaches [8], [9], [19], we analyze the training
+time of our framework. Specifically, in Tab. VI we com-
+pare the training time of our framework with the existing
+NeRF-based surface reconstruction method Neuralangelo [4],
+as well as the existing commonly used GS-based surface
+reconstruction methods including 2D-GS [9], GaussianSurfels
+[8], and GOF [19], on an RTX 6000 Ada GPU in terms of
+hours. As demonstrated, our MP-GS framework can achieve
+a competitive training time compared to existing GS-based
+surface reconstruction methods, while obtaining significantly
+better performance.
+In addition to training time, here we also further analyze the
+rendering time of our framework, compared to 2D-GS which
+only uses Gaussian ellipses. We observe that, the rendering
+time (per image) of both our framework and 2D-GS is around
+7ms on an RTX 6000 Ada GPU. This shows that, from the
+perspective of rendering efficiency, our method, whose main
+additional computation (common tangent line measurement)
+over typical Gaussian Splatting has closed-form solution, is
+also competitive compared to 2D-GS.
+TABLE VI
+ANALYSIS OF TRAINING TIME IN TERMS OF HOURS.
+Method
+Chamfer distance ↓
+Training time
+Neuralangelo [4]
+0.61
+>12h
+GaussianSurfels [8]
+0.88
+0.2h
+2D-GS [9]
+0.80
+0.2h
+GOF [19]
+0.74
+1.0h
+Ours
+0.46
+0.3h
+Impact of the criteria in our proposed mixed primitive-
+based
+initialization
+strategy.
+In
+our
+proposed
+mixed
+primitive-based initialization strategy, particularly during the
+point clustering process, besides close proximity, we require
+each subset of points to also meet the criterion of similar
+colors (close proximity + similar colors). To validate this
+design choice, we test three variants. In the first variant
+(only close proximity), we omit the additional criterion of
+similar colors during clustering. In the second variant (close
+proximity + similar normals), instead of colors, we use surface
+normals—the other attribute in the COLMAP point cloud—as
+the additional criterion. In the third variant (close proximity
++ similar colors + similar normals), we use both similar
+colors and similar normals as additional criteria. As shown in
+Tab. VII, regardless of the criteria used, our framework with
+the mixed primitive-based initialization strategy consistently
+achieves better performance than the variant w/o proposed
+initialization strategy (defined in front of Tab. IV). Meanwhile,
+we observe that incorporating color similarity alongside close
+proximity already enables the best performance among these
+variants, comparable to the variant that also incorporates
+similar normals. Thus, taking the framework complexity also
+into consideration, we adopt close proximity and similar
+colors as the clustering criteria in our mixed primitive-based
+initialization strategy.
+TABLE VII
+EVALUATION ON THE CRITERIA IN OUR PROPOSED MIXED
+PRIMITIVE-BASED INITIALIZATION STRATEGY.
+Method
+Chamfer distance ↓
+w/o proposed initialization strategy
+0.56
+only close proximity
+0.50
+close proximity + similar normals
+0.48
+close proximity + similar colors
+0.46
+close proximity + similar colors + similar normals
+0.46
+Impact of the initial learning rate set to µ1, µ2, and µ3.
+In our framework, during primitive formulation (definition),
+we introduce three new parameters including µ1, µ2, and µ3.
+
+<!-- page 10 -->
+JOURNAL OF LATEX CLASS FILES, VOL. 14, NO. 8, AUGUST 2021
+10
+For these parameters, in our experiments, we set their initial
+learning rates all to 2e-4 (i.e., lrµ = 2e-4). Here, we also
+assess the other choices of lrµ from 1e-4 to 1e-3, and report
+the results in Tab. VIII. As shown, with different choices of
+lrµ, our framework maintains consistent performance. This
+demonstrates the robustness of our framework to lrµ.
+TABLE VIII
+EVALUATION ON THE INITIAL LEARNING RATE (lrµ) SET TO µ1, µ2, AND
+µ3.
+Method
+Chamfer distance ↓
+lrµ = 1e-4
+0.47
+lrµ = 2e-4
+0.46
+lrµ = 5e-4
+0.48
+lrµ = 1e-3
+0.49
+Impact of the hyperparameter ωcolor. In the initialization
+step of our framework, we regard points in a subset to have
+similar colors if their maximum pairwise color difference,
+measured by L2 distance, is below ωcolor, where ωcolor is
+set to 5 in our experiments. Here, we evaluate other choices
+of ωcolor in Tab. IX. As shown, with different choice of ωcolor,
+the performance of our framework is consistent. This demon-
+strates the robustness of our framework to this hyperparameter.
+TABLE IX
+EVALUATION ON ωcolor.
+Method
+Chamfer distance ↓
+ωcolor = 1
+0.47
+ωcolor = 5
+0.46
+ωcolor = 10
+0.48
+ωcolor = 20
+0.50
+Impact of the hyperparameter ωdist. In the pruning step of
+our framework, we consider a set of “vertices” of a primitive
+as being close to each other if their maximum pairwise
+L2 distance is below ωdist, where we set ωdist to 0.5 in
+our experiments. We also evaluate other choices of ωdist in
+Tab. X. As shown, all variants (ωdist = 0.1, ωdist = 0.5,
+ωdist = 1.0, ωdist = 2.0) maintain a relatively consistent
+performance, demonstrating that our framework is fairly robust
+to the choice of ωdist, and does not require intensive tuning
+of this parameter.
+TABLE X
+EVALUATION ON ωdist.
+Method
+Chamfer distance ↓
+ωdist = 0.1
+0.48
+ωdist = 0.5
+0.46
+ωdist = 1.0
+0.47
+ωdist = 2.0
+0.51
+Impact of the hyperparameter ωpear. Furthermore, in our
+framework, we regard the three “vertices” of a “Gaussian
+triangle” as being nearly collinear if the absolute value of
+the Pearson correlation coefficient measured from these three
+“vertices” exceeds ωpear. In our experiments, we set ωpear to
+0.9. In Tab. XI, we evaluate other choices of ωpear as well. As
+shown, a compatible performance is achieved across different
+variants with different choices of ωpear. This shows that our
+framework is fairly insensitive to the choice of ωpear.
+TABLE XI
+EVALUATION ON ωpear.
+Method
+Chamfer distance ↓
+ωpear = 0.8
+0.49
+ωpear = 0.85
+0.46
+ωpear = 0.9
+0.46
+ωpear = 0.95
+0.47
+VI. CONCLUSION
+In this paper, we proposed a novel surface reconstruction
+framework MP-GS, which for the first time, enables Gaussian
+Splatting to perform surface reconstruction using a mix of
+elliptical and non-elliptical splatting primitives. Specifically, in
+MP-GS, we propose a novel compositional splatting strategy to
+enable the splatting and rendering of non-elliptical primitives.
+We also propose two other designs respectively over the
+initialization and pruning steps of Gaussian Splatting. Our
+framework achieves superior performance.
+REFERENCES
+[1] N. Deng, Z. He, J. Ye, B. Duinkharjav, P. Chakravarthula, X. Yang, and
+Q. Sun, “Fov-nerf: Foveated neural radiance fields for virtual reality,”
+IEEE Transactions on Visualization and Computer Graphics, vol. 28,
+no. 11, pp. 3854–3864, 2022.
+[2] J. Liu, X. Huang, T. Huang, L. Chen, Y. Hou, S. Tang, Z. Liu,
+W. Ouyang, W. Zuo, J. Jiang et al., “A comprehensive survey on 3d
+content generation,” arXiv preprint arXiv:2402.01166, 2024.
+[3] P. Wang, L. Liu, Y. Liu, C. Theobalt, T. Komura, and W. Wang, “Neus:
+Learning neural implicit surfaces by volume rendering for multi-view
+reconstruction,” arXiv preprint arXiv:2106.10689, 2021.
+[4] Z. Li, T. M¨uller, A. Evans, R. H. Taylor, M. Unberath, M.-Y. Liu, and
+C.-H. Lin, “Neuralangelo: High-fidelity neural surface reconstruction,”
+in Proceedings of the IEEE/CVF Conference on Computer Vision and
+Pattern Recognition, 2023, pp. 8456–8465.
+[5] Q. Fu, Q. Xu, Y. S. Ong, and W. Tao, “Geo-neus: Geometry-consistent
+neural implicit surfaces learning for multi-view reconstruction,” Ad-
+vances in Neural Information Processing Systems, vol. 35, pp. 3403–
+3416, 2022.
+[6] J. Hyung, S. Hong, S. Hwang, J. Lee, J. Choo, and J.-H. Kim, “Effective
+rank analysis and regularization for enhanced 3d gaussian splatting,”
+arXiv preprint arXiv:2406.11672, 2024.
+[7] B. Kerbl, G. Kopanas, T. Leimk¨uhler, and G. Drettakis, “3d gaussian
+splatting for real-time radiance field rendering,” ACM Transactions on
+Graphics, vol. 42, no. 4, pp. 1–14, 2023.
+[8] P. Dai, J. Xu, W. Xie, X. Liu, H. Wang, and W. Xu, “High-quality
+surface reconstruction using gaussian surfels,” in ACM SIGGRAPH 2024
+Conference Papers, 2024, pp. 1–11.
+[9] B. Huang, Z. Yu, A. Chen, A. Geiger, and S. Gao, “2d gaussian splatting
+for geometrically accurate radiance fields,” in ACM SIGGRAPH 2024
+Conference Papers, 2024, pp. 1–11.
+[10] D. Chen, H. Li, W. Ye, Y. Wang, W. Xie, S. Zhai, N. Wang,
+H. Liu, H. Bao, and G. Zhang, “Pgsr: Planar-based gaussian splatting
+for efficient and high-fidelity surface reconstruction,” arXiv preprint
+arXiv:2406.06521, 2024.
+[11] A. Gu´edon and V. Lepetit, “Sugar: Surface-aligned gaussian splatting
+for efficient 3d mesh reconstruction and high-quality mesh rendering,”
+in Proceedings of the IEEE/CVF Conference on Computer Vision and
+Pattern Recognition, 2024, pp. 5354–5363.
+[12] R. Pajarola, M. Sainz, and P. Guidotti, “Confetti: Object-space point
+blending and splatting,” IEEE Transactions on Visualization and Com-
+puter Graphics, vol. 10, no. 5, pp. 598–608, 2004.
+[13] J. Weber and J. Penn, “Creation and rendering of realistic trees,” in
+Proceedings of the 22nd annual conference on Computer graphics and
+interactive techniques, 1995, pp. 119–128.
+[14] O. Deussen, C. Colditz, M. Stamminger, and G. Drettakis, Interactive
+visualization of complex plant ecosystems.
+IEEE, 2002.
+[15] K.-H. Wong, X. Ouyang, C.-W. Lim, T.-S. Tan, and J. Nievergelt,
+“Rendering anti-aliased line segments,” in International 2005 Computer
+Graphics.
+IEEE, 2005, pp. 198–205.
+
+<!-- page 11 -->
+JOURNAL OF LATEX CLASS FILES, VOL. 14, NO. 8, AUGUST 2021
+11
+[16] M. Zwicker, H. Pfister, J. Van Baar, and M. Gross, “Ewa splatting,” IEEE
+Transactions on Visualization and Computer Graphics, vol. 8, no. 3, pp.
+223–238, 2002.
+[17] Y. Furukawa and J. Ponce, “Accurate, dense, and robust multiview stere-
+opsis,” IEEE transactions on pattern analysis and machine intelligence,
+vol. 32, no. 8, pp. 1362–1376, 2009.
+[18] J. L. Sch¨onberger, E. Zheng, J.-M. Frahm, and M. Pollefeys, “Pixelwise
+view selection for unstructured multi-view stereo,” in Computer Vision–
+ECCV 2016: 14th European Conference, Amsterdam, The Netherlands,
+October 11-14, 2016, Proceedings, Part III 14.
+Springer, 2016, pp.
+501–518.
+[19] Z. Yu, T. Sattler, and A. Geiger, “Gaussian opacity fields: Efficient and
+compact surface reconstruction in unbounded scenes,” arXiv preprint
+arXiv:2404.10772, 2024.
+[20] L. Fan, Y. Yang, M. Li, H. Li, and Z. Zhang, “Trim 3d gaussian splatting
+for accurate geometry representation,” arXiv preprint arXiv:2406.07499,
+2024.
+[21] B. Zhang, C. Fang, R. Shrestha, Y. Liang, X. Long, and P. Tan,
+“Rade-gs: Rasterizing depth in gaussian splatting,” arXiv preprint
+arXiv:2406.01467, 2024.
+[22] Y. Wolf, A. Bracha, and R. Kimmel, “Gs2mesh: Surface reconstruction
+from gaussian splatting via novel stereo views,” in ECCV 2024 Workshop
+on Wild 3D: 3D Modeling, Reconstruction, and Generation in the Wild.
+[23] X. Lyu, Y.-T. Sun, Y.-H. Huang, X. Wu, Z. Yang, Y. Chen, J. Pang,
+and X. Qi, “3dgsr: Implicit surface reconstruction with 3d gaussian
+splatting,” arXiv preprint arXiv:2404.00409, 2024.
+[24] H. Chen, C. Li, and G. H. Lee, “Neusg: Neural implicit surface
+reconstruction with 3d gaussian splatting guidance,” arXiv preprint
+arXiv:2312.00846, 2023.
+[25] Q. Wu, J. Zheng, and J. Cai, “Surface reconstruction from 3d gaussian
+splatting via local structural hints,” in European Conference on Com-
+puter Vision.
+Springer, 2025, pp. 441–458.
+[26] Z. Huang, Z. Liang, H. Zhang, Y. Lin, and K. Jia, “Sur2f: A hybrid
+representation for high-quality and efficient surface reconstruction from
+multi-view images,” arXiv preprint arXiv:2401.03704, 2024.
+[27] Z. Jiang, T. Xu, and H. Kato, “Rethinking directional parame-
+terization in neural implicit surface reconstruction,” arXiv preprint
+arXiv:2409.06923, 2024.
+[28] Y. Wang, D. Huang, W. Ye, G. Zhang, W. Ouyang, and T. He, “Neurodin:
+A two-stage framework for high-fidelity neural surface reconstruction,”
+arXiv preprint arXiv:2408.10178, 2024.
+[29] R. Yu, T. Huang, J. Ling, and F. Xu, “2dgh: 2d gaussian-hermite splatting
+for high-quality rendering and better geometry reconstruction,” arXiv
+preprint arXiv:2408.16982, 2024.
+[30] K. Jiang, V. Sivaram, C. Peng, and R. Ramamoorthi, “Geometry field
+splatting with gaussian surfels,” in Proceedings of the Computer Vision
+and Pattern Recognition Conference (CVPR), June 2025, pp. 5752–5762.
+[31] J. Wu, R. Li, Y. Zhu, R. Guo, J. Sun, and Y. Zhang, “Sparse2dgs:
+Geometry-prioritized gaussian splatting for surface reconstruction from
+sparse views,” in Proceedings of the Computer Vision and Pattern
+Recognition Conference, 2025, pp. 11 307–11 316.
+[32] C. Peng, C. Zhang, Y. Wang, C. Xu, Y. Xie, W. Zheng, K. Keutzer,
+M. Tomizuka, and W. Zhan, “Desire-gs: 4d street gaussians for static-
+dynamic decomposition and surface reconstruction for urban driving
+scenes,” in Proceedings of the Computer Vision and Pattern Recognition
+Conference (CVPR), June 2025, pp. 6782–6791.
+[33] B. Toussaint, D. Thomas, and J.-S. Franco, “Probesdf: Light field probes
+for neural surface reconstruction,” in Proceedings of the Computer Vision
+and Pattern Recognition Conference, 2025, pp. 11 026–11 035.
+[34] B. Tan, R. Yu, Y. Shen, and N. Xue, “Planarsplatting: Accurate planar
+surface reconstruction in 3 minutes,” in Proceedings of the Computer
+Vision and Pattern Recognition Conference (CVPR), June 2025, pp.
+1190–1199.
+[35] Z. Zhang, B. Huang, H. Jiang, L. Zhou, X. Xiang, and S. Shen,
+“Quadratic gaussian splatting for efficient and detailed surface recon-
+struction,” arXiv preprint arXiv:2411.16392, 2024.
+[36] J. Wang, Y. Liu, P. Wang, C. Lin, J. Hou, X. Li, T. Komura, and
+W. Wang, “Gaussurf: Geometry-guided 3d gaussian splatting for surface
+reconstruction,” arXiv preprint arXiv:2411.19454, 2024.
+[37] K.
+Li,
+M.
+Niemeyer,
+Z.
+Chen,
+N.
+Navab,
+and
+F.
+Tombari,
+“Monogsdf: Exploring monocular geometric cues for gaussian splatting-
+guided implicit surface reconstruction,” 2025. [Online]. Available:
+https://arxiv.org/abs/2411.16898
+[38] M. Li, P. Pang, H. Fan, H. Huang, and Y. Yang, “Tsgs: Improving
+gaussian splatting for transparent surface reconstruction via normal and
+de-lighting priors,” arXiv preprint arXiv:2504.12799, 2025.
+[39] Y. Liu, X. Cao, Q. Dai, and W. Xu, “Continuous depth estimation for
+multi-view stereo,” in 2009 IEEE Conference on Computer Vision and
+Pattern Recognition.
+IEEE, 2009, pp. 2121–2128.
+[40] S. M. Seitz and C. R. Dyer, “Photorealistic scene reconstruction by
+voxel coloring,” International journal of computer vision, vol. 35, pp.
+151–173, 1999.
+[41] S. N. Sinha, P. Mordohai, and M. Pollefeys, “Multi-view stereo via graph
+cuts on the dual of an adaptive tetrahedral mesh,” in 2007 IEEE 11th
+international conference on computer vision.
+IEEE, 2007, pp. 1–8.
+[42] T.-P. Wu, S.-K. Yeung, J. Jia, and C.-K. Tang, “Quasi-dense 3d recon-
+struction using tensor-based multiview stereo,” in 2010 IEEE computer
+society conference on computer vision and pattern recognition.
+IEEE,
+2010, pp. 1482–1489.
+[43] A. Tewari, O. Fried, J. Thies, V. Sitzmann, S. Lombardi, K. Sunkavalli,
+R. Martin-Brualla, T. Simon, J. Saragih, M. Nießner et al., “State of the
+art on neural rendering,” in Computer Graphics Forum, vol. 39, no. 2.
+Wiley Online Library, 2020, pp. 701–727.
+[44] A. Hamdi, L. Melas-Kyriazi, J. Mai, G. Qian, R. Liu, C. Vondrick,
+B. Ghanem, and A. Vedaldi, “Ges: Generalized exponential splatting
+for efficient radiance field rendering,” in Proceedings of the IEEE/CVF
+Conference on Computer Vision and Pattern Recognition, 2024, pp.
+19 812–19 822.
+[45] J. Zhang, F. Zhan, M. Xu, S. Lu, and E. Xing, “Fregs: 3d gaussian
+splatting with progressive frequency regularization,” in Proceedings of
+the IEEE/CVF Conference on Computer Vision and Pattern Recognition,
+2024, pp. 21 424–21 433.
+[46] Y.-H. Huang, M.-X. Lin, Y.-T. Sun, Z. Yang, X. Lyu, Y.-P. Cao, and
+X. Qi, “Deformable radial kernel splatting,” in Proceedings of the
+Computer Vision and Pattern Recognition Conference, 2025, pp. 21 513–
+21 523.
+[47] J. Zhu, J. Yue, F. He, and H. Wang, “3d student splatting and scoop-
+ing,” in Proceedings of the Computer Vision and Pattern Recognition
+Conference, 2025, pp. 21 045–21 054.
+[48] V. Arunan, S. Nazar, H. Pramuditha, V. Viruthshaan, S. Ramasinghe,
+S. Lucey, and R. Rodrigo, “Darb-splatting: Generalizing splatting with
+decaying anisotropic radial basis functions,” 2025. [Online]. Available:
+https://arxiv.org/abs/2501.12369
+[49] J. Tang, J. Ren, H. Zhou, Z. Liu, and G. Zeng, “Dreamgaussian:
+Generative gaussian splatting for efficient 3d content creation,” in The
+Twelfth International Conference on Learning Representations, 2024.
+[Online]. Available: https://openreview.net/forum?id=UyNXMqnN3c
+[50] H. Qu, Z. Li, H. Rahmani, Y. Cai, and J. Liu, “Disc-gs: Discontinuity-
+aware gaussian splatting,” Advances in Neural Information Processing
+Systems, vol. 37, pp. 112 284–112 309, 2024.
+[51] Y. Jiang, J. Tu, Y. Liu, X. Gao, X. Long, W. Wang, and Y. Ma, “Gaus-
+sianshader: 3d gaussian splatting with shading functions for reflective
+surfaces,” in Proceedings of the IEEE/CVF Conference on Computer
+Vision and Pattern Recognition, 2024, pp. 5322–5332.
+[52] J. Richter-Gebert, Perspectives on projective geometry: a guided tour
+through real and complex geometry.
+Springer, 2011.
+[53] S. Pitafi, T. Anwar, and Z. Sharif, “A taxonomy of machine learning
+clustering algorithms, challenges, and future realms,” Applied sciences,
+vol. 13, no. 6, p. 3529, 2023.
+[54] B. Mildenhall, P. P. Srinivasan, M. Tancik, J. T. Barron, R. Ramamoorthi,
+and R. Ng, “Nerf: Representing scenes as neural radiance fields for view
+synthesis,” Communications of the ACM, vol. 65, no. 1, pp. 99–106,
+2021.
+[55] L. Yariv, J. Gu, Y. Kasten, and Y. Lipman, “Volume rendering of neural
+implicit surfaces,” Advances in Neural Information Processing Systems,
+vol. 34, pp. 4805–4815, 2021.
+[56] R. A. Newcombe, S. Izadi, O. Hilliges, D. Molyneaux, D. Kim,
+A. J. Davison, P. Kohi, J. Shotton, S. Hodges, and A. Fitzgibbon,
+“Kinectfusion: Real-time dense surface mapping and tracking,” in 2011
+10th IEEE international symposium on mixed and augmented reality.
+Ieee, 2011, pp. 127–136.
+[57] R. Jensen, A. Dahl, G. Vogiatzis, E. Tola, and H. Aanæs, “Large scale
+multi-view stereopsis evaluation,” in Proceedings of the IEEE conference
+on computer vision and pattern recognition, 2014, pp. 406–413.
+[58] A. Knapitsch, J. Park, Q.-Y. Zhou, and V. Koltun, “Tanks and temples:
+Benchmarking large-scale scene reconstruction,” ACM Transactions on
+Graphics (ToG), vol. 36, no. 4, pp. 1–13, 2017.
+[59] T. Riemersma, “Colour metric — compuphase.com,” https://www.
+compuphase.com/cmetric.htm.
+
+<!-- page 12 -->
+JOURNAL OF LATEX CLASS FILES, VOL. 14, NO. 8, AUGUST 2021
+12
+Fig. 4. Qualitative results of our MP-GS framework and the commonly-used GS-based surface reconstruction method 2D-GS [9]. As shown, our framework
+based on mixed types of primitives achieves more accurate surface reconstruction than 2D-GS. More qualitative results are in supplementary.

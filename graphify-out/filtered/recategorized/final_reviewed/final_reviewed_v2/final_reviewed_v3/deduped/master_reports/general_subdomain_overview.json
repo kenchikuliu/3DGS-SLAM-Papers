@@ -1,0 +1,30 @@
+[
+  {
+    "subdomain": "Reconstruction",
+    "paper_count": 350,
+    "top_dataset": "ScanNet",
+    "top_metric": "Chamfer",
+    "top_concept": "3D Gaussian Splatting (Kerbl et al. 2023)"
+  },
+  {
+    "subdomain": "Rendering",
+    "paper_count": 93,
+    "top_dataset": "KITTI",
+    "top_metric": "Recall",
+    "top_concept": "3D Gaussian Splatting (Kerbl et al. 2023)"
+  },
+  {
+    "subdomain": "Enhancement",
+    "paper_count": 42,
+    "top_dataset": "KITTI",
+    "top_metric": "Recall",
+    "top_concept": "Medical Imaging Reconstruction with Gaussian Splatting"
+  },
+  {
+    "subdomain": "Evaluation",
+    "paper_count": 29,
+    "top_dataset": "ScanNet",
+    "top_metric": "Chamfer",
+    "top_concept": ""
+  }
+]

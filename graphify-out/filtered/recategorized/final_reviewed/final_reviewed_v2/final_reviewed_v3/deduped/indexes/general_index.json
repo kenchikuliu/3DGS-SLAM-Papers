@@ -1,0 +1,3304 @@
+{
+  "domain": "General",
+  "paper_count": 514,
+  "top_datasets": [
+    {
+      "label": "ScanNet",
+      "count": 50
+    },
+    {
+      "label": "DTU",
+      "count": 29
+    },
+    {
+      "label": "KITTI",
+      "count": 25
+    },
+    {
+      "label": "nuScenes",
+      "count": 20
+    },
+    {
+      "label": "EuRoC",
+      "count": 13
+    },
+    {
+      "label": "Matterport3D",
+      "count": 8
+    },
+    {
+      "label": "HM3D",
+      "count": 7
+    },
+    {
+      "label": "Gibson",
+      "count": 6
+    },
+    {
+      "label": "CO3D",
+      "count": 6
+    },
+    {
+      "label": "TUM-RGBD",
+      "count": 4
+    },
+    {
+      "label": "MP3D",
+      "count": 4
+    },
+    {
+      "label": "7-Scenes",
+      "count": 2
+    },
+    {
+      "label": "FIPS Clinical CT Dataset",
+      "count": 1
+    },
+    {
+      "label": "Aoralscan3 Dental Scan Dataset",
+      "count": 1
+    },
+    {
+      "label": "DeepBlue Tooth Design Dataset",
+      "count": 1
+    },
+    {
+      "label": "Shining3D Tooth Design Dataset",
+      "count": 1
+    },
+    {
+      "label": "DSA-15 Clinical Dataset (Digital Subtraction Angiography)",
+      "count": 1
+    },
+    {
+      "label": "DSA-28 Clinical Dataset (Digital Subtraction Angiography)",
+      "count": 1
+    },
+    {
+      "label": "HDTF Dataset (High-Definition Talking Face)",
+      "count": 1
+    },
+    {
+      "label": "RealEstate10K Dataset",
+      "count": 1
+    }
+  ],
+  "top_metrics": [
+    {
+      "label": "Chamfer",
+      "count": 58
+    },
+    {
+      "label": "Recall",
+      "count": 50
+    },
+    {
+      "label": "PSNR (Peak Signal-to-Noise Ratio)",
+      "count": 8
+    },
+    {
+      "label": "SSIM (Structural Similarity Index)",
+      "count": 7
+    },
+    {
+      "label": "LPIPS (Learned Perceptual Image Patch Similarity)",
+      "count": 6
+    },
+    {
+      "label": "Chamfer Distance (3D Geometry Reconstruction Error)",
+      "count": 2
+    },
+    {
+      "label": "FID (Frechet Inception Distance)",
+      "count": 1
+    },
+    {
+      "label": "Penetration Distance (PD) for Collision Evaluation in Tooth Generation",
+      "count": 1
+    },
+    {
+      "label": "FVMD (Frechet Video Motion Distance)",
+      "count": 1
+    },
+    {
+      "label": "LMD (Landmark Distance) for Talking Head",
+      "count": 1
+    },
+    {
+      "label": "Sync-C (Audio-Visual Sync Confidence Score)",
+      "count": 1
+    },
+    {
+      "label": "MAE (Mean Absolute Error, e.g. surface normal)",
+      "count": 1
+    }
+  ],
+  "top_concepts": [
+    {
+      "label": "3D Gaussian Splatting (Kerbl et al. 2023)",
+      "count": 9
+    },
+    {
+      "label": "Medical Imaging Reconstruction with Gaussian Splatting",
+      "count": 3
+    },
+    {
+      "label": "Radiative Gaussian Splatting (R2-Gaussian)",
+      "count": 2
+    },
+    {
+      "label": "COLMAP / Structure-from-Motion (SfM) Initialization",
+      "count": 2
+    },
+    {
+      "label": "Depth Anything V2/V3 Monocular Depth Estimation",
+      "count": 2
+    },
+    {
+      "label": "VGGT: Visual Geometry Grounded Transformer",
+      "count": 2
+    },
+    {
+      "label": "Pose Graph Optimization",
+      "count": 2
+    },
+    {
+      "label": "Density-Guided Perturbation of Low-Density Gaussian Primitives",
+      "count": 1
+    },
+    {
+      "label": "Next Best View (NBV) / Active View Selection Planning",
+      "count": 1
+    },
+    {
+      "label": "Compositional 3D Scene Generation with Diffusion Models",
+      "count": 1
+    },
+    {
+      "label": "Graph Diffusion Model for Compositional Layout Generation",
+      "count": 1
+    },
+    {
+      "label": "Score Distillation Sampling (SDS) for 3D Generation",
+      "count": 1
+    },
+    {
+      "label": "Multi-Fidelity Texture Learning Module with Confidence-Aware SR Weighting",
+      "count": 1
+    },
+    {
+      "label": "Super-Resolution Integration into Gaussian Splatting Optimization",
+      "count": 1
+    },
+    {
+      "label": "Audio-Driven Talking Head Synthesis with 3DGS",
+      "count": 1
+    },
+    {
+      "label": "Deformable 3D Gaussian Splatting",
+      "count": 1
+    },
+    {
+      "label": "HuBERT Audio Encoder for Speech Features",
+      "count": 1
+    },
+    {
+      "label": "Per-Gaussian Learnable Embeddings for Deformation",
+      "count": 1
+    },
+    {
+      "label": "Tri-plane Encoding for Gaussian Deformation",
+      "count": 1
+    },
+    {
+      "label": "Feed-Forward Gaussian Splatting (single-pass multi-view)",
+      "count": 1
+    }
+  ],
+  "papers": [
+    {
+      "id": "paper_2407_19323v6_4",
+      "label": "2407.19323v6 (4)",
+      "source_file": "2407.19323v6 (4).md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2408_04268",
+      "label": "2408.04268",
+      "source_file": "2408.04268.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2409_12899",
+      "label": "2409.12899",
+      "source_file": "2409.12899.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2503_09447",
+      "label": "2503.09447",
+      "source_file": "2503.09447.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2504_10331v3",
+      "label": "2504.10331v3",
+      "source_file": "2504.10331v3.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2507_16144",
+      "label": "2507.16144",
+      "source_file": "2507.16144.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2508_03077v1",
+      "label": "2508.03077v1",
+      "source_file": "2508.03077v1.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2511_13571",
+      "label": "2511.13571",
+      "source_file": "2511.13571.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2512_01296",
+      "label": "2512.01296",
+      "source_file": "2512.01296.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2602_18322v1",
+      "label": "2602.18322v1",
+      "source_file": "2602.18322v1.md",
+      "alias_count": 1
+    },
+    {
+      "id": "paper_2603_26599v1",
+      "label": "2603.26599v1",
+      "source_file": "2603.26599v1.md",
+      "alias_count": 1
+    },
+    {
+      "id": "paper_0565_general_2d_gaussian_splatting_with_semantic_alignment_for_image_inpa",
+      "label": "2D Gaussian Splatting with Semantic Alignment for Image Inpa",
+      "source_file": "0565_[General]_2D Gaussian Splatting with Semantic Alignment for Image Inpa.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0470_general_2dgs_r_revisiting_the_normal_consistency_regularization_in",
+      "label": "2DGS-R Revisiting the Normal Consistency Regularization in",
+      "source_file": "0470_[General]_2DGS-R Revisiting the Normal Consistency Regularization in.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0339_general_360_geogs_geometrically_consistent_feed_forward_3d_gaussian",
+      "label": "360-GeoGS Geometrically Consistent Feed-Forward 3D Gaussian",
+      "source_file": "0339_[General]_360-GeoGS Geometrically Consistent Feed-Forward 3D Gaussian.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_3746027_3755375",
+      "label": "3746027.3755375",
+      "source_file": "3746027.3755375.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0536_general_3d_gaussian_flats_hybrid_2d3d_photometric_scene_reconstruc",
+      "label": "3D Gaussian Flats Hybrid 2D3D Photometric Scene Reconstruc",
+      "source_file": "0536_[General]_3D Gaussian Flats Hybrid 2D3D Photometric Scene Reconstruc.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0440_general_3d_gaussian_point_encoders",
+      "label": "3D Gaussian Point Encoders",
+      "source_file": "0440_[General]_3D Gaussian Point Encoders.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0447_general_3d_gaussian_radiation_field_modeling_for_integrated_ris_fas",
+      "label": "3D Gaussian Radiation Field Modeling for Integrated RIS-FAS",
+      "source_file": "0447_[General]_3D Gaussian Radiation Field Modeling for Integrated RIS-FAS.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0616_general_3d_gaussian_representations_with_motion_trajectory_field_for",
+      "label": "3D Gaussian Representations with Motion Trajectory Field for",
+      "source_file": "0616_[General]_3D Gaussian Representations with Motion Trajectory Field for.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0427_general_3d_gaussian_and_diffusion_based_gaze_redirection",
+      "label": "3D Gaussian and Diffusion-Based Gaze Redirection",
+      "source_file": "0427_[General]_3D Gaussian and Diffusion-Based Gaze Redirection.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0247_general_3d_scene_rendering_with_multimodal_gaussian_splatting",
+      "label": "3D Scene Rendering with Multimodal Gaussian Splatting",
+      "source_file": "0247_[General]_3D Scene Rendering with Multimodal Gaussian Splatting.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0668_general_3dgaa_realistic_and_robust_3d_gaussian_based_adversarial_at",
+      "label": "3DGAA Realistic and Robust 3D Gaussian-based Adversarial At",
+      "source_file": "0668_[General]_3DGAA Realistic and Robust 3D Gaussian-based Adversarial At.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0297_general_3dgs_2_tr_scalable_second_order_trust_region_method_for_3",
+      "label": "3DGS$^2$-TR Scalable Second-Order Trust-Region Method for 3",
+      "source_file": "0297_[General]_3DGS$^2$-TR Scalable Second-Order Trust-Region Method for 3.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0328_general_3dgs_drag_dragging_gaussians_for_intuitive_point_based_3d_e",
+      "label": "3DGS-Drag Dragging Gaussians for Intuitive Point-Based 3D E",
+      "source_file": "0328_[General]_3DGS-Drag Dragging Gaussians for Intuitive Point-Based 3D E.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0194_general_3dgs_hpc_distractor_free_3d_gaussian_splatting_with_hybrid",
+      "label": "3DGS-HPC Distractor-free 3D Gaussian Splatting with Hybrid",
+      "source_file": "0194_[General]_3DGS-HPC Distractor-free 3D Gaussian Splatting with Hybrid.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0617_general_3dgs_vbench_a_comprehensive_video_quality_evaluation_benchm",
+      "label": "3DGS-VBench A Comprehensive Video Quality Evaluation Benchm",
+      "source_file": "0617_[General]_3DGS-VBench A Comprehensive Video Quality Evaluation Benchm.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0675_general_3dgs_lsrlarge_scale_relocation_for_autonomous_driving_based",
+      "label": "3DGS_LSRLarge_Scale Relocation for Autonomous Driving Based",
+      "source_file": "0675_[General]_3DGS_LSRLarge_Scale Relocation for Autonomous Driving Based.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0558_general_3dof_quantization_3dgs_quantization_for_large_scenes_with_l",
+      "label": "3DOF+Quantization 3DGS quantization for large scenes with l",
+      "source_file": "0558_[General]_3DOF+Quantization 3DGS quantization for large scenes with l.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0523_general_4d_driving_scene_generation_with_stereo_forcing",
+      "label": "4D Driving Scene Generation With Stereo Forcing",
+      "source_file": "0523_[General]_4D Driving Scene Generation With Stereo Forcing.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0354_general_4d_gaussian_splatting_as_a_learned_dynamical_system",
+      "label": "4D Gaussian Splatting as a Learned Dynamical System",
+      "source_file": "0354_[General]_4D Gaussian Splatting as a Learned Dynamical System.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0246_general_4d_monocular_surgical_reconstruction_under_arbitrary_camera",
+      "label": "4D Monocular Surgical Reconstruction under Arbitrary Camera",
+      "source_file": "0246_[General]_4D Monocular Surgical Reconstruction under Arbitrary Camera.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0448_general_4d_neural_voxel_splatting_dynamic_scene_rendering_with_voxe",
+      "label": "4D Neural Voxel Splatting Dynamic Scene Rendering with Voxe",
+      "source_file": "0448_[General]_4D Neural Voxel Splatting Dynamic Scene Rendering with Voxe.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0438_general_4d3r_motion_aware_neural_reconstruction_and_rendering_of_dy",
+      "label": "4D3R Motion-Aware Neural Reconstruction and Rendering of Dy",
+      "source_file": "0438_[General]_4D3R Motion-Aware Neural Reconstruction and Rendering of Dy.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0549_general_4dradar_gs_self_supervised_dynamic_driving_scene_reconstruc",
+      "label": "4DRadar-GS Self-Supervised Dynamic Driving Scene Reconstruc",
+      "source_file": "0549_[General]_4DRadar-GS Self-Supervised Dynamic Driving Scene Reconstruc.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0451_general_6d_channel_knowledge_map_construction_via_bidirectional_wire",
+      "label": "6D Channel Knowledge Map Construction via Bidirectional Wire",
+      "source_file": "0451_[General]_6D Channel Knowledge Map Construction via Bidirectional Wire.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0620_general_a_3dgs_diffusion_self_supervised_framework_for_normal_estima",
+      "label": "A 3DGS-Diffusion Self-Supervised Framework for Normal Estima",
+      "source_file": "0620_[General]_A 3DGS-Diffusion Self-Supervised Framework for Normal Estima.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0337_general_a_high_fidelity_digital_twin_for_robotic_manipulation_based",
+      "label": "A High-Fidelity Digital Twin for Robotic Manipulation Based",
+      "source_file": "0337_[General]_A High-Fidelity Digital Twin for Robotic Manipulation Based.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0667_general_a_mixed_primitive_based_gaussian_splatting_method_for_surfac",
+      "label": "A Mixed-Primitive-based Gaussian Splatting Method for Surfac",
+      "source_file": "0667_[General]_A Mixed-Primitive-based Gaussian Splatting Method for Surfac.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0405_general_aegis_preserving_privacy_of_3d_facial_avatars_with_adversar",
+      "label": "AEGIS Preserving privacy of 3D Facial Avatars with Adversar",
+      "source_file": "0405_[General]_AEGIS Preserving privacy of 3D Facial Avatars with Adversar.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0637_general_ag2aussian_anchor_graph_structured_gaussian_splatting_for_i",
+      "label": "AG2aussian Anchor-Graph Structured Gaussian Splatting for I",
+      "source_file": "0637_[General]_AG2aussian Anchor-Graph Structured Gaussian Splatting for I.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0430_general_aha_animating_human_avatars_in_diverse_scenes_with_gaussian",
+      "label": "AHA! Animating Human Avatars in Diverse Scenes with Gaussian",
+      "source_file": "0430_[General]_AHA! Animating Human Avatars in Diverse Scenes with Gaussian.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0571_general_args_advanced_regularization_on_aligning_gaussians_over_the",
+      "label": "ARGS Advanced Regularization on Aligning Gaussians over the",
+      "source_file": "0571_[General]_ARGS Advanced Regularization on Aligning Gaussians over the.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0376_general_asap_textured_gaussians_enhancing_textured_gaussians_with_a",
+      "label": "ASAP-Textured Gaussians Enhancing Textured Gaussians with A",
+      "source_file": "0376_[General]_ASAP-Textured Gaussians Enhancing Textured Gaussians with A.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0556_general_accurate_and_complete_surface_reconstruction_from_3d_gaussia",
+      "label": "Accurate and Complete Surface Reconstruction from 3D Gaussia",
+      "source_file": "0556_[General]_Accurate and Complete Surface Reconstruction from 3D Gaussia.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0324_general_active_semantic_mapping_of_horticultural_environments_using",
+      "label": "Active Semantic Mapping of Horticultural Environments Using",
+      "source_file": "0324_[General]_Active Semantic Mapping of Horticultural Environments Using.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0197_general_active_view_selection_with_perturbed_gaussian_ensemble_for_t",
+      "label": "Active View Selection with Perturbed Gaussian Ensemble for T",
+      "source_file": "0197_[General]_Active View Selection with Perturbed Gaussian Ensemble for T.md",
+      "alias_count": 1
+    },
+    {
+      "id": "paper_0660_general_adaptive_3d_gaussian_splatting_video_streaming",
+      "label": "Adaptive 3D Gaussian Splatting Video Streaming",
+      "source_file": "0660_[General]_Adaptive 3D Gaussian Splatting Video Streaming.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0659_general_adaptive_3d_gaussian_splatting_video_streaming_visual_salie",
+      "label": "Adaptive 3D Gaussian Splatting Video Streaming Visual Salie",
+      "source_file": "0659_[General]_Adaptive 3D Gaussian Splatting Video Streaming Visual Salie.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0524_general_aerial_ground_image_feature_matching_via_3d_gaussian_splatti",
+      "label": "Aerial-Ground Image Feature Matching via 3D Gaussian Splatti",
+      "source_file": "0524_[General]_Aerial-Ground Image Feature Matching via 3D Gaussian Splatti.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0241_general_aesthetic_camera_viewpoint_suggestion_with_3d_aesthetic_fiel",
+      "label": "Aesthetic Camera Viewpoint Suggestion with 3D Aesthetic Fiel",
+      "source_file": "0241_[General]_Aesthetic Camera Viewpoint Suggestion with 3D Aesthetic Fiel.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0348_general_airgs_real_time_4d_gaussian_streaming_for_free_viewpoint_vi",
+      "label": "AirGS Real-Time 4D Gaussian Streaming for Free-Viewpoint Vi",
+      "source_file": "0348_[General]_AirGS Real-Time 4D Gaussian Streaming for Free-Viewpoint Vi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0270_general_analysis_of_converged_3d_gaussian_splatting_solutions_densi",
+      "label": "Analysis of Converged 3D Gaussian Splatting Solutions Densi",
+      "source_file": "0270_[General]_Analysis of Converged 3D Gaussian Splatting Solutions Densi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0359_general_animate_any_character_in_any_world",
+      "label": "Animate Any Character in Any World",
+      "source_file": "0359_[General]_Animate Any Character in Any World.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0285_general_anystyle_single_pass_multimodal_stylization_for_3d_gaussian",
+      "label": "AnyStyle Single-Pass Multimodal Stylization for 3D Gaussian",
+      "source_file": "0285_[General]_AnyStyle Single-Pass Multimodal Stylization for 3D Gaussian.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0657_general_appearance_harmonization_via_bilateral_grid_prediction_with",
+      "label": "Appearance Harmonization via Bilateral Grid Prediction with",
+      "source_file": "0657_[General]_Appearance Harmonization via Bilateral Grid Prediction with.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0498_general_architecthead_continuous_level_of_detail_control_for_3d_gau",
+      "label": "ArchitectHead Continuous Level of Detail Control for 3D Gau",
+      "source_file": "0498_[General]_ArchitectHead Continuous Level of Detail Control for 3D Gau.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0678_general_armgs_composite_gaussian_appearance_refinement_for_modeling",
+      "label": "ArmGS Composite Gaussian Appearance Refinement for Modeling",
+      "source_file": "0678_[General]_ArmGS Composite Gaussian Appearance Refinement for Modeling.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0233_general_artpro_self_supervised_articulated_object_reconstruction_wi",
+      "label": "ArtPro Self-Supervised Articulated Object Reconstruction wi",
+      "source_file": "0233_[General]_ArtPro Self-Supervised Articulated Object Reconstruction wi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0223_general_artifixer_enhancing_and_extending_3d_reconstruction_with_au",
+      "label": "ArtiFixer Enhancing and Extending 3D Reconstruction with Au",
+      "source_file": "0223_[General]_ArtiFixer Enhancing and Extending 3D Reconstruction with Au.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0266_general_artisangs_interactive_tools_for_gaussian_splat_selection_wi",
+      "label": "ArtisanGS Interactive Tools for Gaussian Splat Selection wi",
+      "source_file": "0266_[General]_ArtisanGS Interactive Tools for Gaussian Splat Selection wi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0573_general_avatarback_back_head_generation_for_complete_3d_avatars_fro",
+      "label": "AvatarBack Back-Head Generation for Complete 3D Avatars fro",
+      "source_file": "0573_[General]_AvatarBack Back-Head Generation for Complete 3D Avatars fro.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0679_general_avatarmakeup_realistic_makeup_transfer_for_3d_animatable_he",
+      "label": "AvatarMakeup Realistic Makeup Transfer for 3D Animatable He",
+      "source_file": "0679_[General]_AvatarMakeup Realistic Makeup Transfer for 3D Animatable He.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0665_general_brum_robust_3d_vehicle_reconstruction_from_360_sparse_image",
+      "label": "BRUM Robust 3D Vehicle Reconstruction from 360 Sparse Image",
+      "source_file": "0665_[General]_BRUM Robust 3D Vehicle Reconstruction from 360 Sparse Image.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0234_general_betterscene_3d_scene_synthesis_with_representation_aligned",
+      "label": "BetterScene 3D Scene Synthesis with Representation-Aligned",
+      "source_file": "0234_[General]_BetterScene 3D Scene Synthesis with Representation-Aligned.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0548_general_beyond_averages_open_vocabulary_3d_scene_understanding_with",
+      "label": "Beyond Averages Open-Vocabulary 3D Scene Understanding with",
+      "source_file": "0548_[General]_Beyond Averages Open-Vocabulary 3D Scene Understanding with.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0422_general_beyond_darkness_thermal_supervised_3d_gaussian_splatting_fo",
+      "label": "Beyond Darkness Thermal-Supervised 3D Gaussian Splatting fo",
+      "source_file": "0422_[General]_Beyond Darkness Thermal-Supervised 3D Gaussian Splatting fo.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0372_general_beyond_a_single_light_a_large_scale_aerial_dataset_for_urba",
+      "label": "Beyond a Single Light A Large-Scale Aerial Dataset for Urba",
+      "source_file": "0372_[General]_Beyond a Single Light A Large-Scale Aerial Dataset for Urba.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0525_general_bitaa_a_bi_task_adversarial_attack_for_object_detection_and",
+      "label": "BiTAA A Bi-Task Adversarial Attack for Object Detection and",
+      "source_file": "0525_[General]_BiTAA A Bi-Task Adversarial Attack for Object Detection and.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0384_general_breaking_the_vicious_cycle_coherent_3d_gaussian_splatting_f",
+      "label": "Breaking the Vicious Cycle Coherent 3D Gaussian Splatting f",
+      "source_file": "0384_[General]_Breaking the Vicious Cycle Coherent 3D Gaussian Splatting f.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0370_general_broadening_view_synthesis_of_dynamic_scenes_from_constrained",
+      "label": "Broadening View Synthesis of Dynamic Scenes from Constrained",
+      "source_file": "0370_[General]_Broadening View Synthesis of Dynamic Scenes from Constrained.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0404_general_cus_gs_a_compact_unified_structured_gaussian_splatting_fram",
+      "label": "CUS-GS A Compact Unified Structured Gaussian Splatting Fram",
+      "source_file": "0404_[General]_CUS-GS A Compact Unified Structured Gaussian Splatting Fram.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0493_general_cvd_storm_cross_view_video_diffusion_with_spatial_temporal",
+      "label": "CVD-STORM Cross-View Video Diffusion with Spatial-Temporal",
+      "source_file": "0493_[General]_CVD-STORM Cross-View Video Diffusion with Spatial-Temporal.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0442_general_carf_enhancing_multi_view_consistency_in_referring_3d_gauss",
+      "label": "CaRF Enhancing Multi-View Consistency in Referring 3D Gauss",
+      "source_file": "0442_[General]_CaRF Enhancing Multi-View Consistency in Referring 3D Gauss.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0539_general_camera_splatting_for_continuous_view_optimization",
+      "label": "Camera Splatting for Continuous View Optimization",
+      "source_file": "0539_[General]_Camera Splatting for Continuous View Optimization.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0497_general_capture_and_interact_rapid_3d_object_acquisition_and_render",
+      "label": "Capture and Interact Rapid 3D Object Acquisition and Render",
+      "source_file": "0497_[General]_Capture and Interact Rapid 3D Object Acquisition and Render.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0336_general_caricaturegs_exaggerating_3d_gaussian_splatting_faces_with",
+      "label": "CaricatureGS Exaggerating 3D Gaussian Splatting Faces With",
+      "source_file": "0336_[General]_CaricatureGS Exaggerating 3D Gaussian Splatting Faces With.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0543_general_causal_reasoning_elicits_controllable_3d_scene_generation",
+      "label": "Causal Reasoning Elicits Controllable 3D Scene Generation",
+      "source_file": "0543_[General]_Causal Reasoning Elicits Controllable 3D Scene Generation.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0426_general_changes_in_real_time_online_scene_change_detection_with_mul",
+      "label": "Changes in Real Time Online Scene Change Detection with Mul",
+      "source_file": "0426_[General]_Changes in Real Time Online Scene Change Detection with Mul.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0358_general_chorus_multi_teacher_pretraining_for_holistic_3d_gaussian_s",
+      "label": "Chorus Multi-Teacher Pretraining for Holistic 3D Gaussian S",
+      "source_file": "0358_[General]_Chorus Multi-Teacher Pretraining for Holistic 3D Gaussian S.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0342_general_clean_gs_semantic_mask_guided_pruning_for_3d_gaussian_splat",
+      "label": "Clean-GS Semantic Mask-Guided Pruning for 3D Gaussian Splat",
+      "source_file": "0342_[General]_Clean-GS Semantic Mask-Guided Pruning for 3D Gaussian Splat.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0203_general_cog2gen3d_sculpturing_3d_semantic_geometric_cognition_for_3",
+      "label": "Cog2Gen3D Sculpturing 3D Semantic-Geometric Cognition for 3",
+      "source_file": "0203_[General]_Cog2Gen3D Sculpturing 3D Semantic-Geometric Cognition for 3.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0196_general_colonsplat_reconstruction_of_peristaltic_motion_in_colonosc",
+      "label": "ColonSplat Reconstruction of Peristaltic Motion in Colonosc",
+      "source_file": "0196_[General]_ColonSplat Reconstruction of Peristaltic Motion in Colonosc.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0577_general_colorgs_high_fidelity_surgical_scene_reconstruction_with_co",
+      "label": "ColorGS High-fidelity Surgical Scene Reconstruction with Co",
+      "source_file": "0577_[General]_ColorGS High-fidelity Surgical Scene Reconstruction with Co.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0495_general_comgs_efficient_3d_object_scene_composition_via_surface_oct",
+      "label": "ComGS Efficient 3D Object-Scene Composition via Surface Oct",
+      "source_file": "0495_[General]_ComGS Efficient 3D Object-Scene Composition via Surface Oct.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0267_general_compsplat_compression_aware_3d_gaussian_splatting_for_real",
+      "label": "CompSplat Compression-aware 3D Gaussian Splatting for Real-",
+      "source_file": "0267_[General]_CompSplat Compression-aware 3D Gaussian Splatting for Real-.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0569_general_complete_gaussian_splats_from_a_single_image_with_denoising",
+      "label": "Complete Gaussian Splats from a Single Image with Denoising",
+      "source_file": "0569_[General]_Complete Gaussian Splats from a Single Image with Denoising.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0603_general_complicitsplat_downstream_models_are_vulnerable_to_blackbox",
+      "label": "ComplicitSplat Downstream Models are Vulnerable to Blackbox",
+      "source_file": "0603_[General]_ComplicitSplat Downstream Models are Vulnerable to Blackbox.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0378_general_computer_vision_training_dataset_generation_for_robotic_envi",
+      "label": "Computer vision training dataset generation for robotic envi",
+      "source_file": "0378_[General]_Computer vision training dataset generation for robotic envi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0436_general_conegs_error_guided_densification_using_pixel_cones_for_imp",
+      "label": "ConeGS Error-Guided Densification Using Pixel Cones for Imp",
+      "source_file": "0436_[General]_ConeGS Error-Guided Densification Using Pixel Cones for Imp.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0374_general_consistent_instance_field_for_dynamic_scene_understanding",
+      "label": "Consistent Instance Field for Dynamic Scene Understanding",
+      "source_file": "0374_[General]_Consistent Instance Field for Dynamic Scene Understanding.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0286_general_constrained_dynamic_gaussian_splatting",
+      "label": "Constrained Dynamic Gaussian Splatting",
+      "source_file": "0286_[General]_Constrained Dynamic Gaussian Splatting.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0563_general_contrags_codebook_condensed_and_trainable_gaussian_splattin",
+      "label": "ContraGS Codebook-Condensed and Trainable Gaussian Splattin",
+      "source_file": "0563_[General]_ContraGS Codebook-Condensed and Trainable Gaussian Splattin.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0515_general_crashsplat_2d_to_3d_vehicle_damage_segmentation_in_gaussian",
+      "label": "CrashSplat 2D to 3D Vehicle Damage Segmentation in Gaussian",
+      "source_file": "0515_[General]_CrashSplat 2D to 3D Vehicle Damage Segmentation in Gaussian.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0625_general_cryogs_gaussian_splatting_for_cryo_em_homogeneous_reconstru",
+      "label": "CryoGS Gaussian Splatting for Cryo-EM Homogeneous Reconstru",
+      "source_file": "0625_[General]_CryoGS Gaussian Splatting for Cryo-EM Homogeneous Reconstru.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0414_general_curigs_curriculum_guided_gaussian_splatting_for_sparse_view",
+      "label": "CuriGS Curriculum-Guided Gaussian Splatting for Sparse View",
+      "source_file": "0414_[General]_CuriGS Curriculum-Guided Gaussian Splatting for Sparse View.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0202_general_cylindersplat_3d_gaussian_splatting_with_cylindrical_tripla",
+      "label": "CylinderSplat 3D Gaussian Splatting with Cylindrical Tripla",
+      "source_file": "0202_[General]_CylinderSplat 3D Gaussian Splatting with Cylindrical Tripla.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0674_general_d_fcgs_feedforward_compression_of_dynamic_gaussian_splattin",
+      "label": "D-FCGS Feedforward Compression of Dynamic Gaussian Splattin",
+      "source_file": "0674_[General]_D-FCGS Feedforward Compression of Dynamic Gaussian Splattin.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0250_general_dav_gswt_diffusion_active_view_sampling_for_data_efficient",
+      "label": "DAV-GSWT Diffusion-Active-View Sampling for Data-Efficient",
+      "source_file": "0250_[General]_DAV-GSWT Diffusion-Active-View Sampling for Data-Efficient.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0628_general_det_gs_depth_and_edge_aware_regularization_for_high_fideli",
+      "label": "DET-GS Depth- and Edge-Aware Regularization for High-Fideli",
+      "source_file": "0628_[General]_DET-GS Depth- and Edge-Aware Regularization for High-Fideli.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0437_general_dial_gs_dynamic_instance_aware_reconstruction_for_label_fre",
+      "label": "DIAL-GS Dynamic Instance Aware Reconstruction for Label-fre",
+      "source_file": "0437_[General]_DIAL-GS Dynamic Instance Aware Reconstruction for Label-fre.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0614_general_dip_gs_deep_image_prior_for_gaussian_splatting_sparse_view",
+      "label": "DIP-GS Deep Image Prior For Gaussian Splatting Sparse View",
+      "source_file": "0614_[General]_DIP-GS Deep Image Prior For Gaussian Splatting Sparse View.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0209_general_dm_cfo_a_diffusion_model_for_compositional_3d_tooth_generat",
+      "label": "DM-CFO A Diffusion Model for Compositional 3D Tooth Generat",
+      "source_file": "0209_[General]_DM-CFO A Diffusion Model for Compositional 3D Tooth Generat.md",
+      "alias_count": 1
+    },
+    {
+      "id": "paper_0207_general_dsa_srgs_super_resolution_gaussian_splatting_for_dynamic_sp",
+      "label": "DSA-SRGS Super-Resolution Gaussian Splatting for Dynamic Sp",
+      "source_file": "0207_[General]_DSA-SRGS Super-Resolution Gaussian Splatting for Dynamic Sp.md",
+      "alias_count": 1
+    },
+    {
+      "id": "paper_0592_general_d_3_talker_dual_branch_decoupled_deformation_fields_for_few",
+      "label": "D^3-Talker Dual-Branch Decoupled Deformation Fields for Few",
+      "source_file": "0592_[General]_D^3-Talker Dual-Branch Decoupled Deformation Fields for Few.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0666_general_dark_evgs_event_camera_as_an_eye_for_radiance_field_in_the",
+      "label": "Dark-EvGS Event Camera as an Eye for Radiance Field in the",
+      "source_file": "0666_[General]_Dark-EvGS Event Camera as an Eye for Radiance Field in the.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0645_general_decomposing_densification_in_gaussian_splatting_for_faster_3",
+      "label": "Decomposing Densification in Gaussian Splatting for Faster 3",
+      "source_file": "0645_[General]_Decomposing Densification in Gaussian Splatting for Faster 3.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0220_general_decoupling_motion_and_geometry_in_4d_gaussian_splatting",
+      "label": "Decoupling Motion and Geometry in 4D Gaussian Splatting",
+      "source_file": "0220_[General]_Decoupling Motion and Geometry in 4D Gaussian Splatting.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0243_general_defensesplat_enhancing_the_robustness_of_3d_gaussian_splatt",
+      "label": "DefenseSplat Enhancing the Robustness of 3D Gaussian Splatt",
+      "source_file": "0243_[General]_DefenseSplat Enhancing the Robustness of 3D Gaussian Splatt.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0184_general_denoisesplat_feed_forward_gaussian_splatting_for_noisy_3d_s",
+      "label": "DenoiseSplat Feed-Forward Gaussian Splatting for Noisy 3D S",
+      "source_file": "0184_[General]_DenoiseSplat Feed-Forward Gaussian Splatting for Noisy 3D S.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0394_general_densifybeforehand_lidar_assisted_content_aware_densificatio",
+      "label": "DensifyBeforehand LiDAR-assisted Content-aware Densificatio",
+      "source_file": "0394_[General]_DensifyBeforehand LiDAR-assisted Content-aware Densificatio.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0416_general_dental3r_geometry_aware_pairing_for_intraoral_3d_reconstruc",
+      "label": "Dental3R Geometry-Aware Pairing for Intraoral 3D Reconstruc",
+      "source_file": "0416_[General]_Dental3R Geometry-Aware Pairing for Intraoral 3D Reconstruc.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0444_general_dentalsplat_dental_occlusion_novel_view_synthesis_from_spar",
+      "label": "DentalSplat Dental Occlusion Novel View Synthesis from Spar",
+      "source_file": "0444_[General]_DentalSplat Dental Occlusion Novel View Synthesis from Spar.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0429_general_depth_consistent_3d_gaussian_splatting_via_physical_defocus",
+      "label": "Depth-Consistent 3D Gaussian Splatting via Physical Defocus",
+      "source_file": "0429_[General]_Depth-Consistent 3D Gaussian Splatting via Physical Defocus.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0304_general_diffstyle3d_consistent_3d_gaussian_stylization_via_attentio",
+      "label": "DiffStyle3D Consistent 3D Gaussian Stylization via Attentio",
+      "source_file": "0304_[General]_DiffStyle3D Consistent 3D Gaussian Stylization via Attentio.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0227_general_diffusionharmonizer_bridging_neural_reconstruction_and_phot",
+      "label": "DiffusionHarmonizer Bridging Neural Reconstruction and Phot",
+      "source_file": "0227_[General]_DiffusionHarmonizer Bridging Neural Reconstruction and Phot.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0595_general_distilled_3dgsdistilled_3d_gaussian_splatting",
+      "label": "Distilled-3DGSDistilled 3D Gaussian Splatting",
+      "source_file": "0595_[General]_Distilled-3DGSDistilled 3D Gaussian Splatting.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0550_general_distributed_3d_gaussian_splatting_for_high_resolution_isosur",
+      "label": "Distributed 3D Gaussian Splatting for High-Resolution Isosur",
+      "source_file": "0550_[General]_Distributed 3D Gaussian Splatting for High-Resolution Isosur.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0547_general_dream3davatar_text_controlled_3d_avatar_reconstruction_from",
+      "label": "Dream3DAvatar Text-Controlled 3D Avatar Reconstruction from",
+      "source_file": "0547_[General]_Dream3DAvatar Text-Controlled 3D Avatar Reconstruction from.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0557_general_dreamlifting_a_plug_in_module_lifting_mv_diffusion_models_f",
+      "label": "DreamLifting A Plug-in Module Lifting MV Diffusion Models f",
+      "source_file": "0557_[General]_DreamLifting A Plug-in Module Lifting MV Diffusion Models f.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0661_general_dreamscene_3d_gaussian_based_end_to_end_text_to_3d_scene_ge",
+      "label": "DreamScene 3D Gaussian-based End-to-end Text-to-3D Scene Ge",
+      "source_file": "0661_[General]_DreamScene 3D Gaussian-based End-to-end Text-to-3D Scene Ge.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0583_general_drivesplat_decoupled_driving_scene_reconstruction_with_geom",
+      "label": "DriveSplat Decoupled Driving Scene Reconstruction with Geom",
+      "source_file": "0583_[General]_DriveSplat Decoupled Driving Scene Reconstruction with Geom.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0572_general_drivinggaussian_towards_realistic_reconstruction_and_edit",
+      "label": "DrivingGaussian++ Towards Realistic Reconstruction and Edit",
+      "source_file": "0572_[General]_DrivingGaussian++ Towards Realistic Reconstruction and Edit.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0453_general_drivingscene_a_multi_task_online_feed_forward_3d_gaussian_s",
+      "label": "DrivingScene A Multi-Task Online Feed-Forward 3D Gaussian S",
+      "source_file": "0453_[General]_DrivingScene A Multi-Task Online Feed-Forward 3D Gaussian S.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0608_general_dualphys_gs_dual_physically_guided_3d_gaussian_splatting_fo",
+      "label": "DualPhys-GS Dual Physically-Guided 3D Gaussian Splatting fo",
+      "source_file": "0608_[General]_DualPhys-GS Dual Physically-Guided 3D Gaussian Splatting fo.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0630_general_duplex_gs_proxy_guided_weighted_blending_for_real_time_orde",
+      "label": "Duplex-GS Proxy-Guided Weighted Blending for Real-Time Orde",
+      "source_file": "0630_[General]_Duplex-GS Proxy-Guided Weighted Blending for Real-Time Orde.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0273_general_dynfoa_generating_first_order_ambisonics_with_conditional_d",
+      "label": "DynFOA Generating First-Order Ambisonics with Conditional D",
+      "source_file": "0273_[General]_DynFOA Generating First-Order Ambisonics with Conditional D.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0459_general_dynapose4d_high_quality_4d_dynamic_content_generation_via_p",
+      "label": "DynaPose4D High-Quality 4D Dynamic Content Generation via P",
+      "source_file": "0459_[General]_DynaPose4D High-Quality 4D Dynamic Content Generation via P.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0522_general_dynamic_novel_view_synthesis_in_high_dynamic_range",
+      "label": "Dynamic Novel View Synthesis in High Dynamic Range",
+      "source_file": "0522_[General]_Dynamic Novel View Synthesis in High Dynamic Range.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0460_general_dynamictree_interactive_real_tree_animation_via_sparse_voxe",
+      "label": "DynamicTree Interactive Real Tree Animation via Sparse Voxe",
+      "source_file": "0460_[General]_DynamicTree Interactive Real Tree Animation via Sparse Voxe.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0191_general_dynamicvggt_learning_dynamic_point_maps_for_4d_scene_recons",
+      "label": "DynamicVGGT Learning Dynamic Point Maps for 4D Scene Recons",
+      "source_file": "0191_[General]_DynamicVGGT Learning Dynamic Point Maps for 4D Scene Recons.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0298_general_eag_pt_emission_aware_gaussians_and_path_tracing_for_indoor",
+      "label": "EAG-PT Emission-Aware Gaussians and Path Tracing for Indoor",
+      "source_file": "0298_[General]_EAG-PT Emission-Aware Gaussians and Path Tracing for Indoor.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0598_general_eavatar_expression_aware_head_avatar_reconstruction_with_ge",
+      "label": "EAvatar Expression-Aware Head Avatar Reconstruction with Ge",
+      "source_file": "0598_[General]_EAvatar Expression-Aware Head Avatar Reconstruction with Ge.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0264_general_ergo_excess_risk_guided_optimization_for_high_fidelity_mono",
+      "label": "ERGO Excess-Risk-Guided Optimization for High-Fidelity Mono",
+      "source_file": "0264_[General]_ERGO Excess-Risk-Guided Optimization for High-Fidelity Mono.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0341_general_esgaussianface_emotional_and_stylized_audio_driven_facial_a",
+      "label": "ESGaussianFace Emotional and Stylized Audio-Driven Facial A",
+      "source_file": "0341_[General]_ESGaussianFace Emotional and Stylized Audio-Driven Facial A.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0313_general_evolsplat4d_efficient_volume_based_gaussian_splatting_for_4",
+      "label": "EVolSplat4D Efficient Volume-based Gaussian Splatting for 4",
+      "source_file": "0313_[General]_EVolSplat4D Efficient Volume-based Gaussian Splatting for 4.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0439_general_efficient_representation_of_3d_spatial_data_for_defense_rela",
+      "label": "Efficient representation of 3D spatial data for defense-rela",
+      "source_file": "0439_[General]_Efficient representation of 3D spatial data for defense-rela.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0193_general_embedtalk_triplane_free_talking_head_synthesis_using_embedd",
+      "label": "EmbedTalk Triplane-Free Talking Head Synthesis using Embedd",
+      "source_file": "0193_[General]_EmbedTalk Triplane-Free Talking Head Synthesis using Embedd.md",
+      "alias_count": 1
+    },
+    {
+      "id": "paper_0456_general_endowave_rational_wavelet_4d_gaussian_splatting_for_endosco",
+      "label": "EndoWave Rational-Wavelet 4D Gaussian Splatting for Endosco",
+      "source_file": "0456_[General]_EndoWave Rational-Wavelet 4D Gaussian Splatting for Endosco.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0641_general_enhanced_velocity_field_modeling_for_gaussian_video_reconstr",
+      "label": "Enhanced Velocity Field Modeling for Gaussian Video Reconstr",
+      "source_file": "0641_[General]_Enhanced Velocity Field Modeling for Gaussian Video Reconstr.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0582_general_enhancing_novel_view_synthesis_from_extremely_sparse_views_w",
+      "label": "Enhancing Novel View Synthesis from extremely sparse views w",
+      "source_file": "0582_[General]_Enhancing Novel View Synthesis from extremely sparse views w.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0351_general_enhancing_annotations_for_5d_apple_pose_estimation_through_3",
+      "label": "Enhancing annotations for 5D apple pose estimation through 3",
+      "source_file": "0351_[General]_Enhancing annotations for 5D apple pose estimation through 3.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0198_general_enton_eigenentropy_optimized_neighborhood_densification_in",
+      "label": "EntON Eigenentropy-Optimized Neighborhood Densification in",
+      "source_file": "0198_[General]_EntON Eigenentropy-Optimized Neighborhood Densification in.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0605_general_entropygs_an_efficient_entropy_coding_on_3d_gaussian_splatt",
+      "label": "EntropyGS An Efficient Entropy Coding on 3D Gaussian Splatt",
+      "source_file": "0605_[General]_EntropyGS An Efficient Entropy Coding on 3D Gaussian Splatt.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0618_general_evaluating_fisheye_compatible_3d_gaussian_splatting_methods",
+      "label": "Evaluating Fisheye-Compatible 3D Gaussian Splatting Methods",
+      "source_file": "0618_[General]_Evaluating Fisheye-Compatible 3D Gaussian Splatting Methods.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0512_general_exgs_extreme_3d_gaussian_compression_with_diffusion_priors",
+      "label": "ExGS Extreme 3D Gaussian Compression with Diffusion Priors",
+      "source_file": "0512_[General]_ExGS Extreme 3D Gaussian Compression with Diffusion Priors.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0308_general_exogs_a_4d_real_to_sim_to_real_framework_for_scalable_manip",
+      "label": "ExoGS A 4D Real-to-Sim-to-Real Framework for Scalable Manip",
+      "source_file": "0308_[General]_ExoGS A 4D Real-to-Sim-to-Real Framework for Scalable Manip.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0463_general_extreme_views_3dgs_filter_for_novel_view_synthesis_from_out",
+      "label": "Extreme Views 3DGS Filter for Novel View Synthesis from Out",
+      "source_file": "0463_[General]_Extreme Views 3DGS Filter for Novel View Synthesis from Out.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0531_general_fggs_lidar_ultra_fast_gpu_accelerated_simulation_from_gene",
+      "label": "FGGS-LiDAR Ultra-Fast, GPU-Accelerated Simulation from Gene",
+      "source_file": "0531_[General]_FGGS-LiDAR Ultra-Fast, GPU-Accelerated Simulation from Gene.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0271_general_flag_4d_flow_guided_local_global_dual_deformation_model_for",
+      "label": "FLAG-4D Flow-Guided Local-Global Dual-Deformation Model for",
+      "source_file": "0271_[General]_FLAG-4D Flow-Guided Local-Global Dual-Deformation Model for.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0361_general_fleg_feed_forward_language_embedded_gaussian_splatting_from",
+      "label": "FLEG Feed-Forward Language Embedded Gaussian Splatting from",
+      "source_file": "0361_[General]_FLEG Feed-Forward Language Embedded Gaussian Splatting from.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0218_general_flicker_a_fine_grained_contribution_aware_accelerator_for_r",
+      "label": "FLICKER A Fine-Grained Contribution-Aware Accelerator for R",
+      "source_file": "0218_[General]_FLICKER A Fine-Grained Contribution-Aware Accelerator for R.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0544_general_fmgs_avatar_mesh_guided_2d_gaussian_splatting_with_foundati",
+      "label": "FMGS-Avatar Mesh-Guided 2D Gaussian Splatting with Foundati",
+      "source_file": "0544_[General]_FMGS-Avatar Mesh-Guided 2D Gaussian Splatting with Foundati.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0201_general_ftsplat_feed_forward_triangle_splatting_network",
+      "label": "FTSplat Feed-forward Triangle Splatting Network",
+      "source_file": "0201_[General]_FTSplat Feed-forward Triangle Splatting Network.md",
+      "alias_count": 1
+    },
+    {
+      "id": "paper_0615_general_fading_the_digital_ink_a_universal_black_box_attack_framewo",
+      "label": "Fading the Digital Ink A Universal Black-Box Attack Framewo",
+      "source_file": "0615_[General]_Fading the Digital Ink A Universal Black-Box Attack Framewo.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0305_general_fast_converging_3d_gaussian_splatting_for_1_minute_reconstru",
+      "label": "Fast Converging 3D Gaussian Splatting for 1-Minute Reconstru",
+      "source_file": "0305_[General]_Fast Converging 3D Gaussian Splatting for 1-Minute Reconstru.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0380_general_fast_and_explicit_slice_to_volume_reconstruction_via_3d_gau",
+      "label": "Fast and Explicit Slice-to-Volume Reconstruction via 3D Gau",
+      "source_file": "0380_[General]_Fast and Explicit Slice-to-Volume Reconstruction via 3D Gau.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0578_general_fastavatar_instant_3d_gaussian_splatting_for_faces_from_sin",
+      "label": "FastAvatar Instant 3D Gaussian Splatting for Faces from Sin",
+      "source_file": "0578_[General]_FastAvatar Instant 3D Gaussian Splatting for Faces from Sin.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0291_general_fastphysgs_accelerating_physics_based_dynamic_3dgs_simulati",
+      "label": "FastPhysGS Accelerating Physics-based Dynamic 3DGS Simulati",
+      "source_file": "0291_[General]_FastPhysGS Accelerating Physics-based Dynamic 3DGS Simulati.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0581_general_fiducial_marker_splatting_for_high_fidelity_robotics_simulat",
+      "label": "Fiducial Marker Splatting for High-Fidelity Robotics Simulat",
+      "source_file": "0581_[General]_Fiducial Marker Splatting for High-Fidelity Robotics Simulat.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0540_general_fingersplat_contactless_fingerprint_3d_reconstruction_and_g",
+      "label": "FingerSplat Contactless Fingerprint 3D Reconstruction and G",
+      "source_file": "0540_[General]_FingerSplat Contactless Fingerprint 3D Reconstruction and G.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0529_general_fixinggs_enhancing_3d_gaussian_splatting_via_training_free",
+      "label": "FixingGS Enhancing 3D Gaussian Splatting via Training-Free",
+      "source_file": "0529_[General]_FixingGS Enhancing 3D Gaussian Splatting via Training-Free.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0257_general_flowhoi_flow_based_semantics_grounded_generation_of_hand_ob",
+      "label": "FlowHOI Flow-based Semantics-Grounded Generation of Hand-Ob",
+      "source_file": "0257_[General]_FlowHOI Flow-based Semantics-Grounded Generation of Hand-Ob.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0364_general_flying_in_clutter_on_monocular_rgb_by_learning_in_3d_radianc",
+      "label": "Flying in Clutter on Monocular RGB by Learning in 3D Radianc",
+      "source_file": "0364_[General]_Flying in Clutter on Monocular RGB by Learning in 3D Radianc.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0514_general_forge4d_feed_forward_4d_human_reconstruction_and_interpolat",
+      "label": "Forge4D Feed-Forward 4D Human Reconstruction and Interpolat",
+      "source_file": "0514_[General]_Forge4D Feed-Forward 4D Human Reconstruction and Interpolat.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0300_general_freefix_boosting_3d_gaussian_splatting_via_fine_tuning_free",
+      "label": "FreeFix Boosting 3D Gaussian Splatting via Fine-Tuning-Free",
+      "source_file": "0300_[General]_FreeFix Boosting 3D Gaussian Splatting via Fine-Tuning-Free.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0403_general_frequency_adaptive_sharpness_regularization_for_improving_3d",
+      "label": "Frequency-Adaptive Sharpness Regularization for Improving 3D",
+      "source_file": "0403_[General]_Frequency-Adaptive Sharpness Regularization for Improving 3D.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0530_general_from_restoration_to_reconstruction_rethinking_3d_gaussian_s",
+      "label": "From Restoration to Reconstruction Rethinking 3D Gaussian S",
+      "source_file": "0530_[General]_From Restoration to Reconstruction Rethinking 3D Gaussian S.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0591_general_from_slices_to_structures_unsupervised_3d_reconstruction_of",
+      "label": "From Slices to Structures Unsupervised 3D Reconstruction of",
+      "source_file": "0591_[General]_From Slices to Structures Unsupervised 3D Reconstruction of.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0501_general_from_tokens_to_nodes_semantic_guided_motion_control_for_dyn",
+      "label": "From Tokens to Nodes Semantic-Guided Motion Control for Dyn",
+      "source_file": "0501_[General]_From Tokens to Nodes Semantic-Guided Motion Control for Dyn.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0360_general_g3splat_geometrically_consistent_generalizable_gaussian_spl",
+      "label": "G3Splat Geometrically Consistent Generalizable Gaussian Spl",
+      "source_file": "0360_[General]_G3Splat Geometrically Consistent Generalizable Gaussian Spl.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0386_general_gains_gaussian_based_inverse_rendering_from_sparse_multi_vi",
+      "label": "GAINS Gaussian-based Inverse Rendering from Sparse Multi-Vi",
+      "source_file": "0386_[General]_GAINS Gaussian-based Inverse Rendering from Sparse Multi-Vi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0594_general_gala_guided_attention_with_language_alignment_for_open_voca",
+      "label": "GALA Guided Attention with Language Alignment for Open Voca",
+      "source_file": "0594_[General]_GALA Guided Attention with Language Alignment for Open Voca.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0683_general_gdgs_3d_gaussian_splatting_via_geometry_guided_initializati",
+      "label": "GDGS 3D Gaussian Splatting Via Geometry-Guided Initializati",
+      "source_file": "0683_[General]_GDGS 3D Gaussian Splatting Via Geometry-Guided Initializati.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0510_general_gem_3d_gaussian_splatting_for_efficient_and_accurate_cryo_e",
+      "label": "GEM 3D Gaussian Splatting for Efficient and Accurate Cryo-E",
+      "source_file": "0510_[General]_GEM 3D Gaussian Splatting for Efficient and Accurate Cryo-E.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0417_general_gen3d_generating_domain_free_3d_scenes_from_a_single_image",
+      "label": "GEN3D Generating Domain-Free 3D Scenes from a Single Image",
+      "source_file": "0417_[General]_GEN3D Generating Domain-Free 3D Scenes from a Single Image.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0633_general_genie_gaussian_encoding_for_neural_radiance_fields_interact",
+      "label": "GENIE Gaussian Encoding for Neural Radiance Fields Interact",
+      "source_file": "0633_[General]_GENIE Gaussian Encoding for Neural Radiance Fields Interact.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0434_general_gfix_perceptually_enhanced_gaussian_splatting_video_compres",
+      "label": "GFix Perceptually Enhanced Gaussian Splatting Video Compres",
+      "source_file": "0434_[General]_GFix Perceptually Enhanced Gaussian Splatting Video Compres.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0235_general_gifsplat_generative_prior_guided_iterative_feed_forward_3d",
+      "label": "GIFSplat Generative Prior-Guided Iterative Feed-Forward 3D",
+      "source_file": "0235_[General]_GIFSplat Generative Prior-Guided Iterative Feed-Forward 3D.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0590_general_gogs_high_fidelity_geometry_and_relighting_for_glossy_objec",
+      "label": "GOGS High-Fidelity Geometry and Relighting for Glossy Objec",
+      "source_file": "0590_[General]_GOGS High-Fidelity Geometry and Relighting for Glossy Objec.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0261_general_gr_diffusion_3d_gaussian_representation_meets_diffusion_in",
+      "label": "GR-Diffusion 3D Gaussian Representation Meets Diffusion in",
+      "source_file": "0261_[General]_GR-Diffusion 3D Gaussian Representation Meets Diffusion in.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0635_general_gr_gaussian_graph_based_radiative_gaussian_splatting_for_sp",
+      "label": "GR-Gaussian Graph-Based Radiative Gaussian Splatting for Sp",
+      "source_file": "0635_[General]_GR-Gaussian Graph-Based Radiative Gaussian Splatting for Sp.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0564_general_grmm_real_time_high_fidelity_gaussian_morphable_head_model",
+      "label": "GRMM Real-Time High-Fidelity Gaussian Morphable Head Model",
+      "source_file": "0564_[General]_GRMM Real-Time High-Fidelity Gaussian Morphable Head Model.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0331_general_gs_dmsr_dynamic_sensitive_multi_scale_manifold_enhancement",
+      "label": "GS-DMSR Dynamic Sensitive Multi-scale Manifold Enhancement",
+      "source_file": "0331_[General]_GS-DMSR Dynamic Sensitive Multi-scale Manifold Enhancement.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0541_general_gs_scale_unlocking_large_scale_3d_gaussian_splatting_traini",
+      "label": "GS-Scale Unlocking Large-Scale 3D Gaussian Splatting Traini",
+      "source_file": "0541_[General]_GS-Scale Unlocking Large-Scale 3D Gaussian Splatting Traini.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0500_general_gs_share_enabling_high_fidelity_map_sharing_with_incrementa",
+      "label": "GS-Share Enabling High-fidelity Map Sharing with Incrementa",
+      "source_file": "0500_[General]_GS-Share Enabling High-fidelity Map Sharing with Incrementa.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0481_general_gs_verse_mesh_based_gaussian_splatting_for_physics_aware_in",
+      "label": "GS-Verse Mesh-based Gaussian Splatting for Physics-aware In",
+      "source_file": "0481_[General]_GS-Verse Mesh-based Gaussian Splatting for Physics-aware In.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0471_general_gs2pose_marry_gaussian_splatting_to_6d_object_pose_estimati",
+      "label": "GS2POSE Marry Gaussian Splatting to 6D Object Pose Estimati",
+      "source_file": "0471_[General]_GS2POSE Marry Gaussian Splatting to 6D Object Pose Estimati.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0648_general_gscache_real_time_radiance_caching_for_volume_path_tracing",
+      "label": "GSCache Real-Time Radiance Caching for Volume Path Tracing",
+      "source_file": "0648_[General]_GSCache Real-Time Radiance Caching for Volume Path Tracing.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0588_general_gsfix3d_diffusion_guided_repair_of_novel_views_in_gaussian",
+      "label": "GSFix3D Diffusion-Guided Repair of Novel Views in Gaussian",
+      "source_file": "0588_[General]_GSFix3D Diffusion-Guided Repair of Novel Views in Gaussian.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0606_general_gsfixer_improving_3d_gaussian_splatting_with_reference_guid",
+      "label": "GSFixer Improving 3D Gaussian Splatting with Reference-Guid",
+      "source_file": "0606_[General]_GSFixer Improving 3D Gaussian Splatting with Reference-Guid.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0258_general_gsm_gs_geometry_constrained_single_and_multi_view_gaussian",
+      "label": "GSM-GS Geometry-Constrained Single and Multi-view Gaussian",
+      "source_file": "0258_[General]_GSM-GS Geometry-Constrained Single and Multi-view Gaussian.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0469_general_gsplane_concise_and_accurate_planar_reconstruction_via_stru",
+      "label": "GSPlane Concise and Accurate Planar Reconstruction via Stru",
+      "source_file": "0469_[General]_GSPlane Concise and Accurate Planar Reconstruction via Stru.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0181_general_gsstream_3d_gaussian_splatting_based_volumetric_scene_strea",
+      "label": "GSStream 3D Gaussian Splatting based Volumetric Scene Strea",
+      "source_file": "0181_[General]_GSStream 3D Gaussian Splatting based Volumetric Scene Strea.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0185_general_gst_vla_structured_gaussian_spatial_tokens_for_3d_depth_awa",
+      "label": "GST-VLA Structured Gaussian Spatial Tokens for 3D Depth-Awa",
+      "source_file": "0185_[General]_GST-VLA Structured Gaussian Spatial Tokens for 3D Depth-Awa.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0231_general_gsturb_gaussian_splatting_for_atmospheric_turbulence_mitiga",
+      "label": "GSTurb Gaussian Splatting for Atmospheric Turbulence Mitiga",
+      "source_file": "0231_[General]_GSTurb Gaussian Splatting for Atmospheric Turbulence Mitiga.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0462_general_gsworld_closed_loop_photo_realistic_simulation_suite_for_ro",
+      "label": "GSWorld Closed-Loop Photo-Realistic Simulation Suite for Ro",
+      "source_file": "0462_[General]_GSWorld Closed-Loop Photo-Realistic Simulation Suite for Ro.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0301_general_gvgs_gaussian_visibility_aware_multi_view_geometry_for_accu",
+      "label": "GVGS Gaussian Visibility-Aware Multi-View Geometry for Accu",
+      "source_file": "0301_[General]_GVGS Gaussian Visibility-Aware Multi-View Geometry for Accu.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0476_general_gaussmart_enhanced_3d_reconstruction_through_2d_foundation",
+      "label": "GauSSmart Enhanced 3D Reconstruction through 2D Foundation",
+      "source_file": "0476_[General]_GauSSmart Enhanced 3D Reconstruction through 2D Foundation.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0321_general_gaussexplorer_3d_gaussian_splatting_for_embodied_exploratio",
+      "label": "GaussExplorer 3D Gaussian Splatting for Embodied Exploratio",
+      "source_file": "0321_[General]_GaussExplorer 3D Gaussian Splatting for Embodied Exploratio.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0473_general_gaussgym_an_open_source_real_to_sim_framework_for_learning",
+      "label": "GaussGym An open-source real-to-sim framework for learning",
+      "source_file": "0473_[General]_GaussGym An open-source real-to-sim framework for learning.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0205_general_gausstwin_unified_simulation_and_correction_with_gaussian_s",
+      "label": "GaussTwin Unified Simulation and Correction with Gaussian S",
+      "source_file": "0205_[General]_GaussTwin Unified Simulation and Correction with Gaussian S.md",
+      "alias_count": 1
+    },
+    {
+      "id": "paper_0366_general_gaussian_pixel_codec_avatars_a_hybrid_representation_for_ef",
+      "label": "Gaussian Pixel Codec Avatars A Hybrid Representation for Ef",
+      "source_file": "0366_[General]_Gaussian Pixel Codec Avatars A Hybrid Representation for Ef.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0480_general_gaussian_semantic_field_for_one_shot_lidar_global_localizati",
+      "label": "Gaussian Semantic Field for One-shot LiDAR Global Localizati",
+      "source_file": "0480_[General]_Gaussian Semantic Field for One-shot LiDAR Global Localizati.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0254_general_gaussian_sequences_with_multi_scale_dynamics_for_4d_reconstr",
+      "label": "Gaussian Sequences with Multi-Scale Dynamics for 4D Reconstr",
+      "source_file": "0254_[General]_Gaussian Sequences with Multi-Scale Dynamics for 4D Reconstr.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0649_general_gaussian_set_surface_reconstruction_through_per_gaussian_opt",
+      "label": "Gaussian Set Surface Reconstruction through Per-Gaussian Opt",
+      "source_file": "0649_[General]_Gaussian Set Surface Reconstruction through Per-Gaussian Opt.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0208_general_gaussian_wardrobe_compositional_3d_gaussian_avatars_for_fre",
+      "label": "Gaussian Wardrobe Compositional 3D Gaussian Avatars for Fre",
+      "source_file": "0208_[General]_Gaussian Wardrobe Compositional 3D Gaussian Avatars for Fre.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0652_general_gaussianfusionocc_a_seamless_sensor_fusion_approach_for_3d",
+      "label": "GaussianFusionOcc A Seamless Sensor Fusion Approach for 3D",
+      "source_file": "0652_[General]_GaussianFusionOcc A Seamless Sensor Fusion Approach for 3D.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0383_general_gaussianheadtalk_wobble_free_3d_talking_heads_with_audio_dr",
+      "label": "GaussianHeadTalk Wobble-Free 3D Talking Heads with Audio Dr",
+      "source_file": "0383_[General]_GaussianHeadTalk Wobble-Free 3D Talking Heads with Audio Dr.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0507_general_gaussianlens_localized_high_resolution_reconstruction_via_o",
+      "label": "GaussianLens Localized High-Resolution Reconstruction via O",
+      "source_file": "0507_[General]_GaussianLens Localized High-Resolution Reconstruction via O.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0502_general_gaussianmorphing_mesh_guided_3d_gaussians_for_semantic_awar",
+      "label": "GaussianMorphing Mesh-Guided 3D Gaussians for Semantic-Awar",
+      "source_file": "0502_[General]_GaussianMorphing Mesh-Guided 3D Gaussians for Semantic-Awar.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0274_general_gaussianpop_principled_simplification_framework_for_compact",
+      "label": "GaussianPOP Principled Simplification Framework for Compact",
+      "source_file": "0274_[General]_GaussianPOP Principled Simplification Framework for Compact.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0375_general_gaussianplant_structure_aligned_gaussian_splatting_for_3d_r",
+      "label": "GaussianPlant Structure-aligned Gaussian Splatting for 3D R",
+      "source_file": "0375_[General]_GaussianPlant Structure-aligned Gaussian Splatting for 3D R.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0332_general_gaussianswap_animatable_video_face_swapping_with_3d_gaussia",
+      "label": "GaussianSwap Animatable Video Face Swapping with 3D Gaussia",
+      "source_file": "0332_[General]_GaussianSwap Animatable Video Face Swapping with 3D Gaussia.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0323_general_gaussiantrimmer_online_trimming_boundaries_for_3dgs_segment",
+      "label": "GaussianTrimmer Online Trimming Boundaries for 3DGS Segment",
+      "source_file": "0323_[General]_GaussianTrimmer Online Trimming Boundaries for 3DGS Segment.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0681_general_gaussianvlm_scene_centric_3d_vision_language_models_using_l",
+      "label": "GaussianVLM Scene-centric 3D Vision-Language Models using L",
+      "source_file": "0681_[General]_GaussianVLM Scene-centric 3D Vision-Language Models using L.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0589_general_gems_efficient_gaussian_splatting_for_extreme_motion_blur",
+      "label": "GeMS Efficient Gaussian Splatting for Extreme Motion Blur",
+      "source_file": "0589_[General]_GeMS Efficient Gaussian Splatting for Extreme Motion Blur.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0457_general_gen_langsplat_generalized_language_gaussian_splatting_with",
+      "label": "Gen-LangSplat Generalized Language Gaussian Splatting with",
+      "source_file": "0457_[General]_Gen-LangSplat Generalized Language Gaussian Splatting with.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0212_general_generalized_non_exponential_gaussian_splatting",
+      "label": "Generalized non-exponential Gaussian splatting",
+      "source_file": "0212_[General]_Generalized non-exponential Gaussian splatting.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0496_general_generating_surface_for_text_to_3d_using_2d_gaussian_splattin",
+      "label": "Generating Surface for Text-to-3D using 2D Gaussian Splattin",
+      "source_file": "0496_[General]_Generating Surface for Text-to-3D using 2D Gaussian Splattin.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0225_general_geodiff4d_geometry_aware_diffusion_for_4d_head_avatar_recon",
+      "label": "GeoDiff4D Geometry-Aware Diffusion for 4D Head Avatar Recon",
+      "source_file": "0225_[General]_GeoDiff4D Geometry-Aware Diffusion for 4D Head Avatar Recon.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0561_general_geosplat_a_deep_dive_into_geometry_constrained_gaussian_spl",
+      "label": "GeoSplat A Deep Dive into Geometry-Constrained Gaussian Spl",
+      "source_file": "0561_[General]_GeoSplat A Deep Dive into Geometry-Constrained Gaussian Spl.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0356_general_geometric_photometric_event_based_3d_gaussian_ray_tracing",
+      "label": "Geometric-Photometric Event-based 3D Gaussian Ray Tracing",
+      "source_file": "0356_[General]_Geometric-Photometric Event-based 3D Gaussian Ray Tracing.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0310_general_geometry_grounded_gaussian_splatting",
+      "label": "Geometry-Grounded Gaussian Splatting",
+      "source_file": "0310_[General]_Geometry-Grounded Gaussian Splatting.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0486_general_gesplat_robust_pose_free_3d_reconstruction_via_geometry_gui",
+      "label": "Gesplat Robust Pose-Free 3D Reconstruction via Geometry-Gui",
+      "source_file": "0486_[General]_Gesplat Robust Pose-Free 3D Reconstruction via Geometry-Gui.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0393_general_gigaworld_0_world_models_as_data_engine_to_empower_embodied",
+      "label": "GigaWorld-0 World Models as Data Engine to Empower Embodied",
+      "source_file": "0393_[General]_GigaWorld-0 World Models as Data Engine to Empower Embodied.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0206_general_glosplat_joint_pose_appearance_optimization_for_faster_and",
+      "label": "GloSplat Joint Pose-Appearance Optimization for Faster and",
+      "source_file": "0206_[General]_GloSplat Joint Pose-Appearance Optimization for Faster and.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0410_general_gradient_driven_natural_selection_for_compact_3d_gaussian_sp",
+      "label": "Gradient-Driven Natural Selection for Compact 3D Gaussian Sp",
+      "source_file": "0410_[General]_Gradient-Driven Natural Selection for Compact 3D Gaussian Sp.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0302_general_graphical_x_splatting_graphixs_a_graphical_model_for_4d_g",
+      "label": "Graphical X Splatting (GraphiXS) A Graphical Model for 4D G",
+      "source_file": "0302_[General]_Graphical X Splatting (GraphiXS) A Graphical Model for 4D G.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0269_general_grow_with_the_flow_4d_reconstruction_of_growing_plants_with",
+      "label": "Grow with the Flow 4D Reconstruction of Growing Plants with",
+      "source_file": "0269_[General]_Grow with the Flow 4D Reconstruction of Growing Plants with.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0505_general_hart_human_aligned_reconstruction_transformer",
+      "label": "HART Human Aligned Reconstruction Transformer",
+      "source_file": "0505_[General]_HART Human Aligned Reconstruction Transformer.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0511_general_hbsplat_robust_sparse_view_gaussian_reconstruction_with_hyb",
+      "label": "HBSplat Robust Sparse-View Gaussian Reconstruction with Hyb",
+      "source_file": "0511_[General]_HBSplat Robust Sparse-View Gaussian Reconstruction with Hyb.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0518_general_helios_hierarchical_exploration_for_language_grounded_inter",
+      "label": "HELIOS Hierarchical Exploration for Language-grounded Inter",
+      "source_file": "0518_[General]_HELIOS Hierarchical Exploration for Language-grounded Inter.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0371_general_hgs_hybrid_gaussian_splatting_with_static_dynamic_decomposi",
+      "label": "HGS Hybrid Gaussian Splatting with Static-Dynamic Decomposi",
+      "source_file": "0371_[General]_HGS Hybrid Gaussian Splatting with Static-Dynamic Decomposi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0295_general_hpc_hierarchical_point_based_latent_representation_for_stre",
+      "label": "HPC Hierarchical Point-based Latent Representation for Stre",
+      "source_file": "0295_[General]_HPC Hierarchical Point-based Latent Representation for Stre.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0219_general_herogs_hierarchical_guidance_for_robust_3d_gaussian_splatti",
+      "label": "HeroGS Hierarchical Guidance for Robust 3D Gaussian Splatti",
+      "source_file": "0219_[General]_HeroGS Hierarchical Guidance for Robust 3D Gaussian Splatti.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0658_general_hi_2_gsloc_dual_hierarchical_gaussian_specific_visual_reloc",
+      "label": "Hi^2-GSLoc Dual-Hierarchical Gaussian-Specific Visual Reloc",
+      "source_file": "0658_[General]_Hi^2-GSLoc Dual-Hierarchical Gaussian-Specific Visual Reloc.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0483_general_high_fidelity_simulated_data_generation_for_real_world_zero",
+      "label": "High-Fidelity Simulated Data Generation for Real-World Zero-",
+      "source_file": "0483_[General]_High-Fidelity Simulated Data Generation for Real-World Zero-.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0655_general_high_fidelity_3d_gaussian_inpainting_preserving_multi_view",
+      "label": "High-fidelity 3D Gaussian Inpainting preserving multi-view",
+      "source_file": "0655_[General]_High-fidelity 3D Gaussian Inpainting preserving multi-view.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0192_general_holi_spatial_evolving_video_streams_into_holistic_3d_spatia",
+      "label": "Holi-Spatial Evolving Video Streams into Holistic 3D Spatia",
+      "source_file": "0192_[General]_Holi-Spatial Evolving Video Streams into Holistic 3D Spatia.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0352_general_hyge_occ_hybrid_view_transformation_with_3d_gaussian_and_ed",
+      "label": "HyGE-Occ Hybrid View-Transformation with 3D Gaussian and Ed",
+      "source_file": "0352_[General]_HyGE-Occ Hybrid View-Transformation with 3D Gaussian and Ed.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0642_general_i2v_gs_infrastructure_to_vehicle_view_transformation_with_g",
+      "label": "I2V-GS Infrastructure-to-Vehicle View Transformation with G",
+      "source_file": "0642_[General]_I2V-GS Infrastructure-to-Vehicle View Transformation with G.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0335_general_idesplat_iterative_depth_probability_estimation_for_general",
+      "label": "IDESplat Iterative Depth Probability Estimation for General",
+      "source_file": "0335_[General]_IDESplat Iterative Depth Probability Estimation for General.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0395_general_idsplat_instance_decomposed_3d_gaussian_splatting_for_drivi",
+      "label": "IDSplat Instance-Decomposed 3D Gaussian Splatting for Drivi",
+      "source_file": "0395_[General]_IDSplat Instance-Decomposed 3D Gaussian Splatting for Drivi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0579_general_idu_incremental_dynamic_update_of_existing_3d_virtual_envir",
+      "label": "IDU Incremental Dynamic Update of Existing 3D Virtual Envir",
+      "source_file": "0579_[General]_IDU Incremental Dynamic Update of Existing 3D Virtual Envir.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0600_general_igfuse_interactive_3d_gaussian_scene_reconstruction_via_mul",
+      "label": "IGFuse Interactive 3D Gaussian Scene Reconstruction via Mul",
+      "source_file": "0600_[General]_IGFuse Interactive 3D Gaussian Scene Reconstruction via Mul.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_illumination_refinement_via_textual_cues_a_prompt_driven_approach_for_low_light_nerf_enhancement",
+      "label": "Illumination_Refinement_via_Textual_Cues_A_Prompt-Driven_Approach_for_Low-Light_NeRF_Enhancement",
+      "source_file": "Illumination_Refinement_via_Textual_Cues_A_Prompt-Driven_Approach_for_Low-Light_NeRF_Enhancement.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0584_general_image_conditioned_3d_gaussian_splat_quantization",
+      "label": "Image-Conditioned 3D Gaussian Splat Quantization",
+      "source_file": "0584_[General]_Image-Conditioned 3D Gaussian Splat Quantization.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0347_general_improved_3d_gaussian_splatting_of_unknown_spacecraft_structu",
+      "label": "Improved 3D Gaussian Splatting of Unknown Spacecraft Structu",
+      "source_file": "0347_[General]_Improved 3D Gaussian Splatting of Unknown Spacecraft Structu.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0189_general_improvedgs_a_high_performance_c_cuda_re_implementation_s",
+      "label": "ImprovedGS+ A High-Performance C++CUDA Re-Implementation S",
+      "source_file": "0189_[General]_ImprovedGS+ A High-Performance C++CUDA Re-Implementation S.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0546_general_improving_3d_gaussian_splatting_compression_by_scene_adaptiv",
+      "label": "Improving 3D Gaussian Splatting Compression by Scene-Adaptiv",
+      "source_file": "0546_[General]_Improving 3D Gaussian Splatting Compression by Scene-Adaptiv.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0601_general_improving_densification_in_3d_gaussian_splatting_for_high_fi",
+      "label": "Improving Densification in 3D Gaussian Splatting for High-Fi",
+      "source_file": "0601_[General]_Improving Densification in 3D Gaussian Splatting for High-Fi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0443_general_improving_multi_view_reconstruction_via_texture_guided_gauss",
+      "label": "Improving Multi-View Reconstruction via Texture-Guided Gauss",
+      "source_file": "0443_[General]_Improving Multi-View Reconstruction via Texture-Guided Gauss.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0468_general_initialize_to_generalize_a_stronger_initialization_pipeline",
+      "label": "Initialize to Generalize A Stronger Initialization Pipeline",
+      "source_file": "0468_[General]_Initialize to Generalize A Stronger Initialization Pipeline.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0599_general_innergs_internal_scenes_rendering_via_factorized_3d_gaussia",
+      "label": "InnerGS Internal Scenes Rendering via Factorized 3D Gaussia",
+      "source_file": "0599_[General]_InnerGS Internal Scenes Rendering via Factorized 3D Gaussia.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0602_general_instdrive_instance_aware_3d_gaussian_splatting_for_driving",
+      "label": "InstDrive Instance-Aware 3D Gaussian Splatting for Driving",
+      "source_file": "0602_[General]_InstDrive Instance-Aware 3D Gaussian Splatting for Driving.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0363_general_instant_expressive_gaussian_head_avatar_via_3d_aware_express",
+      "label": "Instant Expressive Gaussian Head Avatar via 3D-Aware Express",
+      "source_file": "0363_[General]_Instant Expressive Gaussian Head Avatar via 3D-Aware Express.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0290_general_intellectual_property_protection_for_3d_gaussian_splatting_a",
+      "label": "Intellectual Property Protection for 3D Gaussian Splatting A",
+      "source_file": "0290_[General]_Intellectual Property Protection for 3D Gaussian Splatting A.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0677_general_intergsedit_interactive_3d_gaussian_splatting_editing_with",
+      "label": "InterGSEdit Interactive 3D Gaussian Splatting Editing with",
+      "source_file": "0677_[General]_InterGSEdit Interactive 3D Gaussian Splatting Editing with.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0415_general_interaction_aware_4d_gaussian_splatting_for_dynamic_hand_obj",
+      "label": "Interaction-Aware 4D Gaussian Splatting for Dynamic Hand-Obj",
+      "source_file": "0415_[General]_Interaction-Aware 4D Gaussian Splatting for Dynamic Hand-Obj.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0237_general_interactive_augmented_reality_enabled_outdoor_scene_visualiz",
+      "label": "Interactive Augmented Reality-enabled Outdoor Scene Visualiz",
+      "source_file": "0237_[General]_Interactive Augmented Reality-enabled Outdoor Scene Visualiz.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0211_general_intrinsic_geometry_appearance_consistency_optimization_for_s",
+      "label": "Intrinsic Geometry-Appearance Consistency Optimization for S",
+      "source_file": "0211_[General]_Intrinsic Geometry-Appearance Consistency Optimization for S.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0452_general_jogs_joint_optimization_of_pose_estimation_and_3d_gaussian",
+      "label": "JOGS Joint Optimization of Pose Estimation and 3D Gaussian",
+      "source_file": "0452_[General]_JOGS Joint Optimization of Pose Estimation and 3D Gaussian.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0284_general_jointgs_joint_optimization_of_cameras_bodies_and_3d_gaussi",
+      "label": "JOintGS Joint Optimization of Cameras, Bodies and 3D Gaussi",
+      "source_file": "0284_[General]_JOintGS Joint Optimization of Cameras, Bodies and 3D Gaussi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0255_general_joint_orientation_and_weight_optimization_for_robust_waterti",
+      "label": "Joint Orientation and Weight Optimization for Robust Waterti",
+      "source_file": "0255_[General]_Joint Orientation and Weight Optimization for Robust Waterti.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0312_general_lgdwt_gs_local_and_global_discrete_wavelet_regularized_3d_g",
+      "label": "LGDWT-GS Local and Global Discrete Wavelet-Regularized 3D G",
+      "source_file": "0312_[General]_LGDWT-GS Local and Global Discrete Wavelet-Regularized 3D G.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0315_general_ll_gaussianimage_efficient_image_representation_for_zero_sh",
+      "label": "LL-GaussianImage Efficient Image Representation for Zero-sh",
+      "source_file": "0315_[General]_LL-GaussianImage Efficient Image Representation for Zero-sh.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0316_general_ll_gaussianmap_zero_shot_low_light_image_enhancement_via_2d",
+      "label": "LL-GaussianMap Zero-shot Low-Light Image Enhancement via 2D",
+      "source_file": "0316_[General]_LL-GaussianMap Zero-shot Low-Light Image Enhancement via 2D.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0506_general_llm_powered_code_analysis_and_optimization_for_gaussian_spla",
+      "label": "LLM-Powered Code Analysis and Optimization for Gaussian Spla",
+      "source_file": "0506_[General]_LLM-Powered Code Analysis and Optimization for Gaussian Spla.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0504_general_lobe_gs_load_balanced_and_efficient_3d_gaussian_splatting_f",
+      "label": "LOBE-GS Load-Balanced and Efficient 3D Gaussian Splatting f",
+      "source_file": "0504_[General]_LOBE-GS Load-Balanced and Efficient 3D Gaussian Splatting f.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0682_general_lod_gs_level_of_detail_sensitive_3d_gaussian_splatting_for",
+      "label": "LOD-GS Level-of-Detail-Sensitive 3D Gaussian Splatting for",
+      "source_file": "0682_[General]_LOD-GS Level-of-Detail-Sensitive 3D Gaussian Splatting for.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0488_general_ltgs_long_term_gaussian_scene_chronology_from_sparse_view_u",
+      "label": "LTGS Long-Term Gaussian Scene Chronology From Sparse View U",
+      "source_file": "0488_[General]_LTGS Long-Term Gaussian Scene Chronology From Sparse View U.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0455_general_lagmemo_language_3d_gaussian_splatting_memory_for_multi_mod",
+      "label": "LagMemo Language 3D Gaussian Splatting Memory for Multi-mod",
+      "source_file": "0455_[General]_LagMemo Language 3D Gaussian Splatting Memory for Multi-mod.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0623_general_laplacian_analysis_meets_dynamics_modelling_gaussian_splatt",
+      "label": "Laplacian Analysis Meets Dynamics Modelling Gaussian Splatt",
+      "source_file": "0623_[General]_Laplacian Analysis Meets Dynamics Modelling Gaussian Splatt.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0521_general_large_material_gaussian_model_for_relightable_3d_generation",
+      "label": "Large Material Gaussian Model for Relightable 3D Generation",
+      "source_file": "0521_[General]_Large Material Gaussian Model for Relightable 3D Generation.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0242_general_large_scale_photorealistic_outdoor_3d_scene_reconstruction_f",
+      "label": "Large-scale Photorealistic Outdoor 3D Scene Reconstruction f",
+      "source_file": "0242_[General]_Large-scale Photorealistic Outdoor 3D Scene Reconstruction f.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0230_general_latent_gaussian_splatting_for_4d_panoptic_occupancy_tracking",
+      "label": "Latent Gaussian Splatting for 4D Panoptic Occupancy Tracking",
+      "source_file": "0230_[General]_Latent Gaussian Splatting for 4D Panoptic Occupancy Tracking.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0259_general_latentam_real_time_large_scale_latent_gaussian_attention_m",
+      "label": "LatentAM Real-Time, Large-Scale Latent Gaussian Attention M",
+      "source_file": "0259_[General]_LatentAM Real-Time, Large-Scale Latent Gaussian Attention M.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0330_general_layergs_decomposition_and_inpainting_of_layered_3d_human_av",
+      "label": "LayerGS Decomposition and Inpainting of Layered 3D Human Av",
+      "source_file": "0330_[General]_LayerGS Decomposition and Inpainting of Layered 3D Human Av.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0253_general_learnable_multi_level_discrete_wavelet_transforms_for_3d_gau",
+      "label": "Learnable Multi-level Discrete Wavelet Transforms for 3D Gau",
+      "source_file": "0253_[General]_Learnable Multi-level Discrete Wavelet Transforms for 3D Gau.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0650_general_learning_efficient_and_generalizable_human_representation_wi",
+      "label": "Learning Efficient and Generalizable Human Representation wi",
+      "source_file": "0650_[General]_Learning Efficient and Generalizable Human Representation wi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0517_general_learning_unified_representation_of_3d_gaussian_splatting",
+      "label": "Learning Unified Representation of 3D Gaussian Splatting",
+      "source_file": "0517_[General]_Learning Unified Representation of 3D Gaussian Splatting.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0216_general_liftavatar_kinematic_space_completion_for_expression_contro",
+      "label": "LiftAvatar Kinematic-Space Completion for Expression-Contro",
+      "source_file": "0216_[General]_LiftAvatar Kinematic-Space Completion for Expression-Contro.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0672_general_lighthousegs_indoor_structure_aware_3d_gaussian_splatting_f",
+      "label": "LighthouseGS Indoor Structure-aware 3D Gaussian Splatting f",
+      "source_file": "0672_[General]_LighthouseGS Indoor Structure-aware 3D Gaussian Splatting f.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0309_general_lod_structured_3d_gaussian_splatting_for_streaming_video_rec",
+      "label": "LoD-Structured 3D Gaussian Splatting for Streaming Video Rec",
+      "source_file": "0309_[General]_LoD-Structured 3D Gaussian Splatting for Streaming Video Rec.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0382_general_long_lrm_preserving_fine_details_in_feed_forward_wide_cov",
+      "label": "Long-LRM++ Preserving Fine Details in Feed-Forward Wide-Cov",
+      "source_file": "0382_[General]_Long-LRM++ Preserving Fine Details in Feed-Forward Wide-Cov.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0431_general_lumos3d_a_single_forward_framework_for_low_light_3d_scene_r",
+      "label": "Lumos3D A Single-Forward Framework for Low-Light 3D Scene R",
+      "source_file": "0431_[General]_Lumos3D A Single-Forward Framework for Low-Light 3D Scene R.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0238_general_m_gaussian_an_magnetic_gaussian_framework_for_efficient_mul",
+      "label": "M-Gaussian An Magnetic Gaussian Framework for Efficient Mul",
+      "source_file": "0238_[General]_M-Gaussian An Magnetic Gaussian Framework for Efficient Mul.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0575_general_mapo_motion_aware_partitioning_of_deformable_3d_gaussian_sp",
+      "label": "MAPo Motion-Aware Partitioning of Deformable 3D Gaussian Sp",
+      "source_file": "0575_[General]_MAPo Motion-Aware Partitioning of Deformable 3D Gaussian Sp.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0542_general_ms_gs_multi_appearance_sparse_view_3d_gaussian_splatting_in",
+      "label": "MS-GS Multi-Appearance Sparse-View 3D Gaussian Splatting in",
+      "source_file": "0542_[General]_MS-GS Multi-Appearance Sparse-View 3D Gaussian Splatting in.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0435_general_mugsqa_novel_multi_uncertainty_based_gaussian_splatting_qua",
+      "label": "MUGSQA Novel Multi-Uncertainty-Based Gaussian Splatting Qua",
+      "source_file": "0435_[General]_MUGSQA Novel Multi-Uncertainty-Based Gaussian Splatting Qua.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0653_general_mvg4d_image_matrix_based_multi_view_and_motion_generation_f",
+      "label": "MVG4D Image Matrix-Based Multi-View and Motion Generation f",
+      "source_file": "0653_[General]_MVG4D Image Matrix-Based Multi-View and Motion Generation f.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0369_general_mvgsr_multi_view_consistent_3d_gaussian_super_resolution_vi",
+      "label": "MVGSR Multi-View Consistent 3D Gaussian Super-Resolution vi",
+      "source_file": "0369_[General]_MVGSR Multi-View Consistent 3D Gaussian Super-Resolution vi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0568_general_marksplatter_generalizable_watermarking_for_3d_gaussian_spl",
+      "label": "MarkSplatter Generalizable Watermarking for 3D Gaussian Spl",
+      "source_file": "0568_[General]_MarkSplatter Generalizable Watermarking for 3D Gaussian Spl.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0680_general_masks_make_discriminative_models_great_again",
+      "label": "Masks make discriminative models great again!",
+      "source_file": "0680_[General]_Masks make discriminative models great again!.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0676_general_mastering_regional_3dgs_locating_initializing_and_editing",
+      "label": "Mastering Regional 3DGS Locating, Initializing, and Editing",
+      "source_file": "0676_[General]_Mastering Regional 3DGS Locating, Initializing, and Editing.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0357_general_matspray_fusing_2d_material_world_knowledge_on_3d_geometry",
+      "label": "MatSpray Fusing 2D Material World Knowledge on 3D Geometry",
+      "source_file": "0357_[General]_MatSpray Fusing 2D Material World Knowledge on 3D Geometry.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0392_general_material_informed_gaussian_splatting_for_3d_world_reconstruc",
+      "label": "Material-informed Gaussian Splatting for 3D World Reconstruc",
+      "source_file": "0392_[General]_Material-informed Gaussian Splatting for 3D World Reconstruc.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0585_general_mess_city_mesh_guided_outdoor_scene_generation_with_cross_v",
+      "label": "MeSS City Mesh-Guided Outdoor Scene Generation with Cross-V",
+      "source_file": "0585_[General]_MeSS City Mesh-Guided Outdoor Scene Generation with Cross-V.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0534_general_medgs_gaussian_splatting_for_multi_modal_3d_medical_imaging",
+      "label": "MedGS Gaussian Splatting for Multi-Modal 3D Medical Imaging",
+      "source_file": "0534_[General]_MedGS Gaussian Splatting for Multi-Modal 3D Medical Imaging.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0397_general_metrogs_efficient_and_stable_reconstruction_of_geometricall",
+      "label": "MetroGS Efficient and Stable Reconstruction of Geometricall",
+      "source_file": "0397_[General]_MetroGS Efficient and Stable Reconstruction of Geometricall.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0638_general_mogaface_momentum_guided_and_texture_aware_gaussian_avatars",
+      "label": "MoGaFace Momentum-Guided and Texture-Aware Gaussian Avatars",
+      "source_file": "0638_[General]_MoGaFace Momentum-Guided and Texture-Aware Gaussian Avatars.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0379_general_moment_based_3d_gaussian_splatting_resolving_volumetric_occ",
+      "label": "Moment-Based 3D Gaussian Splatting Resolving Volumetric Occ",
+      "source_file": "0379_[General]_Moment-Based 3D Gaussian Splatting Resolving Volumetric Occ.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0489_general_mono4deditor_text_driven_4d_scene_editing_from_monocular_vi",
+      "label": "Mono4DEditor Text-Driven 4D Scene Editing from Monocular Vi",
+      "source_file": "0489_[General]_Mono4DEditor Text-Driven 4D Scene Editing from Monocular Vi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0421_general_monocular_3d_lane_detection_via_structure_uncertainty_aware",
+      "label": "Monocular 3D Lane Detection via Structure Uncertainty-Aware",
+      "source_file": "0421_[General]_Monocular 3D Lane Detection via Structure Uncertainty-Aware.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0239_general_monocular_endoscopic_tissue_3d_reconstruction_with_multi_lev",
+      "label": "Monocular Endoscopic Tissue 3D Reconstruction with Multi-Lev",
+      "source_file": "0239_[General]_Monocular Endoscopic Tissue 3D Reconstruction with Multi-Lev.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0465_general_moving_light_adaptive_colonoscopy_reconstruction_via_illumin",
+      "label": "Moving Light Adaptive Colonoscopy Reconstruction via Illumin",
+      "source_file": "0465_[General]_Moving Light Adaptive Colonoscopy Reconstruction via Illumin.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0604_general_multi_sample_anti_aliasing_and_constrained_optimization_for",
+      "label": "Multi-Sample Anti-Aliasing and Constrained Optimization for",
+      "source_file": "0604_[General]_Multi-Sample Anti-Aliasing and Constrained Optimization for.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0644_general_multieditor_controllable_multimodal_object_editing_for_driv",
+      "label": "MultiEditor Controllable Multimodal Object Editing for Driv",
+      "source_file": "0644_[General]_MultiEditor Controllable Multimodal Object Editing for Driv.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0213_general_multimodal_prior_guided_importance_sampling_for_hierarchical",
+      "label": "Multimodal-Prior-Guided Importance Sampling for Hierarchical",
+      "source_file": "0213_[General]_Multimodal-Prior-Guided Importance Sampling for Hierarchical.md",
+      "alias_count": 1
+    },
+    {
+      "id": "paper_0329_general_nas_gs_noise_aware_sonar_gaussian_splatting",
+      "label": "NAS-GS Noise-Aware Sonar Gaussian Splatting",
+      "source_file": "0329_[General]_NAS-GS Noise-Aware Sonar Gaussian Splatting.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0396_general_nvgs_neural_visibility_for_occlusion_culling_in_3d_gaussian",
+      "label": "NVGS Neural Visibility for Occlusion Culling in 3D Gaussian",
+      "source_file": "0396_[General]_NVGS Neural Visibility for Occlusion Culling in 3D Gaussian.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0454_general_nvsim_novel_view_synthesis_simulator_for_large_scale_indoor",
+      "label": "NVSim Novel View Synthesis Simulator for Large Scale Indoor",
+      "source_file": "0454_[General]_NVSim Novel View Synthesis Simulator for Large Scale Indoor.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0398_general_near_coupled_neural_asset_renderer_stack",
+      "label": "NeAR Coupled Neural Asset-Renderer Stack",
+      "source_file": "0398_[General]_NeAR Coupled Neural Asset-Renderer Stack.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0350_general_nebula_enable_city_scale_3d_gaussian_splatting_in_virtual_r",
+      "label": "Nebula Enable City-Scale 3D Gaussian Splatting in Virtual R",
+      "source_file": "0350_[General]_Nebula Enable City-Scale 3D Gaussian Splatting in Virtual R.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0611_general_neeco_image_synthesis_of_novel_instrument_states_based_on_d",
+      "label": "NeeCo Image Synthesis of Novel Instrument States Based on D",
+      "source_file": "0611_[General]_NeeCo Image Synthesis of Novel Instrument States Based on D.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0424_general_neo_real_time_on_device_3d_gaussian_splatting_with_reuse_an",
+      "label": "Neo Real-Time On-Device 3D Gaussian Splatting with Reuse-an",
+      "source_file": "0424_[General]_Neo Real-Time On-Device 3D Gaussian Splatting with Reuse-an.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0377_general_nexels_neurally_textured_surfels_for_real_time_novel_view_s",
+      "label": "Nexels Neurally-Textured Surfels for Real-Time Novel View S",
+      "source_file": "0377_[General]_Nexels Neurally-Textured Surfels for Real-Time Novel View S.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0256_general_nighttime_autonomous_driving_scene_reconstruction_with_physi",
+      "label": "Nighttime Autonomous Driving Scene Reconstruction with Physi",
+      "source_file": "0256_[General]_Nighttime Autonomous Driving Scene Reconstruction with Physi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0282_general_nix_and_fix_targeting_1000x_compression_of_3d_gaussian_spla",
+      "label": "Nix and Fix Targeting 1000x Compression of 3D Gaussian Spla",
+      "source_file": "0282_[General]_Nix and Fix Targeting 1000x Compression of 3D Gaussian Spla.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0229_general_no_calibration_no_depth_no_problem_cross_sensor_view_synt",
+      "label": "No Calibration, No Depth, No Problem Cross-Sensor View Synt",
+      "source_file": "0229_[General]_No Calibration, No Depth, No Problem Cross-Sensor View Synt.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0613_general_novel_view_synthesis_with_gaussian_splatting_impact_on_phot",
+      "label": "Novel View Synthesis with Gaussian Splatting Impact on Phot",
+      "source_file": "0613_[General]_Novel View Synthesis with Gaussian Splatting Impact on Phot.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0260_general_omega_avatar_one_shot_modeling_of_360_gaussian_avatars",
+      "label": "OMEGA-Avatar One-shot Modeling of 360掳 Gaussian Avatars",
+      "source_file": "0260_[General]_OMEGA-Avatar One-shot Modeling of 360掳 Gaussian Avatars.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0432_general_ougs_active_view_selection_via_object_aware_uncertainty_est",
+      "label": "OUGS Active View Selection via Object-aware Uncertainty Est",
+      "source_file": "0432_[General]_OUGS Active View Selection via Object-aware Uncertainty Est.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0449_general_object_aware_4d_human_motion_generation",
+      "label": "Object-Aware 4D Human Motion Generation",
+      "source_file": "0449_[General]_Object-Aware 4D Human Motion Generation.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0446_general_object_centric_3d_gaussian_splatting_for_strawberry_plant_re",
+      "label": "Object-Centric 3D Gaussian Splatting for Strawberry Plant Re",
+      "source_file": "0446_[General]_Object-Centric 3D Gaussian Splatting for Strawberry Plant Re.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0401_general_observer_actor_active_vision_imitation_learning_with_sparse",
+      "label": "Observer Actor Active Vision Imitation Learning with Sparse",
+      "source_file": "0401_[General]_Observer Actor Active Vision Imitation Learning with Sparse.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0367_general_off_the_grid_detection_of_primitives_for_feed_forward_3d_ga",
+      "label": "Off The Grid Detection of Primitives for Feed-Forward 3D Ga",
+      "source_file": "0367_[General]_Off The Grid Detection of Primitives for Feed-Forward 3D Ga.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0411_general_one_walk_is_all_you_need_data_efficient_3d_rf_scene_reconst",
+      "label": "One Walk is All You Need Data-Efficient 3D RF Scene Reconst",
+      "source_file": "0411_[General]_One Walk is All You Need Data-Efficient 3D RF Scene Reconst.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0596_general_online_3d_gaussian_splatting_modeling_with_novel_view_select",
+      "label": "Online 3D Gaussian Splatting Modeling with Novel View Select",
+      "source_file": "0596_[General]_Online 3D Gaussian Splatting Modeling with Novel View Select.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0485_general_opacity_gradient_driven_density_control_for_compact_and_effi",
+      "label": "Opacity-Gradient Driven Density Control for Compact and Effi",
+      "source_file": "0485_[General]_Opacity-Gradient Driven Density Control for Compact and Effi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0466_general_openinsgaussian_open_vocabulary_instance_gaussian_segmentat",
+      "label": "OpenInsGaussian Open-vocabulary Instance Gaussian Segmentat",
+      "source_file": "0466_[General]_OpenInsGaussian Open-vocabulary Instance Gaussian Segmentat.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0413_general_optimizing_3d_gaussian_splattering_for_mobile_gpus",
+      "label": "Optimizing 3D Gaussian Splattering for Mobile GPUs",
+      "source_file": "0413_[General]_Optimizing 3D Gaussian Splattering for Mobile GPUs.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0516_general_oraclegs_grounding_generative_priors_for_sparse_view_gaussi",
+      "label": "OracleGS Grounding Generative Priors for Sparse-View Gaussi",
+      "source_file": "0516_[General]_OracleGS Grounding Generative Priors for Sparse-View Gaussi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0487_general_p_4dgs_predictive_4d_gaussian_splatting_with_90_compressio",
+      "label": "P-4DGS Predictive 4D Gaussian Splatting with 90脳 Compressio",
+      "source_file": "0487_[General]_P-4DGS Predictive 4D Gaussian Splatting with 90脳 Compressio.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0478_general_pags_priority_adaptive_gaussian_splatting_for_dynamic_drivi",
+      "label": "PAGS Priority-Adaptive Gaussian Splatting for Dynamic Drivi",
+      "source_file": "0478_[General]_PAGS Priority-Adaptive Gaussian Splatting for Dynamic Drivi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0662_general_pcr_gs_colmap_free_3d_gaussian_splatting_via_pose_co_regula",
+      "label": "PCR-GS COLMAP-Free 3D Gaussian Splatting via Pose Co-Regula",
+      "source_file": "0662_[General]_PCR-GS COLMAP-Free 3D Gaussian Splatting via Pose Co-Regula.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0406_general_pegs_physics_event_enhanced_large_spatiotemporal_motion_rec",
+      "label": "PEGS Physics-Event Enhanced Large Spatiotemporal Motion Rec",
+      "source_file": "0406_[General]_PEGS Physics-Event Enhanced Large Spatiotemporal Motion Rec.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0472_general_pfgs_pose_fused_3d_gaussian_splatting_for_complete_multi_po",
+      "label": "PFGS Pose-Fused 3D Gaussian Splatting for Complete Multi-Po",
+      "source_file": "0472_[General]_PFGS Pose-Fused 3D Gaussian Splatting for Complete Multi-Po.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0634_general_pmgs_reconstruction_of_projectile_motion_across_large_spati",
+      "label": "PMGS Reconstruction of Projectile Motion across Large Spati",
+      "source_file": "0634_[General]_PMGS Reconstruction of Projectile Motion across Large Spati.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0318_general_potr_post_training_3dgs_compression",
+      "label": "POTR Post-Training 3DGS Compression",
+      "source_file": "0318_[General]_POTR Post-Training 3DGS Compression.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0654_general_ps_gs_gaussian_splatting_for_multi_view_photometric_stereo",
+      "label": "PS-GS Gaussian Splatting for Multi-View Photometric Stereo",
+      "source_file": "0654_[General]_PS-GS Gaussian Splatting for Multi-View Photometric Stereo.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0296_general_psgs_text_driven_panorama_sliding_scene_generation_via_gaus",
+      "label": "PSGS Text-driven Panorama Sliding Scene Generation via Gaus",
+      "source_file": "0296_[General]_PSGS Text-driven Panorama Sliding Scene Generation via Gaus.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0555_general_panolam_large_avatar_model_for_gaussian_full_head_synthesis",
+      "label": "PanoLAM Large Avatar Model for Gaussian Full-Head Synthesis",
+      "source_file": "0555_[General]_PanoLAM Large Avatar Model for Gaussian Full-Head Synthesis.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0445_general_perchead_perceptual_head_model_for_single_image_3d_head_rec",
+      "label": "PercHead Perceptual Head Model for Single-Image 3D Head Rec",
+      "source_file": "0445_[General]_PercHead Perceptual Head Model for Single-Image 3D Head Rec.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0624_general_perceive_sample_compress_towards_real_time_3d_gaussian_spla",
+      "label": "Perceive-Sample-Compress Towards Real-Time 3D Gaussian Spla",
+      "source_file": "0624_[General]_Perceive-Sample-Compress Towards Real-Time 3D Gaussian Spla.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0597_general_physgm_large_physical_gaussian_model_for_feed_forward_4d_sy",
+      "label": "PhysGM Large Physical Gaussian Model for Feed-Forward 4D Sy",
+      "source_file": "0597_[General]_PhysGM Large Physical Gaussian Model for Feed-Forward 4D Sy.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0399_general_physgs_bayesian_inferred_gaussian_splatting_for_physical_pr",
+      "label": "PhysGS Bayesian-Inferred Gaussian Splatting for Physical Pr",
+      "source_file": "0399_[General]_PhysGS Bayesian-Inferred Gaussian Splatting for Physical Pr.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0409_general_physmorph_gs_differentiable_shape_morphing_via_joint_optimi",
+      "label": "PhysMorph-GS Differentiable Shape Morphing via Joint Optimi",
+      "source_file": "0409_[General]_PhysMorph-GS Differentiable Shape Morphing via Joint Optimi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0345_general_phystalk_language_driven_real_time_physics_in_3d_gaussian_s",
+      "label": "PhysTalk Language-driven Real-time Physics in 3D Gaussian S",
+      "source_file": "0345_[General]_PhysTalk Language-driven Real-time Physics in 3D Gaussian S.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0287_general_pi_gs_sparse_view_gaussian_splatting_with_dense_3_initial",
+      "label": "Pi-GS Sparse-View Gaussian Splatting with Dense 蟺^3 Initial",
+      "source_file": "0287_[General]_Pi-GS Sparse-View Gaussian Splatting with Dense 蟺^3 Initial.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0580_general_pixie_fast_and_generalizable_supervised_learning_of_3d_phys",
+      "label": "Pixie Fast and Generalizable Supervised Learning of 3D Phys",
+      "source_file": "0580_[General]_Pixie Fast and Generalizable Supervised Learning of 3D Phys.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0545_general_plug_and_play_pde_optimization_for_3d_gaussian_splatting_to",
+      "label": "Plug-and-Play PDE Optimization for 3D Gaussian Splatting To",
+      "source_file": "0545_[General]_Plug-and-Play PDE Optimization for 3D Gaussian Splatting To.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0311_general_pocketgs_on_device_training_of_3d_gaussian_splatting_for_hi",
+      "label": "PocketGS On-Device Training of 3D Gaussian Splatting for Hi",
+      "source_file": "0311_[General]_PocketGS On-Device Training of 3D Gaussian Splatting for Hi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0639_general_pointgauss_point_cloud_guided_multi_object_segmentation_for",
+      "label": "PointGauss Point Cloud-Guided Multi-Object Segmentation for",
+      "source_file": "0639_[General]_PointGauss Point Cloud-Guided Multi-Object Segmentation for.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0519_general_polysemous_language_gaussian_splatting_via_matching_based_ma",
+      "label": "Polysemous Language Gaussian Splatting via Matching-based Ma",
+      "source_file": "0519_[General]_Polysemous Language Gaussian Splatting via Matching-based Ma.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0292_general_position_3d_gaussian_splatting_watermarking_should_be_scena",
+      "label": "Position 3D Gaussian Splatting Watermarking Should Be Scena",
+      "source_file": "0292_[General]_Position 3D Gaussian Splatting Watermarking Should Be Scena.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0381_general_prior_enhanced_gaussian_splatting_for_dynamic_scene_reconstr",
+      "label": "Prior-Enhanced Gaussian Splatting for Dynamic Scene Reconstr",
+      "source_file": "0381_[General]_Prior-Enhanced Gaussian Splatting for Dynamic Scene Reconstr.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0494_general_prismgs_physically_grounded_anti_aliasing_for_high_fidelity",
+      "label": "PrismGS Physically-Grounded Anti-Aliasing for High-Fidelity",
+      "source_file": "0494_[General]_PrismGS Physically-Grounded Anti-Aliasing for High-Fidelity.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0333_general_profuse_efficient_cross_view_context_fusion_for_open_vocabu",
+      "label": "ProFuse Efficient Cross-View Context Fusion for Open-Vocabu",
+      "source_file": "0333_[General]_ProFuse Efficient Cross-View Context Fusion for Open-Vocabu.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0182_general_progs_towards_progressive_coding_for_3d_gaussian_splatting",
+      "label": "ProGS Towards Progressive Coding for 3D Gaussian Splatting",
+      "source_file": "0182_[General]_ProGS Towards Progressive Coding for 3D Gaussian Splatting.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0513_general_proxy_gs_efficient_3d_gaussian_splatting_via_proxy_mesh",
+      "label": "Proxy-GS Efficient 3D Gaussian Splatting via Proxy Mesh",
+      "source_file": "0513_[General]_Proxy-GS Efficient 3D Gaussian Splatting via Proxy Mesh.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0226_general_prune_wisely_reconstruct_sharply_compact_3d_gaussian_splat",
+      "label": "Prune Wisely, Reconstruct Sharply Compact 3D Gaussian Splat",
+      "source_file": "0226_[General]_Prune Wisely, Reconstruct Sharply Compact 3D Gaussian Splat.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0278_general_pseudo_view_enhancement_via_confidence_fusion_for_unposed_sp",
+      "label": "Pseudo-View Enhancement via Confidence Fusion for Unposed Sp",
+      "source_file": "0278_[General]_Pseudo-View Enhancement via Confidence Fusion for Unposed Sp.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0349_general_quantile_rendering_efficiently_embedding_high_dimensional_f",
+      "label": "Quantile Rendering Efficiently Embedding High-dimensional F",
+      "source_file": "0349_[General]_Quantile Rendering Efficiently Embedding High-dimensional F.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0281_general_quantumgs_quantum_encoding_framework_for_gaussian_splatting",
+      "label": "QuantumGS Quantum Encoding Framework for Gaussian Splatting",
+      "source_file": "0281_[General]_QuantumGS Quantum Encoding Framework for Gaussian Splatting.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0214_general_r3gw_relightable_3d_gaussians_for_outdoor_scenes_in_the_wil",
+      "label": "R3GW Relightable 3D Gaussians for Outdoor Scenes in the Wil",
+      "source_file": "0214_[General]_R3GW Relightable 3D Gaussians for Outdoor Scenes in the Wil.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0629_general_rlgs_reinforcement_learning_based_adaptive_hyperparameter_t",
+      "label": "RLGS Reinforcement Learning-Based Adaptive Hyperparameter T",
+      "source_file": "0629_[General]_RLGS Reinforcement Learning-Based Adaptive Hyperparameter T.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0503_general_roi_gs_interest_based_local_quality_3d_gaussian_splatting",
+      "label": "ROI-GS Interest-based Local Quality 3D Gaussian Splatting",
+      "source_file": "0503_[General]_ROI-GS Interest-based Local Quality 3D Gaussian Splatting.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0552_general_rosgs_relightable_outdoor_scenes_with_gaussian_splatting",
+      "label": "ROSGS Relightable Outdoor Scenes With Gaussian Splatting",
+      "source_file": "0552_[General]_ROSGS Relightable Outdoor Scenes With Gaussian Splatting.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0670_general_rtr_gs_3d_gaussian_splatting_for_inverse_rendering_with_rad",
+      "label": "RTR-GS 3D Gaussian Splatting for Inverse Rendering with Rad",
+      "source_file": "0670_[General]_RTR-GS 3D Gaussian Splatting for Inverse Rendering with Rad.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0646_general_rags_unleashing_3d_gaussian_splatting_from_4d_radar_and_mon",
+      "label": "RaGS Unleashing 3D Gaussian Splatting from 4D Radar and Mon",
+      "source_file": "0646_[General]_RaGS Unleashing 3D Gaussian Splatting from 4D Radar and Mon.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0537_general_radargaussiandet3d_an_efficient_and_effective_gaussian_base",
+      "label": "RadarGaussianDet3D An Efficient and Effective Gaussian-base",
+      "source_file": "0537_[General]_RadarGaussianDet3D An Efficient and Effective Gaussian-base.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0294_general_radioactive_3d_gaussian_ray_tracing_for_tomographic_reconstr",
+      "label": "Radioactive 3D Gaussian Ray Tracing for Tomographic Reconstr",
+      "source_file": "0294_[General]_Radioactive 3D Gaussian Ray Tracing for Tomographic Reconstr.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0467_general_raindrop_gs_a_benchmark_for_3d_gaussian_splatting_under_rai",
+      "label": "Raindrop GS A Benchmark for 3D Gaussian Splatting under Rai",
+      "source_file": "0467_[General]_Raindrop GS A Benchmark for 3D Gaussian Splatting under Rai.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0464_general_re_activating_frozen_primitives_for_3d_gaussian_splatting",
+      "label": "Re-Activating Frozen Primitives for 3D Gaussian Splatting",
+      "source_file": "0464_[General]_Re-Activating Frozen Primitives for 3D Gaussian Splatting.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0669_general_repaintgs_reference_guided_gaussian_splatting_for_realistic",
+      "label": "RePaintGS Reference-Guided Gaussian Splatting for Realistic",
+      "source_file": "0669_[General]_RePaintGS Reference-Guided Gaussian Splatting for Realistic.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0491_general_resplat_learning_recurrent_gaussian_splats",
+      "label": "ReSplat Learning Recurrent Gaussian Splats",
+      "source_file": "0491_[General]_ReSplat Learning Recurrent Gaussian Splats.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0263_general_ready_go_real_to_sim_dynamic_3d_gaussian_splatting_simulati",
+      "label": "ReaDy-Go Real-to-Sim Dynamic 3D Gaussian Splatting Simulati",
+      "source_file": "0263_[General]_ReaDy-Go Real-to-Sim Dynamic 3D Gaussian Splatting Simulati.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0441_general_real_to_sim_robot_policy_evaluation_with_gaussian_splatting",
+      "label": "Real-to-Sim Robot Policy Evaluation with Gaussian Splatting",
+      "source_file": "0441_[General]_Real-to-Sim Robot Policy Evaluation with Gaussian Splatting.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0574_general_realistic_and_controllable_3d_gaussian_guided_object_editing",
+      "label": "Realistic and Controllable 3D Gaussian-Guided Object Editing",
+      "source_file": "0574_[General]_Realistic and Controllable 3D Gaussian-Guided Object Editing.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0428_general_realisticdreamer_guidance_score_distillation_for_few_shot_g",
+      "label": "RealisticDreamer Guidance Score Distillation for Few-shot G",
+      "source_file": "0428_[General]_RealisticDreamer Guidance Score Distillation for Few-shot G.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0195_general_recondrive_fast_feed_forward_4d_gaussian_splatting_for_auto",
+      "label": "ReconDrive Fast Feed-Forward 4D Gaussian Splatting for Auto",
+      "source_file": "0195_[General]_ReconDrive Fast Feed-Forward 4D Gaussian Splatting for Auto.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0425_general_reconstructing_3d_scenes_in_native_high_dynamic_range",
+      "label": "Reconstructing 3D Scenes in Native High Dynamic Range",
+      "source_file": "0425_[General]_Reconstructing 3D Scenes in Native High Dynamic Range.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0593_general_reconstruction_using_the_invisible_intuition_from_nir_and_m",
+      "label": "Reconstruction Using the Invisible Intuition from NIR and M",
+      "source_file": "0593_[General]_Reconstruction Using the Invisible Intuition from NIR and M.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0559_general_reconstruction_and_reenactment_separated_method_for_realisti",
+      "label": "Reconstruction and Reenactment Separated Method for Realisti",
+      "source_file": "0559_[General]_Reconstruction and Reenactment Separated Method for Realisti.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0621_general_refining_gaussian_splatting_a_volumetric_densification_appr",
+      "label": "Refining Gaussian Splatting A Volumetric Densification Appr",
+      "source_file": "0621_[General]_Refining Gaussian Splatting A Volumetric Densification Appr.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0673_general_reflections_unlock_geometry_aware_reflection_disentanglemen",
+      "label": "Reflections Unlock Geometry-Aware Reflection Disentanglemen",
+      "source_file": "0673_[General]_Reflections Unlock Geometry-Aware Reflection Disentanglemen.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0458_general_region_adaptive_learned_hierarchical_encoding_for_3d_gaussia",
+      "label": "Region-Adaptive Learned Hierarchical Encoding for 3D Gaussia",
+      "source_file": "0458_[General]_Region-Adaptive Learned Hierarchical Encoding for 3D Gaussia.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0320_general_rig_aware_3d_reconstruction_of_vehicle_undercarriages_using",
+      "label": "Rig-Aware 3D Reconstruction of Vehicle Undercarriages using",
+      "source_file": "0320_[General]_Rig-Aware 3D Reconstruction of Vehicle Undercarriages using.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0520_general_rigidity_aware_3d_gaussian_deformation_from_a_single_image",
+      "label": "Rigidity-Aware 3D Gaussian Deformation from a Single Image",
+      "source_file": "0520_[General]_Rigidity-Aware 3D Gaussian Deformation from a Single Image.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0402_general_roboarmgs_high_quality_robotic_arm_splatting_via_b_zier_cur",
+      "label": "RoboArmGS High-Quality Robotic Arm Splatting via B茅zier Cur",
+      "source_file": "0402_[General]_RoboArmGS High-Quality Robotic Arm Splatting via B茅zier Cur.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0631_general_robustgs_unified_boosting_of_feedforward_3d_gaussian_splatt",
+      "label": "RobustGS Unified Boosting of Feedforward 3D Gaussian Splatt",
+      "source_file": "0631_[General]_RobustGS Unified Boosting of Feedforward 3D Gaussian Splatt.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0408_general_roomplanner_explicit_layout_planner_for_easier_llm_driven_3",
+      "label": "RoomPlanner Explicit Layout Planner for Easier LLM-Driven 3",
+      "source_file": "0408_[General]_RoomPlanner Explicit Layout Planner for Easier LLM-Driven 3.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0338_general_sa_resgs_self_augmented_residual_3d_gaussian_splatting_for",
+      "label": "SA-ResGS Self-Augmented Residual 3D Gaussian Splatting for",
+      "source_file": "0338_[General]_SA-ResGS Self-Augmented Residual 3D Gaussian Splatting for.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0610_general_sagonline_segment_any_gaussians_online",
+      "label": "SAGOnline Segment Any Gaussians Online",
+      "source_file": "0610_[General]_SAGOnline Segment Any Gaussians Online.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0450_general_sags_self_adaptive_alias_free_gaussian_splatting_for_dynami",
+      "label": "SAGS Self-Adaptive Alias-Free Gaussian Splatting for Dynami",
+      "source_file": "0450_[General]_SAGS Self-Adaptive Alias-Free Gaussian Splatting for Dynami.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0334_general_scar_gs_spatial_context_attention_for_residuals_in_progress",
+      "label": "SCAR-GS Spatial Context Attention for Residuals in Progress",
+      "source_file": "0334_[General]_SCAR-GS Spatial Context Attention for Residuals in Progress.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0671_general_sd_gs_structured_deformable_3d_gaussians_for_efficient_dyna",
+      "label": "SD-GS Structured Deformable 3D Gaussians for Efficient Dyna",
+      "source_file": "0671_[General]_SD-GS Structured Deformable 3D Gaussians for Efficient Dyna.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0365_general_sdfoam_signed_distance_foam_for_explicit_surface_reconstruc",
+      "label": "SDFoam Signed-Distance Foam for explicit surface reconstruc",
+      "source_file": "0365_[General]_SDFoam Signed-Distance Foam for explicit surface reconstruc.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0419_general_sf_recon_simplification_free_lightweight_building_reconstru",
+      "label": "SF-Recon Simplification-Free Lightweight Building Reconstru",
+      "source_file": "0419_[General]_SF-Recon Simplification-Free Lightweight Building Reconstru.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0407_general_spags_sparse_view_articulated_object_reconstruction_from_si",
+      "label": "SPAGS Sparse-View Articulated Object Reconstruction from Si",
+      "source_file": "0407_[General]_SPAGS Sparse-View Articulated Object Reconstruction from Si.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0533_general_spfsplatv2_efficient_self_supervised_pose_free_3d_gaussian",
+      "label": "SPFSplatV2 Efficient Self-Supervised Pose-Free 3D Gaussian",
+      "source_file": "0533_[General]_SPFSplatV2 Efficient Self-Supervised Pose-Free 3D Gaussian.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0228_general_sr3r_rethinking_super_resolution_3d_reconstruction_with_fee",
+      "label": "SR3R Rethinking Super-Resolution 3D Reconstruction With Fee",
+      "source_file": "0228_[General]_SR3R Rethinking Super-Resolution 3D Reconstruction With Fee.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0562_general_ssgaussian_semantic_aware_and_structure_preserving_3d_style",
+      "label": "SSGaussian Semantic-Aware and Structure-Preserving 3D Style",
+      "source_file": "0562_[General]_SSGaussian Semantic-Aware and Structure-Preserving 3D Style.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0204_general_ssr_gs_separating_specular_reflection_in_gaussian_splatting",
+      "label": "SSR-GS Separating Specular Reflection in Gaussian Splatting",
+      "source_file": "0204_[General]_SSR-GS Separating Specular Reflection in Gaussian Splatting.md",
+      "alias_count": 1
+    },
+    {
+      "id": "paper_0535_general_st_gs_vision_based_3d_semantic_occupancy_prediction_with_sp",
+      "label": "ST-GS Vision-Based 3D Semantic Occupancy Prediction with Sp",
+      "source_file": "0535_[General]_ST-GS Vision-Based 3D Semantic Occupancy Prediction with Sp.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0344_general_sv_gs_sparse_view_4d_reconstruction_with_skeleton_driven_ga",
+      "label": "SV-GS Sparse View 4D Reconstruction with Skeleton-Driven Ga",
+      "source_file": "0344_[General]_SV-GS Sparse View 4D Reconstruction with Skeleton-Driven Ga.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0553_general_svr_gs_spatially_variant_regularization_for_probabilistic_m",
+      "label": "SVR-GS Spatially Variant Regularization for Probabilistic M",
+      "source_file": "0553_[General]_SVR-GS Spatially Variant Regularization for Probabilistic M.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0567_general_swagsplatting_semantic_guided_water_scene_augmented_gaussia",
+      "label": "SWAGSplatting Semantic-guided Water-scene Augmented Gaussia",
+      "source_file": "0567_[General]_SWAGSplatting Semantic-guided Water-scene Augmented Gaussia.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0474_general_salon3r_structure_aware_long_term_generalizable_3d_reconstr",
+      "label": "SaLon3R Structure-aware Long-term Generalizable 3D Reconstr",
+      "source_file": "0474_[General]_SaLon3R Structure-aware Long-term Generalizable 3D Reconstr.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0232_general_sapling_nerf_geo_localised_sapling_reconstruction_in_forest",
+      "label": "Sapling-NeRF Geo-Localised Sapling Reconstruction in Forest",
+      "source_file": "0232_[General]_Sapling-NeRF Geo-Localised Sapling Reconstruction in Forest.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0272_general_scalable_adaptation_of_3d_geometric_foundation_models_via_we",
+      "label": "Scalable Adaptation of 3D Geometric Foundation Models via We",
+      "source_file": "0272_[General]_Scalable Adaptation of 3D Geometric Foundation Models via We.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0570_general_scale_gs_efficient_scalable_gaussian_splatting_via_redundan",
+      "label": "Scale-GS Efficient Scalable Gaussian Splatting via Redundan",
+      "source_file": "0570_[General]_Scale-GS Efficient Scalable Gaussian Splatting via Redundan.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0528_general_seeing_through_reflections_advancing_3d_scene_reconstructio",
+      "label": "Seeing Through Reflections Advancing 3D Scene Reconstructio",
+      "source_file": "0528_[General]_Seeing Through Reflections Advancing 3D Scene Reconstructio.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0400_general_segsplat_feed_forward_gaussian_splatting_and_open_set_seman",
+      "label": "SegSplat Feed-forward Gaussian Splatting and Open-Set Seman",
+      "source_file": "0400_[General]_SegSplat Feed-forward Gaussian Splatting and Open-Set Seman.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0551_general_segmentation_driven_initialization_for_sparse_view_3d_gaussi",
+      "label": "Segmentation-Driven Initialization for Sparse-view 3D Gaussi",
+      "source_file": "0551_[General]_Segmentation-Driven Initialization for Sparse-view 3D Gaussi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0299_general_self_supervised_slice_to_volume_reconstruction_with_gaussian",
+      "label": "Self-Supervised Slice-to-Volume Reconstruction with Gaussian",
+      "source_file": "0299_[General]_Self-Supervised Slice-to-Volume Reconstruction with Gaussian.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0215_general_semgs_feed_forward_semantic_3d_gaussian_splatting_from_spar",
+      "label": "SemGS Feed-Forward Semantic 3D Gaussian Splatting from Spar",
+      "source_file": "0215_[General]_SemGS Feed-Forward Semantic 3D Gaussian Splatting from Spar.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0249_general_semantic_guided_3d_gaussian_splatting_for_transient_object_r",
+      "label": "Semantic-Guided 3D Gaussian Splatting for Transient Object R",
+      "source_file": "0249_[General]_Semantic-Guided 3D Gaussian Splatting for Transient Object R.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0607_general_semantic_aware_dropsplat_adaptive_pruning_of_redundant_gaus",
+      "label": "Semantic-aware DropSplat Adaptive Pruning of Redundant Gaus",
+      "source_file": "0607_[General]_Semantic-aware DropSplat Adaptive Pruning of Redundant Gaus.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0640_general_seqaffordsplat_scene_level_sequential_affordance_reasoning",
+      "label": "SeqAffordSplat Scene-level Sequential Affordance Reasoning",
+      "source_file": "0640_[General]_SeqAffordSplat Scene-level Sequential Affordance Reasoning.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0343_general_shadowgs_shadow_aware_3d_gaussian_splatting_for_satellite_i",
+      "label": "ShadowGS Shadow-Aware 3D Gaussian Splatting for Satellite I",
+      "source_file": "0343_[General]_ShadowGS Shadow-Aware 3D Gaussian Splatting for Satellite I.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0288_general_sharptimegs_sharp_and_stable_dynamic_gaussian_splatting_via",
+      "label": "SharpTimeGS Sharp and Stable Dynamic Gaussian Splatting via",
+      "source_file": "0288_[General]_SharpTimeGS Sharp and Stable Dynamic Gaussian Splatting via.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0477_general_simuli_real_time_lidar_and_camera_simulation_with_unscented",
+      "label": "SimULi Real-Time LiDAR and Camera Simulation with Unscented",
+      "source_file": "0477_[General]_SimULi Real-Time LiDAR and Camera Simulation with Unscented.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0499_general_sketchplan_diffusion_based_drone_planning_from_human_sketch",
+      "label": "SketchPlan Diffusion Based Drone Planning From Human Sketch",
+      "source_file": "0499_[General]_SketchPlan Diffusion Based Drone Planning From Human Sketch.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0340_general_sketchrodgs_sketch_based_extraction_of_slender_geometries_f",
+      "label": "SketchRodGS Sketch-based Extraction of Slender Geometries f",
+      "source_file": "0340_[General]_SketchRodGS Sketch-based Extraction of Slender Geometries f.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0186_general_skipgs_post_densification_backward_skipping_for_efficient_3",
+      "label": "SkipGS Post-Densification Backward Skipping for Efficient 3",
+      "source_file": "0186_[General]_SkipGS Post-Densification Backward Skipping for Efficient 3.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0609_general_skysplat_generalizable_3d_gaussian_splatting_from_multi_tem",
+      "label": "SkySplat Generalizable 3D Gaussian Splatting from Multi-Tem",
+      "source_file": "0609_[General]_SkySplat Generalizable 3D Gaussian Splatting from Multi-Tem.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0532_general_smokeseer_3d_gaussian_splatting_for_smoke_removal_and_scene",
+      "label": "SmokeSeer 3D Gaussian Splatting for Smoke Removal and Scene",
+      "source_file": "0532_[General]_SmokeSeer 3D Gaussian Splatting for Smoke Removal and Scene.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0587_general_snap_snap_taking_two_images_to_reconstruct_3d_human_gaussia",
+      "label": "Snap-Snap Taking Two Images to Reconstruct 3D Human Gaussia",
+      "source_file": "0587_[General]_Snap-Snap Taking Two Images to Reconstruct 3D Human Gaussia.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0289_general_soma_a_real_to_sim_neural_simulator_for_robotic_soft_body_m",
+      "label": "SoMA A Real-to-Sim Neural Simulator for Robotic Soft-body M",
+      "source_file": "0289_[General]_SoMA A Real-to-Sim Neural Simulator for Robotic Soft-body M.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0217_general_sparse_view_distractor_free_gaussian_splatting",
+      "label": "Sparse View Distractor-Free Gaussian Splatting",
+      "source_file": "0217_[General]_Sparse View Distractor-Free Gaussian Splatting.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0244_general_spatial_temporal_state_propagation_autoregressive_model_for",
+      "label": "Spatial-Temporal State Propagation Autoregressive Model for",
+      "source_file": "0244_[General]_Spatial-Temporal State Propagation Autoregressive Model for.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0373_general_spherical_voronoi_directional_appearance_as_a_differentiabl",
+      "label": "Spherical Voronoi Directional Appearance as a Differentiabl",
+      "source_file": "0373_[General]_Spherical Voronoi Directional Appearance as a Differentiabl.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0190_general_spherical_gof_geometry_aware_panoramic_gaussian_opacity_fie",
+      "label": "Spherical-GOF Geometry-Aware Panoramic Gaussian Opacity Fie",
+      "source_file": "0190_[General]_Spherical-GOF Geometry-Aware Panoramic Gaussian Opacity Fie.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0492_general_splat_the_net_radiance_fields_with_splattable_neural_primit",
+      "label": "Splat the Net Radiance Fields with Splattable Neural Primit",
+      "source_file": "0492_[General]_Splat the Net Radiance Fields with Splattable Neural Primit.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0307_general_splat_portrait_generalizing_talking_heads_with_gaussian_spl",
+      "label": "Splat-Portrait Generalizing Talking Heads with Gaussian Spl",
+      "source_file": "0307_[General]_Splat-Portrait Generalizing Talking Heads with Gaussian Spl.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0355_general_splatbright_generalizable_low_light_scene_reconstruction_fr",
+      "label": "SplatBright Generalizable Low-Light Scene Reconstruction fr",
+      "source_file": "0355_[General]_SplatBright Generalizable Low-Light Scene Reconstruction fr.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0317_general_splatbus_a_gaussian_splatting_viewer_framework_via_gpu_inte",
+      "label": "SplatBus A Gaussian Splatting Viewer Framework via GPU Inte",
+      "source_file": "0317_[General]_SplatBus A Gaussian Splatting Viewer Framework via GPU Inte.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0554_general_splatfill_3d_scene_inpainting_via_depth_guided_gaussian_spl",
+      "label": "SplatFill 3D Scene Inpainting via Depth-Guided Gaussian Spl",
+      "source_file": "0554_[General]_SplatFill 3D Scene Inpainting via Depth-Guided Gaussian Spl.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0636_general_splatssc_decoupled_depth_guided_gaussian_splatting_for_sema",
+      "label": "SplatSSC Decoupled Depth-Guided Gaussian Splatting for Sema",
+      "source_file": "0636_[General]_SplatSSC Decoupled Depth-Guided Gaussian Splatting for Sema.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0387_general_splatent_splatting_diffusion_latents_for_novel_view_synthes",
+      "label": "Splatent Splatting Diffusion Latents for Novel View Synthes",
+      "source_file": "0387_[General]_Splatent Splatting Diffusion Latents for Novel View Synthes.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0346_general_splatwizard_a_benchmark_toolkit_for_3d_gaussian_splatting_c",
+      "label": "Splatwizard A Benchmark Toolkit for 3D Gaussian Splatting C",
+      "source_file": "0346_[General]_Splatwizard A Benchmark Toolkit for 3D Gaussian Splatting C.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0293_general_split_splat_zero_shot_panoptic_segmentation_via_explicit_in",
+      "label": "Split&Splat Zero-Shot Panoptic Segmentation via Explicit In",
+      "source_file": "0293_[General]_Split&Splat Zero-Shot Panoptic Segmentation via Explicit In.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0627_general_splitgaussian_reconstructing_dynamic_scenes_via_visual_geom",
+      "label": "SplitGaussian Reconstructing Dynamic Scenes via Visual Geom",
+      "source_file": "0627_[General]_SplitGaussian Reconstructing Dynamic Scenes via Visual Geom.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0656_general_streamme_simplify_3d_gaussian_avatar_within_live_stream",
+      "label": "StreamME Simplify 3D Gaussian Avatar within Live Stream",
+      "source_file": "0656_[General]_StreamME Simplify 3D Gaussian Avatar within Live Stream.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0319_general_structured_image_based_coding_for_efficient_gaussian_splatti",
+      "label": "Structured Image-based Coding for Efficient Gaussian Splatti",
+      "source_file": "0319_[General]_Structured Image-based Coding for Efficient Gaussian Splatti.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0576_general_style4d_bench_a_benchmark_suite_for_4d_stylization",
+      "label": "Style4D-Bench A Benchmark Suite for 4D Stylization",
+      "source_file": "0576_[General]_Style4D-Bench A Benchmark Suite for 4D Stylization.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0389_general_super4dr_4d_radar_centric_self_supervised_odometry_and_gaus",
+      "label": "Super4DR 4D Radar-centric Self-supervised Odometry and Gaus",
+      "source_file": "0389_[General]_Super4DR 4D Radar-centric Self-supervised Odometry and Gaus.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0626_general_surf3r_rapid_surface_reconstruction_from_sparse_rgb_views_i",
+      "label": "Surf3R Rapid Surface Reconstruction from Sparse RGB Views i",
+      "source_file": "0626_[General]_Surf3R Rapid Surface Reconstruction from Sparse RGB Views i.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0187_general_surgcalib_gaussian_splatting_based_hand_eye_calibration_for",
+      "label": "SurgCalib Gaussian Splatting-Based Hand-Eye Calibration for",
+      "source_file": "0187_[General]_SurgCalib Gaussian Splatting-Based Hand-Eye Calibration for.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0236_general_swiftndc_fast_neural_depth_correction_for_high_fidelity_3d",
+      "label": "SwiftNDC Fast Neural Depth Correction for High-Fidelity 3D",
+      "source_file": "0236_[General]_SwiftNDC Fast Neural Depth Correction for High-Fidelity 3D.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0420_general_symgs_leveraging_local_symmetries_for_3d_gaussian_splattin",
+      "label": "SymGS Leveraging Local Symmetries for 3D Gaussian Splattin",
+      "source_file": "0420_[General]_SymGS Leveraging Local Symmetries for 3D Gaussian Splattin.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0276_general_tfusionocc_student_s_t_distribution_based_object_centric_mu",
+      "label": "TFusionOcc Student's t-Distribution Based Object-Centric Mu",
+      "source_file": "0276_[General]_TFusionOcc Student's t-Distribution Based Object-Centric Mu.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0327_general_tidi_gs_floater_suppression_in_3d_gaussian_splatting_for_en",
+      "label": "TIDI-GS Floater Suppression in 3D Gaussian Splatting for En",
+      "source_file": "0327_[General]_TIDI-GS Floater Suppression in 3D Gaussian Splatting for En.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0423_general_tr_gaussians_high_fidelity_real_time_rendering_of_planar_tr",
+      "label": "TR-Gaussians High-fidelity Real-time Rendering of Planar Tr",
+      "source_file": "0423_[General]_TR-Gaussians High-fidelity Real-time Rendering of Planar Tr.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0647_general_taking_language_embedded_3d_gaussian_splatting_into_the_wild",
+      "label": "Taking Language Embedded 3D Gaussian Splatting into the Wild",
+      "source_file": "0647_[General]_Taking Language Embedded 3D Gaussian Splatting into the Wild.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0475_general_terra_explorable_native_3d_world_model_with_point_latents",
+      "label": "Terra Explorable Native 3D World Model with Point Latents",
+      "source_file": "0475_[General]_Terra Explorable Native 3D World Model with Point Latents.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0391_general_tessellation_gs_neural_mesh_gaussians_for_robust_monocular",
+      "label": "Tessellation GS Neural Mesh Gaussians for Robust Monocular",
+      "source_file": "0391_[General]_Tessellation GS Neural Mesh Gaussians for Robust Monocular.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0314_general_thermosplat_cross_modal_3d_gaussian_splatting_with_feature",
+      "label": "ThermoSplat Cross-Modal 3D Gaussian Splatting with Feature",
+      "source_file": "0314_[General]_ThermoSplat Cross-Modal 3D Gaussian Splatting with Feature.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0326_general_thinking_like_van_gogh_structure_aware_style_transfer_via_f",
+      "label": "Thinking Like Van Gogh Structure-Aware Style Transfer via F",
+      "source_file": "0326_[General]_Thinking Like Van Gogh Structure-Aware Style Transfer via F.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0279_general_three_dimensional_damage_visualization_of_civil_structures_v",
+      "label": "Three-dimensional Damage Visualization of Civil Structures v",
+      "source_file": "0279_[General]_Three-dimensional Damage Visualization of Civil Structures v.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0251_general_time_archival_camera_virtualization_for_sports_and_visual_pe",
+      "label": "Time-Archival Camera Virtualization for Sports and Visual Pe",
+      "source_file": "0251_[General]_Time-Archival Camera Virtualization for Sports and Visual Pe.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0221_general_tokensplat_token_aligned_3d_gaussian_splatting_for_feed_for",
+      "label": "TokenSplat Token-aligned 3D Gaussian Splatting for Feed-for",
+      "source_file": "0221_[General]_TokenSplat Token-aligned 3D Gaussian Splatting for Feed-for.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0612_general_touch_augmented_gaussian_splatting_for_enhanced_3d_scene_rec",
+      "label": "Touch-Augmented Gaussian Splatting for Enhanced 3D Scene Rec",
+      "source_file": "0612_[General]_Touch-Augmented Gaussian Splatting for Enhanced 3D Scene Rec.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0268_general_toward_fine_grained_facial_control_in_3d_talking_head_genera",
+      "label": "Toward Fine-Grained Facial Control in 3D Talking Head Genera",
+      "source_file": "0268_[General]_Toward Fine-Grained Facial Control in 3D Talking Head Genera.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0484_general_towards_efficient_3d_gaussian_human_avatar_compression_a_pr",
+      "label": "Towards Efficient 3D Gaussian Human Avatar Compression A Pr",
+      "source_file": "0484_[General]_Towards Efficient 3D Gaussian Human Avatar Compression A Pr.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0461_general_towards_physically_executable_3d_gaussian_for_embodied_navig",
+      "label": "Towards Physically Executable 3D Gaussian for Embodied Navig",
+      "source_file": "0461_[General]_Towards Physically Executable 3D Gaussian for Embodied Navig.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0385_general_traceflow_dynamic_3d_reconstruction_of_specular_scenes_driv",
+      "label": "TraceFlow Dynamic 3D Reconstruction of Specular Scenes Driv",
+      "source_file": "0385_[General]_TraceFlow Dynamic 3D Reconstruction of Specular Scenes Driv.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0418_general_training_free_multi_view_extension_of_ic_light_for_textual_p",
+      "label": "Training-Free Multi-View Extension of IC-Light for Textual P",
+      "source_file": "0418_[General]_Training-Free Multi-View Extension of IC-Light for Textual P.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0200_general_transforming_omnidirectional_rgb_lidar_data_into_3d_gaussian",
+      "label": "Transforming Omnidirectional RGB-LiDAR data into 3D Gaussian",
+      "source_file": "0200_[General]_Transforming Omnidirectional RGB-LiDAR data into 3D Gaussian.md",
+      "alias_count": 1
+    },
+    {
+      "id": "paper_0322_general_treedgs_aerial_gaussian_splatting_for_distant_dbh_measureme",
+      "label": "TreeDGS Aerial Gaussian Splatting for Distant DBH Measureme",
+      "source_file": "0322_[General]_TreeDGS Aerial Gaussian Splatting for Distant DBH Measureme.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0508_general_triangle_splatting_differentiable_rendering_with_opaque_tr",
+      "label": "Triangle Splatting+ Differentiable Rendering with Opaque Tr",
+      "source_file": "0508_[General]_Triangle Splatting+ Differentiable Rendering with Opaque Tr.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0224_general_ufo_4d_unposed_feedforward_4d_reconstruction_from_two_image",
+      "label": "UFO-4D Unposed Feedforward 4D Reconstruction from Two Image",
+      "source_file": "0224_[General]_UFO-4D Unposed Feedforward 4D Reconstruction from Two Image.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0643_general_ufv_splatter_pose_free_feed_forward_3d_gaussian_splatting_a",
+      "label": "UFV-Splatter Pose-Free Feed-Forward 3D Gaussian Splatting A",
+      "source_file": "0643_[General]_UFV-Splatter Pose-Free Feed-Forward 3D Gaussian Splatting A.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0622_general_ugod_uncertainty_guided_differentiable_opacity_and_soft_dro",
+      "label": "UGOD Uncertainty-Guided Differentiable Opacity and Soft Dro",
+      "source_file": "0622_[General]_UGOD Uncertainty-Guided Differentiable Opacity and Soft Dro.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0566_general_upgs_unified_pose_aware_gaussian_splatting_for_dynamic_scen",
+      "label": "UPGS Unified Pose-aware Gaussian Splatting for Dynamic Scen",
+      "source_file": "0566_[General]_UPGS Unified Pose-aware Gaussian Splatting for Dynamic Scen.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0619_general_uw_3dgs_underwater_3d_reconstruction_with_physics_aware_gau",
+      "label": "UW-3DGS Underwater 3D Reconstruction with Physics-Aware Gau",
+      "source_file": "0619_[General]_UW-3DGS Underwater 3D Reconstruction with Physics-Aware Gau.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0277_general_uncertainty_aware_4d_gaussian_splatting_for_monocular_occlud",
+      "label": "Uncertainty-Aware 4D Gaussian Splatting for Monocular Occlud",
+      "source_file": "0277_[General]_Uncertainty-Aware 4D Gaussian Splatting for Monocular Occlud.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0479_general_unigs_unified_geometry_aware_gaussian_splatting_for_multimo",
+      "label": "UniGS Unified Geometry-Aware Gaussian Splatting for Multimo",
+      "source_file": "0479_[General]_UniGS Unified Geometry-Aware Gaussian Splatting for Multimo.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0509_general_unilat3d_geometry_appearance_unified_latents_for_single_sta",
+      "label": "UniLat3D Geometry-Appearance Unified Latents for Single-Sta",
+      "source_file": "0509_[General]_UniLat3D Geometry-Appearance Unified Latents for Single-Sta.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0306_general_unimgs_unifying_mesh_and_3d_gaussian_splatting_with_single",
+      "label": "UniMGS Unifying Mesh and 3D Gaussian Splatting with Single-",
+      "source_file": "0306_[General]_UniMGS Unifying Mesh and 3D Gaussian Splatting with Single-.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0280_general_unified_sensor_simulation_for_autonomous_driving",
+      "label": "Unified Sensor Simulation for Autonomous Driving",
+      "source_file": "0280_[General]_Unified Sensor Simulation for Autonomous Driving.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0245_general_unifying_color_and_lightness_correction_with_view_adaptive_c",
+      "label": "Unifying Color and Lightness Correction with View-Adaptive C",
+      "source_file": "0245_[General]_Unifying Color and Lightness Correction with View-Adaptive C.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0651_general_unposed_3dgs_reconstruction_with_probabilistic_procrustes_ma",
+      "label": "Unposed 3DGS Reconstruction with Probabilistic Procrustes Ma",
+      "source_file": "0651_[General]_Unposed 3DGS Reconstruction with Probabilistic Procrustes Ma.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0362_general_using_gaussian_splats_to_create_high_fidelity_facial_geometr",
+      "label": "Using Gaussian Splats to Create High-Fidelity Facial Geometr",
+      "source_file": "0362_[General]_Using Gaussian Splats to Create High-Fidelity Facial Geometr.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0199_general_vg3s_visual_geometry_grounded_gaussian_splatting_for_semant",
+      "label": "VG3S Visual Geometry Grounded Gaussian Splatting for Semant",
+      "source_file": "0199_[General]_VG3S Visual Geometry Grounded Gaussian Splatting for Semant.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0210_general_virgi_view_dependent_instant_recoloring_of_3d_gaussians_spl",
+      "label": "VIRGi View-dependent Instant Recoloring of 3D Gaussians Spl",
+      "source_file": "0210_[General]_VIRGi View-dependent Instant Recoloring of 3D Gaussians Spl.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0368_general_vla_an_an_efficient_and_onboard_vision_language_action_fram",
+      "label": "VLA-AN An Efficient and Onboard Vision-Language-Action Fram",
+      "source_file": "0368_[General]_VLA-AN An Efficient and Onboard Vision-Language-Action Fram.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0262_general_variation_aware_flexible_3d_gaussian_editing",
+      "label": "Variation-aware Flexible 3D Gaussian Editing",
+      "source_file": "0262_[General]_Variation-aware Flexible 3D Gaussian Editing.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0283_general_vecset_edit_unleashing_pre_trained_lrm_for_mesh_editing_fro",
+      "label": "VecSet-Edit Unleashing Pre-trained LRM for Mesh Editing fro",
+      "source_file": "0283_[General]_VecSet-Edit Unleashing Pre-trained LRM for Mesh Editing fro.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0490_general_visibility_aware_densification_for_3d_gaussian_splatting_in",
+      "label": "Visibility-Aware Densification for 3D Gaussian Splatting in",
+      "source_file": "0490_[General]_Visibility-Aware Densification for 3D Gaussian Splatting in.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0560_general_visibility_aware_language_aggregation_for_open_vocabulary_se",
+      "label": "Visibility-Aware Language Aggregation for Open-Vocabulary Se",
+      "source_file": "0560_[General]_Visibility-Aware Language Aggregation for Open-Vocabulary Se.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0663_general_volseggs_segmentation_and_tracking_in_dynamic_volumetric_sc",
+      "label": "VolSegGS Segmentation and Tracking in Dynamic Volumetric Sc",
+      "source_file": "0663_[General]_VolSegGS Segmentation and Tracking in Dynamic Volumetric Sc.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0526_general_volsplat_rethinking_feed_forward_3d_gaussian_splatting_with",
+      "label": "VolSplat Rethinking Feed-Forward 3D Gaussian Splatting with",
+      "source_file": "0526_[General]_VolSplat Rethinking Feed-Forward 3D Gaussian Splatting with.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0412_general_vorion_a_risc_v_gpu_with_hardware_accelerated_3d_gaussian_r",
+      "label": "Vorion A RISC-V GPU with Hardware-Accelerated 3D Gaussian R",
+      "source_file": "0412_[General]_Vorion A RISC-V GPU with Hardware-Accelerated 3D Gaussian R.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0303_general_waterclear_gs_optical_aware_gaussian_splatting_for_underwat",
+      "label": "WaterClear-GS Optical-Aware Gaussian Splatting for Underwat",
+      "source_file": "0303_[General]_WaterClear-GS Optical-Aware Gaussian Splatting for Underwat.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0664_general_wavelet_gs_3d_gaussian_splatting_with_wavelet_decomposition",
+      "label": "Wavelet-GS 3D Gaussian Splatting with Wavelet Decomposition",
+      "source_file": "0664_[General]_Wavelet-GS 3D Gaussian Splatting with Wavelet Decomposition.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0527_general_waveletgaussian_wavelet_domain_diffusion_for_sparse_view_3d",
+      "label": "WaveletGaussian Wavelet-domain Diffusion for Sparse-view 3D",
+      "source_file": "0527_[General]_WaveletGaussian Wavelet-domain Diffusion for Sparse-view 3D.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0188_general_where_what_why_toward_explainable_3d_gs_watermarking",
+      "label": "Where, What, Why Toward Explainable 3D-GS Watermarking",
+      "source_file": "0188_[General]_Where, What, Why Toward Explainable 3D-GS Watermarking.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0240_general_wildghand_learning_anti_perturbation_gaussian_hand_avatars",
+      "label": "WildGHand Learning Anti-Perturbation Gaussian Hand Avatars",
+      "source_file": "0240_[General]_WildGHand Learning Anti-Perturbation Gaussian Hand Avatars.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0482_general_worldmirror_universal_3d_world_reconstruction_with_any_prio",
+      "label": "WorldMirror Universal 3D World Reconstruction with Any-Prio",
+      "source_file": "0482_[General]_WorldMirror Universal 3D World Reconstruction with Any-Prio.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0353_general_worldwarp_propagating_3d_geometry_with_asynchronous_video_d",
+      "label": "WorldWarp Propagating 3D Geometry with Asynchronous Video D",
+      "source_file": "0353_[General]_WorldWarp Propagating 3D Geometry with Asynchronous Video D.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0252_general_wrivinder_towards_spatial_intelligence_for_geo_locating_gro",
+      "label": "Wrivinder Towards Spatial Intelligence for Geo-locating Gro",
+      "source_file": "0252_[General]_Wrivinder Towards Spatial Intelligence for Geo-locating Gro.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0183_general_x_gs_an_extensible_open_framework_unifying_3dgs_architectur",
+      "label": "X-GS An Extensible Open Framework Unifying 3DGS Architectur",
+      "source_file": "0183_[General]_X-GS An Extensible Open Framework Unifying 3DGS Architectur.md",
+      "alias_count": 1
+    },
+    {
+      "id": "paper_0265_general_xsplain_xai_enabling_splat_based_prototype_learning_for_att",
+      "label": "XSPLAIN XAI-enabling Splat-based Prototype Learning for Att",
+      "source_file": "0265_[General]_XSPLAIN XAI-enabling Splat-based Prototype Learning for Att.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0388_general_yopo_nav_visual_navigation_using_3dgs_graphs_from_one_pass",
+      "label": "YOPO-Nav Visual Navigation using 3DGS Graphs from One-Pass",
+      "source_file": "0388_[General]_YOPO-Nav Visual Navigation using 3DGS Graphs from One-Pass.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0433_general_yonosplat_you_only_need_one_model_for_feedforward_3d_gaussi",
+      "label": "YoNoSplat You Only Need One Model for Feedforward 3D Gaussi",
+      "source_file": "0433_[General]_YoNoSplat You Only Need One Model for Feedforward 3D Gaussi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0222_general_zero_shot_robotic_manipulation_via_3d_gaussian_splatting_enh",
+      "label": "Zero-Shot Robotic Manipulation via 3D Gaussian Splatting-Enh",
+      "source_file": "0222_[General]_Zero-Shot Robotic Manipulation via 3D Gaussian Splatting-Enh.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0275_general_zero_shot_uav_navigation_in_forests_via_relightable_3d_gauss",
+      "label": "Zero-Shot UAV Navigation in Forests via Relightable 3D Gauss",
+      "source_file": "0275_[General]_Zero-Shot UAV Navigation in Forests via Relightable 3D Gauss.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0538_general_zero_shot_visual_grounding_in_3d_gaussians_via_view_retrieva",
+      "label": "Zero-Shot Visual Grounding in 3D Gaussians via View Retrieva",
+      "source_file": "0538_[General]_Zero-Shot Visual Grounding in 3D Gaussians via View Retrieva.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0586_general_zero_shot_volumetric_ct_super_resolution_using_3d_gaussian_s",
+      "label": "Zero-shot Volumetric CT Super-Resolution using 3D Gaussian S",
+      "source_file": "0586_[General]_Zero-shot Volumetric CT Super-Resolution using 3D Gaussian S.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0248_general_i_physgaussian_implicit_physical_simulation_for_3d_gaussian",
+      "label": "i-PhysGaussian Implicit Physical Simulation for 3D Gaussian",
+      "source_file": "0248_[General]_i-PhysGaussian Implicit Physical Simulation for 3D Gaussian.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0325_general_studentsplat_your_student_model_learns_single_view_3d_gauss",
+      "label": "studentSplat Your Student Model Learns Single-view 3D Gauss",
+      "source_file": "0325_[General]_studentSplat Your Student Model Learns Single-view 3D Gauss.md",
+      "alias_count": 0
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+0621_[General]_Refining Gaussian Splatting A Volumetric Densification Appr.md
+0622_[General]_UGOD Uncertainty-Guided Differentiable Opacity and Soft Dro.md
+0626_[General]_Surf3R Rapid Surface Reconstruction from Sparse RGB Views i.md
+0627_[General]_SplitGaussian Reconstructing Dynamic Scenes via Visual Geom.md
+0631_[General]_RobustGS Unified Boosting of Feedforward 3D Gaussian Splatt.md
+0634_[General]_PMGS Reconstruction of Projectile Motion across Large Spati.md
+0640_[General]_SeqAffordSplat Scene-level Sequential Affordance Reasoning.md
+0644_[General]_MultiEditor Controllable Multimodal Object Editing for Driv.md
+0645_[General]_Decomposing Densification in Gaussian Splatting for Faster 3.md
+0654_[General]_PS-GS Gaussian Splatting for Multi-View Photometric Stereo.md
+0657_[General]_Appearance Harmonization via Bilateral Grid Prediction with.md
+0665_[General]_BRUM Robust 3D Vehicle Reconstruction from 360 Sparse Image.md
+0668_[General]_3DGAA Realistic and Robust 3D Gaussian-based Adversarial At.md
+0674_[General]_D-FCGS Feedforward Compression of Dynamic Gaussian Splattin.md
+0678_[General]_ArmGS Composite Gaussian Appearance Refinement for Modeling.md
+0679_[General]_AvatarMakeup Realistic Makeup Transfer for 3D Animatable He.md
+2209.08409.md
+2303.16739.md
+2309.13240.md
+2310.00684.md
+2310.00685.md
+2310.06984.md

@@ -1,0 +1,18 @@
+﻿id,reviewed_category,reason
+paper_2405_14824,SLAM,Camera relocalization with NeRF belongs with localization/SLAM.
+paper_2408_12677,SLAM,Online RGB-D mapping with Gaussian/TSDF fusion.
+paper_2409_12899,General,LiDAR-incorporated large-scale reconstruction is reconstruction-centric.
+paper_2509_01228,Robotics,Multi-agent distributed mapping for robots.
+paper_3746027_3755375,General,Low-light scene reconstruction and enhancement.
+paper_2406_06948,Robotics,Uncertainty-driven active mapping fits robotics exploration.
+paper_2504_10331v3,General,Low-light scene reconstruction and enhancement.
+paper_2508_17876,SLAM,Camera pose refinement via 3DGS is localization-focused.
+paper_2601_00705,SLAM,RGS-SLAM is explicitly SLAM.
+paper_2408_03825,SLAM,Photometric SLAM acceleration paper.
+paper_2502_13803,SLAM,3DGS-aided localization using a visual SLAM map.
+paper_2503_09447,General,"Online language splatting is semantic scene representation, not clearly SLAM/robotics."
+paper_2509_00433,SLAM,AGS is explicitly Gaussian Splatting SLAM.
+paper_2310_00685,Robotics,Active one-shot view planning for autonomous robots.
+paper_2503_05425,SLAM,LiDAR-enhanced 3DGS mapping with pose tracking.
+paper_2510_09962,Robotics,Variation-aware online mapping in semi-static scenes leans robotics deployment.
+paper_2602_21644,SLAM,DAGS-SLAM is explicitly dynamic-aware SLAM.

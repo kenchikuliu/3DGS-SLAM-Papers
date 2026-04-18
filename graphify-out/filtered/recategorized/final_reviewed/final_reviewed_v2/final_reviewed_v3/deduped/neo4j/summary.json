@@ -1,0 +1,19 @@
+{
+  "input_graph": "C:\\Users\\Administrator\\Downloads\\3DGS-SLAM-Papers\\graphify-out\\filtered\\recategorized\\final_reviewed\\final_reviewed_v2\\final_reviewed_v3\\deduped\\graphify_final_reviewed_v3_deduped.json",
+  "node_rows": 926,
+  "edge_rows": 1644,
+  "hyperedge_member_rows": 824,
+  "neo4j_dir": "C:\\Users\\Administrator\\Downloads\\3DGS-SLAM-Papers\\graphify-out\\filtered\\recategorized\\final_reviewed\\final_reviewed_v2\\final_reviewed_v3\\deduped\\neo4j",
+  "edge_types": [
+    "BELONGS_TO",
+    "CITES",
+    "CONCEPTUALLY_RELATED_TO",
+    "EVALUATES_WITH",
+    "RATIONALE_FOR",
+    "REFERENCES",
+    "SEMANTICALLY_SIMILAR_TO",
+    "SHARES_DATA_WITH"
+  ],
+  "apoc_import": "C:\\Users\\Administrator\\Downloads\\3DGS-SLAM-Papers\\graphify-out\\filtered\\recategorized\\final_reviewed\\final_reviewed_v2\\final_reviewed_v3\\deduped\\neo4j\\import.cypher",
+  "native_import": "C:\\Users\\Administrator\\Downloads\\3DGS-SLAM-Papers\\graphify-out\\filtered\\recategorized\\final_reviewed\\final_reviewed_v2\\final_reviewed_v3\\deduped\\neo4j\\import_native.cypher"
+}

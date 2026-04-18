@@ -1,0 +1,4 @@
+﻿domain,paper_count,top_dataset,top_metric,top_concept
+SLAM,162,ScanNet,Recall,Pose Graph Optimization
+Robotics,97,ScanNet,Recall,Pose Graph Optimization
+General,514,ScanNet,Chamfer,3D Gaussian Splatting (Kerbl et al. 2023)

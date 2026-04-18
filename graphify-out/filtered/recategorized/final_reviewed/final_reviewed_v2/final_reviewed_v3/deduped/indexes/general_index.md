@@ -1,0 +1,581 @@
+# General Index
+
+- paper count: 514
+
+## Top Datasets
+
+- ScanNet: 50
+- DTU: 29
+- KITTI: 25
+- nuScenes: 20
+- EuRoC: 13
+- Matterport3D: 8
+- HM3D: 7
+- Gibson: 6
+- CO3D: 6
+- TUM-RGBD: 4
+- MP3D: 4
+- 7-Scenes: 2
+- FIPS Clinical CT Dataset: 1
+- Aoralscan3 Dental Scan Dataset: 1
+- DeepBlue Tooth Design Dataset: 1
+- Shining3D Tooth Design Dataset: 1
+- DSA-15 Clinical Dataset (Digital Subtraction Angiography): 1
+- DSA-28 Clinical Dataset (Digital Subtraction Angiography): 1
+- HDTF Dataset (High-Definition Talking Face): 1
+- RealEstate10K Dataset: 1
+
+## Top Metrics
+
+- Chamfer: 58
+- Recall: 50
+- PSNR (Peak Signal-to-Noise Ratio): 8
+- SSIM (Structural Similarity Index): 7
+- LPIPS (Learned Perceptual Image Patch Similarity): 6
+- Chamfer Distance (3D Geometry Reconstruction Error): 2
+- FID (Frechet Inception Distance): 1
+- Penetration Distance (PD) for Collision Evaluation in Tooth Generation: 1
+- FVMD (Frechet Video Motion Distance): 1
+- LMD (Landmark Distance) for Talking Head: 1
+- Sync-C (Audio-Visual Sync Confidence Score): 1
+- MAE (Mean Absolute Error, e.g. surface normal): 1
+
+## Top Concepts
+
+- 3D Gaussian Splatting (Kerbl et al. 2023): 9
+- Medical Imaging Reconstruction with Gaussian Splatting: 3
+- Radiative Gaussian Splatting (R2-Gaussian): 2
+- COLMAP / Structure-from-Motion (SfM) Initialization: 2
+- Depth Anything V2/V3 Monocular Depth Estimation: 2
+- VGGT: Visual Geometry Grounded Transformer: 2
+- Pose Graph Optimization: 2
+- Density-Guided Perturbation of Low-Density Gaussian Primitives: 1
+- Next Best View (NBV) / Active View Selection Planning: 1
+- Compositional 3D Scene Generation with Diffusion Models: 1
+- Graph Diffusion Model for Compositional Layout Generation: 1
+- Score Distillation Sampling (SDS) for 3D Generation: 1
+- Multi-Fidelity Texture Learning Module with Confidence-Aware SR Weighting: 1
+- Super-Resolution Integration into Gaussian Splatting Optimization: 1
+- Audio-Driven Talking Head Synthesis with 3DGS: 1
+- Deformable 3D Gaussian Splatting: 1
+- HuBERT Audio Encoder for Speech Features: 1
+- Per-Gaussian Learnable Embeddings for Deformation: 1
+- Tri-plane Encoding for Gaussian Deformation: 1
+- Feed-Forward Gaussian Splatting (single-pass multi-view): 1
+
+## Papers
+
+- 2407.19323v6 (4) | 2407.19323v6 (4).md
+- 2408.04268 | 2408.04268.md
+- 2409.12899 | 2409.12899.md
+- 2503.09447 | 2503.09447.md
+- 2504.10331v3 | 2504.10331v3.md
+- 2507.16144 | 2507.16144.md
+- 2508.03077v1 | 2508.03077v1.md
+- 2511.13571 | 2511.13571.md
+- 2512.01296 | 2512.01296.md
+- 2602.18322v1 | 2602.18322v1.md | aliases 1
+- 2603.26599v1 | 2603.26599v1.md | aliases 1
+- 2D Gaussian Splatting with Semantic Alignment for Image Inpa | 0565_[General]_2D Gaussian Splatting with Semantic Alignment for Image Inpa.md
+- 2DGS-R Revisiting the Normal Consistency Regularization in | 0470_[General]_2DGS-R Revisiting the Normal Consistency Regularization in.md
+- 360-GeoGS Geometrically Consistent Feed-Forward 3D Gaussian | 0339_[General]_360-GeoGS Geometrically Consistent Feed-Forward 3D Gaussian.md
+- 3746027.3755375 | 3746027.3755375.md
+- 3D Gaussian Flats Hybrid 2D3D Photometric Scene Reconstruc | 0536_[General]_3D Gaussian Flats Hybrid 2D3D Photometric Scene Reconstruc.md
+- 3D Gaussian Point Encoders | 0440_[General]_3D Gaussian Point Encoders.md
+- 3D Gaussian Radiation Field Modeling for Integrated RIS-FAS | 0447_[General]_3D Gaussian Radiation Field Modeling for Integrated RIS-FAS.md
+- 3D Gaussian Representations with Motion Trajectory Field for | 0616_[General]_3D Gaussian Representations with Motion Trajectory Field for.md
+- 3D Gaussian and Diffusion-Based Gaze Redirection | 0427_[General]_3D Gaussian and Diffusion-Based Gaze Redirection.md
+- 3D Scene Rendering with Multimodal Gaussian Splatting | 0247_[General]_3D Scene Rendering with Multimodal Gaussian Splatting.md
+- 3DGAA Realistic and Robust 3D Gaussian-based Adversarial At | 0668_[General]_3DGAA Realistic and Robust 3D Gaussian-based Adversarial At.md
+- 3DGS$^2$-TR Scalable Second-Order Trust-Region Method for 3 | 0297_[General]_3DGS$^2$-TR Scalable Second-Order Trust-Region Method for 3.md
+- 3DGS-Drag Dragging Gaussians for Intuitive Point-Based 3D E | 0328_[General]_3DGS-Drag Dragging Gaussians for Intuitive Point-Based 3D E.md
+- 3DGS-HPC Distractor-free 3D Gaussian Splatting with Hybrid | 0194_[General]_3DGS-HPC Distractor-free 3D Gaussian Splatting with Hybrid.md
+- 3DGS-VBench A Comprehensive Video Quality Evaluation Benchm | 0617_[General]_3DGS-VBench A Comprehensive Video Quality Evaluation Benchm.md
+- 3DGS_LSRLarge_Scale Relocation for Autonomous Driving Based | 0675_[General]_3DGS_LSRLarge_Scale Relocation for Autonomous Driving Based.md
+- 3DOF+Quantization 3DGS quantization for large scenes with l | 0558_[General]_3DOF+Quantization 3DGS quantization for large scenes with l.md
+- 4D Driving Scene Generation With Stereo Forcing | 0523_[General]_4D Driving Scene Generation With Stereo Forcing.md
+- 4D Gaussian Splatting as a Learned Dynamical System | 0354_[General]_4D Gaussian Splatting as a Learned Dynamical System.md
+- 4D Monocular Surgical Reconstruction under Arbitrary Camera | 0246_[General]_4D Monocular Surgical Reconstruction under Arbitrary Camera.md
+- 4D Neural Voxel Splatting Dynamic Scene Rendering with Voxe | 0448_[General]_4D Neural Voxel Splatting Dynamic Scene Rendering with Voxe.md
+- 4D3R Motion-Aware Neural Reconstruction and Rendering of Dy | 0438_[General]_4D3R Motion-Aware Neural Reconstruction and Rendering of Dy.md
+- 4DRadar-GS Self-Supervised Dynamic Driving Scene Reconstruc | 0549_[General]_4DRadar-GS Self-Supervised Dynamic Driving Scene Reconstruc.md
+- 6D Channel Knowledge Map Construction via Bidirectional Wire | 0451_[General]_6D Channel Knowledge Map Construction via Bidirectional Wire.md
+- A 3DGS-Diffusion Self-Supervised Framework for Normal Estima | 0620_[General]_A 3DGS-Diffusion Self-Supervised Framework for Normal Estima.md
+- A High-Fidelity Digital Twin for Robotic Manipulation Based | 0337_[General]_A High-Fidelity Digital Twin for Robotic Manipulation Based.md
+- A Mixed-Primitive-based Gaussian Splatting Method for Surfac | 0667_[General]_A Mixed-Primitive-based Gaussian Splatting Method for Surfac.md
+- AEGIS Preserving privacy of 3D Facial Avatars with Adversar | 0405_[General]_AEGIS Preserving privacy of 3D Facial Avatars with Adversar.md
+- AG2aussian Anchor-Graph Structured Gaussian Splatting for I | 0637_[General]_AG2aussian Anchor-Graph Structured Gaussian Splatting for I.md
+- AHA! Animating Human Avatars in Diverse Scenes with Gaussian | 0430_[General]_AHA! Animating Human Avatars in Diverse Scenes with Gaussian.md
+- ARGS Advanced Regularization on Aligning Gaussians over the | 0571_[General]_ARGS Advanced Regularization on Aligning Gaussians over the.md
+- ASAP-Textured Gaussians Enhancing Textured Gaussians with A | 0376_[General]_ASAP-Textured Gaussians Enhancing Textured Gaussians with A.md
+- Accurate and Complete Surface Reconstruction from 3D Gaussia | 0556_[General]_Accurate and Complete Surface Reconstruction from 3D Gaussia.md
+- Active Semantic Mapping of Horticultural Environments Using | 0324_[General]_Active Semantic Mapping of Horticultural Environments Using.md
+- Active View Selection with Perturbed Gaussian Ensemble for T | 0197_[General]_Active View Selection with Perturbed Gaussian Ensemble for T.md | aliases 1
+- Adaptive 3D Gaussian Splatting Video Streaming | 0660_[General]_Adaptive 3D Gaussian Splatting Video Streaming.md
+- Adaptive 3D Gaussian Splatting Video Streaming Visual Salie | 0659_[General]_Adaptive 3D Gaussian Splatting Video Streaming Visual Salie.md
+- Aerial-Ground Image Feature Matching via 3D Gaussian Splatti | 0524_[General]_Aerial-Ground Image Feature Matching via 3D Gaussian Splatti.md
+- Aesthetic Camera Viewpoint Suggestion with 3D Aesthetic Fiel | 0241_[General]_Aesthetic Camera Viewpoint Suggestion with 3D Aesthetic Fiel.md
+- AirGS Real-Time 4D Gaussian Streaming for Free-Viewpoint Vi | 0348_[General]_AirGS Real-Time 4D Gaussian Streaming for Free-Viewpoint Vi.md
+- Analysis of Converged 3D Gaussian Splatting Solutions Densi | 0270_[General]_Analysis of Converged 3D Gaussian Splatting Solutions Densi.md
+- Animate Any Character in Any World | 0359_[General]_Animate Any Character in Any World.md
+- AnyStyle Single-Pass Multimodal Stylization for 3D Gaussian | 0285_[General]_AnyStyle Single-Pass Multimodal Stylization for 3D Gaussian.md
+- Appearance Harmonization via Bilateral Grid Prediction with | 0657_[General]_Appearance Harmonization via Bilateral Grid Prediction with.md
+- ArchitectHead Continuous Level of Detail Control for 3D Gau | 0498_[General]_ArchitectHead Continuous Level of Detail Control for 3D Gau.md
+- ArmGS Composite Gaussian Appearance Refinement for Modeling | 0678_[General]_ArmGS Composite Gaussian Appearance Refinement for Modeling.md
+- ArtPro Self-Supervised Articulated Object Reconstruction wi | 0233_[General]_ArtPro Self-Supervised Articulated Object Reconstruction wi.md
+- ArtiFixer Enhancing and Extending 3D Reconstruction with Au | 0223_[General]_ArtiFixer Enhancing and Extending 3D Reconstruction with Au.md
+- ArtisanGS Interactive Tools for Gaussian Splat Selection wi | 0266_[General]_ArtisanGS Interactive Tools for Gaussian Splat Selection wi.md
+- AvatarBack Back-Head Generation for Complete 3D Avatars fro | 0573_[General]_AvatarBack Back-Head Generation for Complete 3D Avatars fro.md
+- AvatarMakeup Realistic Makeup Transfer for 3D Animatable He | 0679_[General]_AvatarMakeup Realistic Makeup Transfer for 3D Animatable He.md
+- BRUM Robust 3D Vehicle Reconstruction from 360 Sparse Image | 0665_[General]_BRUM Robust 3D Vehicle Reconstruction from 360 Sparse Image.md
+- BetterScene 3D Scene Synthesis with Representation-Aligned | 0234_[General]_BetterScene 3D Scene Synthesis with Representation-Aligned.md
+- Beyond Averages Open-Vocabulary 3D Scene Understanding with | 0548_[General]_Beyond Averages Open-Vocabulary 3D Scene Understanding with.md
+- Beyond Darkness Thermal-Supervised 3D Gaussian Splatting fo | 0422_[General]_Beyond Darkness Thermal-Supervised 3D Gaussian Splatting fo.md
+- Beyond a Single Light A Large-Scale Aerial Dataset for Urba | 0372_[General]_Beyond a Single Light A Large-Scale Aerial Dataset for Urba.md
+- BiTAA A Bi-Task Adversarial Attack for Object Detection and | 0525_[General]_BiTAA A Bi-Task Adversarial Attack for Object Detection and.md
+- Breaking the Vicious Cycle Coherent 3D Gaussian Splatting f | 0384_[General]_Breaking the Vicious Cycle Coherent 3D Gaussian Splatting f.md
+- Broadening View Synthesis of Dynamic Scenes from Constrained | 0370_[General]_Broadening View Synthesis of Dynamic Scenes from Constrained.md
+- CUS-GS A Compact Unified Structured Gaussian Splatting Fram | 0404_[General]_CUS-GS A Compact Unified Structured Gaussian Splatting Fram.md
+- CVD-STORM Cross-View Video Diffusion with Spatial-Temporal | 0493_[General]_CVD-STORM Cross-View Video Diffusion with Spatial-Temporal.md
+- CaRF Enhancing Multi-View Consistency in Referring 3D Gauss | 0442_[General]_CaRF Enhancing Multi-View Consistency in Referring 3D Gauss.md
+- Camera Splatting for Continuous View Optimization | 0539_[General]_Camera Splatting for Continuous View Optimization.md
+- Capture and Interact Rapid 3D Object Acquisition and Render | 0497_[General]_Capture and Interact Rapid 3D Object Acquisition and Render.md
+- CaricatureGS Exaggerating 3D Gaussian Splatting Faces With | 0336_[General]_CaricatureGS Exaggerating 3D Gaussian Splatting Faces With.md
+- Causal Reasoning Elicits Controllable 3D Scene Generation | 0543_[General]_Causal Reasoning Elicits Controllable 3D Scene Generation.md
+- Changes in Real Time Online Scene Change Detection with Mul | 0426_[General]_Changes in Real Time Online Scene Change Detection with Mul.md
+- Chorus Multi-Teacher Pretraining for Holistic 3D Gaussian S | 0358_[General]_Chorus Multi-Teacher Pretraining for Holistic 3D Gaussian S.md
+- Clean-GS Semantic Mask-Guided Pruning for 3D Gaussian Splat | 0342_[General]_Clean-GS Semantic Mask-Guided Pruning for 3D Gaussian Splat.md
+- Cog2Gen3D Sculpturing 3D Semantic-Geometric Cognition for 3 | 0203_[General]_Cog2Gen3D Sculpturing 3D Semantic-Geometric Cognition for 3.md
+- ColonSplat Reconstruction of Peristaltic Motion in Colonosc | 0196_[General]_ColonSplat Reconstruction of Peristaltic Motion in Colonosc.md
+- ColorGS High-fidelity Surgical Scene Reconstruction with Co | 0577_[General]_ColorGS High-fidelity Surgical Scene Reconstruction with Co.md
+- ComGS Efficient 3D Object-Scene Composition via Surface Oct | 0495_[General]_ComGS Efficient 3D Object-Scene Composition via Surface Oct.md
+- CompSplat Compression-aware 3D Gaussian Splatting for Real- | 0267_[General]_CompSplat Compression-aware 3D Gaussian Splatting for Real-.md
+- Complete Gaussian Splats from a Single Image with Denoising | 0569_[General]_Complete Gaussian Splats from a Single Image with Denoising.md
+- ComplicitSplat Downstream Models are Vulnerable to Blackbox | 0603_[General]_ComplicitSplat Downstream Models are Vulnerable to Blackbox.md
+- Computer vision training dataset generation for robotic envi | 0378_[General]_Computer vision training dataset generation for robotic envi.md
+- ConeGS Error-Guided Densification Using Pixel Cones for Imp | 0436_[General]_ConeGS Error-Guided Densification Using Pixel Cones for Imp.md
+- Consistent Instance Field for Dynamic Scene Understanding | 0374_[General]_Consistent Instance Field for Dynamic Scene Understanding.md
+- Constrained Dynamic Gaussian Splatting | 0286_[General]_Constrained Dynamic Gaussian Splatting.md
+- ContraGS Codebook-Condensed and Trainable Gaussian Splattin | 0563_[General]_ContraGS Codebook-Condensed and Trainable Gaussian Splattin.md
+- CrashSplat 2D to 3D Vehicle Damage Segmentation in Gaussian | 0515_[General]_CrashSplat 2D to 3D Vehicle Damage Segmentation in Gaussian.md
+- CryoGS Gaussian Splatting for Cryo-EM Homogeneous Reconstru | 0625_[General]_CryoGS Gaussian Splatting for Cryo-EM Homogeneous Reconstru.md
+- CuriGS Curriculum-Guided Gaussian Splatting for Sparse View | 0414_[General]_CuriGS Curriculum-Guided Gaussian Splatting for Sparse View.md
+- CylinderSplat 3D Gaussian Splatting with Cylindrical Tripla | 0202_[General]_CylinderSplat 3D Gaussian Splatting with Cylindrical Tripla.md
+- D-FCGS Feedforward Compression of Dynamic Gaussian Splattin | 0674_[General]_D-FCGS Feedforward Compression of Dynamic Gaussian Splattin.md
+- DAV-GSWT Diffusion-Active-View Sampling for Data-Efficient | 0250_[General]_DAV-GSWT Diffusion-Active-View Sampling for Data-Efficient.md
+- DET-GS Depth- and Edge-Aware Regularization for High-Fideli | 0628_[General]_DET-GS Depth- and Edge-Aware Regularization for High-Fideli.md
+- DIAL-GS Dynamic Instance Aware Reconstruction for Label-fre | 0437_[General]_DIAL-GS Dynamic Instance Aware Reconstruction for Label-fre.md
+- DIP-GS Deep Image Prior For Gaussian Splatting Sparse View | 0614_[General]_DIP-GS Deep Image Prior For Gaussian Splatting Sparse View.md
+- DM-CFO A Diffusion Model for Compositional 3D Tooth Generat | 0209_[General]_DM-CFO A Diffusion Model for Compositional 3D Tooth Generat.md | aliases 1
+- DSA-SRGS Super-Resolution Gaussian Splatting for Dynamic Sp | 0207_[General]_DSA-SRGS Super-Resolution Gaussian Splatting for Dynamic Sp.md | aliases 1
+- D^3-Talker Dual-Branch Decoupled Deformation Fields for Few | 0592_[General]_D^3-Talker Dual-Branch Decoupled Deformation Fields for Few.md
+- Dark-EvGS Event Camera as an Eye for Radiance Field in the | 0666_[General]_Dark-EvGS Event Camera as an Eye for Radiance Field in the.md
+- Decomposing Densification in Gaussian Splatting for Faster 3 | 0645_[General]_Decomposing Densification in Gaussian Splatting for Faster 3.md
+- Decoupling Motion and Geometry in 4D Gaussian Splatting | 0220_[General]_Decoupling Motion and Geometry in 4D Gaussian Splatting.md
+- DefenseSplat Enhancing the Robustness of 3D Gaussian Splatt | 0243_[General]_DefenseSplat Enhancing the Robustness of 3D Gaussian Splatt.md
+- DenoiseSplat Feed-Forward Gaussian Splatting for Noisy 3D S | 0184_[General]_DenoiseSplat Feed-Forward Gaussian Splatting for Noisy 3D S.md
+- DensifyBeforehand LiDAR-assisted Content-aware Densificatio | 0394_[General]_DensifyBeforehand LiDAR-assisted Content-aware Densificatio.md
+- Dental3R Geometry-Aware Pairing for Intraoral 3D Reconstruc | 0416_[General]_Dental3R Geometry-Aware Pairing for Intraoral 3D Reconstruc.md
+- DentalSplat Dental Occlusion Novel View Synthesis from Spar | 0444_[General]_DentalSplat Dental Occlusion Novel View Synthesis from Spar.md
+- Depth-Consistent 3D Gaussian Splatting via Physical Defocus | 0429_[General]_Depth-Consistent 3D Gaussian Splatting via Physical Defocus.md
+- DiffStyle3D Consistent 3D Gaussian Stylization via Attentio | 0304_[General]_DiffStyle3D Consistent 3D Gaussian Stylization via Attentio.md
+- DiffusionHarmonizer Bridging Neural Reconstruction and Phot | 0227_[General]_DiffusionHarmonizer Bridging Neural Reconstruction and Phot.md
+- Distilled-3DGSDistilled 3D Gaussian Splatting | 0595_[General]_Distilled-3DGSDistilled 3D Gaussian Splatting.md
+- Distributed 3D Gaussian Splatting for High-Resolution Isosur | 0550_[General]_Distributed 3D Gaussian Splatting for High-Resolution Isosur.md
+- Dream3DAvatar Text-Controlled 3D Avatar Reconstruction from | 0547_[General]_Dream3DAvatar Text-Controlled 3D Avatar Reconstruction from.md
+- DreamLifting A Plug-in Module Lifting MV Diffusion Models f | 0557_[General]_DreamLifting A Plug-in Module Lifting MV Diffusion Models f.md
+- DreamScene 3D Gaussian-based End-to-end Text-to-3D Scene Ge | 0661_[General]_DreamScene 3D Gaussian-based End-to-end Text-to-3D Scene Ge.md
+- DriveSplat Decoupled Driving Scene Reconstruction with Geom | 0583_[General]_DriveSplat Decoupled Driving Scene Reconstruction with Geom.md
+- DrivingGaussian++ Towards Realistic Reconstruction and Edit | 0572_[General]_DrivingGaussian++ Towards Realistic Reconstruction and Edit.md
+- DrivingScene A Multi-Task Online Feed-Forward 3D Gaussian S | 0453_[General]_DrivingScene A Multi-Task Online Feed-Forward 3D Gaussian S.md
+- DualPhys-GS Dual Physically-Guided 3D Gaussian Splatting fo | 0608_[General]_DualPhys-GS Dual Physically-Guided 3D Gaussian Splatting fo.md
+- Duplex-GS Proxy-Guided Weighted Blending for Real-Time Orde | 0630_[General]_Duplex-GS Proxy-Guided Weighted Blending for Real-Time Orde.md
+- DynFOA Generating First-Order Ambisonics with Conditional D | 0273_[General]_DynFOA Generating First-Order Ambisonics with Conditional D.md
+- DynaPose4D High-Quality 4D Dynamic Content Generation via P | 0459_[General]_DynaPose4D High-Quality 4D Dynamic Content Generation via P.md
+- Dynamic Novel View Synthesis in High Dynamic Range | 0522_[General]_Dynamic Novel View Synthesis in High Dynamic Range.md
+- DynamicTree Interactive Real Tree Animation via Sparse Voxe | 0460_[General]_DynamicTree Interactive Real Tree Animation via Sparse Voxe.md
+- DynamicVGGT Learning Dynamic Point Maps for 4D Scene Recons | 0191_[General]_DynamicVGGT Learning Dynamic Point Maps for 4D Scene Recons.md
+- EAG-PT Emission-Aware Gaussians and Path Tracing for Indoor | 0298_[General]_EAG-PT Emission-Aware Gaussians and Path Tracing for Indoor.md
+- EAvatar Expression-Aware Head Avatar Reconstruction with Ge | 0598_[General]_EAvatar Expression-Aware Head Avatar Reconstruction with Ge.md
+- ERGO Excess-Risk-Guided Optimization for High-Fidelity Mono | 0264_[General]_ERGO Excess-Risk-Guided Optimization for High-Fidelity Mono.md
+- ESGaussianFace Emotional and Stylized Audio-Driven Facial A | 0341_[General]_ESGaussianFace Emotional and Stylized Audio-Driven Facial A.md
+- EVolSplat4D Efficient Volume-based Gaussian Splatting for 4 | 0313_[General]_EVolSplat4D Efficient Volume-based Gaussian Splatting for 4.md
+- Efficient representation of 3D spatial data for defense-rela | 0439_[General]_Efficient representation of 3D spatial data for defense-rela.md
+- EmbedTalk Triplane-Free Talking Head Synthesis using Embedd | 0193_[General]_EmbedTalk Triplane-Free Talking Head Synthesis using Embedd.md | aliases 1
+- EndoWave Rational-Wavelet 4D Gaussian Splatting for Endosco | 0456_[General]_EndoWave Rational-Wavelet 4D Gaussian Splatting for Endosco.md
+- Enhanced Velocity Field Modeling for Gaussian Video Reconstr | 0641_[General]_Enhanced Velocity Field Modeling for Gaussian Video Reconstr.md
+- Enhancing Novel View Synthesis from extremely sparse views w | 0582_[General]_Enhancing Novel View Synthesis from extremely sparse views w.md
+- Enhancing annotations for 5D apple pose estimation through 3 | 0351_[General]_Enhancing annotations for 5D apple pose estimation through 3.md
+- EntON Eigenentropy-Optimized Neighborhood Densification in | 0198_[General]_EntON Eigenentropy-Optimized Neighborhood Densification in.md
+- EntropyGS An Efficient Entropy Coding on 3D Gaussian Splatt | 0605_[General]_EntropyGS An Efficient Entropy Coding on 3D Gaussian Splatt.md
+- Evaluating Fisheye-Compatible 3D Gaussian Splatting Methods | 0618_[General]_Evaluating Fisheye-Compatible 3D Gaussian Splatting Methods.md
+- ExGS Extreme 3D Gaussian Compression with Diffusion Priors | 0512_[General]_ExGS Extreme 3D Gaussian Compression with Diffusion Priors.md
+- ExoGS A 4D Real-to-Sim-to-Real Framework for Scalable Manip | 0308_[General]_ExoGS A 4D Real-to-Sim-to-Real Framework for Scalable Manip.md
+- Extreme Views 3DGS Filter for Novel View Synthesis from Out | 0463_[General]_Extreme Views 3DGS Filter for Novel View Synthesis from Out.md
+- FGGS-LiDAR Ultra-Fast, GPU-Accelerated Simulation from Gene | 0531_[General]_FGGS-LiDAR Ultra-Fast, GPU-Accelerated Simulation from Gene.md
+- FLAG-4D Flow-Guided Local-Global Dual-Deformation Model for | 0271_[General]_FLAG-4D Flow-Guided Local-Global Dual-Deformation Model for.md
+- FLEG Feed-Forward Language Embedded Gaussian Splatting from | 0361_[General]_FLEG Feed-Forward Language Embedded Gaussian Splatting from.md
+- FLICKER A Fine-Grained Contribution-Aware Accelerator for R | 0218_[General]_FLICKER A Fine-Grained Contribution-Aware Accelerator for R.md
+- FMGS-Avatar Mesh-Guided 2D Gaussian Splatting with Foundati | 0544_[General]_FMGS-Avatar Mesh-Guided 2D Gaussian Splatting with Foundati.md
+- FTSplat Feed-forward Triangle Splatting Network | 0201_[General]_FTSplat Feed-forward Triangle Splatting Network.md | aliases 1
+- Fading the Digital Ink A Universal Black-Box Attack Framewo | 0615_[General]_Fading the Digital Ink A Universal Black-Box Attack Framewo.md
+- Fast Converging 3D Gaussian Splatting for 1-Minute Reconstru | 0305_[General]_Fast Converging 3D Gaussian Splatting for 1-Minute Reconstru.md
+- Fast and Explicit Slice-to-Volume Reconstruction via 3D Gau | 0380_[General]_Fast and Explicit Slice-to-Volume Reconstruction via 3D Gau.md
+- FastAvatar Instant 3D Gaussian Splatting for Faces from Sin | 0578_[General]_FastAvatar Instant 3D Gaussian Splatting for Faces from Sin.md
+- FastPhysGS Accelerating Physics-based Dynamic 3DGS Simulati | 0291_[General]_FastPhysGS Accelerating Physics-based Dynamic 3DGS Simulati.md
+- Fiducial Marker Splatting for High-Fidelity Robotics Simulat | 0581_[General]_Fiducial Marker Splatting for High-Fidelity Robotics Simulat.md
+- FingerSplat Contactless Fingerprint 3D Reconstruction and G | 0540_[General]_FingerSplat Contactless Fingerprint 3D Reconstruction and G.md
+- FixingGS Enhancing 3D Gaussian Splatting via Training-Free | 0529_[General]_FixingGS Enhancing 3D Gaussian Splatting via Training-Free.md
+- FlowHOI Flow-based Semantics-Grounded Generation of Hand-Ob | 0257_[General]_FlowHOI Flow-based Semantics-Grounded Generation of Hand-Ob.md
+- Flying in Clutter on Monocular RGB by Learning in 3D Radianc | 0364_[General]_Flying in Clutter on Monocular RGB by Learning in 3D Radianc.md
+- Forge4D Feed-Forward 4D Human Reconstruction and Interpolat | 0514_[General]_Forge4D Feed-Forward 4D Human Reconstruction and Interpolat.md
+- FreeFix Boosting 3D Gaussian Splatting via Fine-Tuning-Free | 0300_[General]_FreeFix Boosting 3D Gaussian Splatting via Fine-Tuning-Free.md
+- Frequency-Adaptive Sharpness Regularization for Improving 3D | 0403_[General]_Frequency-Adaptive Sharpness Regularization for Improving 3D.md
+- From Restoration to Reconstruction Rethinking 3D Gaussian S | 0530_[General]_From Restoration to Reconstruction Rethinking 3D Gaussian S.md
+- From Slices to Structures Unsupervised 3D Reconstruction of | 0591_[General]_From Slices to Structures Unsupervised 3D Reconstruction of.md
+- From Tokens to Nodes Semantic-Guided Motion Control for Dyn | 0501_[General]_From Tokens to Nodes Semantic-Guided Motion Control for Dyn.md
+- G3Splat Geometrically Consistent Generalizable Gaussian Spl | 0360_[General]_G3Splat Geometrically Consistent Generalizable Gaussian Spl.md
+- GAINS Gaussian-based Inverse Rendering from Sparse Multi-Vi | 0386_[General]_GAINS Gaussian-based Inverse Rendering from Sparse Multi-Vi.md
+- GALA Guided Attention with Language Alignment for Open Voca | 0594_[General]_GALA Guided Attention with Language Alignment for Open Voca.md
+- GDGS 3D Gaussian Splatting Via Geometry-Guided Initializati | 0683_[General]_GDGS 3D Gaussian Splatting Via Geometry-Guided Initializati.md
+- GEM 3D Gaussian Splatting for Efficient and Accurate Cryo-E | 0510_[General]_GEM 3D Gaussian Splatting for Efficient and Accurate Cryo-E.md
+- GEN3D Generating Domain-Free 3D Scenes from a Single Image | 0417_[General]_GEN3D Generating Domain-Free 3D Scenes from a Single Image.md
+- GENIE Gaussian Encoding for Neural Radiance Fields Interact | 0633_[General]_GENIE Gaussian Encoding for Neural Radiance Fields Interact.md
+- GFix Perceptually Enhanced Gaussian Splatting Video Compres | 0434_[General]_GFix Perceptually Enhanced Gaussian Splatting Video Compres.md
+- GIFSplat Generative Prior-Guided Iterative Feed-Forward 3D | 0235_[General]_GIFSplat Generative Prior-Guided Iterative Feed-Forward 3D.md
+- GOGS High-Fidelity Geometry and Relighting for Glossy Objec | 0590_[General]_GOGS High-Fidelity Geometry and Relighting for Glossy Objec.md
+- GR-Diffusion 3D Gaussian Representation Meets Diffusion in | 0261_[General]_GR-Diffusion 3D Gaussian Representation Meets Diffusion in.md
+- GR-Gaussian Graph-Based Radiative Gaussian Splatting for Sp | 0635_[General]_GR-Gaussian Graph-Based Radiative Gaussian Splatting for Sp.md
+- GRMM Real-Time High-Fidelity Gaussian Morphable Head Model | 0564_[General]_GRMM Real-Time High-Fidelity Gaussian Morphable Head Model.md
+- GS-DMSR Dynamic Sensitive Multi-scale Manifold Enhancement | 0331_[General]_GS-DMSR Dynamic Sensitive Multi-scale Manifold Enhancement.md
+- GS-Scale Unlocking Large-Scale 3D Gaussian Splatting Traini | 0541_[General]_GS-Scale Unlocking Large-Scale 3D Gaussian Splatting Traini.md
+- GS-Share Enabling High-fidelity Map Sharing with Incrementa | 0500_[General]_GS-Share Enabling High-fidelity Map Sharing with Incrementa.md
+- GS-Verse Mesh-based Gaussian Splatting for Physics-aware In | 0481_[General]_GS-Verse Mesh-based Gaussian Splatting for Physics-aware In.md
+- GS2POSE Marry Gaussian Splatting to 6D Object Pose Estimati | 0471_[General]_GS2POSE Marry Gaussian Splatting to 6D Object Pose Estimati.md
+- GSCache Real-Time Radiance Caching for Volume Path Tracing | 0648_[General]_GSCache Real-Time Radiance Caching for Volume Path Tracing.md
+- GSFix3D Diffusion-Guided Repair of Novel Views in Gaussian | 0588_[General]_GSFix3D Diffusion-Guided Repair of Novel Views in Gaussian.md
+- GSFixer Improving 3D Gaussian Splatting with Reference-Guid | 0606_[General]_GSFixer Improving 3D Gaussian Splatting with Reference-Guid.md
+- GSM-GS Geometry-Constrained Single and Multi-view Gaussian | 0258_[General]_GSM-GS Geometry-Constrained Single and Multi-view Gaussian.md
+- GSPlane Concise and Accurate Planar Reconstruction via Stru | 0469_[General]_GSPlane Concise and Accurate Planar Reconstruction via Stru.md
+- GSStream 3D Gaussian Splatting based Volumetric Scene Strea | 0181_[General]_GSStream 3D Gaussian Splatting based Volumetric Scene Strea.md
+- GST-VLA Structured Gaussian Spatial Tokens for 3D Depth-Awa | 0185_[General]_GST-VLA Structured Gaussian Spatial Tokens for 3D Depth-Awa.md
+- GSTurb Gaussian Splatting for Atmospheric Turbulence Mitiga | 0231_[General]_GSTurb Gaussian Splatting for Atmospheric Turbulence Mitiga.md
+- GSWorld Closed-Loop Photo-Realistic Simulation Suite for Ro | 0462_[General]_GSWorld Closed-Loop Photo-Realistic Simulation Suite for Ro.md
+- GVGS Gaussian Visibility-Aware Multi-View Geometry for Accu | 0301_[General]_GVGS Gaussian Visibility-Aware Multi-View Geometry for Accu.md
+- GauSSmart Enhanced 3D Reconstruction through 2D Foundation | 0476_[General]_GauSSmart Enhanced 3D Reconstruction through 2D Foundation.md
+- GaussExplorer 3D Gaussian Splatting for Embodied Exploratio | 0321_[General]_GaussExplorer 3D Gaussian Splatting for Embodied Exploratio.md
+- GaussGym An open-source real-to-sim framework for learning | 0473_[General]_GaussGym An open-source real-to-sim framework for learning.md
+- GaussTwin Unified Simulation and Correction with Gaussian S | 0205_[General]_GaussTwin Unified Simulation and Correction with Gaussian S.md | aliases 1
+- Gaussian Pixel Codec Avatars A Hybrid Representation for Ef | 0366_[General]_Gaussian Pixel Codec Avatars A Hybrid Representation for Ef.md
+- Gaussian Semantic Field for One-shot LiDAR Global Localizati | 0480_[General]_Gaussian Semantic Field for One-shot LiDAR Global Localizati.md
+- Gaussian Sequences with Multi-Scale Dynamics for 4D Reconstr | 0254_[General]_Gaussian Sequences with Multi-Scale Dynamics for 4D Reconstr.md
+- Gaussian Set Surface Reconstruction through Per-Gaussian Opt | 0649_[General]_Gaussian Set Surface Reconstruction through Per-Gaussian Opt.md
+- Gaussian Wardrobe Compositional 3D Gaussian Avatars for Fre | 0208_[General]_Gaussian Wardrobe Compositional 3D Gaussian Avatars for Fre.md
+- GaussianFusionOcc A Seamless Sensor Fusion Approach for 3D | 0652_[General]_GaussianFusionOcc A Seamless Sensor Fusion Approach for 3D.md
+- GaussianHeadTalk Wobble-Free 3D Talking Heads with Audio Dr | 0383_[General]_GaussianHeadTalk Wobble-Free 3D Talking Heads with Audio Dr.md
+- GaussianLens Localized High-Resolution Reconstruction via O | 0507_[General]_GaussianLens Localized High-Resolution Reconstruction via O.md
+- GaussianMorphing Mesh-Guided 3D Gaussians for Semantic-Awar | 0502_[General]_GaussianMorphing Mesh-Guided 3D Gaussians for Semantic-Awar.md
+- GaussianPOP Principled Simplification Framework for Compact | 0274_[General]_GaussianPOP Principled Simplification Framework for Compact.md
+- GaussianPlant Structure-aligned Gaussian Splatting for 3D R | 0375_[General]_GaussianPlant Structure-aligned Gaussian Splatting for 3D R.md
+- GaussianSwap Animatable Video Face Swapping with 3D Gaussia | 0332_[General]_GaussianSwap Animatable Video Face Swapping with 3D Gaussia.md
+- GaussianTrimmer Online Trimming Boundaries for 3DGS Segment | 0323_[General]_GaussianTrimmer Online Trimming Boundaries for 3DGS Segment.md
+- GaussianVLM Scene-centric 3D Vision-Language Models using L | 0681_[General]_GaussianVLM Scene-centric 3D Vision-Language Models using L.md
+- GeMS Efficient Gaussian Splatting for Extreme Motion Blur | 0589_[General]_GeMS Efficient Gaussian Splatting for Extreme Motion Blur.md
+- Gen-LangSplat Generalized Language Gaussian Splatting with | 0457_[General]_Gen-LangSplat Generalized Language Gaussian Splatting with.md
+- Generalized non-exponential Gaussian splatting | 0212_[General]_Generalized non-exponential Gaussian splatting.md
+- Generating Surface for Text-to-3D using 2D Gaussian Splattin | 0496_[General]_Generating Surface for Text-to-3D using 2D Gaussian Splattin.md
+- GeoDiff4D Geometry-Aware Diffusion for 4D Head Avatar Recon | 0225_[General]_GeoDiff4D Geometry-Aware Diffusion for 4D Head Avatar Recon.md
+- GeoSplat A Deep Dive into Geometry-Constrained Gaussian Spl | 0561_[General]_GeoSplat A Deep Dive into Geometry-Constrained Gaussian Spl.md
+- Geometric-Photometric Event-based 3D Gaussian Ray Tracing | 0356_[General]_Geometric-Photometric Event-based 3D Gaussian Ray Tracing.md
+- Geometry-Grounded Gaussian Splatting | 0310_[General]_Geometry-Grounded Gaussian Splatting.md
+- Gesplat Robust Pose-Free 3D Reconstruction via Geometry-Gui | 0486_[General]_Gesplat Robust Pose-Free 3D Reconstruction via Geometry-Gui.md
+- GigaWorld-0 World Models as Data Engine to Empower Embodied | 0393_[General]_GigaWorld-0 World Models as Data Engine to Empower Embodied.md
+- GloSplat Joint Pose-Appearance Optimization for Faster and | 0206_[General]_GloSplat Joint Pose-Appearance Optimization for Faster and.md
+- Gradient-Driven Natural Selection for Compact 3D Gaussian Sp | 0410_[General]_Gradient-Driven Natural Selection for Compact 3D Gaussian Sp.md
+- Graphical X Splatting (GraphiXS) A Graphical Model for 4D G | 0302_[General]_Graphical X Splatting (GraphiXS) A Graphical Model for 4D G.md
+- Grow with the Flow 4D Reconstruction of Growing Plants with | 0269_[General]_Grow with the Flow 4D Reconstruction of Growing Plants with.md
+- HART Human Aligned Reconstruction Transformer | 0505_[General]_HART Human Aligned Reconstruction Transformer.md
+- HBSplat Robust Sparse-View Gaussian Reconstruction with Hyb | 0511_[General]_HBSplat Robust Sparse-View Gaussian Reconstruction with Hyb.md
+- HELIOS Hierarchical Exploration for Language-grounded Inter | 0518_[General]_HELIOS Hierarchical Exploration for Language-grounded Inter.md
+- HGS Hybrid Gaussian Splatting with Static-Dynamic Decomposi | 0371_[General]_HGS Hybrid Gaussian Splatting with Static-Dynamic Decomposi.md
+- HPC Hierarchical Point-based Latent Representation for Stre | 0295_[General]_HPC Hierarchical Point-based Latent Representation for Stre.md
+- HeroGS Hierarchical Guidance for Robust 3D Gaussian Splatti | 0219_[General]_HeroGS Hierarchical Guidance for Robust 3D Gaussian Splatti.md
+- Hi^2-GSLoc Dual-Hierarchical Gaussian-Specific Visual Reloc | 0658_[General]_Hi^2-GSLoc Dual-Hierarchical Gaussian-Specific Visual Reloc.md
+- High-Fidelity Simulated Data Generation for Real-World Zero- | 0483_[General]_High-Fidelity Simulated Data Generation for Real-World Zero-.md
+- High-fidelity 3D Gaussian Inpainting preserving multi-view | 0655_[General]_High-fidelity 3D Gaussian Inpainting preserving multi-view.md
+- Holi-Spatial Evolving Video Streams into Holistic 3D Spatia | 0192_[General]_Holi-Spatial Evolving Video Streams into Holistic 3D Spatia.md
+- HyGE-Occ Hybrid View-Transformation with 3D Gaussian and Ed | 0352_[General]_HyGE-Occ Hybrid View-Transformation with 3D Gaussian and Ed.md
+- I2V-GS Infrastructure-to-Vehicle View Transformation with G | 0642_[General]_I2V-GS Infrastructure-to-Vehicle View Transformation with G.md
+- IDESplat Iterative Depth Probability Estimation for General | 0335_[General]_IDESplat Iterative Depth Probability Estimation for General.md
+- IDSplat Instance-Decomposed 3D Gaussian Splatting for Drivi | 0395_[General]_IDSplat Instance-Decomposed 3D Gaussian Splatting for Drivi.md
+- IDU Incremental Dynamic Update of Existing 3D Virtual Envir | 0579_[General]_IDU Incremental Dynamic Update of Existing 3D Virtual Envir.md
+- IGFuse Interactive 3D Gaussian Scene Reconstruction via Mul | 0600_[General]_IGFuse Interactive 3D Gaussian Scene Reconstruction via Mul.md
+- Illumination_Refinement_via_Textual_Cues_A_Prompt-Driven_Approach_for_Low-Light_NeRF_Enhancement | Illumination_Refinement_via_Textual_Cues_A_Prompt-Driven_Approach_for_Low-Light_NeRF_Enhancement.md
+- Image-Conditioned 3D Gaussian Splat Quantization | 0584_[General]_Image-Conditioned 3D Gaussian Splat Quantization.md
+- Improved 3D Gaussian Splatting of Unknown Spacecraft Structu | 0347_[General]_Improved 3D Gaussian Splatting of Unknown Spacecraft Structu.md
+- ImprovedGS+ A High-Performance C++CUDA Re-Implementation S | 0189_[General]_ImprovedGS+ A High-Performance C++CUDA Re-Implementation S.md
+- Improving 3D Gaussian Splatting Compression by Scene-Adaptiv | 0546_[General]_Improving 3D Gaussian Splatting Compression by Scene-Adaptiv.md
+- Improving Densification in 3D Gaussian Splatting for High-Fi | 0601_[General]_Improving Densification in 3D Gaussian Splatting for High-Fi.md
+- Improving Multi-View Reconstruction via Texture-Guided Gauss | 0443_[General]_Improving Multi-View Reconstruction via Texture-Guided Gauss.md
+- Initialize to Generalize A Stronger Initialization Pipeline | 0468_[General]_Initialize to Generalize A Stronger Initialization Pipeline.md
+- InnerGS Internal Scenes Rendering via Factorized 3D Gaussia | 0599_[General]_InnerGS Internal Scenes Rendering via Factorized 3D Gaussia.md
+- InstDrive Instance-Aware 3D Gaussian Splatting for Driving | 0602_[General]_InstDrive Instance-Aware 3D Gaussian Splatting for Driving.md
+- Instant Expressive Gaussian Head Avatar via 3D-Aware Express | 0363_[General]_Instant Expressive Gaussian Head Avatar via 3D-Aware Express.md
+- Intellectual Property Protection for 3D Gaussian Splatting A | 0290_[General]_Intellectual Property Protection for 3D Gaussian Splatting A.md
+- InterGSEdit Interactive 3D Gaussian Splatting Editing with | 0677_[General]_InterGSEdit Interactive 3D Gaussian Splatting Editing with.md
+- Interaction-Aware 4D Gaussian Splatting for Dynamic Hand-Obj | 0415_[General]_Interaction-Aware 4D Gaussian Splatting for Dynamic Hand-Obj.md
+- Interactive Augmented Reality-enabled Outdoor Scene Visualiz | 0237_[General]_Interactive Augmented Reality-enabled Outdoor Scene Visualiz.md
+- Intrinsic Geometry-Appearance Consistency Optimization for S | 0211_[General]_Intrinsic Geometry-Appearance Consistency Optimization for S.md
+- JOGS Joint Optimization of Pose Estimation and 3D Gaussian | 0452_[General]_JOGS Joint Optimization of Pose Estimation and 3D Gaussian.md
+- JOintGS Joint Optimization of Cameras, Bodies and 3D Gaussi | 0284_[General]_JOintGS Joint Optimization of Cameras, Bodies and 3D Gaussi.md
+- Joint Orientation and Weight Optimization for Robust Waterti | 0255_[General]_Joint Orientation and Weight Optimization for Robust Waterti.md
+- LGDWT-GS Local and Global Discrete Wavelet-Regularized 3D G | 0312_[General]_LGDWT-GS Local and Global Discrete Wavelet-Regularized 3D G.md
+- LL-GaussianImage Efficient Image Representation for Zero-sh | 0315_[General]_LL-GaussianImage Efficient Image Representation for Zero-sh.md
+- LL-GaussianMap Zero-shot Low-Light Image Enhancement via 2D | 0316_[General]_LL-GaussianMap Zero-shot Low-Light Image Enhancement via 2D.md
+- LLM-Powered Code Analysis and Optimization for Gaussian Spla | 0506_[General]_LLM-Powered Code Analysis and Optimization for Gaussian Spla.md
+- LOBE-GS Load-Balanced and Efficient 3D Gaussian Splatting f | 0504_[General]_LOBE-GS Load-Balanced and Efficient 3D Gaussian Splatting f.md
+- LOD-GS Level-of-Detail-Sensitive 3D Gaussian Splatting for | 0682_[General]_LOD-GS Level-of-Detail-Sensitive 3D Gaussian Splatting for.md
+- LTGS Long-Term Gaussian Scene Chronology From Sparse View U | 0488_[General]_LTGS Long-Term Gaussian Scene Chronology From Sparse View U.md
+- LagMemo Language 3D Gaussian Splatting Memory for Multi-mod | 0455_[General]_LagMemo Language 3D Gaussian Splatting Memory for Multi-mod.md
+- Laplacian Analysis Meets Dynamics Modelling Gaussian Splatt | 0623_[General]_Laplacian Analysis Meets Dynamics Modelling Gaussian Splatt.md
+- Large Material Gaussian Model for Relightable 3D Generation | 0521_[General]_Large Material Gaussian Model for Relightable 3D Generation.md
+- Large-scale Photorealistic Outdoor 3D Scene Reconstruction f | 0242_[General]_Large-scale Photorealistic Outdoor 3D Scene Reconstruction f.md
+- Latent Gaussian Splatting for 4D Panoptic Occupancy Tracking | 0230_[General]_Latent Gaussian Splatting for 4D Panoptic Occupancy Tracking.md
+- LatentAM Real-Time, Large-Scale Latent Gaussian Attention M | 0259_[General]_LatentAM Real-Time, Large-Scale Latent Gaussian Attention M.md
+- LayerGS Decomposition and Inpainting of Layered 3D Human Av | 0330_[General]_LayerGS Decomposition and Inpainting of Layered 3D Human Av.md
+- Learnable Multi-level Discrete Wavelet Transforms for 3D Gau | 0253_[General]_Learnable Multi-level Discrete Wavelet Transforms for 3D Gau.md
+- Learning Efficient and Generalizable Human Representation wi | 0650_[General]_Learning Efficient and Generalizable Human Representation wi.md
+- Learning Unified Representation of 3D Gaussian Splatting | 0517_[General]_Learning Unified Representation of 3D Gaussian Splatting.md
+- LiftAvatar Kinematic-Space Completion for Expression-Contro | 0216_[General]_LiftAvatar Kinematic-Space Completion for Expression-Contro.md
+- LighthouseGS Indoor Structure-aware 3D Gaussian Splatting f | 0672_[General]_LighthouseGS Indoor Structure-aware 3D Gaussian Splatting f.md
+- LoD-Structured 3D Gaussian Splatting for Streaming Video Rec | 0309_[General]_LoD-Structured 3D Gaussian Splatting for Streaming Video Rec.md
+- Long-LRM++ Preserving Fine Details in Feed-Forward Wide-Cov | 0382_[General]_Long-LRM++ Preserving Fine Details in Feed-Forward Wide-Cov.md
+- Lumos3D A Single-Forward Framework for Low-Light 3D Scene R | 0431_[General]_Lumos3D A Single-Forward Framework for Low-Light 3D Scene R.md
+- M-Gaussian An Magnetic Gaussian Framework for Efficient Mul | 0238_[General]_M-Gaussian An Magnetic Gaussian Framework for Efficient Mul.md
+- MAPo Motion-Aware Partitioning of Deformable 3D Gaussian Sp | 0575_[General]_MAPo Motion-Aware Partitioning of Deformable 3D Gaussian Sp.md
+- MS-GS Multi-Appearance Sparse-View 3D Gaussian Splatting in | 0542_[General]_MS-GS Multi-Appearance Sparse-View 3D Gaussian Splatting in.md
+- MUGSQA Novel Multi-Uncertainty-Based Gaussian Splatting Qua | 0435_[General]_MUGSQA Novel Multi-Uncertainty-Based Gaussian Splatting Qua.md
+- MVG4D Image Matrix-Based Multi-View and Motion Generation f | 0653_[General]_MVG4D Image Matrix-Based Multi-View and Motion Generation f.md
+- MVGSR Multi-View Consistent 3D Gaussian Super-Resolution vi | 0369_[General]_MVGSR Multi-View Consistent 3D Gaussian Super-Resolution vi.md
+- MarkSplatter Generalizable Watermarking for 3D Gaussian Spl | 0568_[General]_MarkSplatter Generalizable Watermarking for 3D Gaussian Spl.md
+- Masks make discriminative models great again! | 0680_[General]_Masks make discriminative models great again!.md
+- Mastering Regional 3DGS Locating, Initializing, and Editing | 0676_[General]_Mastering Regional 3DGS Locating, Initializing, and Editing.md
+- MatSpray Fusing 2D Material World Knowledge on 3D Geometry | 0357_[General]_MatSpray Fusing 2D Material World Knowledge on 3D Geometry.md
+- Material-informed Gaussian Splatting for 3D World Reconstruc | 0392_[General]_Material-informed Gaussian Splatting for 3D World Reconstruc.md
+- MeSS City Mesh-Guided Outdoor Scene Generation with Cross-V | 0585_[General]_MeSS City Mesh-Guided Outdoor Scene Generation with Cross-V.md
+- MedGS Gaussian Splatting for Multi-Modal 3D Medical Imaging | 0534_[General]_MedGS Gaussian Splatting for Multi-Modal 3D Medical Imaging.md
+- MetroGS Efficient and Stable Reconstruction of Geometricall | 0397_[General]_MetroGS Efficient and Stable Reconstruction of Geometricall.md
+- MoGaFace Momentum-Guided and Texture-Aware Gaussian Avatars | 0638_[General]_MoGaFace Momentum-Guided and Texture-Aware Gaussian Avatars.md
+- Moment-Based 3D Gaussian Splatting Resolving Volumetric Occ | 0379_[General]_Moment-Based 3D Gaussian Splatting Resolving Volumetric Occ.md
+- Mono4DEditor Text-Driven 4D Scene Editing from Monocular Vi | 0489_[General]_Mono4DEditor Text-Driven 4D Scene Editing from Monocular Vi.md
+- Monocular 3D Lane Detection via Structure Uncertainty-Aware | 0421_[General]_Monocular 3D Lane Detection via Structure Uncertainty-Aware.md
+- Monocular Endoscopic Tissue 3D Reconstruction with Multi-Lev | 0239_[General]_Monocular Endoscopic Tissue 3D Reconstruction with Multi-Lev.md
+- Moving Light Adaptive Colonoscopy Reconstruction via Illumin | 0465_[General]_Moving Light Adaptive Colonoscopy Reconstruction via Illumin.md
+- Multi-Sample Anti-Aliasing and Constrained Optimization for | 0604_[General]_Multi-Sample Anti-Aliasing and Constrained Optimization for.md
+- MultiEditor Controllable Multimodal Object Editing for Driv | 0644_[General]_MultiEditor Controllable Multimodal Object Editing for Driv.md
+- Multimodal-Prior-Guided Importance Sampling for Hierarchical | 0213_[General]_Multimodal-Prior-Guided Importance Sampling for Hierarchical.md | aliases 1
+- NAS-GS Noise-Aware Sonar Gaussian Splatting | 0329_[General]_NAS-GS Noise-Aware Sonar Gaussian Splatting.md
+- NVGS Neural Visibility for Occlusion Culling in 3D Gaussian | 0396_[General]_NVGS Neural Visibility for Occlusion Culling in 3D Gaussian.md
+- NVSim Novel View Synthesis Simulator for Large Scale Indoor | 0454_[General]_NVSim Novel View Synthesis Simulator for Large Scale Indoor.md
+- NeAR Coupled Neural Asset-Renderer Stack | 0398_[General]_NeAR Coupled Neural Asset-Renderer Stack.md
+- Nebula Enable City-Scale 3D Gaussian Splatting in Virtual R | 0350_[General]_Nebula Enable City-Scale 3D Gaussian Splatting in Virtual R.md
+- NeeCo Image Synthesis of Novel Instrument States Based on D | 0611_[General]_NeeCo Image Synthesis of Novel Instrument States Based on D.md
+- Neo Real-Time On-Device 3D Gaussian Splatting with Reuse-an | 0424_[General]_Neo Real-Time On-Device 3D Gaussian Splatting with Reuse-an.md
+- Nexels Neurally-Textured Surfels for Real-Time Novel View S | 0377_[General]_Nexels Neurally-Textured Surfels for Real-Time Novel View S.md
+- Nighttime Autonomous Driving Scene Reconstruction with Physi | 0256_[General]_Nighttime Autonomous Driving Scene Reconstruction with Physi.md
+- Nix and Fix Targeting 1000x Compression of 3D Gaussian Spla | 0282_[General]_Nix and Fix Targeting 1000x Compression of 3D Gaussian Spla.md
+- No Calibration, No Depth, No Problem Cross-Sensor View Synt | 0229_[General]_No Calibration, No Depth, No Problem Cross-Sensor View Synt.md
+- Novel View Synthesis with Gaussian Splatting Impact on Phot | 0613_[General]_Novel View Synthesis with Gaussian Splatting Impact on Phot.md
+- OMEGA-Avatar One-shot Modeling of 360掳 Gaussian Avatars | 0260_[General]_OMEGA-Avatar One-shot Modeling of 360掳 Gaussian Avatars.md
+- OUGS Active View Selection via Object-aware Uncertainty Est | 0432_[General]_OUGS Active View Selection via Object-aware Uncertainty Est.md
+- Object-Aware 4D Human Motion Generation | 0449_[General]_Object-Aware 4D Human Motion Generation.md
+- Object-Centric 3D Gaussian Splatting for Strawberry Plant Re | 0446_[General]_Object-Centric 3D Gaussian Splatting for Strawberry Plant Re.md
+- Observer Actor Active Vision Imitation Learning with Sparse | 0401_[General]_Observer Actor Active Vision Imitation Learning with Sparse.md
+- Off The Grid Detection of Primitives for Feed-Forward 3D Ga | 0367_[General]_Off The Grid Detection of Primitives for Feed-Forward 3D Ga.md
+- One Walk is All You Need Data-Efficient 3D RF Scene Reconst | 0411_[General]_One Walk is All You Need Data-Efficient 3D RF Scene Reconst.md
+- Online 3D Gaussian Splatting Modeling with Novel View Select | 0596_[General]_Online 3D Gaussian Splatting Modeling with Novel View Select.md
+- Opacity-Gradient Driven Density Control for Compact and Effi | 0485_[General]_Opacity-Gradient Driven Density Control for Compact and Effi.md
+- OpenInsGaussian Open-vocabulary Instance Gaussian Segmentat | 0466_[General]_OpenInsGaussian Open-vocabulary Instance Gaussian Segmentat.md
+- Optimizing 3D Gaussian Splattering for Mobile GPUs | 0413_[General]_Optimizing 3D Gaussian Splattering for Mobile GPUs.md
+- OracleGS Grounding Generative Priors for Sparse-View Gaussi | 0516_[General]_OracleGS Grounding Generative Priors for Sparse-View Gaussi.md
+- P-4DGS Predictive 4D Gaussian Splatting with 90脳 Compressio | 0487_[General]_P-4DGS Predictive 4D Gaussian Splatting with 90脳 Compressio.md
+- PAGS Priority-Adaptive Gaussian Splatting for Dynamic Drivi | 0478_[General]_PAGS Priority-Adaptive Gaussian Splatting for Dynamic Drivi.md
+- PCR-GS COLMAP-Free 3D Gaussian Splatting via Pose Co-Regula | 0662_[General]_PCR-GS COLMAP-Free 3D Gaussian Splatting via Pose Co-Regula.md
+- PEGS Physics-Event Enhanced Large Spatiotemporal Motion Rec | 0406_[General]_PEGS Physics-Event Enhanced Large Spatiotemporal Motion Rec.md
+- PFGS Pose-Fused 3D Gaussian Splatting for Complete Multi-Po | 0472_[General]_PFGS Pose-Fused 3D Gaussian Splatting for Complete Multi-Po.md
+- PMGS Reconstruction of Projectile Motion across Large Spati | 0634_[General]_PMGS Reconstruction of Projectile Motion across Large Spati.md
+- POTR Post-Training 3DGS Compression | 0318_[General]_POTR Post-Training 3DGS Compression.md
+- PS-GS Gaussian Splatting for Multi-View Photometric Stereo | 0654_[General]_PS-GS Gaussian Splatting for Multi-View Photometric Stereo.md
+- PSGS Text-driven Panorama Sliding Scene Generation via Gaus | 0296_[General]_PSGS Text-driven Panorama Sliding Scene Generation via Gaus.md
+- PanoLAM Large Avatar Model for Gaussian Full-Head Synthesis | 0555_[General]_PanoLAM Large Avatar Model for Gaussian Full-Head Synthesis.md
+- PercHead Perceptual Head Model for Single-Image 3D Head Rec | 0445_[General]_PercHead Perceptual Head Model for Single-Image 3D Head Rec.md
+- Perceive-Sample-Compress Towards Real-Time 3D Gaussian Spla | 0624_[General]_Perceive-Sample-Compress Towards Real-Time 3D Gaussian Spla.md
+- PhysGM Large Physical Gaussian Model for Feed-Forward 4D Sy | 0597_[General]_PhysGM Large Physical Gaussian Model for Feed-Forward 4D Sy.md
+- PhysGS Bayesian-Inferred Gaussian Splatting for Physical Pr | 0399_[General]_PhysGS Bayesian-Inferred Gaussian Splatting for Physical Pr.md
+- PhysMorph-GS Differentiable Shape Morphing via Joint Optimi | 0409_[General]_PhysMorph-GS Differentiable Shape Morphing via Joint Optimi.md
+- PhysTalk Language-driven Real-time Physics in 3D Gaussian S | 0345_[General]_PhysTalk Language-driven Real-time Physics in 3D Gaussian S.md
+- Pi-GS Sparse-View Gaussian Splatting with Dense 蟺^3 Initial | 0287_[General]_Pi-GS Sparse-View Gaussian Splatting with Dense 蟺^3 Initial.md
+- Pixie Fast and Generalizable Supervised Learning of 3D Phys | 0580_[General]_Pixie Fast and Generalizable Supervised Learning of 3D Phys.md
+- Plug-and-Play PDE Optimization for 3D Gaussian Splatting To | 0545_[General]_Plug-and-Play PDE Optimization for 3D Gaussian Splatting To.md
+- PocketGS On-Device Training of 3D Gaussian Splatting for Hi | 0311_[General]_PocketGS On-Device Training of 3D Gaussian Splatting for Hi.md
+- PointGauss Point Cloud-Guided Multi-Object Segmentation for | 0639_[General]_PointGauss Point Cloud-Guided Multi-Object Segmentation for.md
+- Polysemous Language Gaussian Splatting via Matching-based Ma | 0519_[General]_Polysemous Language Gaussian Splatting via Matching-based Ma.md
+- Position 3D Gaussian Splatting Watermarking Should Be Scena | 0292_[General]_Position 3D Gaussian Splatting Watermarking Should Be Scena.md
+- Prior-Enhanced Gaussian Splatting for Dynamic Scene Reconstr | 0381_[General]_Prior-Enhanced Gaussian Splatting for Dynamic Scene Reconstr.md
+- PrismGS Physically-Grounded Anti-Aliasing for High-Fidelity | 0494_[General]_PrismGS Physically-Grounded Anti-Aliasing for High-Fidelity.md
+- ProFuse Efficient Cross-View Context Fusion for Open-Vocabu | 0333_[General]_ProFuse Efficient Cross-View Context Fusion for Open-Vocabu.md
+- ProGS Towards Progressive Coding for 3D Gaussian Splatting | 0182_[General]_ProGS Towards Progressive Coding for 3D Gaussian Splatting.md
+- Proxy-GS Efficient 3D Gaussian Splatting via Proxy Mesh | 0513_[General]_Proxy-GS Efficient 3D Gaussian Splatting via Proxy Mesh.md
+- Prune Wisely, Reconstruct Sharply Compact 3D Gaussian Splat | 0226_[General]_Prune Wisely, Reconstruct Sharply Compact 3D Gaussian Splat.md
+- Pseudo-View Enhancement via Confidence Fusion for Unposed Sp | 0278_[General]_Pseudo-View Enhancement via Confidence Fusion for Unposed Sp.md
+- Quantile Rendering Efficiently Embedding High-dimensional F | 0349_[General]_Quantile Rendering Efficiently Embedding High-dimensional F.md
+- QuantumGS Quantum Encoding Framework for Gaussian Splatting | 0281_[General]_QuantumGS Quantum Encoding Framework for Gaussian Splatting.md
+- R3GW Relightable 3D Gaussians for Outdoor Scenes in the Wil | 0214_[General]_R3GW Relightable 3D Gaussians for Outdoor Scenes in the Wil.md
+- RLGS Reinforcement Learning-Based Adaptive Hyperparameter T | 0629_[General]_RLGS Reinforcement Learning-Based Adaptive Hyperparameter T.md
+- ROI-GS Interest-based Local Quality 3D Gaussian Splatting | 0503_[General]_ROI-GS Interest-based Local Quality 3D Gaussian Splatting.md
+- ROSGS Relightable Outdoor Scenes With Gaussian Splatting | 0552_[General]_ROSGS Relightable Outdoor Scenes With Gaussian Splatting.md
+- RTR-GS 3D Gaussian Splatting for Inverse Rendering with Rad | 0670_[General]_RTR-GS 3D Gaussian Splatting for Inverse Rendering with Rad.md
+- RaGS Unleashing 3D Gaussian Splatting from 4D Radar and Mon | 0646_[General]_RaGS Unleashing 3D Gaussian Splatting from 4D Radar and Mon.md
+- RadarGaussianDet3D An Efficient and Effective Gaussian-base | 0537_[General]_RadarGaussianDet3D An Efficient and Effective Gaussian-base.md
+- Radioactive 3D Gaussian Ray Tracing for Tomographic Reconstr | 0294_[General]_Radioactive 3D Gaussian Ray Tracing for Tomographic Reconstr.md
+- Raindrop GS A Benchmark for 3D Gaussian Splatting under Rai | 0467_[General]_Raindrop GS A Benchmark for 3D Gaussian Splatting under Rai.md
+- Re-Activating Frozen Primitives for 3D Gaussian Splatting | 0464_[General]_Re-Activating Frozen Primitives for 3D Gaussian Splatting.md
+- RePaintGS Reference-Guided Gaussian Splatting for Realistic | 0669_[General]_RePaintGS Reference-Guided Gaussian Splatting for Realistic.md
+- ReSplat Learning Recurrent Gaussian Splats | 0491_[General]_ReSplat Learning Recurrent Gaussian Splats.md
+- ReaDy-Go Real-to-Sim Dynamic 3D Gaussian Splatting Simulati | 0263_[General]_ReaDy-Go Real-to-Sim Dynamic 3D Gaussian Splatting Simulati.md
+- Real-to-Sim Robot Policy Evaluation with Gaussian Splatting | 0441_[General]_Real-to-Sim Robot Policy Evaluation with Gaussian Splatting.md
+- Realistic and Controllable 3D Gaussian-Guided Object Editing | 0574_[General]_Realistic and Controllable 3D Gaussian-Guided Object Editing.md
+- RealisticDreamer Guidance Score Distillation for Few-shot G | 0428_[General]_RealisticDreamer Guidance Score Distillation for Few-shot G.md
+- ReconDrive Fast Feed-Forward 4D Gaussian Splatting for Auto | 0195_[General]_ReconDrive Fast Feed-Forward 4D Gaussian Splatting for Auto.md
+- Reconstructing 3D Scenes in Native High Dynamic Range | 0425_[General]_Reconstructing 3D Scenes in Native High Dynamic Range.md
+- Reconstruction Using the Invisible Intuition from NIR and M | 0593_[General]_Reconstruction Using the Invisible Intuition from NIR and M.md
+- Reconstruction and Reenactment Separated Method for Realisti | 0559_[General]_Reconstruction and Reenactment Separated Method for Realisti.md
+- Refining Gaussian Splatting A Volumetric Densification Appr | 0621_[General]_Refining Gaussian Splatting A Volumetric Densification Appr.md
+- Reflections Unlock Geometry-Aware Reflection Disentanglemen | 0673_[General]_Reflections Unlock Geometry-Aware Reflection Disentanglemen.md
+- Region-Adaptive Learned Hierarchical Encoding for 3D Gaussia | 0458_[General]_Region-Adaptive Learned Hierarchical Encoding for 3D Gaussia.md
+- Rig-Aware 3D Reconstruction of Vehicle Undercarriages using | 0320_[General]_Rig-Aware 3D Reconstruction of Vehicle Undercarriages using.md
+- Rigidity-Aware 3D Gaussian Deformation from a Single Image | 0520_[General]_Rigidity-Aware 3D Gaussian Deformation from a Single Image.md
+- RoboArmGS High-Quality Robotic Arm Splatting via B茅zier Cur | 0402_[General]_RoboArmGS High-Quality Robotic Arm Splatting via B茅zier Cur.md
+- RobustGS Unified Boosting of Feedforward 3D Gaussian Splatt | 0631_[General]_RobustGS Unified Boosting of Feedforward 3D Gaussian Splatt.md
+- RoomPlanner Explicit Layout Planner for Easier LLM-Driven 3 | 0408_[General]_RoomPlanner Explicit Layout Planner for Easier LLM-Driven 3.md
+- SA-ResGS Self-Augmented Residual 3D Gaussian Splatting for | 0338_[General]_SA-ResGS Self-Augmented Residual 3D Gaussian Splatting for.md
+- SAGOnline Segment Any Gaussians Online | 0610_[General]_SAGOnline Segment Any Gaussians Online.md
+- SAGS Self-Adaptive Alias-Free Gaussian Splatting for Dynami | 0450_[General]_SAGS Self-Adaptive Alias-Free Gaussian Splatting for Dynami.md
+- SCAR-GS Spatial Context Attention for Residuals in Progress | 0334_[General]_SCAR-GS Spatial Context Attention for Residuals in Progress.md
+- SD-GS Structured Deformable 3D Gaussians for Efficient Dyna | 0671_[General]_SD-GS Structured Deformable 3D Gaussians for Efficient Dyna.md
+- SDFoam Signed-Distance Foam for explicit surface reconstruc | 0365_[General]_SDFoam Signed-Distance Foam for explicit surface reconstruc.md
+- SF-Recon Simplification-Free Lightweight Building Reconstru | 0419_[General]_SF-Recon Simplification-Free Lightweight Building Reconstru.md
+- SPAGS Sparse-View Articulated Object Reconstruction from Si | 0407_[General]_SPAGS Sparse-View Articulated Object Reconstruction from Si.md
+- SPFSplatV2 Efficient Self-Supervised Pose-Free 3D Gaussian | 0533_[General]_SPFSplatV2 Efficient Self-Supervised Pose-Free 3D Gaussian.md
+- SR3R Rethinking Super-Resolution 3D Reconstruction With Fee | 0228_[General]_SR3R Rethinking Super-Resolution 3D Reconstruction With Fee.md
+- SSGaussian Semantic-Aware and Structure-Preserving 3D Style | 0562_[General]_SSGaussian Semantic-Aware and Structure-Preserving 3D Style.md
+- SSR-GS Separating Specular Reflection in Gaussian Splatting | 0204_[General]_SSR-GS Separating Specular Reflection in Gaussian Splatting.md | aliases 1
+- ST-GS Vision-Based 3D Semantic Occupancy Prediction with Sp | 0535_[General]_ST-GS Vision-Based 3D Semantic Occupancy Prediction with Sp.md
+- SV-GS Sparse View 4D Reconstruction with Skeleton-Driven Ga | 0344_[General]_SV-GS Sparse View 4D Reconstruction with Skeleton-Driven Ga.md
+- SVR-GS Spatially Variant Regularization for Probabilistic M | 0553_[General]_SVR-GS Spatially Variant Regularization for Probabilistic M.md
+- SWAGSplatting Semantic-guided Water-scene Augmented Gaussia | 0567_[General]_SWAGSplatting Semantic-guided Water-scene Augmented Gaussia.md
+- SaLon3R Structure-aware Long-term Generalizable 3D Reconstr | 0474_[General]_SaLon3R Structure-aware Long-term Generalizable 3D Reconstr.md
+- Sapling-NeRF Geo-Localised Sapling Reconstruction in Forest | 0232_[General]_Sapling-NeRF Geo-Localised Sapling Reconstruction in Forest.md
+- Scalable Adaptation of 3D Geometric Foundation Models via We | 0272_[General]_Scalable Adaptation of 3D Geometric Foundation Models via We.md
+- Scale-GS Efficient Scalable Gaussian Splatting via Redundan | 0570_[General]_Scale-GS Efficient Scalable Gaussian Splatting via Redundan.md
+- Seeing Through Reflections Advancing 3D Scene Reconstructio | 0528_[General]_Seeing Through Reflections Advancing 3D Scene Reconstructio.md
+- SegSplat Feed-forward Gaussian Splatting and Open-Set Seman | 0400_[General]_SegSplat Feed-forward Gaussian Splatting and Open-Set Seman.md
+- Segmentation-Driven Initialization for Sparse-view 3D Gaussi | 0551_[General]_Segmentation-Driven Initialization for Sparse-view 3D Gaussi.md
+- Self-Supervised Slice-to-Volume Reconstruction with Gaussian | 0299_[General]_Self-Supervised Slice-to-Volume Reconstruction with Gaussian.md
+- SemGS Feed-Forward Semantic 3D Gaussian Splatting from Spar | 0215_[General]_SemGS Feed-Forward Semantic 3D Gaussian Splatting from Spar.md
+- Semantic-Guided 3D Gaussian Splatting for Transient Object R | 0249_[General]_Semantic-Guided 3D Gaussian Splatting for Transient Object R.md
+- Semantic-aware DropSplat Adaptive Pruning of Redundant Gaus | 0607_[General]_Semantic-aware DropSplat Adaptive Pruning of Redundant Gaus.md
+- SeqAffordSplat Scene-level Sequential Affordance Reasoning | 0640_[General]_SeqAffordSplat Scene-level Sequential Affordance Reasoning.md
+- ShadowGS Shadow-Aware 3D Gaussian Splatting for Satellite I | 0343_[General]_ShadowGS Shadow-Aware 3D Gaussian Splatting for Satellite I.md
+- SharpTimeGS Sharp and Stable Dynamic Gaussian Splatting via | 0288_[General]_SharpTimeGS Sharp and Stable Dynamic Gaussian Splatting via.md
+- SimULi Real-Time LiDAR and Camera Simulation with Unscented | 0477_[General]_SimULi Real-Time LiDAR and Camera Simulation with Unscented.md
+- SketchPlan Diffusion Based Drone Planning From Human Sketch | 0499_[General]_SketchPlan Diffusion Based Drone Planning From Human Sketch.md
+- SketchRodGS Sketch-based Extraction of Slender Geometries f | 0340_[General]_SketchRodGS Sketch-based Extraction of Slender Geometries f.md
+- SkipGS Post-Densification Backward Skipping for Efficient 3 | 0186_[General]_SkipGS Post-Densification Backward Skipping for Efficient 3.md
+- SkySplat Generalizable 3D Gaussian Splatting from Multi-Tem | 0609_[General]_SkySplat Generalizable 3D Gaussian Splatting from Multi-Tem.md
+- SmokeSeer 3D Gaussian Splatting for Smoke Removal and Scene | 0532_[General]_SmokeSeer 3D Gaussian Splatting for Smoke Removal and Scene.md
+- Snap-Snap Taking Two Images to Reconstruct 3D Human Gaussia | 0587_[General]_Snap-Snap Taking Two Images to Reconstruct 3D Human Gaussia.md
+- SoMA A Real-to-Sim Neural Simulator for Robotic Soft-body M | 0289_[General]_SoMA A Real-to-Sim Neural Simulator for Robotic Soft-body M.md
+- Sparse View Distractor-Free Gaussian Splatting | 0217_[General]_Sparse View Distractor-Free Gaussian Splatting.md
+- Spatial-Temporal State Propagation Autoregressive Model for | 0244_[General]_Spatial-Temporal State Propagation Autoregressive Model for.md
+- Spherical Voronoi Directional Appearance as a Differentiabl | 0373_[General]_Spherical Voronoi Directional Appearance as a Differentiabl.md
+- Spherical-GOF Geometry-Aware Panoramic Gaussian Opacity Fie | 0190_[General]_Spherical-GOF Geometry-Aware Panoramic Gaussian Opacity Fie.md
+- Splat the Net Radiance Fields with Splattable Neural Primit | 0492_[General]_Splat the Net Radiance Fields with Splattable Neural Primit.md
+- Splat-Portrait Generalizing Talking Heads with Gaussian Spl | 0307_[General]_Splat-Portrait Generalizing Talking Heads with Gaussian Spl.md
+- SplatBright Generalizable Low-Light Scene Reconstruction fr | 0355_[General]_SplatBright Generalizable Low-Light Scene Reconstruction fr.md
+- SplatBus A Gaussian Splatting Viewer Framework via GPU Inte | 0317_[General]_SplatBus A Gaussian Splatting Viewer Framework via GPU Inte.md
+- SplatFill 3D Scene Inpainting via Depth-Guided Gaussian Spl | 0554_[General]_SplatFill 3D Scene Inpainting via Depth-Guided Gaussian Spl.md
+- SplatSSC Decoupled Depth-Guided Gaussian Splatting for Sema | 0636_[General]_SplatSSC Decoupled Depth-Guided Gaussian Splatting for Sema.md
+- Splatent Splatting Diffusion Latents for Novel View Synthes | 0387_[General]_Splatent Splatting Diffusion Latents for Novel View Synthes.md
+- Splatwizard A Benchmark Toolkit for 3D Gaussian Splatting C | 0346_[General]_Splatwizard A Benchmark Toolkit for 3D Gaussian Splatting C.md
+- Split&Splat Zero-Shot Panoptic Segmentation via Explicit In | 0293_[General]_Split&Splat Zero-Shot Panoptic Segmentation via Explicit In.md
+- SplitGaussian Reconstructing Dynamic Scenes via Visual Geom | 0627_[General]_SplitGaussian Reconstructing Dynamic Scenes via Visual Geom.md
+- StreamME Simplify 3D Gaussian Avatar within Live Stream | 0656_[General]_StreamME Simplify 3D Gaussian Avatar within Live Stream.md
+- Structured Image-based Coding for Efficient Gaussian Splatti | 0319_[General]_Structured Image-based Coding for Efficient Gaussian Splatti.md
+- Style4D-Bench A Benchmark Suite for 4D Stylization | 0576_[General]_Style4D-Bench A Benchmark Suite for 4D Stylization.md
+- Super4DR 4D Radar-centric Self-supervised Odometry and Gaus | 0389_[General]_Super4DR 4D Radar-centric Self-supervised Odometry and Gaus.md
+- Surf3R Rapid Surface Reconstruction from Sparse RGB Views i | 0626_[General]_Surf3R Rapid Surface Reconstruction from Sparse RGB Views i.md
+- SurgCalib Gaussian Splatting-Based Hand-Eye Calibration for | 0187_[General]_SurgCalib Gaussian Splatting-Based Hand-Eye Calibration for.md
+- SwiftNDC Fast Neural Depth Correction for High-Fidelity 3D | 0236_[General]_SwiftNDC Fast Neural Depth Correction for High-Fidelity 3D.md
+- SymGS Leveraging Local Symmetries for 3D Gaussian Splattin | 0420_[General]_SymGS Leveraging Local Symmetries for 3D Gaussian Splattin.md
+- TFusionOcc Student's t-Distribution Based Object-Centric Mu | 0276_[General]_TFusionOcc Student's t-Distribution Based Object-Centric Mu.md
+- TIDI-GS Floater Suppression in 3D Gaussian Splatting for En | 0327_[General]_TIDI-GS Floater Suppression in 3D Gaussian Splatting for En.md
+- TR-Gaussians High-fidelity Real-time Rendering of Planar Tr | 0423_[General]_TR-Gaussians High-fidelity Real-time Rendering of Planar Tr.md
+- Taking Language Embedded 3D Gaussian Splatting into the Wild | 0647_[General]_Taking Language Embedded 3D Gaussian Splatting into the Wild.md
+- Terra Explorable Native 3D World Model with Point Latents | 0475_[General]_Terra Explorable Native 3D World Model with Point Latents.md
+- Tessellation GS Neural Mesh Gaussians for Robust Monocular | 0391_[General]_Tessellation GS Neural Mesh Gaussians for Robust Monocular.md
+- ThermoSplat Cross-Modal 3D Gaussian Splatting with Feature | 0314_[General]_ThermoSplat Cross-Modal 3D Gaussian Splatting with Feature.md
+- Thinking Like Van Gogh Structure-Aware Style Transfer via F | 0326_[General]_Thinking Like Van Gogh Structure-Aware Style Transfer via F.md
+- Three-dimensional Damage Visualization of Civil Structures v | 0279_[General]_Three-dimensional Damage Visualization of Civil Structures v.md
+- Time-Archival Camera Virtualization for Sports and Visual Pe | 0251_[General]_Time-Archival Camera Virtualization for Sports and Visual Pe.md
+- TokenSplat Token-aligned 3D Gaussian Splatting for Feed-for | 0221_[General]_TokenSplat Token-aligned 3D Gaussian Splatting for Feed-for.md
+- Touch-Augmented Gaussian Splatting for Enhanced 3D Scene Rec | 0612_[General]_Touch-Augmented Gaussian Splatting for Enhanced 3D Scene Rec.md
+- Toward Fine-Grained Facial Control in 3D Talking Head Genera | 0268_[General]_Toward Fine-Grained Facial Control in 3D Talking Head Genera.md
+- Towards Efficient 3D Gaussian Human Avatar Compression A Pr | 0484_[General]_Towards Efficient 3D Gaussian Human Avatar Compression A Pr.md
+- Towards Physically Executable 3D Gaussian for Embodied Navig | 0461_[General]_Towards Physically Executable 3D Gaussian for Embodied Navig.md
+- TraceFlow Dynamic 3D Reconstruction of Specular Scenes Driv | 0385_[General]_TraceFlow Dynamic 3D Reconstruction of Specular Scenes Driv.md
+- Training-Free Multi-View Extension of IC-Light for Textual P | 0418_[General]_Training-Free Multi-View Extension of IC-Light for Textual P.md
+- Transforming Omnidirectional RGB-LiDAR data into 3D Gaussian | 0200_[General]_Transforming Omnidirectional RGB-LiDAR data into 3D Gaussian.md | aliases 1
+- TreeDGS Aerial Gaussian Splatting for Distant DBH Measureme | 0322_[General]_TreeDGS Aerial Gaussian Splatting for Distant DBH Measureme.md
+- Triangle Splatting+ Differentiable Rendering with Opaque Tr | 0508_[General]_Triangle Splatting+ Differentiable Rendering with Opaque Tr.md
+- UFO-4D Unposed Feedforward 4D Reconstruction from Two Image | 0224_[General]_UFO-4D Unposed Feedforward 4D Reconstruction from Two Image.md
+- UFV-Splatter Pose-Free Feed-Forward 3D Gaussian Splatting A | 0643_[General]_UFV-Splatter Pose-Free Feed-Forward 3D Gaussian Splatting A.md
+- UGOD Uncertainty-Guided Differentiable Opacity and Soft Dro | 0622_[General]_UGOD Uncertainty-Guided Differentiable Opacity and Soft Dro.md
+- UPGS Unified Pose-aware Gaussian Splatting for Dynamic Scen | 0566_[General]_UPGS Unified Pose-aware Gaussian Splatting for Dynamic Scen.md
+- UW-3DGS Underwater 3D Reconstruction with Physics-Aware Gau | 0619_[General]_UW-3DGS Underwater 3D Reconstruction with Physics-Aware Gau.md
+- Uncertainty-Aware 4D Gaussian Splatting for Monocular Occlud | 0277_[General]_Uncertainty-Aware 4D Gaussian Splatting for Monocular Occlud.md
+- UniGS Unified Geometry-Aware Gaussian Splatting for Multimo | 0479_[General]_UniGS Unified Geometry-Aware Gaussian Splatting for Multimo.md
+- UniLat3D Geometry-Appearance Unified Latents for Single-Sta | 0509_[General]_UniLat3D Geometry-Appearance Unified Latents for Single-Sta.md
+- UniMGS Unifying Mesh and 3D Gaussian Splatting with Single- | 0306_[General]_UniMGS Unifying Mesh and 3D Gaussian Splatting with Single-.md
+- Unified Sensor Simulation for Autonomous Driving | 0280_[General]_Unified Sensor Simulation for Autonomous Driving.md
+- Unifying Color and Lightness Correction with View-Adaptive C | 0245_[General]_Unifying Color and Lightness Correction with View-Adaptive C.md
+- Unposed 3DGS Reconstruction with Probabilistic Procrustes Ma | 0651_[General]_Unposed 3DGS Reconstruction with Probabilistic Procrustes Ma.md
+- Using Gaussian Splats to Create High-Fidelity Facial Geometr | 0362_[General]_Using Gaussian Splats to Create High-Fidelity Facial Geometr.md
+- VG3S Visual Geometry Grounded Gaussian Splatting for Semant | 0199_[General]_VG3S Visual Geometry Grounded Gaussian Splatting for Semant.md
+- VIRGi View-dependent Instant Recoloring of 3D Gaussians Spl | 0210_[General]_VIRGi View-dependent Instant Recoloring of 3D Gaussians Spl.md
+- VLA-AN An Efficient and Onboard Vision-Language-Action Fram | 0368_[General]_VLA-AN An Efficient and Onboard Vision-Language-Action Fram.md
+- Variation-aware Flexible 3D Gaussian Editing | 0262_[General]_Variation-aware Flexible 3D Gaussian Editing.md
+- VecSet-Edit Unleashing Pre-trained LRM for Mesh Editing fro | 0283_[General]_VecSet-Edit Unleashing Pre-trained LRM for Mesh Editing fro.md
+- Visibility-Aware Densification for 3D Gaussian Splatting in | 0490_[General]_Visibility-Aware Densification for 3D Gaussian Splatting in.md
+- Visibility-Aware Language Aggregation for Open-Vocabulary Se | 0560_[General]_Visibility-Aware Language Aggregation for Open-Vocabulary Se.md
+- VolSegGS Segmentation and Tracking in Dynamic Volumetric Sc | 0663_[General]_VolSegGS Segmentation and Tracking in Dynamic Volumetric Sc.md
+- VolSplat Rethinking Feed-Forward 3D Gaussian Splatting with | 0526_[General]_VolSplat Rethinking Feed-Forward 3D Gaussian Splatting with.md
+- Vorion A RISC-V GPU with Hardware-Accelerated 3D Gaussian R | 0412_[General]_Vorion A RISC-V GPU with Hardware-Accelerated 3D Gaussian R.md
+- WaterClear-GS Optical-Aware Gaussian Splatting for Underwat | 0303_[General]_WaterClear-GS Optical-Aware Gaussian Splatting for Underwat.md
+- Wavelet-GS 3D Gaussian Splatting with Wavelet Decomposition | 0664_[General]_Wavelet-GS 3D Gaussian Splatting with Wavelet Decomposition.md
+- WaveletGaussian Wavelet-domain Diffusion for Sparse-view 3D | 0527_[General]_WaveletGaussian Wavelet-domain Diffusion for Sparse-view 3D.md
+- Where, What, Why Toward Explainable 3D-GS Watermarking | 0188_[General]_Where, What, Why Toward Explainable 3D-GS Watermarking.md
+- WildGHand Learning Anti-Perturbation Gaussian Hand Avatars | 0240_[General]_WildGHand Learning Anti-Perturbation Gaussian Hand Avatars.md
+- WorldMirror Universal 3D World Reconstruction with Any-Prio | 0482_[General]_WorldMirror Universal 3D World Reconstruction with Any-Prio.md
+- WorldWarp Propagating 3D Geometry with Asynchronous Video D | 0353_[General]_WorldWarp Propagating 3D Geometry with Asynchronous Video D.md
+- Wrivinder Towards Spatial Intelligence for Geo-locating Gro | 0252_[General]_Wrivinder Towards Spatial Intelligence for Geo-locating Gro.md
+- X-GS An Extensible Open Framework Unifying 3DGS Architectur | 0183_[General]_X-GS An Extensible Open Framework Unifying 3DGS Architectur.md | aliases 1
+- XSPLAIN XAI-enabling Splat-based Prototype Learning for Att | 0265_[General]_XSPLAIN XAI-enabling Splat-based Prototype Learning for Att.md
+- YOPO-Nav Visual Navigation using 3DGS Graphs from One-Pass | 0388_[General]_YOPO-Nav Visual Navigation using 3DGS Graphs from One-Pass.md
+- YoNoSplat You Only Need One Model for Feedforward 3D Gaussi | 0433_[General]_YoNoSplat You Only Need One Model for Feedforward 3D Gaussi.md
+- Zero-Shot Robotic Manipulation via 3D Gaussian Splatting-Enh | 0222_[General]_Zero-Shot Robotic Manipulation via 3D Gaussian Splatting-Enh.md
+- Zero-Shot UAV Navigation in Forests via Relightable 3D Gauss | 0275_[General]_Zero-Shot UAV Navigation in Forests via Relightable 3D Gauss.md
+- Zero-Shot Visual Grounding in 3D Gaussians via View Retrieva | 0538_[General]_Zero-Shot Visual Grounding in 3D Gaussians via View Retrieva.md
+- Zero-shot Volumetric CT Super-Resolution using 3D Gaussian S | 0586_[General]_Zero-shot Volumetric CT Super-Resolution using 3D Gaussian S.md
+- i-PhysGaussian Implicit Physical Simulation for 3D Gaussian | 0248_[General]_i-PhysGaussian Implicit Physical Simulation for 3D Gaussian.md
+- studentSplat Your Student Model Learns Single-view 3D Gauss | 0325_[General]_studentSplat Your Student Model Learns Single-view 3D Gauss.md

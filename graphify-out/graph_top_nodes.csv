@@ -1,0 +1,51 @@
+﻿id,label,file_type,category,degree,source_file
+metric_ate,ATE,concept,,815,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+concept_reconstruction,Reconstruction,concept,,802,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+metric_spl,SPL,concept,,794,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+concept_3d_gaussian_splatting,3D Gaussian Splatting,concept,,761,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+concept_imu_integration,IMU Integration,concept,,753,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+metric_iou,IoU,concept,,750,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+concept_nerf,NeRF,concept,,734,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+metric_accuracy,Accuracy,concept,,652,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+metric_psnr,PSNR,concept,,601,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+metric_ssim,SSIM,concept,,599,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+metric_lpips,LPIPS,concept,,531,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+category_general,General,concept,,501,0181_[General]_GSStream 3D Gaussian Splatting based Volumetric Scene Strea.md
+concept_slam,SLAM,concept,,392,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+metric_rpe,RPE,concept,,331,0009_[SLAM]_RTG-SLAM Real-time 3D Reconstruction at Scale using Gaussian Splattin.md
+concept_navigation,Navigation,concept,,297,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+concept_lidar,LiDAR,concept,,229,0011_[SLAM]_MG-SLAM Structure Gaussian SLAM with Manhattan World Hypothesis.md
+dataset_replica,Replica,concept,,208,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+dataset_scannet,ScanNet,concept,,144,"0003_[SLAM]_SplaTAM Splat, Track & Map 3D Gaussians for Dense RGB-D SLAM.md"
+category_unknown,Unknown,concept,,144,2209.08409.md
+concept_semantic_mapping,Semantic Mapping,concept,,134,0005_[SLAM]_SGS-SLAM Semantic Gaussian Splatting For Neural Dense SLAM.md
+concept_visual_localization,Visual Localization,concept,,112,0002_[SLAM]_Photo-SLAM Real-time Simultaneous Localization and Photorealistic Mappi.md
+metric_ate_rmse,ATE RMSE,concept,,109,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+metric_recall,Recall,concept,,95,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+metric_chamfer,Chamfer,concept,,84,0008_[SLAM]_CG-SLAM Efficient Dense RGB-D SLAM in a Consistent Uncertainty-aware.md
+category_slam,SLAM,concept,,68,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+dataset_tum_rgbd,TUM-RGBD,concept,,65,0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+category_robotics,Robotics,concept,,65,0073_[Robotics]_Ditto Building Digital Twins of Articulated Objects from Interacti.md
+dataset_kitti,KITTI,concept,,57,0016_[SLAM]_UDGS-SLAM UniDepth Assisted Gaussian Splatting for Monocular SLAM.md
+dataset_euroc,EuRoC,concept,,41,0002_[SLAM]_Photo-SLAM Real-time Simultaneous Localization and Photorealistic Mappi.md
+category_slam_supplement,SLAM-Supplement,concept,,37,0143_[SLAM-Supplement]_`arXiv`.md
+dataset_dtu,DTU,concept,,35,0139_[Robotics]_SiLVR Scalable Lidar-Visual Radiance Field Reconstruction with Unc.md
+concept_pose_graph_optimization,Pose Graph Optimization,concept,,32,0010_[SLAM]_Splat-SLAM Globally Optimized RGB-only SLAM with 3D Gaussians.md
+dataset_nuscenes,nuScenes,concept,,26,0163_[SLAM-Supplement]_`arXiv`.md
+paper_2402_13255,2402.13255,document,Unknown,25,2402.13255.md
+paper_2405_05526,2405.05526,document,Unknown,25,2405.05526.md
+paper_2410_12262,2410.12262,document,Unknown,25,2410.12262.md
+dataset_gibson,Gibson,concept,,24,0004_[SLAM]_Gaussian-SLAM Photo-realistic Dense SLAM with Gaussian Splatting.md
+dataset_matterport3d,Matterport3D,concept,,24,0026_[SLAM]_AG-SLAM Active Gaussian Splatting SLAM.md
+paper_0149_slam_supplement_arxiv,`arXiv`,document,SLAM-Supplement,24,0149_[SLAM-Supplement]_`arXiv`.md
+paper_2405_01333,2405.01333,document,Unknown,24,2405.01333.md
+paper_2506_18678,2506.18678,document,Unknown,24,2506.18678.md
+paper_2510_23988,2510.23988,document,Unknown,24,2510.23988.md
+paper_2602_04251,2602.04251,document,Unknown,24,2602.04251.md
+paper_0482_general_worldmirror_universal_3d_world_reconstruction_with_any_prio,WorldMirror Universal 3D World Reconstruction with Any-Prio,document,General,23,0482_[General]_WorldMirror Universal 3D World Reconstruction with Any-Prio.md
+paper_2512_03422,2512.03422,document,Unknown,23,2512.03422.md
+paper_2406_16850,2406.16850,document,Unknown,22,2406.16850.md
+paper_2601_05738,2601.05738,document,Unknown,22,2601.05738.md
+paper_0041_slam_vings_mono_visual_inertial_gaussian_splatting_monocular_slam_in_large_s,VINGS-Mono Visual-Inertial Gaussian Splatting Monocular SLAM in Large S,document,SLAM,21,0041_[SLAM]_VINGS-Mono Visual-Inertial Gaussian Splatting Monocular SLAM in Large S.md
+paper_0046_slam_hier_slam_neuro_symbolic_semantic_slam_with_a_hierarchically_categoric,Hier-SLAM++ Neuro-Symbolic Semantic SLAM with a Hierarchically Categoric,document,SLAM,21,0046_[SLAM]_Hier-SLAM++ Neuro-Symbolic Semantic SLAM with a Hierarchically Categoric.md
+paper_0051_slam_stamics_splat_track_and_map_with_integrated_consistency_and_semanti,"STAMICS Splat, Track And Map with Integrated Consistency and Semanti",document,SLAM,21,"0051_[SLAM]_STAMICS Splat, Track And Map with Integrated Consistency and Semanti.md"

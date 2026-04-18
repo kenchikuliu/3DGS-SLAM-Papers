@@ -1,0 +1,234 @@
+{
+  "domain": "General",
+  "subdomain": "Evaluation",
+  "paper_count": 29,
+  "top_datasets": [
+    {
+      "label": "ScanNet",
+      "count": 4
+    },
+    {
+      "label": "KITTI",
+      "count": 2
+    },
+    {
+      "label": "HM3D",
+      "count": 1
+    },
+    {
+      "label": "EuRoC",
+      "count": 1
+    },
+    {
+      "label": "nuScenes",
+      "count": 1
+    },
+    {
+      "label": "7-Scenes",
+      "count": 1
+    },
+    {
+      "label": "Matterport3D",
+      "count": 1
+    },
+    {
+      "label": "MP3D",
+      "count": 1
+    },
+    {
+      "label": "TUM-RGBD",
+      "count": 1
+    },
+    {
+      "label": "DTU",
+      "count": 1
+    }
+  ],
+  "top_metrics": [
+    {
+      "label": "Chamfer",
+      "count": 7
+    },
+    {
+      "label": "Recall",
+      "count": 5
+    }
+  ],
+  "top_concepts": [],
+  "papers": [
+    {
+      "id": "paper_0339_general_360_geogs_geometrically_consistent_feed_forward_3d_gaussian",
+      "label": "360-GeoGS Geometrically Consistent Feed-Forward 3D Gaussian",
+      "source_file": "0339_[General]_360-GeoGS Geometrically Consistent Feed-Forward 3D Gaussian.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0536_general_3d_gaussian_flats_hybrid_2d3d_photometric_scene_reconstruc",
+      "label": "3D Gaussian Flats Hybrid 2D3D Photometric Scene Reconstruc",
+      "source_file": "0536_[General]_3D Gaussian Flats Hybrid 2D3D Photometric Scene Reconstruc.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0668_general_3dgaa_realistic_and_robust_3d_gaussian_based_adversarial_at",
+      "label": "3DGAA Realistic and Robust 3D Gaussian-based Adversarial At",
+      "source_file": "0668_[General]_3DGAA Realistic and Robust 3D Gaussian-based Adversarial At.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0617_general_3dgs_vbench_a_comprehensive_video_quality_evaluation_benchm",
+      "label": "3DGS-VBench A Comprehensive Video Quality Evaluation Benchm",
+      "source_file": "0617_[General]_3DGS-VBench A Comprehensive Video Quality Evaluation Benchm.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0270_general_analysis_of_converged_3d_gaussian_splatting_solutions_densi",
+      "label": "Analysis of Converged 3D Gaussian Splatting Solutions Densi",
+      "source_file": "0270_[General]_Analysis of Converged 3D Gaussian Splatting Solutions Densi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0525_general_bitaa_a_bi_task_adversarial_attack_for_object_detection_and",
+      "label": "BiTAA A Bi-Task Adversarial Attack for Object Detection and",
+      "source_file": "0525_[General]_BiTAA A Bi-Task Adversarial Attack for Object Detection and.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0203_general_cog2gen3d_sculpturing_3d_semantic_geometric_cognition_for_3",
+      "label": "Cog2Gen3D Sculpturing 3D Semantic-Geometric Cognition for 3",
+      "source_file": "0203_[General]_Cog2Gen3D Sculpturing 3D Semantic-Geometric Cognition for 3.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0618_general_evaluating_fisheye_compatible_3d_gaussian_splatting_methods",
+      "label": "Evaluating Fisheye-Compatible 3D Gaussian Splatting Methods",
+      "source_file": "0618_[General]_Evaluating Fisheye-Compatible 3D Gaussian Splatting Methods.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0360_general_g3splat_geometrically_consistent_generalizable_gaussian_spl",
+      "label": "G3Splat Geometrically Consistent Generalizable Gaussian Spl",
+      "source_file": "0360_[General]_G3Splat Geometrically Consistent Generalizable Gaussian Spl.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0181_general_gsstream_3d_gaussian_splatting_based_volumetric_scene_strea",
+      "label": "GSStream 3D Gaussian Splatting based Volumetric Scene Strea",
+      "source_file": "0181_[General]_GSStream 3D Gaussian Splatting based Volumetric Scene Strea.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0356_general_geometric_photometric_event_based_3d_gaussian_ray_tracing",
+      "label": "Geometric-Photometric Event-based 3D Gaussian Ray Tracing",
+      "source_file": "0356_[General]_Geometric-Photometric Event-based 3D Gaussian Ray Tracing.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0506_general_llm_powered_code_analysis_and_optimization_for_gaussian_spla",
+      "label": "LLM-Powered Code Analysis and Optimization for Gaussian Spla",
+      "source_file": "0506_[General]_LLM-Powered Code Analysis and Optimization for Gaussian Spla.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0623_general_laplacian_analysis_meets_dynamics_modelling_gaussian_splatt",
+      "label": "Laplacian Analysis Meets Dynamics Modelling Gaussian Splatt",
+      "source_file": "0623_[General]_Laplacian Analysis Meets Dynamics Modelling Gaussian Splatt.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0568_general_marksplatter_generalizable_watermarking_for_3d_gaussian_spl",
+      "label": "MarkSplatter Generalizable Watermarking for 3D Gaussian Spl",
+      "source_file": "0568_[General]_MarkSplatter Generalizable Watermarking for 3D Gaussian Spl.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0676_general_mastering_regional_3dgs_locating_initializing_and_editing",
+      "label": "Mastering Regional 3DGS Locating, Initializing, and Editing",
+      "source_file": "0676_[General]_Mastering Regional 3DGS Locating, Initializing, and Editing.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0397_general_metrogs_efficient_and_stable_reconstruction_of_geometricall",
+      "label": "MetroGS Efficient and Stable Reconstruction of Geometricall",
+      "source_file": "0397_[General]_MetroGS Efficient and Stable Reconstruction of Geometricall.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0379_general_moment_based_3d_gaussian_splatting_resolving_volumetric_occ",
+      "label": "Moment-Based 3D Gaussian Splatting Resolving Volumetric Occ",
+      "source_file": "0379_[General]_Moment-Based 3D Gaussian Splatting Resolving Volumetric Occ.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0654_general_ps_gs_gaussian_splatting_for_multi_view_photometric_stereo",
+      "label": "PS-GS Gaussian Splatting for Multi-View Photometric Stereo",
+      "source_file": "0654_[General]_PS-GS Gaussian Splatting for Multi-View Photometric Stereo.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0292_general_position_3d_gaussian_splatting_watermarking_should_be_scena",
+      "label": "Position 3D Gaussian Splatting Watermarking Should Be Scena",
+      "source_file": "0292_[General]_Position 3D Gaussian Splatting Watermarking Should Be Scena.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0467_general_raindrop_gs_a_benchmark_for_3d_gaussian_splatting_under_rai",
+      "label": "Raindrop GS A Benchmark for 3D Gaussian Splatting under Rai",
+      "source_file": "0467_[General]_Raindrop GS A Benchmark for 3D Gaussian Splatting under Rai.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0441_general_real_to_sim_robot_policy_evaluation_with_gaussian_splatting",
+      "label": "Real-to-Sim Robot Policy Evaluation with Gaussian Splatting",
+      "source_file": "0441_[General]_Real-to-Sim Robot Policy Evaluation with Gaussian Splatting.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0621_general_refining_gaussian_splatting_a_volumetric_densification_appr",
+      "label": "Refining Gaussian Splatting A Volumetric Densification Appr",
+      "source_file": "0621_[General]_Refining Gaussian Splatting A Volumetric Densification Appr.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0272_general_scalable_adaptation_of_3d_geometric_foundation_models_via_we",
+      "label": "Scalable Adaptation of 3D Geometric Foundation Models via We",
+      "source_file": "0272_[General]_Scalable Adaptation of 3D Geometric Foundation Models via We.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0346_general_splatwizard_a_benchmark_toolkit_for_3d_gaussian_splatting_c",
+      "label": "Splatwizard A Benchmark Toolkit for 3D Gaussian Splatting C",
+      "source_file": "0346_[General]_Splatwizard A Benchmark Toolkit for 3D Gaussian Splatting C.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0576_general_style4d_bench_a_benchmark_suite_for_4d_stylization",
+      "label": "Style4D-Bench A Benchmark Suite for 4D Stylization",
+      "source_file": "0576_[General]_Style4D-Bench A Benchmark Suite for 4D Stylization.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0663_general_volseggs_segmentation_and_tracking_in_dynamic_volumetric_sc",
+      "label": "VolSegGS Segmentation and Tracking in Dynamic Volumetric Sc",
+      "source_file": "0663_[General]_VolSegGS Segmentation and Tracking in Dynamic Volumetric Sc.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0188_general_where_what_why_toward_explainable_3d_gs_watermarking",
+      "label": "Where, What, Why Toward Explainable 3D-GS Watermarking",
+      "source_file": "0188_[General]_Where, What, Why Toward Explainable 3D-GS Watermarking.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0252_general_wrivinder_towards_spatial_intelligence_for_geo_locating_gro",
+      "label": "Wrivinder Towards Spatial Intelligence for Geo-locating Gro",
+      "source_file": "0252_[General]_Wrivinder Towards Spatial Intelligence for Geo-locating Gro.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0586_general_zero_shot_volumetric_ct_super_resolution_using_3d_gaussian_s",
+      "label": "Zero-shot Volumetric CT Super-Resolution using 3D Gaussian S",
+      "source_file": "0586_[General]_Zero-shot Volumetric CT Super-Resolution using 3D Gaussian S.md",
+      "alias_count": 0
+    }
+  ]
+}

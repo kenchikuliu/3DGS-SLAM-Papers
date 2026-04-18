@@ -1,0 +1,787 @@
+{
+  "category_sizes": [
+    {
+      "category": "General",
+      "document_count": 501
+    },
+    {
+      "category": "Unknown",
+      "document_count": 144
+    },
+    {
+      "category": "SLAM",
+      "document_count": 68
+    },
+    {
+      "category": "Robotics",
+      "document_count": 65
+    },
+    {
+      "category": "SLAM-Supplement",
+      "document_count": 37
+    }
+  ],
+  "relation_counts": [
+    {
+      "label": "belongs_to",
+      "count": 815
+    },
+    {
+      "label": "shares_data_with",
+      "count": 493
+    },
+    {
+      "label": "evaluates_with",
+      "count": 179
+    },
+    {
+      "label": "references",
+      "count": 134
+    },
+    {
+      "label": "semantically_similar_to",
+      "count": 11
+    },
+    {
+      "label": "conceptually_related_to",
+      "count": 5
+    },
+    {
+      "label": "rationale_for",
+      "count": 4
+    },
+    {
+      "label": "cites",
+      "count": 3
+    }
+  ],
+  "categories": [
+    {
+      "category": "General",
+      "document_count": 501,
+      "top_concepts": [
+        {
+          "label": "Pose Graph Optimization",
+          "count": 2
+        }
+      ],
+      "top_datasets": [
+        {
+          "label": "ScanNet",
+          "count": 48
+        },
+        {
+          "label": "DTU",
+          "count": 29
+        },
+        {
+          "label": "KITTI",
+          "count": 25
+        },
+        {
+          "label": "nuScenes",
+          "count": 20
+        },
+        {
+          "label": "EuRoC",
+          "count": 11
+        },
+        {
+          "label": "Matterport3D",
+          "count": 8
+        },
+        {
+          "label": "HM3D",
+          "count": 7
+        },
+        {
+          "label": "CO3D",
+          "count": 6
+        }
+      ],
+      "top_metrics": [
+        {
+          "label": "Chamfer",
+          "count": 56
+        },
+        {
+          "label": "Recall",
+          "count": 46
+        }
+      ],
+      "representative_documents": [
+        {
+          "id": "paper_0272_general_scalable_adaptation_of_3d_geometric_foundation_models_via_we",
+          "label": "Scalable Adaptation of 3D Geometric Foundation Models via We",
+          "source_file": "0272_[General]_Scalable Adaptation of 3D Geometric Foundation Models via We.md",
+          "degree": 7
+        },
+        {
+          "id": "paper_0482_general_worldmirror_universal_3d_world_reconstruction_with_any_prio",
+          "label": "WorldMirror Universal 3D World Reconstruction with Any-Prio",
+          "source_file": "0482_[General]_WorldMirror Universal 3D World Reconstruction with Any-Prio.md",
+          "degree": 7
+        },
+        {
+          "id": "paper_0454_general_nvsim_novel_view_synthesis_simulator_for_large_scale_indoor",
+          "label": "NVSim Novel View Synthesis Simulator for Large Scale Indoor",
+          "source_file": "0454_[General]_NVSim Novel View Synthesis Simulator for Large Scale Indoor.md",
+          "degree": 5
+        },
+        {
+          "id": "paper_0367_general_off_the_grid_detection_of_primitives_for_feed_forward_3d_ga",
+          "label": "Off The Grid Detection of Primitives for Feed-Forward 3D Ga",
+          "source_file": "0367_[General]_Off The Grid Detection of Primitives for Feed-Forward 3D Ga.md",
+          "degree": 5
+        },
+        {
+          "id": "paper_0536_general_3d_gaussian_flats_hybrid_2d3d_photometric_scene_reconstruc",
+          "label": "3D Gaussian Flats Hybrid 2D3D Photometric Scene Reconstruc",
+          "source_file": "0536_[General]_3D Gaussian Flats Hybrid 2D3D Photometric Scene Reconstruc.md",
+          "degree": 4
+        },
+        {
+          "id": "paper_0556_general_accurate_and_complete_surface_reconstruction_from_3d_gaussia",
+          "label": "Accurate and Complete Surface Reconstruction from 3D Gaussia",
+          "source_file": "0556_[General]_Accurate and Complete Surface Reconstruction from 3D Gaussia.md",
+          "degree": 4
+        },
+        {
+          "id": "paper_0358_general_chorus_multi_teacher_pretraining_for_holistic_3d_gaussian_s",
+          "label": "Chorus Multi-Teacher Pretraining for Holistic 3D Gaussian S",
+          "source_file": "0358_[General]_Chorus Multi-Teacher Pretraining for Holistic 3D Gaussian S.md",
+          "degree": 4
+        },
+        {
+          "id": "paper_0257_general_flowhoi_flow_based_semantics_grounded_generation_of_hand_ob",
+          "label": "FlowHOI Flow-based Semantics-Grounded Generation of Hand-Ob",
+          "source_file": "0257_[General]_FlowHOI Flow-based Semantics-Grounded Generation of Hand-Ob.md",
+          "degree": 4
+        },
+        {
+          "id": "paper_0360_general_g3splat_geometrically_consistent_generalizable_gaussian_spl",
+          "label": "G3Splat Geometrically Consistent Generalizable Gaussian Spl",
+          "source_file": "0360_[General]_G3Splat Geometrically Consistent Generalizable Gaussian Spl.md",
+          "degree": 4
+        },
+        {
+          "id": "paper_0594_general_gala_guided_attention_with_language_alignment_for_open_voca",
+          "label": "GALA Guided Attention with Language Alignment for Open Voca",
+          "source_file": "0594_[General]_GALA Guided Attention with Language Alignment for Open Voca.md",
+          "degree": 4
+        },
+        {
+          "id": "paper_0469_general_gsplane_concise_and_accurate_planar_reconstruction_via_stru",
+          "label": "GSPlane Concise and Accurate Planar Reconstruction via Stru",
+          "source_file": "0469_[General]_GSPlane Concise and Accurate Planar Reconstruction via Stru.md",
+          "degree": 4
+        },
+        {
+          "id": "paper_0473_general_gaussgym_an_open_source_real_to_sim_framework_for_learning",
+          "label": "GaussGym An open-source real-to-sim framework for learning",
+          "source_file": "0473_[General]_GaussGym An open-source real-to-sim framework for learning.md",
+          "degree": 4
+        },
+        {
+          "id": "paper_0649_general_gaussian_set_surface_reconstruction_through_per_gaussian_opt",
+          "label": "Gaussian Set Surface Reconstruction through Per-Gaussian Opt",
+          "source_file": "0649_[General]_Gaussian Set Surface Reconstruction through Per-Gaussian Opt.md",
+          "degree": 4
+        },
+        {
+          "id": "paper_0310_general_geometry_grounded_gaussian_splatting",
+          "label": "Geometry-Grounded Gaussian Splatting",
+          "source_file": "0310_[General]_Geometry-Grounded Gaussian Splatting.md",
+          "degree": 4
+        },
+        {
+          "id": "paper_0395_general_idsplat_instance_decomposed_3d_gaussian_splatting_for_drivi",
+          "label": "IDSplat Instance-Decomposed 3D Gaussian Splatting for Drivi",
+          "source_file": "0395_[General]_IDSplat Instance-Decomposed 3D Gaussian Splatting for Drivi.md",
+          "degree": 4
+        }
+      ]
+    },
+    {
+      "category": "Unknown",
+      "document_count": 144,
+      "top_concepts": [
+        {
+          "label": "Pose Graph Optimization",
+          "count": 16
+        }
+      ],
+      "top_datasets": [
+        {
+          "label": "ScanNet",
+          "count": 49
+        },
+        {
+          "label": "TUM-RGBD",
+          "count": 33
+        },
+        {
+          "label": "KITTI",
+          "count": 21
+        },
+        {
+          "label": "EuRoC",
+          "count": 16
+        },
+        {
+          "label": "Gibson",
+          "count": 8
+        },
+        {
+          "label": "Matterport3D",
+          "count": 7
+        },
+        {
+          "label": "7-Scenes",
+          "count": 7
+        },
+        {
+          "label": "HM3D",
+          "count": 5
+        }
+      ],
+      "top_metrics": [
+        {
+          "label": "Recall",
+          "count": 22
+        },
+        {
+          "label": "Chamfer",
+          "count": 11
+        }
+      ],
+      "representative_documents": [
+        {
+          "id": "paper_2405_05526",
+          "label": "2405.05526",
+          "source_file": "2405.05526.md",
+          "degree": 10
+        },
+        {
+          "id": "paper_2402_13255",
+          "label": "2402.13255",
+          "source_file": "2402.13255.md",
+          "degree": 8
+        },
+        {
+          "id": "paper_2512_03422",
+          "label": "2512.03422",
+          "source_file": "2512.03422.md",
+          "degree": 8
+        },
+        {
+          "id": "paper_2506_18678",
+          "label": "2506.18678",
+          "source_file": "2506.18678.md",
+          "degree": 7
+        },
+        {
+          "id": "paper_2402_08125",
+          "label": "2402.08125",
+          "source_file": "2402.08125.md",
+          "degree": 6
+        },
+        {
+          "id": "paper_2406_16850",
+          "label": "2406.16850",
+          "source_file": "2406.16850.md",
+          "degree": 6
+        },
+        {
+          "id": "paper_2410_12262",
+          "label": "2410.12262",
+          "source_file": "2410.12262.md",
+          "degree": 6
+        },
+        {
+          "id": "paper_2510_23988",
+          "label": "2510.23988",
+          "source_file": "2510.23988.md",
+          "degree": 6
+        },
+        {
+          "id": "paper_2602_04251",
+          "label": "2602.04251",
+          "source_file": "2602.04251.md",
+          "degree": 6
+        },
+        {
+          "id": "paper_2303_00304",
+          "label": "2303.00304",
+          "source_file": "2303.00304.md",
+          "degree": 5
+        },
+        {
+          "id": "paper_2405_01333",
+          "label": "2405.01333",
+          "source_file": "2405.01333.md",
+          "degree": 5
+        },
+        {
+          "id": "paper_2412_02249",
+          "label": "2412.02249",
+          "source_file": "2412.02249.md",
+          "degree": 5
+        },
+        {
+          "id": "paper_2412_09401v3_2",
+          "label": "2412.09401v3 (2)",
+          "source_file": "2412.09401v3 (2).md",
+          "degree": 5
+        },
+        {
+          "id": "paper_2502_05752",
+          "label": "2502.05752",
+          "source_file": "2502.05752.md",
+          "degree": 5
+        },
+        {
+          "id": "paper_2601_05738",
+          "label": "2601.05738",
+          "source_file": "2601.05738.md",
+          "degree": 5
+        }
+      ]
+    },
+    {
+      "category": "SLAM",
+      "document_count": 68,
+      "top_concepts": [
+        {
+          "label": "Pose Graph Optimization",
+          "count": 5
+        }
+      ],
+      "top_datasets": [
+        {
+          "label": "ScanNet",
+          "count": 36
+        },
+        {
+          "label": "TUM-RGBD",
+          "count": 28
+        },
+        {
+          "label": "EuRoC",
+          "count": 7
+        },
+        {
+          "label": "KITTI",
+          "count": 6
+        },
+        {
+          "label": "EuRoC MAV",
+          "count": 4
+        },
+        {
+          "label": "Gibson",
+          "count": 2
+        },
+        {
+          "label": "HM3D",
+          "count": 1
+        },
+        {
+          "label": "Matterport3D",
+          "count": 1
+        }
+      ],
+      "top_metrics": [
+        {
+          "label": "Recall",
+          "count": 10
+        },
+        {
+          "label": "Chamfer",
+          "count": 3
+        }
+      ],
+      "representative_documents": [
+        {
+          "id": "paper_0062_slam_vtgaussian_slam_rgbd_slam_for_large_scale_scenes_with_splatting_view_tied_3d",
+          "label": "VTGaussian-SLAM RGBD SLAM for Large Scale Scenes with Splatting View-Tied 3D",
+          "source_file": "0062_[SLAM]_VTGaussian-SLAM RGBD SLAM for Large Scale Scenes with Splatting View-Tied 3D.md",
+          "degree": 6
+        },
+        {
+          "id": "paper_0018_slam_glc_slam_gaussian_splatting_slam_with_efficient_loop_closure",
+          "label": "GLC-SLAM Gaussian Splatting SLAM with Efficient Loop Closure",
+          "source_file": "0018_[SLAM]_GLC-SLAM Gaussian Splatting SLAM with Efficient Loop Closure.md",
+          "degree": 5
+        },
+        {
+          "id": "paper_0004_slam_gaussian_slam_photo_realistic_dense_slam_with_gaussian_splatting",
+          "label": "Gaussian-SLAM Photo-realistic Dense SLAM with Gaussian Splatting",
+          "source_file": "0004_[SLAM]_Gaussian-SLAM Photo-realistic Dense SLAM with Gaussian Splatting.md",
+          "degree": 5
+        },
+        {
+          "id": "paper_0013_slam_ig_slam_instant_gaussian_slam",
+          "label": "IG-SLAM Instant Gaussian SLAM",
+          "source_file": "0013_[SLAM]_IG-SLAM Instant Gaussian SLAM.md",
+          "degree": 5
+        },
+        {
+          "id": "paper_0014_slam_loopsplat_loop_closure_by_registering_3d_gaussian_splats",
+          "label": "LoopSplat Loop Closure by Registering 3D Gaussian Splats,",
+          "source_file": "0014_[SLAM]_LoopSplat Loop Closure by Registering 3D Gaussian Splats,.md",
+          "degree": 5
+        },
+        {
+          "id": "paper_0026_slam_ag_slam_active_gaussian_splatting_slam",
+          "label": "AG-SLAM Active Gaussian Splatting SLAM",
+          "source_file": "0026_[SLAM]_AG-SLAM Active Gaussian Splatting SLAM.md",
+          "degree": 4
+        },
+        {
+          "id": "paper_0008_slam_cg_slam_efficient_dense_rgb_d_slam_in_a_consistent_uncertainty_aware",
+          "label": "CG-SLAM Efficient Dense RGB-D SLAM in a Consistent Uncertainty-aware",
+          "source_file": "0008_[SLAM]_CG-SLAM Efficient Dense RGB-D SLAM in a Consistent Uncertainty-aware.md",
+          "degree": 4
+        },
+        {
+          "id": "paper_0046_slam_hier_slam_neuro_symbolic_semantic_slam_with_a_hierarchically_categoric",
+          "label": "Hier-SLAM++ Neuro-Symbolic Semantic SLAM with a Hierarchically Categoric",
+          "source_file": "0046_[SLAM]_Hier-SLAM++ Neuro-Symbolic Semantic SLAM with a Hierarchically Categoric.md",
+          "degree": 4
+        },
+        {
+          "id": "paper_0020_slam_mgso_monocular_real_time_photometric_slam_with_efficient_3d_gauss",
+          "label": "MGSO Monocular Real-time Photometric SLAM with Efficient 3D Gauss",
+          "source_file": "0020_[SLAM]_MGSO Monocular Real-time Photometric SLAM with Efficient 3D Gauss.md",
+          "degree": 4
+        },
+        {
+          "id": "paper_0071_slam_sing3r_slam_submap_based_indoor_monocular_gaussian_slam_with_3d_reconstr",
+          "label": "SING3R-SLAM Submap-based Indoor Monocular Gaussian SLAM with 3D Reconstr",
+          "source_file": "0071_[SLAM]_SING3R-SLAM Submap-based Indoor Monocular Gaussian SLAM with 3D Reconstr.md",
+          "degree": 4
+        },
+        {
+          "id": "paper_0010_slam_splat_slam_globally_optimized_rgb_only_slam_with_3d_gaussians",
+          "label": "Splat-SLAM Globally Optimized RGB-only SLAM with 3D Gaussians",
+          "source_file": "0010_[SLAM]_Splat-SLAM Globally Optimized RGB-only SLAM with 3D Gaussians.md",
+          "degree": 4
+        },
+        {
+          "id": "paper_0041_slam_vings_mono_visual_inertial_gaussian_splatting_monocular_slam_in_large_s",
+          "label": "VINGS-Mono Visual-Inertial Gaussian Splatting Monocular SLAM in Large S",
+          "source_file": "0041_[SLAM]_VINGS-Mono Visual-Inertial Gaussian Splatting Monocular SLAM in Large S.md",
+          "degree": 4
+        },
+        {
+          "id": "paper_0032_slam_droid_splat_combining_end_to_end_slam_with_3d_gaussian_splatting",
+          "label": "DROID-Splat Combining end-to-end SLAM with 3D Gaussian Splatting",
+          "source_file": "0032_[SLAM]_DROID-Splat Combining end-to-end SLAM with 3D Gaussian Splatting.md",
+          "degree": 3
+        },
+        {
+          "id": "paper_0069_slam_diskchungs_large_scale_3d_gaussian_slam_through_chunk_based_memory_mana",
+          "label": "DiskChunGS Large-Scale 3D Gaussian SLAM Through Chunk-Based Memory Mana",
+          "source_file": "0069_[SLAM]_DiskChunGS Large-Scale 3D Gaussian SLAM Through Chunk-Based Memory Mana.md",
+          "degree": 3
+        },
+        {
+          "id": "paper_0034_slam_flashslam_accelerated_rgb_d_slam_for_real_time_3d_scene_reconstruction",
+          "label": "FlashSLAM Accelerated RGB-D SLAM for Real-Time 3D Scene Reconstruction",
+          "source_file": "0034_[SLAM]_FlashSLAM Accelerated RGB-D SLAM for Real-Time 3D Scene Reconstruction.md",
+          "degree": 3
+        }
+      ]
+    },
+    {
+      "category": "Robotics",
+      "document_count": 65,
+      "top_concepts": [
+        {
+          "label": "Pose Graph Optimization",
+          "count": 4
+        }
+      ],
+      "top_datasets": [
+        {
+          "label": "Gibson",
+          "count": 9
+        },
+        {
+          "label": "Matterport3D",
+          "count": 8
+        },
+        {
+          "label": "HM3D",
+          "count": 6
+        },
+        {
+          "label": "MP3D",
+          "count": 6
+        },
+        {
+          "label": "7-Scenes",
+          "count": 5
+        },
+        {
+          "label": "ScanNet",
+          "count": 4
+        },
+        {
+          "label": "EuRoC",
+          "count": 3
+        },
+        {
+          "label": "KITTI",
+          "count": 1
+        }
+      ],
+      "top_metrics": [
+        {
+          "label": "Recall",
+          "count": 14
+        },
+        {
+          "label": "Chamfer",
+          "count": 10
+        }
+      ],
+      "representative_documents": [
+        {
+          "id": "paper_0117_robotics_dream_slam_dreaming_the_unseen_for_active_slam_in_dynamic_environments",
+          "label": "Dream-SLAM Dreaming the Unseen for Active SLAM in Dynamic Environments",
+          "source_file": "0117_[Robotics]_Dream-SLAM Dreaming the Unseen for Active SLAM in Dynamic Environments.md",
+          "degree": 5
+        },
+        {
+          "id": "paper_0097_robotics_gaussnav_gaussian_splatting_for_visual_navigation",
+          "label": "GaussNav Gaussian Splatting for Visual Navigation",
+          "source_file": "0097_[Robotics]_GaussNav Gaussian Splatting for Visual Navigation.md",
+          "degree": 5
+        },
+        {
+          "id": "paper_0116_robotics_3dgsnav_enhancing_vision_language_model_reasoning_for_object_navigat",
+          "label": "3DGSNav Enhancing Vision-Language Model Reasoning for Object Navigat",
+          "source_file": "0116_[Robotics]_3DGSNav Enhancing Vision-Language Model Reasoning for Object Navigat.md",
+          "degree": 4
+        },
+        {
+          "id": "paper_0102_robotics_activesplat_high_fidelity_scene_reconstruction_through_active_gaussian_s",
+          "label": "ActiveSplat High-Fidelity Scene Reconstruction through Active Gaussian S",
+          "source_file": "0102_[Robotics]_ActiveSplat High-Fidelity Scene Reconstruction through Active Gaussian S.md",
+          "degree": 4
+        },
+        {
+          "id": "paper_0137_robotics_gsvisloc_generalizable_visual_localization_for_gaussian_splatting_sce",
+          "label": "GSVisLoc Generalizable Visual Localization for Gaussian Splatting Sce",
+          "source_file": "0137_[Robotics]_GSVisLoc Generalizable Visual Localization for Gaussian Splatting Sce.md",
+          "degree": 4
+        },
+        {
+          "id": "paper_0084_robotics_nerf2real_sim2real_transfer_of_vision_guided_bipedal_motion_skills_usi",
+          "label": "NeRF2Real Sim2real Transfer of Vision-guided Bipedal Motion Skills usi",
+          "source_file": "0084_[Robotics]_NeRF2Real Sim2real Transfer of Vision-guided Bipedal Motion Skills usi.md",
+          "degree": 4
+        },
+        {
+          "id": "paper_0101_robotics_rt_guide_real_time_gaussian_splatting_for_information_driven_explorat",
+          "label": "RT-GuIDE Real-Time Gaussian splatting for Information-Driven Explorat",
+          "source_file": "0101_[Robotics]_RT-GuIDE Real-Time Gaussian splatting for Information-Driven Explorat.md",
+          "degree": 4
+        },
+        {
+          "id": "paper_0114_robotics_active3d_active_high_fidelity_3d_reconstruction_via_hierarchical_unce",
+          "label": "Active3D Active High-Fidelity 3D Reconstruction via Hierarchical Unce",
+          "source_file": "0114_[Robotics]_Active3D Active High-Fidelity 3D Reconstruction via Hierarchical Unce.md",
+          "degree": 3
+        },
+        {
+          "id": "paper_0094_robotics_clip_fields_weakly_supervised_semantic_fields_for_robotic_memory",
+          "label": "CLIP-Fields Weakly Supervised Semantic Fields for Robotic Memory",
+          "source_file": "0094_[Robotics]_CLIP-Fields Weakly Supervised Semantic Fields for Robotic Memory.md",
+          "degree": 3
+        },
+        {
+          "id": "paper_0073_robotics_ditto_building_digital_twins_of_articulated_objects_from_interacti",
+          "label": "Ditto Building Digital Twins of Articulated Objects from Interacti",
+          "source_file": "0073_[Robotics]_Ditto Building Digital Twins of Articulated Objects from Interacti.md",
+          "degree": 3
+        },
+        {
+          "id": "paper_0140_robotics_dynamicgsg_dynamic_3d_gaussian_scene_graphs_for_environment_adaptation",
+          "label": "DynamicGSG Dynamic 3D Gaussian Scene Graphs for Environment Adaptation",
+          "source_file": "0140_[Robotics]_DynamicGSG Dynamic 3D Gaussian Scene Graphs for Environment Adaptation.md",
+          "degree": 3
+        },
+        {
+          "id": "paper_0131_robotics_geomgs_lidar_guided_geometry_aware_gaussian_splatting_for_robot_loc",
+          "label": "GeomGS LiDAR-Guided Geometry-Aware Gaussian Splatting for Robot Loc",
+          "source_file": "0131_[Robotics]_GeomGS LiDAR-Guided Geometry-Aware Gaussian Splatting for Robot Loc.md",
+          "degree": 3
+        },
+        {
+          "id": "paper_0100_robotics_hgs_planner_hierarchical_planning_framework_for_active_scene_reconstruct",
+          "label": "HGS-Planner Hierarchical Planning Framework for Active Scene Reconstruct",
+          "source_file": "0100_[Robotics]_HGS-Planner Hierarchical Planning Framework for Active Scene Reconstruct.md",
+          "degree": 3
+        },
+        {
+          "id": "paper_0138_robotics_language_embedded_gaussian_splats_legs_incrementally_building_room_scale_representations_with_a_mob",
+          "label": "Language-Embedded Gaussian Splats (LEGS) Incrementally Building Room-Scale Representations with a Mob",
+          "source_file": "0138_[Robotics]_Language-Embedded Gaussian Splats (LEGS) Incrementally Building Room-Scale Representations with a Mob.md",
+          "degree": 3
+        },
+        {
+          "id": "paper_0129_robotics_logs_visual_localization_via_gaussian_splatting_with_fewer_traini",
+          "label": "LoGS Visual Localization via Gaussian Splatting with Fewer Traini",
+          "source_file": "0129_[Robotics]_LoGS Visual Localization via Gaussian Splatting with Fewer Traini.md",
+          "degree": 3
+        }
+      ]
+    },
+    {
+      "category": "SLAM-Supplement",
+      "document_count": 37,
+      "top_concepts": [
+        {
+          "label": "Pose Graph Optimization",
+          "count": 5
+        }
+      ],
+      "top_datasets": [
+        {
+          "label": "ScanNet",
+          "count": 7
+        },
+        {
+          "label": "KITTI",
+          "count": 4
+        },
+        {
+          "label": "EuRoC",
+          "count": 4
+        },
+        {
+          "label": "TUM-RGBD",
+          "count": 2
+        },
+        {
+          "label": "nuScenes",
+          "count": 2
+        },
+        {
+          "label": "HM3D",
+          "count": 1
+        },
+        {
+          "label": "DTU",
+          "count": 1
+        }
+      ],
+      "top_metrics": [
+        {
+          "label": "Chamfer",
+          "count": 4
+        },
+        {
+          "label": "Recall",
+          "count": 3
+        }
+      ],
+      "representative_documents": [
+        {
+          "id": "paper_0149_slam_supplement_arxiv",
+          "label": "`arXiv`",
+          "source_file": "0149_[SLAM-Supplement]_`arXiv`.md",
+          "degree": 5
+        },
+        {
+          "id": "paper_0143_slam_supplement_arxiv",
+          "label": "`arXiv`",
+          "source_file": "0143_[SLAM-Supplement]_`arXiv`.md",
+          "degree": 4
+        },
+        {
+          "id": "paper_0144_slam_supplement_arxiv",
+          "label": "`arXiv`",
+          "source_file": "0144_[SLAM-Supplement]_`arXiv`.md",
+          "degree": 4
+        },
+        {
+          "id": "paper_0150_slam_supplement_arxiv",
+          "label": "`arXiv`",
+          "source_file": "0150_[SLAM-Supplement]_`arXiv`.md",
+          "degree": 4
+        },
+        {
+          "id": "paper_0154_slam_supplement_arxiv",
+          "label": "`arXiv`",
+          "source_file": "0154_[SLAM-Supplement]_`arXiv`.md",
+          "degree": 4
+        },
+        {
+          "id": "paper_0160_slam_supplement_iros",
+          "label": "`IROS`",
+          "source_file": "0160_[SLAM-Supplement]_`IROS`.md",
+          "degree": 3
+        },
+        {
+          "id": "paper_0158_slam_supplement_arxiv",
+          "label": "`arXiv`",
+          "source_file": "0158_[SLAM-Supplement]_`arXiv`.md",
+          "degree": 3
+        },
+        {
+          "id": "paper_0163_slam_supplement_arxiv",
+          "label": "`arXiv`",
+          "source_file": "0163_[SLAM-Supplement]_`arXiv`.md",
+          "degree": 3
+        },
+        {
+          "id": "paper_0166_slam_supplement_arxiv",
+          "label": "`arXiv`",
+          "source_file": "0166_[SLAM-Supplement]_`arXiv`.md",
+          "degree": 3
+        },
+        {
+          "id": "paper_0167_slam_supplement_eccv",
+          "label": "`ECCV`",
+          "source_file": "0167_[SLAM-Supplement]_`ECCV`.md",
+          "degree": 2
+        },
+        {
+          "id": "paper_0180_slam_supplement_icml",
+          "label": "`ICML`",
+          "source_file": "0180_[SLAM-Supplement]_`ICML`.md",
+          "degree": 2
+        },
+        {
+          "id": "paper_0162_slam_supplement_iros",
+          "label": "`IROS`",
+          "source_file": "0162_[SLAM-Supplement]_`IROS`.md",
+          "degree": 2
+        },
+        {
+          "id": "paper_0157_slam_supplement_nips",
+          "label": "`NIPS`",
+          "source_file": "0157_[SLAM-Supplement]_`NIPS`.md",
+          "degree": 2
+        },
+        {
+          "id": "paper_0161_slam_supplement_ral",
+          "label": "`RAL`",
+          "source_file": "0161_[SLAM-Supplement]_`RAL`.md",
+          "degree": 2
+        },
+        {
+          "id": "paper_0147_slam_supplement_arxiv",
+          "label": "`arXiv`",
+          "source_file": "0147_[SLAM-Supplement]_`arXiv`.md",
+          "degree": 2
+        }
+      ]
+    }
+  ],
+  "hyperedge_count": 9
+}

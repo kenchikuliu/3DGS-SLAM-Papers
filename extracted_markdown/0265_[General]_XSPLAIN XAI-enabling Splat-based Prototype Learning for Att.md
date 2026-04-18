@@ -1,0 +1,1497 @@
+<!-- page 1 -->
+XSPLAIN: XAI-enabling Splat-based Prototype Learning
+for Attribute-aware INterpretability
+Dominik Galus 1 Julia Farganus 1 Tymoteusz Zapala 1 Mikołaj Czachorowski 1 Piotr Borycki 2
+Przemysław Spurek 2 3 Piotr Syga 1
+Abstract
+3D Gaussian Splatting (3DGS) has rapidly be-
+come a standard for high-fidelity 3D reconstruc-
+tion, yet its adoption in multiple critical domains
+is hindered by the lack of interpretability of the
+generation models as well as classification of the
+Splats. While explainability methods exist for
+other 3D representations, like point clouds, they
+typically rely on ambiguous saliency maps that
+fail to capture the volumetric coherence of Gaus-
+sian primitives. We introduce XSPLAIN, the first
+ante-hoc, prototype-based interpretability frame-
+work designed specifically for 3DGS classifica-
+tion. Our approach leverages a voxel-aggregated
+PointNet backbone and a novel, invertible orthog-
+onal transformation that disentangles feature chan-
+nels for interpretability while strictly preserving
+the original decision boundaries. Explanations
+are grounded in representative training examples,
+enabling intuitive “this looks like that” reason-
+ing without any degradation in classification per-
+formance. A rigorous user study (N=51) demon-
+strates a decisive preference for our approach: par-
+ticipants selected XSPLAIN explanations 48.4%
+of the time as the best, significantly outperforming
+baselines (p < 0.001), showing that XSPLAIN
+provides transparency and user trust. 1
+1. Introduction
+Recent years have observed an accretion of deep learning
+methods dedicated to 3D due to growing data acquisition,
+mainly in fields such as robotic applications (Keetha et al.,
+2024), autonomous driving (Zhou et al., 2024), augmented
+reality and medical imaging (Li et al., 2024). Although
+they achieve impressive performance, their decision-making
+1Wrocław University of Science and Technology 2Jagiellonian
+University 3IDEAS Research Institute. Correspondence to: D.
+Galus <279690@student.pwr.edu.pl>.
+Preprint. February 12, 2026.
+1The source code for this work is available at: GitHub.
+processes remain largely unclear or rely on spurious cor-
+relations (Buhrmester et al., 2021). To overcome these
+limitations, a class of solutions has been proposed under the
+umbrella of eXplainable AI (XAI) (Xu et al., 2019) to pro-
+vide transparency and interpretability. Generally, these algo-
+rithms are grouped into two categories: post-hoc approaches
+and ante-hoc approaches, where the model is designed to be
+interpretable by nature. Post-hoc methods serve pre-trained
+models without altering their architecture, such as SHAP
+(Lundberg & Lee, 2017), LIME (Ribeiro et al., 2016), LRP
+(Bach et al., 2015), and Grad-CAM (Selvaraju et al., 2020)
+However, they usually focus on a single instance and pro-
+vide saliency maps that may not provide decisive insights.
+Ante-hoc models incorporate interpretable architectures and
+usually use prototypes (Chen et al., 2019; Nauta et al., 2023;
+Struski et al., 2024), which are beneficial for explaining a
+given phenomenon by relating it to the dataset used to train
+the model. Although significant progress has been made
+in explaining 2D image classifiers, explainability in 3D re-
+mains considerably less explored, despite the increasing
+adoption of 3D representations in real-world systems.
+Recently, 3D Gaussian Splatting (3DGS) (Kerbl et al., 2023)
+has emerged as a powerful representation for modeling com-
+plex geometry, offering an efficient and continuous alterna-
+tive to point clouds and meshes (Bao et al., 2025; Chen &
+Wang, 2025). Although 3DGS has been extensively stud-
+ied in the context of rendering and reconstruction, its use
+for discriminative tasks such as classification (Zhang et al.,
+2025a) and, more importantly, the interpretability of such
+models, has received limited attention. Existing explanation
+methods for 3D data often rely on point-level saliency or
+gradient-based attribution, which can be noisy, difficult to
+interpret, and do not leverage the spatial coherence inherent
+in Gaussian-based representations.
+In this work, we address these limitations by introducing
+XSPLAIN, an ante-hoc, prototype-based explainable frame-
+work for the classification of objects represented by 3D
+Gaussian primitives. Our XSPLAIN can operate as a stan-
+dalone classifier, as the interpretability mechanism is a plug-
+in module that does not influence classification performance.
+Our method produces explanations that are both faithful to
+1
+arXiv:2602.10239v1  [cs.CV]  10 Feb 2026
+
+<!-- page 2 -->
+XSPLAIN: XAI-enabling Splat-based Prototype Learning for Attribute-aware INterpretability
+Figure 1. XSPLAIN provides ante-hoc, prototype-based explanations for 3D Gaussian Splat classification. A PointNet-based classifier
+predicts the object category from Gaussian Splat representations, while identifying the most influential voxel regions that drive the
+decision. Explanations are generated by retrieving representative training examples that activate similar latent responses in the same
+regions, enabling intuitive “looks like that” reasoning grounded in both geometry and semantic attributes.
+the model’s decision process and interpretable to humans
+by establishing the predictions in spatially localized and
+semantically consistent regions of the 3D representation.
+At a high level, XSPLAIN builds on a PointNet-inspired
+(Charles et al., 2017) backbone with a voxel aggregation
+module that preserves spatial structure while remaining
+permutation-invariant. The model is trained in two stages:
+first, the backbone is optimized purely for classification,
+second, the trained backbone is frozen, and a learnable, in-
+vertible transformation is optimized to disentangle feature
+channels for interpretability while strictly preserving the
+original decision boundaries. Building on this disentangled
+representation, XSPLAIN employs a prototype-based inter-
+pretability mechanism. For each feature channel, representa-
+tive training examples are identified and used as prototypes,
+allowing explanations to be formed by direct comparison
+between regions of the test sample and analogous regions
+in the training data. Explanations are thus expressed as
+localized subsets of Gaussian primitives, offering intuitive,
+example-based insights into the model’s predictions.
+We evaluate XSPLAIN on multiple 3D Gaussian Splatting
+classification benchmarks, focusing on subsets of the Shape-
+Splat (Ma et al., 2024) dataset and the MVImageNet-GS
+(Zhang et al., 2025a) benchmark. Our experiments demon-
+strate that XSPLAIN maintains competitive classification
+performance while producing coherent, spatially grounded
+explanations. Qualitative results show that the identified
+regions correspond to meaningful object parts, while quanti-
+tative analyzes validate the disentanglement and stability of
+the learned representations.
+In summary, our contributions are threefold:
+• We introduce the first ante-hoc, prototype-based ex-
+plainability method for classification models operating
+on 3D Gaussian Splatting representations.
+• We propose a PointNet-inspired architecture and a
+stage-wise feature disentanglement strategy guided by
+a purity objective, enabling spatially coherent, seman-
+tically isolated explanations.
+• We conduct a comprehensive evaluation on multiple
+3D Gaussian Splatting datasets, comparing XSPLAIN
+against existing post-hoc explainability methods and
+demonstrating improved interpretability while main-
+taining competitive classification performance.
+2. Related Work
+Prototype-based explainability In safety-critical applica-
+tions, explanations are required to verify that decisions are
+grounded in meaningful characteristics rather than spuri-
+ous cues. While some methods examine models post-hoc
+(Crabbé et al., 2021), intrinsic (ante-hoc) interpretability
+(Koh et al., 2020) aims to build transparent models from
+scratch. Prototype learning for deep neural networks usually
+involves finding structures in latent space representations.
+ProtoPNet (Chen et al., 2019) introduces learnable proto-
+types for each class in the spirit of ’this looks like that’
+reasoning, which agrees with human perception, where the
+final prediction is a weighted sum of prototype scores. As
+prototypes usually exhibit similarity, ProtoPShare (Rymar-
+czyk et al., 2021) introduces a merge-pruning mechanism to
+merge redundant prototypes, improving stability and predic-
+tion accuracy. Other extensions focus on utilizing classifiers
+other than linear ones, like the decision tree in ProtoTree
+(Nauta et al., 2020) or KNN in ProtoKNN (Ukai et al., 2023).
+The applicability of prototypes extends beyond images, cov-
+ering motion analysis (ProtoFormer; Han et al., 2024) or
+tabular data (ProtoGate; Jiang et al., 2024). Deformable
+ProtoPNet (Donnelly et al., 2022) and TesNet (Wang et al.,
+2021) introduce orthogonality constraints to further enhance
+prototypes flexibility and transparency. InfoDisent (Struski
+2
+
+<!-- page 3 -->
+XSPLAIN: XAI-enabling Splat-based Prototype Learning for Attribute-aware INterpretability
+et al., 2024) is a hybrid approach utilizing a trainable orthog-
+onal transformation on pixel space to enable disentangle-
+ment of feature space, thus associating each channel with
+a prototype. EPIC (Borycki et al., 2025) introduces post-
+hoc feature channel disentanglement to find representative
+patches for the most active channels in the sample.
+Point Cloud Interpretability Intrinsic methods introduce
+specific architecture design, like XPCC (Arnold et al., 2023)
+with prototype based classifier that utilizes kernel point
+CNN to extract features and class-weighted similarity to rep-
+resentative prototypes for the final decision, Interpretable3D
+(Feng et al., 2024) that optimizes prototypes based on the
+cosine similarity to the correct predictions or C-PointNet
+(Zhang et al., 2019) which modifies the former architecture
+by replacing the max pooling layer with a class-attentive
+feature module, assigning each point to the class that max-
+imizes the activation value. InfoCons (Li et al., 2025) ap-
+plies information-theoretic approach to extract a group of
+interpretable critical concepts. On the other hand, post-hoc
+methods are usually model-agnostic, like LIME3D (Tan
+& Kotthaus, 2022) that explains a point cloud by fitting a
+surrogate model on a perturbed original sample, Feature
+Based Interpretability introduced in (Levi & Gilboa, 2024)
+that evaluates per-point contribution based on pre-bottleneck
+features’ probing, or BubblEX (Matrone et al., 2022) that
+introduces interpretability module based on GradCAM to
+generate saliency maps conditioned on a class. PointMask
+(Taghanaki et al., 2020) incorporates a differentiable mask-
+ing layer to mask out points with negligible contribution.
+They also show that PointNet architecture is prone to learn
+from bias pattern in training dataset.
+Gaussian Splatting Interpretability 3DisGS (Zhang et al.,
+2025b) proposes a generative framework for single-view
+reconstruction with feature disentanglement at both coarse
+and fine-grained levels, such that each dimension encodes an
+interpretable semantic factor. However, it is an unsupervised
+approach with an image input, without clear relevance to
+the classification on pure 3D objects presented in this work.
+3. XSPLAIN
+Our framework consists of 3 components: (1) a backbone
+network inspired by PointNet (Charles et al., 2017) with a
+voxel aggregation module, (2) a trainable parametrized ma-
+trix for feature disentanglement, and (3) a prototype-based
+interpretability mechanism. Crucially, our approach follows
+a two-stage training procedure: the backbone is trained for
+classification, then frozen, while the parametrized matrix
+is optimized for interpretability. The architecture and the
+explaining procedure are illustrated in Fig. 2.
+Problem Formulation
+Let G = {gi}N
+i=1 denote a 3D
+Gaussian Splatting representation with N Gaussian prim-
+itives. We consider only geometric attributes, excluding
+view-dependent color:
+gi = (xi, si, qi, αi) ∈(R3, R3, R4, R1) ,
+(1)
+where xi denotes the 3D position, si the anisotropic scaling
+factors, qi the orientation quaternion, and αi the opacity.
+This choice is motivated by recent findings (Zhang et al.,
+2025a) showing that geometric attributes alone encode rich
+structural semantics, while excluding color improves robust-
+ness to appearance variations and reduces input dimension-
+ality. This formulation allows our method to generalize to
+scenarios where color information may be unavailable or
+unreliable, e.g., objects reconstructed under varying illumi-
+nation or from depth sensors.
+Backbone architecture
+Our backbone is based on the
+PointNet architecture (Charles et al., 2017). We employ
+two Spatial Transformer Networks for input alignment: one
+operating in 3D coordinate space and another in the 64-
+dimensional feature space-followed by shared 1D convolu-
+tions that produce per-point feature vectors fi ∈RC. The
+key modification we introduce is a voxel aggregation mod-
+ule that replaces the global max-pooling operation, provid-
+ing spatial structure for interpretability while improving
+robustness to outliers.
+Voxel Aggregation Module To establish a spatially struc-
+tured representation suitable for interpretability, we employ
+an intrinsic partitioning strategy. Specifically, we parti-
+tion the normalized input space into a regular grid of G3
+voxels. Crucially, the voxel index v(i) for each Gaussian
+primitive is assigned prior to the Spatial Transformer Net-
+work based on its initial coordinates:
+v(i) = ⌊˜xi · G⌋· G2 + ⌊˜yi · G⌋· G + ⌊˜zi · G⌋,
+(2)
+where coordinates are clipped to [0, G −1]. This design
+choice ensures that explanations are anchored in the object’s
+original coordinate frame rather than a learned canonical
+pose. As a result, the spatial attribution directly reflects
+where the model attends in the input space, providing trans-
+parent insight into positional dependencies of the classifier.
+This index v(i) serves as immutable metadata bound to each
+primitive throughout the network. Point features are subse-
+quently aggregated within each voxel using max-pooling:
+hv = max
+i:v(i)=v fi ∈RC.
+(3)
+Structure Preservation via Decoupling This architectural
+choice decouples local feature aggregation from global se-
+mantic integration. Unlike standard PointNet (Charles et al.,
+2017) which collapses all spatial information via global
+max-pooling, our voxel strategy preserves the association
+between features and their coarse spatial locations.
+3
+
+<!-- page 4 -->
+XSPLAIN: XAI-enabling Splat-based Prototype Learning for Attribute-aware INterpretability
+Figure 2. Overview of the XSPLAIN architecture A) The classification backbone is a modified PointNet architecture extended by
+a voxel aggregation layer, producing structured latent representations at the voxel level from Gaussian Splat inputs. B) An attachable
+disentangling module learns an invertible linear transformation that separates latent channels for interpretability while preserving the
+original global representation and classification output. C) Explanations are generated by identifyingthe most active disentangled channels,
+visualizing the corresponding influential voxels, and retrieving representative training examples that exhibit similar channel activations.
+Global Feature and Classification We obtain the global
+feature vector by applying average pooling across all voxels:
+z = 1
+G3
+G3
+X
+v=1
+hv ∈RC.
+(4)
+The final classification is performed by a linear layer:
+ˆy = arg max
+k
+(Wclsz)k ,
+(5)
+where Wcls ∈RK×C are the classifier weights.
+Two-Stage Training Procedure
+Although the architec-
+ture is intrinsically interpretable (ante-hoc), training is per-
+formed in two stages to decouple classification from inter-
+pretability. Joint optimization of accuracy and prototype
+purity can reduce discriminative power. Our decoupled
+strategy preserves backbone feature learning and predic-
+tive accuracy while ensuring output-level faithfulness in the
+second stage.
+Stage 1: Backbone Training The entire backbone network
+is trained fθ (including both STNs, convolutional layers,
+voxel aggregation, and the classification head) end-to-end
+using a combination of classification loss and a density-
+aware regularization term.
+Classification Loss The primary objective is the standard
+cross-entropy loss:
+Lcls = −1
+|D|
+X
+(G,y)∈D
+log
+exp((Wclsz)y)
+PK
+k=1 exp((Wclsz)k)
+,
+(6)
+where D denotes the training dataset.
+Density-Aware Regularization The limitation of PointNet-
+style architectures with max-pooling aggregation is their ten-
+dency to focus on isolated outlier points rather than dense,
+geometrically meaningful regions. In our voxel-based set-
+ting, this manifests as high activations in sparsely populated
+voxels containing only a few Gaussian primitives, which
+often correspond to reconstruction artifacts or noise rather
+than salient object parts.
+To address this, we introduce a regularization term based
+on the Kullback-Leibler divergence that encourages the net-
+work to align its attention with the spatial density of the
+input. Let a ∈RG3 denote the voxel activation magnitudes
+computed as av = ∥hv∥2, and let n ∈RG3 denote the point
+counts per voxel, where nv = |{i : v(i) = v}|.
+We define two probability distributions over voxels. The
+activation distribution is obtained by applying a temperature-
+scaled softmax:
+pv =
+exp(ReLU(av)/τ)
+PG3
+u=1 exp(ReLU(au)/τ)
+,
+(7)
+where τ > 0 is a temperature hyperparameter controlling the
+sharpness of the distribution. The target density distribution
+is derived from the point counts:
+qv =
+nβ
+v + ϵ
+PG3
+u=1(nβ
+u + ϵ)
+,
+(8)
+where ϵ = 1 · e−6 ensures numerical stability and β > 0
+controls sensitivity to density differences
+The density-aware regularization is defined as the KL diver-
+4
+
+<!-- page 5 -->
+XSPLAIN: XAI-enabling Splat-based Prototype Learning for Attribute-aware INterpretability
+gence between the target and activation distributions:
+Ldensity = DKL(p∥q) =
+G3
+X
+v=1
+pv log pv
+qv
+.
+(9)
+Minimizing this term encourages the model to assign higher
+activations to voxels with more Gaussian primitives. Intu-
+itively, densely populated voxels are more likely to represent
+coherent geometric structures (e.g., object surfaces, distinc-
+tive parts) rather than isolated outliers or reconstruction
+noise. This regularization guides the network toward learn-
+ing features grounded in the actual geometry of the object.
+Total Training Objective The complete training objective
+for Stage 1 combines both terms:
+LStage 1 = Lcls + λLdensity ,
+(10)
+where λ ≥0 is a hyperparameter balancing classification
+accuracy and density alignment. This formulation ensures
+that the learned voxel representations are both discriminative
+for classification and focused on geometrically meaningful
+regions, which subsequently benefits the interpretability of
+the prototype-based explanations in Stage 2.
+Stage 2: Parametrized Matrix Training In the second stage,
+the backbone parameters are frozen and fixed to the solution
+obtained in the first stage:
+θ∗= arg min
+θ
+Lcls(θ) ,
+(11)
+and no updates of θ are performed during training.
+We then introduce a trainable parametrized matrix U ∈
+RC×C inserted between the voxel aggregation module and
+the global pooling operation. Only the parameters of this
+matrix are optimized during the second stage on a dynami-
+cally updated set of prototype examples (detailed in 3). In
+this phase, the backbone remains fixed. This design choice
+ensures that: (1) the classification performance established
+in Stage 1 is preserved, and (2) the interpretability module
+does not interfere with learned feature representations.
+Parametrized Feature Disentanglement
+We introduce a
+transformation matrix U ∈RC×C that maps voxel features
+into a disentangled representation where channels capture
+semantically distinct information:
+˜H = UHflat ,
+(12)
+where Hflat ∈RC×G3 is the flattened voxel tensor.
+To ensure that the transformation preserves the classifier out-
+puts by construction, we restrict it to an orthogonal mapping
+in the feature space, which preserves inner products and
+Euclidean distances prior to the fixed classification layer.
+Let P ∈RC×C be a learnable, unconstrained weight matrix.
+We derive a skew-symmetric matrix A and the disentangle-
+ment matrix U as:
+A = P −PT .
+(13)
+U = exp(A).
+(14)
+Since A is skew-symmetric (AT = −A), the resulting ma-
+trix U is guaranteed to be orthogonal (UT U = I). More-
+over, det(U) = 1, ensuring the transformation is volume-
+preserving and strictly invertible. Initializing P = 0, yields
+U = I, ensuring the second training stage begins with the
+exact feature space learned by the backbone.
+Classifier Compensation After optimizing P for inter-
+pretability, we compensate the classification head to strictly
+preserve the original model predictions. Since U is orthog-
+onal, its inverse is simply its transpose (U−1 = UT ). We
+compute the adjusted weights as:
+W′
+cls = WclsUT .
+(15)
+This formulation allows us to rotate the internal feature
+representation for human interpretation without altering the
+decision boundary (see Appendix C for proof).
+Prototype-Based Interpretability
+Our interpretability
+mechanism identifies prototype examples that maximally
+activate each feature channel.
+Prototype Discovery For each channel c ∈{1, . . . , C}, we
+identify the top-k training samples with the highest activa-
+tion. For a sample with transformed voxel features ˜H, we
+compute:
+ac = max
+v:nv>0
+˜hc,v,
+(16)
+where ˜hc,v is the activation of the c -th channel in voxel v,
+and nv is the count of points. We maintain prototype indices
+Pc = {j1, . . . , jk} for the samples with highest ac.
+Purity Metric To train U toward disentangled representa-
+tions, we introduce a purity metric measuring how well each
+channel is isolated in its maximally activated voxel. For a
+sample associated with channel c:
+v∗= arg max
+v:nv>0
+˜hc,v,
+purityc =
+˜hc,v∗
+∥˜hv∗∥2 + ϵ
+.
+(17)
+A purity close to 1 indicates that the channel c dominates
+the representation in its most activated voxel. The training
+objective maximizes average purity:
+Lpurity = −1
+|B|
+X
+(i,c)∈B
+purity(i)
+c ,
+(18)
+where B is a batch of prototype-channel pairs.
+5
+
+<!-- page 6 -->
+XSPLAIN: XAI-enabling Splat-based Prototype Learning for Attribute-aware INterpretability
+Dynamic Prototype Updates We periodically recompute
+prototypes during training, using a curriculum that reduces
+the number per channel:
+kt =
+
+kinit −t
+T (kinit −kfinal)
+
+,
+(19)
+for epoch t, allowing the matrix to first capture broad pat-
+terns before focusing on representative examples.
+Explanation Generation
+Given a test sample G∗, we iden-
+tify the influential channels for the predicted class.
+Channel Importance The importance of channel c for the
+predicted class ˆy is:
+importancec = w′
+ˆy,c · ReLU(˜z∗
+c),
+(20)
+where w′
+ˆy,c is the compensated classifier weight. We select
+the top-m channels.
+Spatial Localization For each important channel c, we lo-
+calize the explanation by finding the maximally activated
+voxel index:
+v∗
+c = arg max
+v
+˜h∗
+c,v.
+(21)
+A key advantage of our intrinsic partitioning strategy is the
+direct reversibility of the spatial attribution. Since the voxel
+assignment v(i) for each primitive is determined at the input
+stage and remains invariant to the STN’s alignment trans-
+formations, we do not require inverse geometric projections
+to locate the relevant features. The explanatory subset of
+primitives Ec is obtained via a direct lookup:
+Ec = {gi ∈G∗| v(i) = v∗
+c}.
+(22)
+We visualize the explanation by rendering only the subset
+Ec, allowing for an exact and artifact-free presentation of
+the regions driving the model’s decision.
+4. Experiments
+In this section, we validate the effectiveness of XSPLAIN
+through a comprehensive evaluation involving both quali-
+tative visualizations, quantitative fidelity checks and user
+study. We utilize a diverse set of data, including a cus-
+tom version of the synthetic Toys4K dataset (Stojanov et al.,
+2021), which we converted to 3DGS using TRELLIS (Xiang
+et al., 2024) (referred to as “Toys”), a subset of ShapeSplat,
+and the 3D Real Car Toolkit (Du et al., 2024), to assess the
+method’s ability to capture semantic attributes and distin-
+guish between fine-grained geometric features. In Table 1,
+we report baseline results for several supervised point cloud
+architectures, namely PointNet (Charles et al., 2017), Point-
+Net++ (Qi et al., 2017), PointNeXt (Qian et al., 2022) and
+PointMLP (Ma et al., 2022) after incorporating Gaussian
+coefficients on these datasets.
+Dataset
+Model
+Accuracy
+Toys
+PointNet
+0.865
+Toys
+PointNet++
+0.934
+Toys
+PointNeXt
+0.898
+Toys
+PointMLP
+0.870
+Toys
+PointNet + Vox Agg
+0.899
+MACGS
+PointNet
+0.873
+MACGS
+PointNet++
+0.871
+MACGS
+PointNeXt
+0.805
+MACGS
+PointMLP
+0.898
+MACGS
+PointNet + Vox Agg
+0.818
+Shapesplat
+PointNet
+0.869
+Shapesplat
+PointNet++
+0.875
+Shapesplat
+PointNeXt
+0.875
+Shapesplat
+PointMLP
+0.803
+Shapesplat
+PointNet + Vox Agg
+0.880
+Table 1. Baseline results using supervised point cloud models with
+additional GS inputs
+Figure 3. Left: Selected prototypes for the most active channels
+with the disentangling module applied. Right: Selected prototypes
+for the same object without applying the disentangling module.
+Prototype Visualization and Interpretability
+Figure 3
+visualizes the behavior of our method on an object from
+the ShapeSplat dataset, comparing prototype selection with
+and without the use of the disentangling matrix. For a given
+target object and a specific feature channel, we identify and
+highlight the 3DGS voxel with the highest activation for
+that channel. Each row shows the target object alongside
+the corresponding fragments from prototype objects that are
+maximally activated for the same channel. The left panel
+presents results obtained using the proposed disentangling
+matrix, whereas the right panel shows the same procedure
+without applying this matrix. As observed, incorporating the
+disentangling matrix leads to a markedly stronger semantic
+and geometric correspondence between the target fragments
+and the selected prototypes, indicating that the proposed
+6
+
+<!-- page 7 -->
+XSPLAIN: XAI-enabling Splat-based Prototype Learning for Attribute-aware INterpretability
+Figure 4. Comparison between PointSHAP, LIME and XSPLAIN
+explanations
+Figure 5. XSPLAIN results on samples from the 3D car dataset.
+method more effectively aligns channel-specific geometric
+attributes across different object instances.
+Comparison with Post-Hoc methods We compare XS-
+PLAIN against established post-hoc explanation meth-
+ods adapted for point-based representations, specifically
+PointSHAP and LIME. As shown in Figure 4, baseline
+methods often produce scattered or noisy attributions that
+fail to respect the underlying object structure. In contrast,
+XSPLAIN leverages the voxel aggregation mechanism to
+produce coherent, localized explanations that align better
+with human intuition regarding object parts. Additional
+qualitative examples across different object categories and
+datasets are provided in the appendix E.
+Semantic Discrimination We further evaluate the model’s
+capability to discern subtle geometric differences using
+real-world datasets.To test the method’s sensitivity to fine-
+grained features within a superclass, we performed experi-
+Figure 6. Generalization to ShapeNet Core. The model identifies
+distinct semantic regions in the point cloud, clearly distinguishing
+the headband (Row 1) and the ear cups (Row 2).
+ments on the 3D Real Car Toolkit (Du et al., 2024). Specifi-
+cally, we analyzed the model’s ability to distinguish between
+different vehicle types, such as SUVs and Sedans. Our visu-
+alizations in Figure 5 show that the learned features focus
+on type-specific geometry (e.g., the roofline height or trunk
+shape), demonstrating that XSPLAIN effectively disentan-
+gles intra-class variations crucial for precise classification.
+Decoupled vs. Joint Training To validate our 2-stage de-
+sign choice, we compared XSPLAIN against an end-to-end
+(one-stage) training strategy. In the 1-stage baseline, the
+purity loss is minimized concurrently with the classification
+loss using a mixed-batch approach, where part of each batch
+consists of prototype candidates. Our experiments reveal
+that the 1-stage approach leads to a lower classification accu-
+racy than to our decoupled method and prototype selection
+as shown in Table 2. By freezing the backbone, we ensure
+that the decision boundaries remain optimal, while the or-
+thogonal transformation U effectively aligns the latent space
+for interpretability without sacrificing model performance.
+Direct Comparison with Point Clouds A key advantage of
+XSPLAIN is its versatility. Our method is not limited to 3D
+Gaussian Splatting but generalizes effectively to standard
+point cloud data. To validate this, we evaluated our method
+on the ShapeNet Core dataset (Chang et al., 2015) using
+only geometric features (XY Z coordinates and normals).
+As shown in Figure 6, the model successfully captures se-
+mantic structures (e.g., distinguishing the headband and the
+ear cups) purely from geometry.
+Poll results analysis The poll was performed on N = 51
+respondents with various background and experience in Ma-
+chine Learning and XAI domains. LIME (Ribeiro et al.,
+2016) and SHAP (Lundberg & Lee, 2017) were chosen as
+competitive methods for two reasons: (i) they provide visual
+heatmaps that underline regions important for the predic-
+tion, in a similar way that XSPLAIN selects most active
+regions, and (ii) their prevalence in different domains make
+them a suitable first-choice for any explainability task. The
+7
+
+<!-- page 8 -->
+XSPLAIN: XAI-enabling Splat-based Prototype Learning for Attribute-aware INterpretability
+Method
+Hyperparameters
+Acc.
+Pool (ρ)
+λpurity
+Baseline⋆
+-
+-
+0.880
+XSPLAIN∗
+-
+-
+0.880
+Joint Opt.
+30%
+0.5
+0.660
+Joint Opt.
+30%
+1.0
+0.726
+Joint Opt.
+50%
+0.5
+0.625
+Joint Opt.
+50%
+1.0
+0.690
+Table 2. Impact of training strategy on model performance.
+The two-stage approach preserves classification accuracy while im-
+proving interpretability, whereas joint optimization (1-stage) fails
+to balance these objectives. Note: λpurity weights the interpretabil-
+ity loss, and Pool(ρ) denotes the fraction of training samples used
+as candidate prototypes. Baseline⋆represents Raw Backbone and
+XSPLAIN∗Decoupled training.
+questions varied between two types: (a) the perceived con-
+fidence regarding model’s prediction for each method and
+(b) single-choice preference from proposed explanations.
+Fig. 7 shows the overall qualitative results with share in
+each question for categories in (a) and preference for (b).
+The results showed a significant preference for XSPLAIN
+with more than 49% of the responses selecting it. More
+detailed statistical analysis can be found in Appendix B.
+Faithfulness and Ablation Study To objectively quantify
+the faithfulness of our explanations, we performed deletion
+tests (detailed in Appendix F). By masking the most active
+voxels associated with the predicted class, we observed a
+measurable drop in accuracy across all datasets, notably
+a 6.82% degradation on Toys (Stojanov et al., 2021) and
+6.13% on MACGS (Zhang et al., 2025a) when removing
+top-5 voxels. This confirms that the regions identified by XS-
+PLAIN are indeed critical for the model’s decision making.
+Finally, our ablation study (Appendix G) highlighted the
+critical role of density-aware regularization (λden), which
+significantly boosts prototype purity by shifting focus from
+sparse outliers to coherent structures. We further identified a
+voxel grid resolution of G = 7 as the effective balance point
+between spatial specificity and robustness to sparsity. For
+the feature dimension, while lower dimensions performed
+well, we selected C = 256 to ensure sufficient latent capac-
+ity for disentangling complex semantic attributes.
+5. Conclusion
+We presented XSPLAIN, an ante-hoc prototype based ex-
+plainability framework tailored to 3D Gaussian Splat classi-
+fication that provides spatially grounded and example based
+rationales without changing the underlying classifier deci-
+sions, hence keeping its efficacy. The method combines
+a voxel aggregated PointNet-style backbone with a train-
+able orthogonal feature rotation and an exact classifier com-
+pensation, which together preserve decision boundaries by
+Figure 7. Results of the user study. Question (a) shows the share of
+each method within specific confidence ratings, highlighting that
+XSPLAIN dominates the highest confidence category. Question
+(b) shows the direct user preference share, with XSPLAIN selected
+half the time.
+construction, while reshaping the latent space toward chan-
+nel wise purity and prototype retrieval. Across evaluated
+datasets, XSPLAIN maintained the same classification accu-
+racy as the frozen backbone, including 0.880 on ShapeSplat,
+while improving interpretability as evidenced by large gains
+in prototype purity and coherent part level localization. In
+a user study with N = 51, users selected XSPLAIN ex-
+planations as the best across 3 methods in 48.4% of cases
+with a statistically significant preference over adapted post-
+hoc baselines with p < 0.0001, indicating higher perceived
+transparency under realistic inspection conditions. Faithful-
+ness was further supported by deletion tests where removing
+the top activated voxels reduced accuracy by up to 6.82%
+on Toys data (a custom 3DGS conversion of Toys4K (Sto-
+janov et al., 2021)), and by 2.36% after removing only
+the single most influential voxel on MACGS (Zhang et al.,
+2025a), showing that the highlighted regions carry measur-
+able predictive signal. These results position XSPLAIN
+as a practical path to interpretable 3DGS recognition that
+aligns human understandable evidence with model internal
+mechanisms while avoiding the instability and visual noise
+typical of saliency-based XAI. Future work may extend the
+framework to richer and more diverse 3DGS corpora, in-
+corporate appearance and view-dependent attributes when
+available, and developing stronger quantitative faithfulness
+and robustness protocols that evaluate explanation stability
+under controlled perturbations of primitives and under distri-
+bution shift. Moreover, a counterfactual (Verma et al., 2024)
+interpretability investigation would strengthen the claims.
+Limitation
+Note that existing datasets for Gaussian Splat-
+ting classification are limited to simple objects (Zhang et al.,
+2025a), but the fast development of GS-based models in-
+creases their importance in a high pace, allowing the method
+to be tested on a more varied datasets in the future.
+8
+
+<!-- page 9 -->
+XSPLAIN: XAI-enabling Splat-based Prototype Learning for Attribute-aware INterpretability
+6. Acknowledgements
+P. Spurek was supported by the project Effective Render-
+ing of 3D Objects Using Gaussian Splatting in an Aug-
+mented Reality Environment (FENG.02.02-IP.05-0114/23),
+carried out under the First Team programme of the Foun-
+dation for Polish Science and co-financed by the European
+Union through the European Funds for Smart Economy
+2021–2027 (FENG). The work of P. Borycki was sup-
+ported by the National Centre of Science (Poland) Grant No.
+2025/57/N/ST6/04389. This work has been partially funded
+by Department of Artificial Intelligence, Wrocław Univer-
+sity of Science and Technology. We gratefully acknowledge
+Poland’s high-performance Infrastructure PLGrid WCSS
+for providing computer facilities and support within compu-
+tational grant no. PLG/2025/018654.
+References
+Arnold, N. I., Angelov, P., and Atkinson, P. M. An improved
+explainable point cloud classifier (xpcc). IEEE Transac-
+tions on Artificial Intelligence, 4(1):71–80, 2023. doi:
+10.1109/TAI.2022.3150647.
+Bach, S., Binder, A., Montavon, G., Klauschen, F., Müller,
+K.-R., and Samek, W. On pixel-wise explanations for
+non-linear classifier decisions by layer-wise relevance
+propagation. PLoS One, 10(7):e0130140, 2015.
+Bao, Y., Ding, T., Huo, J., Liu, Y., Li, Y., Li, W., Gao, Y.,
+and Luo, J. 3d gaussian splatting: Survey, technologies,
+challenges, and opportunities. IEEE Transactions on
+Circuits and Systems for Video Technology, 35(7):6832–
+6852, 2025. doi: 10.1109/TCSVT.2025.3538684.
+Borycki, P., Tr˛edowicz, M., Janusz, S., Tabor, J., Spurek,
+P., Lewicki, A., and Łukasz Struski.
+Epic: Expla-
+nation of pretrained image classification networks via
+prototype, 2025. URL https://arxiv.org/abs/
+2505.12897.
+Buhrmester, V., Münch, D., and Arens, M. Analysis of ex-
+plainers of black box deep neural networks for computer
+vision: A survey. Machine Learning and Knowledge
+Extraction, 3(4):966–989, 2021. ISSN 2504-4990. doi:
+10.3390/make3040048. URL https://www.mdpi.
+com/2504-4990/3/4/48.
+Chang, A. X., Funkhouser, T., Guibas, L., Hanrahan, P.,
+Huang, Q., Li, Z., Savarese, S., Savva, M., Song, S.,
+Su, H., Xiao, J., Yi, L., and Yu, F.
+ShapeNet: An
+Information-Rich 3D Model Repository. Technical Re-
+port arXiv:1512.03012 [cs.GR], Stanford University —
+Princeton University — Toyota Technological Institute at
+Chicago, 2015.
+Charles, R. Q., Su, H., Kaichun, M., and Guibas, L. J. Point-
+net: Deep learning on point sets for 3d classification and
+segmentation. In 2017 IEEE Conference on Computer
+Vision and Pattern Recognition (CVPR), pp. 77–85, 2017.
+doi: 10.1109/CVPR.2017.16.
+Chen, C., Li, O., Tao, D., Barnett, A., Rudin, C., and Su, J. K.
+This looks like that: Deep learning for interpretable image
+recognition. Advances in Neural Information Processing
+Systems, 32, 2019.
+Chen, G. and Wang, W. A survey on 3d gaussian splat-
+ting, 2025. URL https://arxiv.org/abs/2401.
+03890.
+Crabbé, J., Qian, Z., Imrie, F., and van der Schaar, M. Ex-
+plaining latent representations with a corpus of examples.
+Advances in Neural Information Processing Systems, 34:
+12154–12166, 2021.
+Donnelly, J., Barnett, A. J., and Chen, C.
+Deformable
+ProtoPNet: An Interpretable Image Classifier Using De-
+formable Prototypes. In Proceedings of the IEEE/CVF
+Conference on Computer Vision and Pattern Recognition
+(CVPR), pp. 10265–10275, 2022.
+Du, X., Sun, H., Wang, S., Wu, Z., Sheng, H., Ying, J.,
+Lu, M., Zhu, T., Zhan, K., and Yu, X. 3drealcar: An in-
+the-wild rgb-d car dataset with 360-degree views. arXiv
+preprint arXiv:2406.04875, 2024.
+Feng, T., Quan, R., Wang, X., Wang, W., and Yang, Y. Inter-
+pretable3d: An ad-hoc interpretable classifier for 3d point
+clouds. Proceedings of the AAAI Conference on Artificial
+Intelligence, 38(2):1761–1769, Mar. 2024. doi: 10.1609/
+aaai.v38i2.27944. URL https://ojs.aaai.org/
+index.php/AAAI/article/view/27944.
+Han, C., Lu, Y., Sun, G., Liang, J. C., Cao, Z., Wang, Q.,
+Guan, Q., Dianat, S., Rao, R., Geng, T., Tao, Z., and
+Liu, D. Prototypical transformer as unified motion learn-
+ers. In Salakhutdinov, R., Kolter, Z., Heller, K., Weller,
+A., Oliver, N., Scarlett, J., and Berkenkamp, F. (eds.),
+Proceedings of the 41st International Conference on Ma-
+chine Learning, volume 235 of Proceedings of Machine
+Learning Research, pp. 17416–17436. PMLR, 21–27 Jul
+2024. URL https://proceedings.mlr.press/
+v235/han24d.html.
+Jiang, X., Margeloiu, A., Simidjievski, N., and Jamnik,
+M. Protogate: prototype-based neural networks with
+global-to-local feature selection for tabular biomedical
+data. In Proceedings of the 41st International Conference
+on Machine Learning, ICML’24. JMLR.org, 2024.
+Keetha, N., Karhade, J., Jatavallabhula, K. M., Yang, G.,
+Scherer, S., Ramanan, D., and Luiten, J. Splatam: Splat,
+9
+
+<!-- page 10 -->
+XSPLAIN: XAI-enabling Splat-based Prototype Learning for Attribute-aware INterpretability
+track & map 3d gaussians for dense rgb-d slam. In Pro-
+ceedings of the IEEE/CVF Conference on Computer Vi-
+sion and Pattern Recognition, pp. 21357–21366, 2024.
+Kerbl, B., Kopanas, G., Leimkuehler, T., and Drettakis,
+G. 3d gaussian splatting for real-time radiance field ren-
+dering. ACM Trans. Graph., 42(4), July 2023. ISSN
+0730-0301.
+doi: 10.1145/3592433.
+URL https:
+//doi.org/10.1145/3592433.
+Koh, P. W., Nguyen, T., Tang, Y. S., Mussmann, S., Pierson,
+E., Kim, B., and Liang, P. Concept bottleneck models. In
+International conference on machine learning, pp. 5338–
+5348. PMLR, 2020.
+Levi, M. Y. and Gilboa, G. Fast and simple explainability for
+point cloud networks, 2024. URL https://arxiv.
+org/abs/2403.07706.
+Li, F., Zhang, M., Wang, Z., and Yang, M. Infocons: Iden-
+tifying interpretable critical concepts in point clouds via
+information theory. arXiv preprint arXiv:2505.19820,
+2025.
+Li, H., Chen, P., et al. Endo-4dgs: Endoscopic gaussian
+splatting with deformable reconstruction. In International
+Conference on Medical Image Computing and Computer-
+Assisted Intervention, 2024.
+Lundberg, S. M. and Lee, S.-I. A unified approach to inter-
+preting model predictions. Advances in Neural Informa-
+tion Processing Systems, 30, 2017.
+Ma, Q., Li, Y., Ren, B., Sebe, N., Konukoglu, E., Gevers,
+T., Van Gool, L., and Paudel, D. P. Shapesplat: A large-
+scale dataset of gaussian splats and their self-supervised
+pretraining. arXiv preprint arXiv:2408.10906, 2024.
+Ma, X., Qin, C., You, H., Ran, H., and Fu, Y.
+Re-
+thinking network design and local geometry in point
+cloud: A simple residual mlp framework. arXiv preprint
+arXiv:2202.07123, 2022.
+Matrone, F., Paolanti, M., Felicetti, A., Martini, M., and
+Pierdicca, R. Bubblex: An explainable deep learning
+framework for point-cloud classification. IEEE Journal
+of Selected Topics in Applied Earth Observations and
+Remote Sensing, 15:6571–6587, 2022. doi: 10.1109/
+JSTARS.2022.3195200.
+Nauta, L., Sieb, M. H., and van Gemert, J. C.
+Pipnet:
+Prototypical part network for interpretable fine-grained
+recognition. IEEE Transactions on Pattern Analysis and
+Machine Intelligence, 2023.
+Nauta, M., van Bree, R., and Seifert, C. Neural proto-
+type trees for interpretable fine-grained image recog-
+nition. 2021 IEEE/CVF Conference on Computer Vi-
+sion and Pattern Recognition (CVPR), pp. 14928–14938,
+2020.
+URL https://api.semanticscholar.
+org/CorpusID:227254464.
+Qi, C. R., Yi, L., Su, H., and Guibas, L. J. Pointnet++:
+Deep hierarchical feature learning on point sets in a met-
+ric space. Advances in neural information processing
+systems, 30, 2017.
+Qian, G., Li, Y., Peng, H., Mai, J., Hammoud, H., El-
+hoseiny, M., and Ghanem, B.
+Pointnext: Revisiting
+pointnet++ with improved training and scaling strategies.
+Advances in neural information processing systems, 35:
+23192–23204, 2022.
+Ribeiro, M. T., Singh, S., and Guestrin, C. "why should
+i trust you?" explaining the predictions of any classifier.
+In Proceedings of the 22nd ACM SIGKDD International
+Conference on Knowledge Discovery and Data Mining,
+pp. 1135–1144, 2016.
+Rymarczyk, D., Struski, L., Tabor, J., and Zieli´nski, B.
+Protopshare: Prototypical parts sharing for similarity
+discovery in interpretable image classification. In Pro-
+ceedings of the 27th ACM SIGKDD Conference on
+Knowledge Discovery & Data Mining, KDD ’21, pp.
+1420–1430, New York, NY, USA, 2021. Association for
+Computing Machinery. ISBN 9781450383325. doi: 10.
+1145/3447548.3467245. URL https://doi.org/
+10.1145/3447548.3467245.
+Selvaraju, R. R., Cogswell, M., Das, A., Vedantam, R.,
+Parikh, D., and Batra, D. Grad-cam: Visual explanations
+from deep networks via gradient-based localization. In-
+ternational Journal of Computer Vision, 128:336–359,
+2020.
+Stojanov, S., Thai, A., and Rehg, J. M. Using shape to
+categorize: Low-shot learning with an explicit shape
+bias.
+2021 IEEE/CVF Conference on Computer Vi-
+sion and Pattern Recognition (CVPR), pp. 1798–1808,
+2021.
+URL https://api.semanticscholar.
+org/CorpusID:231639354.
+Struski, Ł., Rymarczyk, D., and Tabor, J. Infodisent: Ex-
+plainability of image classification models by information
+disentanglement. arXiv preprint arXiv:2409.10329, 2024.
+Taghanaki, S. A., Hassani, K., Jayaraman, P. K., Ahmadi,
+A. H. K., and Custis, T.
+Pointmask: Towards inter-
+pretable and bias-resilient point cloud processing. CoRR,
+abs/2007.04525, 2020. URL https://arxiv.org/
+abs/2007.04525.
+Tan, H. and Kotthaus, H.
+Surrogate model-based ex-
+plainability methods for point cloud nns.
+In 2022
+IEEE/CVF Winter Conference on Applications of Com-
+puter Vision (WACV), pp. 2927–2936, 2022. doi: 10.
+1109/WACV51458.2022.00298.
+10
+
+<!-- page 11 -->
+XSPLAIN: XAI-enabling Splat-based Prototype Learning for Attribute-aware INterpretability
+Ukai, Y., Hirakawa, T., Yamashita, T., and Fujiyoshi,
+H.
+This looks like it rather than that:
+ProtoKNN
+for similarity-based classifiers.
+In The Eleventh In-
+ternational Conference on Learning Representations,
+2023. URL https://openreview.net/forum?
+id=lh-HRYxuoRr.
+Verma, S., Boonsanong, V., Hoang, M., Hines, K., Dick-
+erson, J., and Shah, C.
+Counterfactual explanations
+and algorithmic recourses for machine learning: A re-
+view. ACM Comput. Surv., 56(12), October 2024. ISSN
+0360-0300.
+doi: 10.1145/3677119.
+URL https:
+//doi.org/10.1145/3677119.
+Wang, J., Liu, H., Wang, X., and Jing, L. Interpretable
+image recognition by constructing transparent embedding
+space. In 2021 IEEE/CVF International Conference on
+Computer Vision (ICCV), pp. 875–884, 2021. doi: 10.
+1109/ICCV48922.2021.00093.
+Xiang, J., Lv, Z., Xu, S., Deng, Y., Wang, R., Zhang, B.,
+Chen, D., Tong, X., and Yang, J. Structured 3d latents
+for scalable and versatile 3d generation. arXiv preprint
+arXiv:2412.01506, 2024.
+Xu, F., Uszkoreit, H., Du, Y., Fan, W., Zhao, D., and Zhu, J.
+Explainable ai: A brief survey on history, research areas,
+approaches and challenges. In Natural Language Pro-
+cessing and Chinese Computing, pp. 563–574. Springer,
+2019.
+Zhang, B., Huang, S., Shen, W., and Wei, Z. Explaining the
+pointnet: What has been learned inside the pointnet? In
+Proceedings of the IEEE/CVF Conference on Computer
+Vision and Pattern Recognition (CVPR) Workshops, June
+2019.
+Zhang, R., Zhu, H., Zhao, J., Zhang, Q., Cao, X., and
+Ma, Z. Mitigating ambiguities in 3d classification with
+gaussian splatting. In Proceedings of the Computer Vision
+and Pattern Recognition Conference, pp. 27275–27284,
+2025a.
+Zhang, Y., Xie, B., Zhu, H., Wang, Q., Guo, H., Jin, X., and
+Zeng, W. Interpretable single-view 3d gaussian splatting
+using unsupervised hierarchical disentangled representa-
+tion learning. arXiv preprint arXiv:2504.04190, 2025b.
+Zhou, X., Lin, Z., Shan, X., Wang, Y., Sun, D., and Yang,
+M.-H. Drivinggaussian: Composite gaussian splatting for
+surround-view autonomous driving scenes. In Proceed-
+ings of the IEEE/CVF Conference on Computer Vision
+and Pattern Recognition, pp. 21634–21643, 2024.
+11
+
+<!-- page 12 -->
+XSPLAIN: XAI-enabling Splat-based Prototype Learning for Attribute-aware INterpretability
+A. Structure of the Poll
+The user study was conducted using a Google Form interface to ensure accessibility and standardization. Participants were
+presented with a series of questions, each featuring two distinct types of visual stimuli displayed as animated GIFs. For
+every query, the interface displayed three anonymized methods: Method A, Method B, and Method C.
+Unbeknownst to the participants, the labels were fixed: Method C always represented our proposed XSPLAIN framework
+(incorporating the original query and prototypes), while Methods A and B represented baseline approaches.
+Figure 8. An exemplary view of the survey interface used to evaluate the quality of explanations across different methods.
+12
+
+<!-- page 13 -->
+XSPLAIN: XAI-enabling Splat-based Prototype Learning for Attribute-aware INterpretability
+Figure 9. An exemplary view of the survey interface where participants rated how strongly the provided explanation convinced them of
+the classification’s correctness.
+13
+
+<!-- page 14 -->
+XSPLAIN: XAI-enabling Splat-based Prototype Learning for Attribute-aware INterpretability
+B. Extended analysis of the responses
+B.1. Data structure and inferential targets
+We collected full responses from N = 51 respondents. The study group consisted of 6 women and 45 men. Regarding
+Machine Learning expertise, the majority were intermediate (Ni,ML = 26) or advanced (Na,ML = 14) practitioners, with
+the remainder being beginners (Nb,ML = 9) or having no experience (N0,ML = 2). Experience with 3D modelling was
+more limited, with most participants identifying as beginners (Nb,3D = 22) or having no experience (N0,3D = 21), and
+only 8 intermediate users. Familiarity with Explainable AI (XAI) was mixed: 23 participants had no prior experience, while
+the rest were intermediate (Ni,XAI = 16), beginners (Nb,XAI = 11), or advanced (Na,XAI = 1) users. Each respondent
+evaluated 3 separate items. In each item, the respondent saw 3 explanation methods, denoted Method A, Method B, and
+Method C. The methods behind the notation were hidden from the respondents and denoted Lime (Ribeiro et al., 2016) by
+A, PointSHAP (Lundberg & Lee, 2017) by B, and XSPLAIN by C. Two information were collected per item.
+1. Best method selection: a single categorical choice among {A, B, C}.
+2. Confidence rating: a four level confidence rating, mapped to integers ("Fairly confident correct" to 4, "Somewhat
+confident correct" to 3, "Somewhat confident incorrect" to 2, "Fairly confident incorrect" maps to 1) that the selected
+explanation supports a correct understanding.
+Statistical analysis follows a deliberate sequence that mirrors these measurement properties. First, for the categorical
+selection outcome, the primary question is whether the population choice probabilities differ from the uniform allocation
+across three categories. This motivates a goodness of fit test within each item. After establishing whether non-uniformity
+exists in an item, the analysis proceeds to pairwise contrasts to identify which methods differ, with Holm correction to
+control familywise error within the set of three pairwise comparisons. Second, for confidence, the data are repeated
+measures because each respondent rates all 3 methods within the same item. The primary question is whether confidence
+differs systematically across methods within an item. This motivates a repeated measures omnibus test, specifically the
+Friedman test, followed by paired Wilcoxon signed rank comparisons with Holm correction only when the omnibus result is
+statistically significant.
+Throughout, the nominal significance level is α = 0.05. Holm correction is applied separately within each family of
+pairwise tests, meaning within one item for the selection comparisons and within one confidence block for the confidence
+comparisons.
+Note that the 2 outcomes require different inferential tools as they encode different forms of replication. Within a fixed
+item, the N = 51 observations are naturally treated as independent across respondents, because each respondent contributes
+exactly one choice for the best method. The dependence problem appears only when we stack across items, because
+then each respondent contributes 3 choices and those can be correlated within the same person. For the confidence, the
+dependence exists already within each item, as each respondent rates all 3 methods in the same context. The 3 ratings
+from one respondent may not be independent, hence we include repeated measures inference, which explicitly accounts for
+within-respondent coupling by comparing methods of each respondent and then aggregating evidence across respondents. To
+account for this we use χ2 goodness of fit for item level selections, and Friedman and Wilcoxon procedures for confidence
+ratings. Each method matches the sampling unit and the dependence structure of the corresponding outcome.
+B.2. Best method selection
+For each item, let (XA, XB, XC) denote the counts of best method selection for each of the items, across the N = 51
+respondents, naturally, XA + XB + XC = N. The null hypothesis for each item is uniform choice probabilities
+H0 : pA = pB = pC = 1
+3.
+Under H0, the expected count in each category is Ej = N/3. The omnibus test is Pearson’s χ2 goodness of fit statistic
+χ2 =
+X
+j∈{A,B,C}
+(Xj −Ej)2
+Ej
+,
+which is asymptotically χ2 distributed with k −1 = 2 degrees of freedom.
+14
+
+<!-- page 15 -->
+XSPLAIN: XAI-enabling Splat-based Prototype Learning for Attribute-aware INterpretability
+For each of the items, we obtained rejections of the hypothesis of uniformity at α = 0.05 for the two first items. The
+hypothesis could not be rejected for the third item.
+• Item 1: (XA, XB, XC) = (9, 16, 26), χ2 = 8.588, p = 0.01365.
+• Item 2: (XA, XB, XC) = (8, 18, 25), χ2 = 8.588, p = 0.01365.
+• Item 3: (XA, XB, XC) = (11, 17, 23), χ2 = 4.235, p = 0.1203.
+Following a significant omnibus test, the script we performed pairwise comparisons and applied Holm correction for
+controlling false positives among the three pairwise contrasts for a given item. For the first item, Holm-corrected post-hoc
+tests found a difference between selection of methods A and C (p = 0.001176), while comparisons involving B were not
+significant after correction (p = 0.107109 for A vs B, and p = 0.088467 B vs C). With the second item, Holm-corrected
+post-hoc tests found differences in selection of A versus C (p = 0.000962) and A versus B (p = 0.046174). The comparison
+B versus C was not significant after correction with p = 0.160443. Due to the results, we desided to perform the analysis of
+the joint selection in the poll.
+Stacked selection analysis across items
+If the three items are stacked, each respondent contributes three selections,
+yielding n = 3N = 153 total selections with counts
+(XA, XB, XC) = (28, 51, 74).
+The χ2 goodness of fit test against uniformity yields χ2 = 20.745 and p = 3.128 × 10−5, which is strong evidence against
+uniform choice probabilities. The stacked test treats the n = 153 selections as independent and identically distributed. This
+is not strictly correct because each respondent contributes 3 observation. The strong χ2 signal and consistent directionality
+across items suggests robustness, but the p-value from the stacked test is approximated. The present conclusions values
+should be taken as strong evidence of preferential selection for Method C, with p-values understood as approximate under
+within respondent dependence. What is important, Holm correction keeps the order of magnitude for each of the compaired
+pairs in the stacked test, i.e., p = 7.285604 × 10−8 after correction and p = 2.428535 × 10−8 pre-correction for A vs C,
+p = 5.321581×10−3 after correction and p = 2.660791×10−3 pre-correction for A vs B, as well as p = 7.476980×10−3
+both before and after correction for B vs C, indicating that all 3 pairs differ jointly across all the items. We decided to
+investigate the size ot this effect with Cramér’s V =
+q
+χ2
+n(k−1) =
+q
+20.745
+153·2 = 0.2604, which corresponds to a small to
+moderate association magnitude for a 3-category outcome.
+Confidence intervals for selection proportions
+Let ˆpm = Xm/n for method m ∈{A, B, C} under the stacked view.
+The reported 95% Wilson score intervals are:
+ˆpA = 28
+153 = 0.183,
+CI0.95 = [0.130, 0.252],
+ˆpB = 51
+153 = 0.333,
+CI0.95 = [0.264, 0.411],
+ˆpC = 74
+153 = 0.484,
+CI0.95 = [0.406, 0.562].
+The intervals quantify uncertainty in the marginal choice rates under the stacked view under the working independence
+model for the stacked data. Method C has the highest estimated selection probability and its interval lies well above 1
+3, while
+Method A lies below 1
+3. Note that due to within-respondent dependence mentioned earlier, they can be slightly too narrow.
+Note that given the number of samples the working assumption of independence is more suitable than bootstrapping. We
+further analyzed the selections of the best method in the demographic groups defined by self-reported Machine Learning
+experience and by self-reported XAI experience. Groups with n < 8 were excluded from inference.
+By Machine Learning experience.
+• Beginner, N = 9, stacked counts (6, 6, 15) across n = 27 selections. Performing the omnibus test resulted in χ2 =
+6.000, p = 0.04979. Holm-corrected post-hoc tests indicate Method C is selected more often than A (p = 0.035983)
+and more often than B (p = 0.035983), with Wilson interval
+pC = 15/27 = 0.556, CI0.95 = [0.373, 0.724].
+15
+
+<!-- page 16 -->
+XSPLAIN: XAI-enabling Splat-based Prototype Learning for Attribute-aware INterpretability
+Cramér’s V =
+p
+6/(27 · 2) = 1
+3, showing moderate magnitude.
+• Intermediate, N = 26, stacked counts (16, 32, 30) across n = 78 selections. Performing the omnibus test resulted in
+χ2 = 5.846, p = 0.05377, not significant at α = 0.05, hence no post-hoc claims were performed.
+• Advanced, N = 14, stacked counts (6, 10, 26) across n = 42 selections. Performing the omnibus test resulted in
+χ2 = 16.000, p = 0.0003355. Holm-corrected post-hoc tests show Method C exceeds both A (p = 0.000021) and
+B (p = 0.000838), while no significance was found in difference between A and B (pre- and post-Holm correction
+p = 0.266380). Wilson interval for Method C is
+pC = 26/42 = 0.619, CI0.95 = [0.468, 0.750].
+Cramér’s V =
+p
+16/(42 · 2) ≈0.4364, indicating a moderate association magnitude.
+Overall, the preference for Method C is clearest in the Advanced and Beginner groups, while the Intermediate group shows
+a similar direction but does not reach the α = 0.05 threshold in the stacked test. Note that we can claim that explaining
+the model’s difference might be of the most importance for those that are the most and the least experienced. By XAI
+experience.
+• None, N = 23, stacked counts (14, 19, 36) across n = 69 selections. Omnibus χ2 = 11.565, p = 0.003081. Holm-
+corrected post-hoc tests show Method C exceeds A (p = 0.000293) and exceeds B (p = 0.006238), with A versus B
+showing p = 0.318360. Wilson interval for Method C is
+pC = 36/69 = 0.522, CI0.95 = [0.406, 0.635].
+• Beginner, N = 11, stacked counts (7, 13, 13) across n = 33 selections. Omnibus χ2 = 2.182, p = 0.3359, hence
+there was no evidence against uniformity.
+• Intermediate, N = 16, stacked counts (7, 18, 23) across n = 48 selections. Omnibus χ2 = 8.375, p = 0.01518.
+Holm-corrected post-hoc tests show Method A is selected less often than B (p = 0.021045) and less often than C
+(p = 0.001280), while B versus C is not significant (p = 0.302236). Wilson intervals include
+pA = 7/48 = 0.146, CI0.95 = [0.072, 0.272].
+B.3. Confidence ratings
+Confidence ratings were assumed as numbers in Likert scale 1-4, hence are ordinal and not normally distributed in most
+blocks according to Shapiro results. Therefore the primary omnibus test is Friedman repeated measures, which tests equality
+of the marginal distributions across methods within each block.
+Effect size is Kendall’s W = χ2/(n(k −1)) with k = 3, with balues near 0 indicating weak consistency of method ranking
+across respondents, values closer to 1 indicate strong agreement.
+• Confidence on 1st item, n = 51, Friedman χ2 = 2.872, p = 0.2379, W = 0.028. This suggests no significant evidence
+of differences in the subject reported confidence across methods.
+• Confidence on 2nd item, n = 51, Friedman χ2 = 12.896, p = 0.001584, W = 0.126. Post-hoc Wilcoxon tests with
+Holm correction indicate a significant difference between Method A and Method C, with median difference A minus
+C equal to −1. This indicates higher confidence under Method C than under Method A by about one Likert level in
+median. Other pairwise comparisons were not significant after correction.
+• Confidence on 3rd item, n = 51, Friedman χ2 = 2.747, p = 0.2532, W = 0.027. Showed no no significant evidence
+of differences in the subject reported confidence across methods.
+Additionally, a per respondent mean confidence across blocks was computed for each method and tested with Friedman.
+With n = 51, Friedman χ2 = 3.841, p = 0.1465, W = 0.038, indicating no detectable overall shift in confidence when
+averaging across the three items.
+16
+
+<!-- page 17 -->
+XSPLAIN: XAI-enabling Splat-based Prototype Learning for Attribute-aware INterpretability
+For paired confidence ratings, effect sizes were quantified using the Hodges-Lehmann estimator of the paired shift. For each
+respondent and item, paired differences were computed as
+di = Confidencei,A −Confidencei,C,
+i = 1, . . . , 51.
+The HL estimator is defined as the median of the paired differences b∆HL = median(d1, . . . , d51), and estimates the shift in
+confidence between Method A and Method C on the Likert scale. Uncertainty was quantified using nonparametric bootstrap
+confidence intervals obtained by resampling respondents with replacement and recomputing the HL estimator. For the
+second item, the HL estimator was b∆HL = −1 with a 95% confidence interval of [−1, 0]. This indicates that the typical
+respondent reported approximately one Likert level higher confidence under Method C than under Method A. The confidence
+interval excludes positive values and is consistent with the significant Friedman omnibus test and the Holm-corrected
+Wilcoxon signed-rank test for this item. While for the other two items we calculated b∆HL = 0 indicating no significant
+differences in the confidance, as suggested by the non-significant Friedman test result. The 95% confidence interval was
+equal to [−1, 1] in the first item, and [−1, 0] in the third.
+Subgroup confidence results. Subgroup analyses mostly mirror the overall pattern. For Machine Learning and Deep
+Learning Intermediate group, 2nd item shows Friedman significance with p = 0.002271 and W = 0.234, and the post-hoc A
+versus C comparison remains significant after Holm correction with median difference −1. Other blocks and the aggregated
+analysis are not significant. Whereas for Machine Learning Advanced and Beginner groups, no confidence block shows a
+Holm-corrected significant pairwise difference.
+For groups divided by XAI familiarity, None, Intermediate, and Beginner groups showed no Holm-corrected pairwise
+differences in confidence scale, although XAI Intermediate has an omnibus Friedman p = 0.02538 in the second item that
+does not translate to Holm-corrected pairwise significance.
+C. Classifier Compensation Proof
+We show that the classifier compensation preserves the original model predictions exactly. Let ˜z = Uz denote the
+transformed global feature, where U is the orthogonal disentanglement matrix and z is the original global feature vector.
+After compensation, the classifier weights become W′
+cls = WclsUT . The prediction on the transformed features is:
+W′
+cls˜z = (WclsUT )(Uz)
+(23)
+= Wcls(UT U)z
+(24)
+= WclsIz
+(25)
+= Wclsz,
+(26)
+where the third equality follows from the orthogonality of U (UT U = I).
+Thus, the logits and consequently the predicted class remain identical before and after applying the disentanglement
+transformation, ensuring that the interpretability module does not affect the model’s decisions.
+D. Additional Details on Point Cloud Generalization
+Expanding on the generalization capabilities discussed in the main text, here we provide further quantitative and qualitative
+details regarding the experiments on standard point clouds. While our primary evaluation focuses on the rich 3D Gaussian
+Splatting representation, verifying performance on the ShapeNet Core dataset (Chang et al., 2015) demonstrates that
+XSPLAIN is not limited to 3D Gaussian Splatting objects.
+Experimental Setup. To isolate geometric understanding from rendering attributes, we trained the model on raw point cloud
+data consisting of N points. The input features were limited to spatial coordinates and surface normals (N × 6 features:
+x, y, z, nx, ny, nz). We utilized the same default hyperparameter configuration as in our main experiments: density
+regularization λ = 3.5, voxel grid size G = 7, and latent feature dimension C = 256.
+Quantitative Results. The model demonstrated high stability and effectiveness in this setting. The PointNet backbone
+achieved a classification accuracy of 94.4%. The purity metric increased from 13.0% to 22.5% during the training of the
+orthogonal matrix.
+17
+
+<!-- page 18 -->
+XSPLAIN: XAI-enabling Splat-based Prototype Learning for Attribute-aware INterpretability
+Qualitative Results. Visualizations of the learned prototypes confirm that the method successfully captures semantic parts
+based purely on geometry. As shown in Figures 10, 11, 12 and 13, the active channels clearly distinguish between structural
+components, such as separating airplane wings or the ear cups of headphones, without relying on color or opacity cues.
+Figure 10. XSPLAIN explanation illustrating four prototypes corresponding to the four most active channels for an object from the
+Airplane class in the ShapeNet Core dataset.
+Figure 11. XSPLAIN explanation illustrating four prototypes corresponding to the four most active channels for an object from the
+Earphones class in the ShapeNet Core dataset.
+18
+
+<!-- page 19 -->
+XSPLAIN: XAI-enabling Splat-based Prototype Learning for Attribute-aware INterpretability
+Figure 12. XSPLAIN explanation illustrating four prototypes corresponding to the four most active channels for an object from the
+Guitar class in the ShapeNet Core dataset.
+Figure 13. XSPLAIN explanation illustrating four prototypes corresponding to the four most active channels for an object from the
+Skateboard class in the ShapeNet Core dataset.
+19
+
+<!-- page 20 -->
+XSPLAIN: XAI-enabling Splat-based Prototype Learning for Attribute-aware INterpretability
+E. Additonal Explaining Examples
+In this section, we present extended qualitative comparisons between XSPLAIN and post-hoc baseline methods (PointSHAP
+and LIME). We visualize results across diverse object categories selected from three distinct datasets used in our main
+evaluation: ShapeSplat (Ma et al., 2024), the Toys dataset (a custom 3DGS conversion of Toys4K (Stojanov et al., 2021)),
+and the 3D Real Car Toolkit (Du et al., 2024).
+Figure 14. XSPLAIN explanation using four prototypes corresponding to the four most active channels, compared with PointSHAP and
+LIME for an object from airplane class from the ShapeSplat dataset.
+20
+
+<!-- page 21 -->
+XSPLAIN: XAI-enabling Splat-based Prototype Learning for Attribute-aware INterpretability
+Figure 15. XSPLAIN explanation using four prototypes corresponding to the four most active channels, compared with PointSHAP and
+LIME for an object from deer moose class from the Toys dataset.
+21
+
+<!-- page 22 -->
+XSPLAIN: XAI-enabling Splat-based Prototype Learning for Attribute-aware INterpretability
+Figure 16. XSPLAIN explanation using four prototypes corresponding to the four most active channels, compared with PointSHAP and
+LIME for an object from the sedan class from the 3d_cars dataset.
+22
+
+<!-- page 23 -->
+XSPLAIN: XAI-enabling Splat-based Prototype Learning for Attribute-aware INterpretability
+Figure 17. XSPLAIN explanation using four prototypes corresponding to the four most active channels, compared with PointSHAP and
+LIME for an object from earphone class from the ShapeSplat dataset.
+23
+
+<!-- page 24 -->
+XSPLAIN: XAI-enabling Splat-based Prototype Learning for Attribute-aware INterpretability
+Figure 18. XSPLAIN explanation using four prototypes corresponding to the four most active channels, compared with PointSHAP and
+LIME for an object from microphone class from the ShapeSplat dataset.
+24
+
+<!-- page 25 -->
+XSPLAIN: XAI-enabling Splat-based Prototype Learning for Attribute-aware INterpretability
+Figure 19. XSPLAIN explanation using four prototypes corresponding to the four most active channels, compared with PointSHAP and
+LIME for an object from tree class from the Toys dataset.
+F. Deletion Test
+To evaluate the importance of voxels selected for channel prototypes, we evaluated the accurracy of samples with the top
+k voxels, corresponding to the top k activated channels, completely removed from the input. Table 3 shows that indeed
+removing important voxels influences the final accuracy.
+25
+
+<!-- page 26 -->
+XSPLAIN: XAI-enabling Splat-based Prototype Learning for Attribute-aware INterpretability
+Dataset
+Top k
+Perturbation degradation
+MACGS
+1
+2.36%
+MACGS
+2
+5.66%
+MACGS
+3
+5.66%
+MACGS
+4
+5.19%
+MACGS
+5
+6.13%
+Shapesplat
+1
+1.46%
+Shapesplat
+2
+2.19%
+Shapesplat
+3
+0.73%
+Shapesplat
+4
+1.46%
+Shapesplat
+5
+1.46%
+Toys
+1
+4.55%
+Toys
+2
+4.55%
+Toys
+3
+5.68%
+Toys
+4
+4.55%
+Toys
+5
+6.82%
+Table 3. Degradation in accuracy (as relative percentage change) after perturbing top k most active voxels in each sample, for each dataset.
+G. Hyperparameters
+We performed a comprehensive ablation study on the ShapeSplat dataset to analyze the impact of key hyperparameters on
+both classification performance and explanation quality. The results highlight the trade-off between pure accuracy and the
+interpretability metrics (Purity Gain and Voxel Density).
+Analysis
+• Regularization (λden): Without density regularization (λ = 0), the model achieves higher accuracy but focuses on sparse
+outliers (Density=32), leading to poor interpretability. Increasing λ forces the model to focus on dense, geometric
+regions, significantly boosting Purity Gain.
+• Grid Size (G): A resolution of G = 7 offers the best balance. Coarser grids (G = 3) lack spatial specificity, while finer
+grids (G = 15) result in sparse voxels susceptible to noise.
+• Feature Dimension (C): While C = 64 yields maximum accuracy, we utilize C = 256 as the default to ensure
+sufficient capacity to disentangle complex semantic attributes during the interpretation stage.
+Param.
+Val.
+Acc. Pur. Gain Dens.
+Reg.
+Strength
+(λden)
+0.0
+86.3
++37.1%
+32
+1.0
+84.5
++86.3%
+78
+2.0
+78.5
++67.3%
+75
+3.5†
+82.1
++61.1%
+78
+5.0
+83.9
++66.0%
+79
+Grid
+Res.
+(G)
+3
+83.3
++55.3%
+468
+5
+77.3
++62.1%
+158
+7†
+82.1
++61.1%
+78
+10
+81.5
++54.9%
+36
+15
+78.5
++51.1%
+23
+Feat.
+Dim.
+(C)
+16
+85.7
++36.0%
+74
+64
+88.0
++64.1%
+74
+256†
+82.1
++61.1%
+78
+1024
+66.6
++46.3%
+72
+Table 4. Ablation Study. Acc.: Classification Accuracy (%), Pur. Gain: Relative improvement in prototype purity after Stage 2
+optimization, Dens.: Mean point count in activated voxels. (†) indicates the default configuration.
+26

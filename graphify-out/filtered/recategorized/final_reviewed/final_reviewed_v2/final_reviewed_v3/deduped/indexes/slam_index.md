@@ -1,0 +1,193 @@
+# SLAM Index
+
+- paper count: 162
+
+## Top Datasets
+
+- ScanNet: 69
+- TUM-RGBD: 59
+- KITTI: 22
+- EuRoC: 20
+- EuRoC MAV: 8
+- 7-Scenes: 6
+- Gibson: 4
+- nuScenes: 2
+- DTU: 2
+- CO3D: 1
+- HM3D: 1
+- Matterport3D: 1
+
+## Top Metrics
+
+- Recall: 20
+- Chamfer: 8
+
+## Top Concepts
+
+- Pose Graph Optimization: 17
+- IMU Integration: 1
+
+## Papers
+
+- 2310.06984 | 2310.06984.md
+- 2312.06741 | 2312.06741.md
+- 2401.14857 | 2401.14857.md
+- 2402.08125 | 2402.08125.md
+- 2402.13255 | 2402.13255.md
+- 2403.07494 | 2403.07494.md
+- 2403.11247 | 2403.11247.md
+- 2403.12535 | 2403.12535.md
+- 2403.12550 | 2403.12550.md
+- 2403.19473 | 2403.19473.md
+- 2403.20159 | 2403.20159.md
+- 2404.04026 | 2404.04026.md
+- 2404.06926 | 2404.06926.md
+- 2405.11129 | 2405.11129.md
+- 2405.13748 | 2405.13748.md
+- 2405.14824 | 2405.14824.md
+- 2406.11766 | 2406.11766.md
+- 2406.12202 | 2406.12202.md
+- 2406.16850 | 2406.16850.md
+- 2407.13338v1 | 2407.13338v1.md
+- 2408.03825 | 2408.03825.md
+- 2408.05635 | 2408.05635.md
+- 2408.11966 | 2408.11966.md
+- 2408.12677 | 2408.12677.md
+- 2409.20111 | 2409.20111.md
+- 2410.17084 | 2410.17084.md
+- 2411.02703 | 2411.02703.md
+- 2411.12185 | 2411.12185.md
+- 2412.03263 | 2412.03263.md
+- 2412.08496v2 | 2412.08496v2.md
+- 2412.09401v3 (2) | 2412.09401v3 (2).md
+- 2412.09723 | 2412.09723.md
+- 2412.20056 | 2412.20056.md
+- 2501.07015 | 2501.07015.md
+- 2501.08672 | 2501.08672.md
+- 2501.19319 | 2501.19319.md
+- 2502.13803 | 2502.13803.md
+- 2502.15633 | 2502.15633.md
+- 2503.01646 | 2503.01646.md
+- 2503.03373 | 2503.03373.md
+- 2503.05425 | 2503.05425.md
+- 2503.12572 | 2503.12572.md
+- 2503.16710 | 2503.16710.md
+- 2504.03886v1 (4) | 2504.03886v1 (4).md
+- 2504.04844 | 2504.04844.md
+- 2505.09915 | 2505.09915.md
+- 2505.12384 | 2505.12384.md
+- 2506.06909 | 2506.06909.md
+- 2506.18678 | 2506.18678.md
+- 2506.21420 | 2506.21420.md
+- 2506.23207 | 2506.23207.md
+- 2507.03737 | 2507.03737.md
+- 2507.18344 | 2507.18344.md
+- 2507.19474 | 2507.19474.md
+- 2507.20854 | 2507.20854.md
+- 2507.23273 | 2507.23273.md
+- 2507.23677 | 2507.23677.md
+- 2508.04597 | 2508.04597.md
+- 2508.17876 | 2508.17876.md
+- 2509.00433 | 2509.00433.md
+- 2509.00741 | 2509.00741.md | aliases 1
+- 2509.11574 | 2509.11574.md
+- 2509.13536 | 2509.13536.md
+- 2509.17864 | 2509.17864.md
+- 2510.06644 | 2510.06644.md
+- 2510.12749 | 2510.12749.md
+- 2510.22600 | 2510.22600.md
+- 2511.23221 | 2511.23221.md
+- 2512.08625 | 2512.08625.md
+- 2512.09411 | 2512.09411.md
+- 2601.00705 | 2601.00705.md
+- 2601.05738 | 2601.05738.md | aliases 1
+- 2601.11617 | 2601.11617.md
+- 2602.04251 | 2602.04251.md
+- 2602.06991 | 2602.06991.md
+- 2602.07493 | 2602.07493.md
+- 2602.17182 | 2602.17182.md
+- 2602.20807 | 2602.20807.md
+- 2602.21644 | 2602.21644.md
+- 2603.06989 | 2603.06989.md
+- 2603.09673 | 2603.09673.md | aliases 1
+- 2603.16844 | 2603.16844.md
+- 2603.19076v1 | 2603.19076v1.md
+- 2603.20443 | 2603.20443.md
+- 2603.21055 | 2603.21055.md
+- 2603.26810 | 2603.26810.md
+- 2604.03092v1 | 2604.03092v1.md
+- 3664647.3680696 | 3664647.3680696.md
+- 4DTAM Non-Rigid Tracking and Mapping via Dynamic Surface Gaussians | 0061_[SLAM]_4DTAM Non-Rigid Tracking and Mapping via Dynamic Surface Gaussians.md
+- ADD-SLAM Adaptive Dynamic Dense SLAM with Gaussian Splatting | 0059_[SLAM]_ADD-SLAM Adaptive Dynamic Dense SLAM with Gaussian Splatting.md
+- AG-SLAM Active Gaussian Splatting SLAM | 0026_[SLAM]_AG-SLAM Active Gaussian Splatting SLAM.md
+- CG-SLAM Efficient Dense RGB-D SLAM in a Consistent Uncertainty-aware | 0008_[SLAM]_CG-SLAM Efficient Dense RGB-D SLAM in a Consistent Uncertainty-aware.md
+- CaRtGS Computational Alignment for Real-Time Gaussian Splatting SLA | 0022_[SLAM]_CaRtGS Computational Alignment for Real-Time Gaussian Splatting SLA.md
+- DGS-SLAM Gaussian Splatting SLAM in Dynamic Environment | 0027_[SLAM]_DGS-SLAM Gaussian Splatting SLAM in Dynamic Environment.md
+- DROID-Splat Combining end-to-end SLAM with 3D Gaussian Splatting | 0032_[SLAM]_DROID-Splat Combining end-to-end SLAM with 3D Gaussian Splatting.md
+- DenseSplat Densifying Gaussian Splatting SLAM with Neural Radiance Prio | 0044_[SLAM]_DenseSplat Densifying Gaussian Splatting SLAM with Neural Radiance Prio.md
+- DiskChunGS Large-Scale 3D Gaussian SLAM Through Chunk-Based Memory Mana | 0069_[SLAM]_DiskChunGS Large-Scale 3D Gaussian SLAM Through Chunk-Based Memory Mana.md
+- Dy3DGS-SLAM Monocular 3DGS-SLAM System for Dynamic Environments | 0054_[SLAM]_Dy3DGS-SLAM Monocular 3DGS-SLAM System for Dynamic Environments.md
+- DynaGSLAM Real-Time Gaussian-Splatting SLAM for Online Rendering, Trac | 0049_[SLAM]_DynaGSLAM Real-Time Gaussian-Splatting SLAM for Online Rendering, Trac.md
+- EndoGSLAM Real-Time Dense Reconstruction and Tracking in Endoscopic Su | 0007_[SLAM]_EndoGSLAM Real-Time Dense Reconstruction and Tracking in Endoscopic Su.md
+- FGO-SLAM Enhancing Gaussian SLAM with Globally Consistent Opacity Rad | 0053_[SLAM]_FGO-SLAM Enhancing Gaussian SLAM with Globally Consistent Opacity Rad.md
+- FGS-SLAM Fourier-based Gaussian Splatting for Real-time SLAM with Spa | 0047_[SLAM]_FGS-SLAM Fourier-based Gaussian Splatting for Real-time SLAM with Spa.md
+- FlashSLAM Accelerated RGB-D SLAM for Real-Time 3D Scene Reconstruction | 0034_[SLAM]_FlashSLAM Accelerated RGB-D SLAM for Real-Time 3D Scene Reconstruction.md
+- GARAD-SLAM 3D GAussian splatting for Real-time Anti Dynamic SLAM | 0043_[SLAM]_GARAD-SLAM 3D GAussian splatting for Real-time Anti Dynamic SLAM.md
+- GEVO Memory-Efficient Monocular Visual Odometry Using Gaussians | 0017_[SLAM]_GEVO Memory-Efficient Monocular Visual Odometry Using Gaussians.md
+- GI-SLAM Gaussian-Inertial SLAM | 0050_[SLAM]_GI-SLAM Gaussian-Inertial SLAM.md | aliases 1
+- GLC-SLAM Gaussian Splatting SLAM with Efficient Loop Closure | 0018_[SLAM]_GLC-SLAM Gaussian Splatting SLAM with Efficient Loop Closure.md
+- GS-GVINS A Tightly-integrated GNSS-Visual-Inertial Navigation System | 0045_[SLAM]_GS-GVINS A Tightly-integrated GNSS-Visual-Inertial Navigation System.md
+- GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting | 0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md
+- GS4 Generalizable Sparse Splatting Semantic SLAM | 0064_[SLAM]_GS4 Generalizable Sparse Splatting Semantic SLAM.md
+- GSFF-SLAM 3D Semantic Gaussian Splatting SLAM via Feature Field | 0057_[SLAM]_GSFF-SLAM 3D Semantic Gaussian Splatting SLAM via Feature Field.md
+- GSORB-SLAM Gaussian Splatting SLAM benefits from ORB features and Trans | 0025_[SLAM]_GSORB-SLAM Gaussian Splatting SLAM benefits from ORB features and Trans.md
+- Gassidy Gaussian Splatting SLAM in Dynamic Environments | 0029_[SLAM]_Gassidy Gaussian Splatting SLAM in Dynamic Environments.md
+- GauS-SLAM Dense RGB-D SLAM with Gaussian Surfels | 0058_[SLAM]_GauS-SLAM Dense RGB-D SLAM with Gaussian Surfels.md
+- Gaussian-SLAM Photo-realistic Dense SLAM with Gaussian Splatting | 0004_[SLAM]_Gaussian-SLAM Photo-realistic Dense SLAM with Gaussian Splatting.md
+- GigaSLAM Large-Scale Monocular SLAM with Hierachical Gaussian Splats | 0048_[SLAM]_GigaSLAM Large-Scale Monocular SLAM with Hierachical Gaussian Splats.md
+- Go-SLAM Grounded Object Segmentation and Localization with Gaussian | 0021_[SLAM]_Go-SLAM Grounded Object Segmentation and Localization with Gaussian.md
+- HI-SLAM2 Geometry-Aware Gaussian SLAM for Fast Monocular Scene Recons | 0033_[SLAM]_HI-SLAM2 Geometry-Aware Gaussian SLAM for Fast Monocular Scene Recons.md
+- Hier-SLAM Scaling-up Semantics in SLAM with a Hierarchically Categoric | 0019_[SLAM]_Hier-SLAM Scaling-up Semantics in SLAM with a Hierarchically Categoric.md
+- Hier-SLAM++ Neuro-Symbolic Semantic SLAM with a Hierarchically Categoric | 0046_[SLAM]_Hier-SLAM++ Neuro-Symbolic Semantic SLAM with a Hierarchically Categoric.md
+- IG-SLAM Instant Gaussian SLAM | 0013_[SLAM]_IG-SLAM Instant Gaussian SLAM.md
+- Improving_Orb-Slam3_Performance_in_Textureless_Environments_Mapping_and_Localization_in_Hospital_Corridors | Improving_Orb-Slam3_Performance_in_Textureless_Environments_Mapping_and_Localization_in_Hospital_Corridors.md
+- LEG-SLAM Language-Enhanced Gaussian Splatting for Real-Time SLAM | 0063_[SLAM]_LEG-SLAM Language-Enhanced Gaussian Splatting for Real-Time SLAM.md
+- LEGO-SLAM Language-Embedded Gaussian Optimization SLAM | 0066_[SLAM]_LEGO-SLAM Language-Embedded Gaussian Optimization SLAM.md
+- LoopSplat Loop Closure by Registering 3D Gaussian Splats, | 0014_[SLAM]_LoopSplat Loop Closure by Registering 3D Gaussian Splats,.md
+- MAGiC-SLAM Multi-Agent Gaussian Globally Consistent SLAM | 0031_[SLAM]_MAGiC-SLAM Multi-Agent Gaussian Globally Consistent SLAM.md
+- MD-SLAM_A_Multi-Task_Deep-Learning-Based_Visual_SLAM_System_in_Dynamic_Environments | MD-SLAM_A_Multi-Task_Deep-Learning-Based_Visual_SLAM_System_in_Dynamic_Environments.md
+- MG-SLAM Structure Gaussian SLAM with Manhattan World Hypothesis | 0011_[SLAM]_MG-SLAM Structure Gaussian SLAM with Manhattan World Hypothesis.md
+- MG-SLAM_Structure_Gaussian_Splatting_SLAM_With_Manhattan_World_Hypothesis (1) | MG-SLAM_Structure_Gaussian_Splatting_SLAM_With_Manhattan_World_Hypothesis (1).md
+- MGS-SLAM Monocular Sparse Tracking and Gaussian Mapping with Depth Sm | 0038_[SLAM]_MGS-SLAM Monocular Sparse Tracking and Gaussian Mapping with Depth Sm.md
+- MGSO Monocular Real-time Photometric SLAM with Efficient 3D Gauss | 0020_[SLAM]_MGSO Monocular Real-time Photometric SLAM with Efficient 3D Gauss.md
+- NEDS-SLAM A Novel Neural Explicit Dense Semantic SLAM Framework using | 0006_[SLAM]_NEDS-SLAM A Novel Neural Explicit Dense Semantic SLAM Framework using.md
+- NFL-BA Improving Endoscopic SLA M with Near-Field Light Bundle Adju | 0037_[SLAM]_NFL-BA Improving Endoscopic SLA M with Near-Field Light Bundle Adju.md
+- ODHSR Online Dense 3D Reconstruction of Humans and Scenes from Mon | 0055_[SLAM]_ODHSR Online Dense 3D Reconstruction of Humans and Scenes from Mon.md
+- OG-Mapping Octree-based Structured 3D Gaussians for Online Dense Mappin | 0015_[SLAM]_OG-Mapping Octree-based Structured 3D Gaussians for Online Dense Mappin.md
+- OVO-SLAM Open-Vocabulary Online Simultaneous Localization and Mapping | 0028_[SLAM]_OVO-SLAM Open-Vocabulary Online Simultaneous Localization and Mapping.md
+- PG-SLAM Photo-realistic and Geometry-aware RGB-D SLAM in Dynamic Env | 0030_[SLAM]_PG-SLAM Photo-realistic and Geometry-aware RGB-D SLAM in Dynamic Env.md
+- PanoSLAM Panoptic 3D Scene Reconstruction via Gaussian SLAM | 0039_[SLAM]_PanoSLAM Panoptic 3D Scene Reconstruction via Gaussian SLAM.md
+- Photo-SLAM Real-time Simultaneous Localization and Photorealistic Mappi | 0002_[SLAM]_Photo-SLAM Real-time Simultaneous Localization and Photorealistic Mappi.md
+- RGBDS-SLAM A RGB-D Semantic Dense SLAM Based on 3D Multi Level Pyramid | 0035_[SLAM]_RGBDS-SLAM A RGB-D Semantic Dense SLAM Based on 3D Multi Level Pyramid.md
+- RP-SLAM Real-time Photorealistic SLAM with Efficient 3D Gaussian Spl | 0036_[SLAM]_RP-SLAM Real-time Photorealistic SLAM with Efficient 3D Gaussian Spl.md
+- RTG-SLAM Real-time 3D Reconstruction at Scale using Gaussian Splattin | 0009_[SLAM]_RTG-SLAM Real-time 3D Reconstruction at Scale using Gaussian Splattin.md
+- SGS-SLAM Semantic Gaussian Splatting For Neural Dense SLAM | 0005_[SLAM]_SGS-SLAM Semantic Gaussian Splatting For Neural Dense SLAM.md
+- SING3R-SLAM Submap-based Indoor Monocular Gaussian SLAM with 3D Reconstr | 0071_[SLAM]_SING3R-SLAM Submap-based Indoor Monocular Gaussian SLAM with 3D Reconstr.md
+- SPLATONIC Architectural Support for 3D Gaussian Splatting SLAM via Spa | 0068_[SLAM]_SPLATONIC Architectural Support for 3D Gaussian Splatting SLAM via Spa.md
+- STAMICS Splat, Track And Map with Integrated Consistency and Semanti | 0051_[SLAM]_STAMICS Splat, Track And Map with Integrated Consistency and Semanti.md
+- Scaffold-SLAM Structured 3D Gaussians for Simultaneous Localization and Ph | 0040_[SLAM]_Scaffold-SLAM Structured 3D Gaussians for Simultaneous Localization and Ph.md
+- SplaTAM Splat, Track & Map 3D Gaussians for Dense RGB-D SLAM | 0003_[SLAM]_SplaTAM Splat, Track & Map 3D Gaussians for Dense RGB-D SLAM.md
+- Splat-SLAM Globally Optimized RGB-only SLAM with 3D Gaussians | 0010_[SLAM]_Splat-SLAM Globally Optimized RGB-only SLAM with 3D Gaussians.md
+- TAMBRIDGE Bridging Frame-Centered Tracking and 3D Gaussian Splatting f | 0012_[SLAM]_TAMBRIDGE Bridging Frame-Centered Tracking and 3D Gaussian Splatting f.md
+- TVG-SLAM_Robust_Gaussian_Splatting_SLAM_With_Tri-View_Geometric_Constraints (1) | TVG-SLAM_Robust_Gaussian_Splatting_SLAM_With_Tri-View_Geometric_Constraints (1).md
+- Taming the Light Illumination-Invariant Semantic 3DGS-SLAM | 0070_[SLAM]_Taming the Light Illumination-Invariant Semantic 3DGS-SLAM.md
+- ToF-Splatting Dense SLAM using Sparse Time-of-Flight Depth and Multi-Frame | 0056_[SLAM]_ToF-Splatting Dense SLAM using Sparse Time-of-Flight Depth and Multi-Frame.md
+- Toward_Accurate_Efficient_and_Robust_RGB-D_Simultaneous_Localization_and_Mapping_in_Challenging_Environments | Toward_Accurate_Efficient_and_Robust_RGB-D_Simultaneous_Localization_and_Mapping_in_Challenging_Environments.md
+- UDGS-SLAM UniDepth Assisted Gaussian Splatting for Monocular SLAM | 0016_[SLAM]_UDGS-SLAM UniDepth Assisted Gaussian Splatting for Monocular SLAM.md
+- UP-SLAM Adaptively Structured Gaussian SLAM with Uncertainty Predict | 0060_[SLAM]_UP-SLAM Adaptively Structured Gaussian SLAM with Uncertainty Predict.md
+- VIGS SLAM IMU-based Large-Scale 3D Gaussian Splatting SLAM | 0042_[SLAM]_VIGS SLAM IMU-based Large-Scale 3D Gaussian Splatting SLAM.md
+- VIGS-SLAM Visual Inertial Gaussian Splatting SLAM | 0072_[SLAM]_VIGS-SLAM Visual Inertial Gaussian Splatting SLAM.md
+- VINGS-Mono Visual-Inertial Gaussian Splatting Monocular SLAM in Large S | 0041_[SLAM]_VINGS-Mono Visual-Inertial Gaussian Splatting Monocular SLAM in Large S.md
+- VTGaussian-SLAM RGBD SLAM for Large Scale Scenes with Splatting View-Tied 3D | 0062_[SLAM]_VTGaussian-SLAM RGBD SLAM for Large Scale Scenes with Splatting View-Tied 3D.md
+- WildGS-SLAM Monocular Gaussian Splatting SLAM in Dynamic Environments | 0052_[SLAM]_WildGS-SLAM Monocular Gaussian Splatting SLAM in Dynamic Environments.md
+- ssrn-4514612 | ssrn-4514612.md

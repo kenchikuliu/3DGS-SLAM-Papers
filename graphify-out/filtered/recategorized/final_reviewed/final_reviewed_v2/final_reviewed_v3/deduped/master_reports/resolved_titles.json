@@ -1,0 +1,184 @@
+[
+  {
+    "node_id": "paper_2405_05526",
+    "original_label": "2405.05526",
+    "resolved_label": "Benchmarking Neural Radiance Fields for Autonomous Robots: An Overview",
+    "source_file": "2405.05526.md",
+    "resolution_type": "manual"
+  },
+  {
+    "node_id": "paper_2601_05738",
+    "original_label": "2601.05738",
+    "resolved_label": "FeatureSLAM: Feature-Enriched 3D Gaussian Splatting SLAM in Real Time",
+    "source_file": "2601.05738.md",
+    "resolution_type": "manual"
+  },
+  {
+    "node_id": "paper_2402_13255",
+    "original_label": "2402.13255",
+    "resolved_label": "How NeRFs and 3D Gaussian Splatting are Reshaping SLAM: a Survey",
+    "source_file": "2402.13255.md",
+    "resolution_type": "heuristic"
+  },
+  {
+    "node_id": "paper_2512_03422",
+    "original_label": "2512.03422",
+    "resolved_label": "What Is The Best 3D Scene Representation for Robotics? From Geometric to Foundation Models",
+    "source_file": "2512.03422.md",
+    "resolution_type": "heuristic"
+  },
+  {
+    "node_id": "paper_2506_18678",
+    "original_label": "2506.18678",
+    "resolved_label": "MCN-SLAM: Multi-Agent Collaborative Neural SLAM with Hybrid Implicit Neural Scene Representation",
+    "source_file": "2506.18678.md",
+    "resolution_type": "manual"
+  },
+  {
+    "node_id": "paper_2402_08125",
+    "original_label": "2402.08125",
+    "resolved_label": "Customizable Perturbation Synthesis for Robust SLAM Benchmarking",
+    "source_file": "2402.08125.md",
+    "resolution_type": "manual"
+  },
+  {
+    "node_id": "paper_2406_16850",
+    "original_label": "2406.16850",
+    "resolved_label": "From Perfect to Noisy World Simulation: Customizable Embodied Multi-modal Perturbations for SLAM Robustness Benchmarking",
+    "source_file": "2406.16850.md",
+    "resolution_type": "manual"
+  },
+  {
+    "node_id": "paper_2410_12262",
+    "original_label": "2410.12262",
+    "resolved_label": "3D Gaussian Splatting in Robotics: A Survey",
+    "source_file": "2410.12262.md",
+    "resolution_type": "heuristic"
+  },
+  {
+    "node_id": "paper_2510_23988",
+    "original_label": "2510.23988",
+    "resolved_label": "A Survey on Collaborative SLAM with 3D Gaussian Splatting",
+    "source_file": "2510.23988.md",
+    "resolution_type": "manual"
+  },
+  {
+    "node_id": "paper_2602_04251",
+    "original_label": "2602.04251",
+    "resolved_label": "Towards Next-Generation SLAM: A Survey on 3DGS-SLAM Focusing on Performance, Robustness, and Future Directions",
+    "source_file": "2602.04251.md",
+    "resolution_type": "heuristic"
+  },
+  {
+    "node_id": "paper_2603_09673",
+    "original_label": "2603.09673",
+    "resolved_label": "VarSplat: Uncertainty-aware 3D Gaussian Splatting for Robust RGB-D SLAM",
+    "source_file": "2603.09673.md",
+    "resolution_type": "heuristic"
+  },
+  {
+    "node_id": "paper_2303_00304",
+    "original_label": "2303.00304",
+    "resolved_label": "Renderable Neural Radiance Map for Visual Navigation",
+    "source_file": "2303.00304.md",
+    "resolution_type": "manual"
+  },
+  {
+    "node_id": "paper_2405_01333",
+    "original_label": "2405.01333",
+    "resolved_label": "NeRFs in Robotics: A Survey",
+    "source_file": "2405.01333.md",
+    "resolution_type": "heuristic"
+  },
+  {
+    "node_id": "paper_2412_02249",
+    "original_label": "2412.02249",
+    "resolved_label": "Multi-robot autonomous 3D reconstruction using Gaussian splatting with Semantic guidance",
+    "source_file": "2412.02249.md",
+    "resolution_type": "heuristic"
+  },
+  {
+    "node_id": "paper_2412_09401v3_2",
+    "original_label": "2412.09401v3 (2)",
+    "resolved_label": "SLAM3R: Real-Time Dense Scene Reconstruction from Monocular RGB Videos",
+    "source_file": "2412.09401v3 (2).md",
+    "resolution_type": "heuristic"
+  },
+  {
+    "node_id": "paper_2502_05752",
+    "original_label": "2502.05752",
+    "resolved_label": "PINGS: Gaussian Splatting Meets Distance Fields within a Point-Based Implicit Neural Map",
+    "source_file": "2502.05752.md",
+    "resolution_type": "manual"
+  },
+  {
+    "node_id": "paper_0051",
+    "original_label": "STAMICS",
+    "resolved_label": "STAMICS: Splat, Track And Map with Integrated Consistency and Semantics for Dense RGB-D SLAM",
+    "source_file": "0053_[SLAM]_STAMICS Splat, Track And Map with Integrated Consistency and Semantics for Dense RGB-.md",
+    "resolution_type": "manual"
+  },
+  {
+    "node_id": "paper_0149_slam_supplement_arxiv",
+    "original_label": "`arXiv`",
+    "resolved_label": "Globally Consistent RGB-D SLAM with 2D Gaussian Splatting",
+    "source_file": "0149_[SLAM-Supplement]_`arXiv`.md",
+    "resolution_type": "manual"
+  },
+  {
+    "node_id": "paper_2309_13240",
+    "original_label": "2309.13240",
+    "resolved_label": "NeRF-Enhanced Outpainting for Faithful Field-of-View Extrapolation",
+    "source_file": "2309.13240.md",
+    "resolution_type": "manual"
+  },
+  {
+    "node_id": "paper_2409_20276",
+    "original_label": "2409.20276",
+    "resolved_label": "Active Neural Mapping at Scale",
+    "source_file": "2409.20276.md",
+    "resolution_type": "manual"
+  },
+  {
+    "node_id": "paper_2412_03263",
+    "original_label": "2412.03263",
+    "resolved_label": "NeRF and Gaussian Splatting SLAM in the Wild",
+    "source_file": "2412.03263.md",
+    "resolution_type": "manual"
+  },
+  {
+    "node_id": "paper_2503_12572",
+    "original_label": "2503.12572",
+    "resolved_label": "Deblur Gaussian Splatting SLAM",
+    "source_file": "2503.12572.md",
+    "resolution_type": "manual"
+  },
+  {
+    "node_id": "paper_2505_09915",
+    "original_label": "2505.09915",
+    "resolved_label": "Large-Scale Gaussian Splatting SLAM",
+    "source_file": "2505.09915.md",
+    "resolution_type": "manual"
+  },
+  {
+    "node_id": "paper_2507_20854",
+    "original_label": "2507.20854",
+    "resolved_label": "S3LAM: Surfel Splatting SLAM for Geometrically Accurate Tracking and Mapping",
+    "source_file": "2507.20854.md",
+    "resolution_type": "heuristic"
+  },
+  {
+    "node_id": "paper_2509_11574",
+    "original_label": "2509.11574",
+    "resolved_label": "Gaussian-plus-SDF SLAM: High-fidelity 3D Reconstruction at 150+ fps",
+    "source_file": "2509.11574.md",
+    "resolution_type": "manual"
+  },
+  {
+    "node_id": "paper_2511_23221",
+    "original_label": "2511.23221",
+    "resolved_label": "Robust 3DGS-based SLAM via Adaptive Kernel Smoothing",
+    "source_file": "2511.23221.md",
+    "resolution_type": "manual"
+  }
+]

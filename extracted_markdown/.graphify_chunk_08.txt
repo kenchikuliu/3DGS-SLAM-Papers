@@ -1,0 +1,22 @@
+0442_[General]_CaRF Enhancing Multi-View Consistency in Referring 3D Gauss.md
+0446_[General]_Object-Centric 3D Gaussian Splatting for Strawberry Plant Re.md
+0451_[General]_6D Channel Knowledge Map Construction via Bidirectional Wire.md
+0454_[General]_NVSim Novel View Synthesis Simulator for Large Scale Indoor.md
+0455_[General]_LagMemo Language 3D Gaussian Splatting Memory for Multi-mod.md
+0456_[General]_EndoWave Rational-Wavelet 4D Gaussian Splatting for Endosco.md
+0457_[General]_Gen-LangSplat Generalized Language Gaussian Splatting with.md
+0461_[General]_Towards Physically Executable 3D Gaussian for Embodied Navig.md
+0469_[General]_GSPlane Concise and Accurate Planar Reconstruction via Stru.md
+0470_[General]_2DGS-R Revisiting the Normal Consistency Regularization in.md
+0471_[General]_GS2POSE Marry Gaussian Splatting to 6D Object Pose Estimati.md
+0473_[General]_GaussGym An open-source real-to-sim framework for learning.md
+0478_[General]_PAGS Priority-Adaptive Gaussian Splatting for Dynamic Drivi.md
+0483_[General]_High-Fidelity Simulated Data Generation for Real-World Zero-.md
+0484_[General]_Towards Efficient 3D Gaussian Human Avatar Compression A Pr.md
+0485_[General]_Opacity-Gradient Driven Density Control for Compact and Effi.md
+0490_[General]_Visibility-Aware Densification for 3D Gaussian Splatting in.md
+0494_[General]_PrismGS Physically-Grounded Anti-Aliasing for High-Fidelity.md
+0496_[General]_Generating Surface for Text-to-3D using 2D Gaussian Splattin.md
+0497_[General]_Capture and Interact Rapid 3D Object Acquisition and Render.md
+0499_[General]_SketchPlan Diffusion Based Drone Planning From Human Sketch.md
+0502_[General]_GaussianMorphing Mesh-Guided 3D Gaussians for Semantic-Awar.md

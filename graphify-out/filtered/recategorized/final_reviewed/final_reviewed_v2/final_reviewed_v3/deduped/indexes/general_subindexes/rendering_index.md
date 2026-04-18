@@ -1,0 +1,143 @@
+# General - Rendering Index
+
+- paper count: 93
+
+## Top Datasets
+
+- KITTI: 6
+- nuScenes: 6
+- ScanNet: 5
+- HM3D: 3
+- Gibson: 2
+- Aoralscan3 Dental Scan Dataset: 1
+- DeepBlue Tooth Design Dataset: 1
+- Shining3D Tooth Design Dataset: 1
+- EuRoC: 1
+- HDTF Dataset (High-Definition Talking Face): 1
+- DTU: 1
+- Matterport3D: 1
+- TUM-RGBD: 1
+
+## Top Metrics
+
+- Recall: 5
+- Chamfer: 3
+- LPIPS (Learned Perceptual Image Patch Similarity): 2
+- PSNR (Peak Signal-to-Noise Ratio): 2
+- Chamfer Distance (3D Geometry Reconstruction Error): 1
+- FID (Frechet Inception Distance): 1
+- Penetration Distance (PD) for Collision Evaluation in Tooth Generation: 1
+- FVMD (Frechet Video Motion Distance): 1
+- LMD (Landmark Distance) for Talking Head: 1
+- SSIM (Structural Similarity Index): 1
+- Sync-C (Audio-Visual Sync Confidence Score): 1
+
+## Top Concepts
+
+- 3D Gaussian Splatting (Kerbl et al. 2023): 2
+- Compositional 3D Scene Generation with Diffusion Models: 1
+- Medical Imaging Reconstruction with Gaussian Splatting: 1
+- Graph Diffusion Model for Compositional Layout Generation: 1
+- Score Distillation Sampling (SDS) for 3D Generation: 1
+- Audio-Driven Talking Head Synthesis with 3DGS: 1
+- COLMAP / Structure-from-Motion (SfM) Initialization: 1
+- Deformable 3D Gaussian Splatting: 1
+- HuBERT Audio Encoder for Speech Features: 1
+- Per-Gaussian Learnable Embeddings for Deformation: 1
+- Tri-plane Encoding for Gaussian Deformation: 1
+
+## Papers
+
+- 3D Scene Rendering with Multimodal Gaussian Splatting | 0247_[General]_3D Scene Rendering with Multimodal Gaussian Splatting.md
+- 3DGS_LSRLarge_Scale Relocation for Autonomous Driving Based | 0675_[General]_3DGS_LSRLarge_Scale Relocation for Autonomous Driving Based.md
+- 4D Driving Scene Generation With Stereo Forcing | 0523_[General]_4D Driving Scene Generation With Stereo Forcing.md
+- 4D Gaussian Splatting as a Learned Dynamical System | 0354_[General]_4D Gaussian Splatting as a Learned Dynamical System.md
+- 4D Neural Voxel Splatting Dynamic Scene Rendering with Voxe | 0448_[General]_4D Neural Voxel Splatting Dynamic Scene Rendering with Voxe.md
+- 4D3R Motion-Aware Neural Reconstruction and Rendering of Dy | 0438_[General]_4D3R Motion-Aware Neural Reconstruction and Rendering of Dy.md
+- 4DRadar-GS Self-Supervised Dynamic Driving Scene Reconstruc | 0549_[General]_4DRadar-GS Self-Supervised Dynamic Driving Scene Reconstruc.md
+- AEGIS Preserving privacy of 3D Facial Avatars with Adversar | 0405_[General]_AEGIS Preserving privacy of 3D Facial Avatars with Adversar.md
+- AHA! Animating Human Avatars in Diverse Scenes with Gaussian | 0430_[General]_AHA! Animating Human Avatars in Diverse Scenes with Gaussian.md
+- AvatarBack Back-Head Generation for Complete 3D Avatars fro | 0573_[General]_AvatarBack Back-Head Generation for Complete 3D Avatars fro.md
+- BetterScene 3D Scene Synthesis with Representation-Aligned | 0234_[General]_BetterScene 3D Scene Synthesis with Representation-Aligned.md
+- Broadening View Synthesis of Dynamic Scenes from Constrained | 0370_[General]_Broadening View Synthesis of Dynamic Scenes from Constrained.md
+- CVD-STORM Cross-View Video Diffusion with Spatial-Temporal | 0493_[General]_CVD-STORM Cross-View Video Diffusion with Spatial-Temporal.md
+- Capture and Interact Rapid 3D Object Acquisition and Render | 0497_[General]_Capture and Interact Rapid 3D Object Acquisition and Render.md
+- Causal Reasoning Elicits Controllable 3D Scene Generation | 0543_[General]_Causal Reasoning Elicits Controllable 3D Scene Generation.md
+- Computer vision training dataset generation for robotic envi | 0378_[General]_Computer vision training dataset generation for robotic envi.md
+- Consistent Instance Field for Dynamic Scene Understanding | 0374_[General]_Consistent Instance Field for Dynamic Scene Understanding.md
+- Constrained Dynamic Gaussian Splatting | 0286_[General]_Constrained Dynamic Gaussian Splatting.md
+- DIAL-GS Dynamic Instance Aware Reconstruction for Label-fre | 0437_[General]_DIAL-GS Dynamic Instance Aware Reconstruction for Label-fre.md
+- DM-CFO A Diffusion Model for Compositional 3D Tooth Generat | 0209_[General]_DM-CFO A Diffusion Model for Compositional 3D Tooth Generat.md | aliases 1
+- DentalSplat Dental Occlusion Novel View Synthesis from Spar | 0444_[General]_DentalSplat Dental Occlusion Novel View Synthesis from Spar.md
+- Dream3DAvatar Text-Controlled 3D Avatar Reconstruction from | 0547_[General]_Dream3DAvatar Text-Controlled 3D Avatar Reconstruction from.md
+- DreamScene 3D Gaussian-based End-to-end Text-to-3D Scene Ge | 0661_[General]_DreamScene 3D Gaussian-based End-to-end Text-to-3D Scene Ge.md
+- DriveSplat Decoupled Driving Scene Reconstruction with Geom | 0583_[General]_DriveSplat Decoupled Driving Scene Reconstruction with Geom.md
+- DrivingScene A Multi-Task Online Feed-Forward 3D Gaussian S | 0453_[General]_DrivingScene A Multi-Task Online Feed-Forward 3D Gaussian S.md
+- DynFOA Generating First-Order Ambisonics with Conditional D | 0273_[General]_DynFOA Generating First-Order Ambisonics with Conditional D.md
+- DynaPose4D High-Quality 4D Dynamic Content Generation via P | 0459_[General]_DynaPose4D High-Quality 4D Dynamic Content Generation via P.md
+- Dynamic Novel View Synthesis in High Dynamic Range | 0522_[General]_Dynamic Novel View Synthesis in High Dynamic Range.md
+- DynamicTree Interactive Real Tree Animation via Sparse Voxe | 0460_[General]_DynamicTree Interactive Real Tree Animation via Sparse Voxe.md
+- DynamicVGGT Learning Dynamic Point Maps for 4D Scene Recons | 0191_[General]_DynamicVGGT Learning Dynamic Point Maps for 4D Scene Recons.md
+- EAvatar Expression-Aware Head Avatar Reconstruction with Ge | 0598_[General]_EAvatar Expression-Aware Head Avatar Reconstruction with Ge.md
+- EmbedTalk Triplane-Free Talking Head Synthesis using Embedd | 0193_[General]_EmbedTalk Triplane-Free Talking Head Synthesis using Embedd.md | aliases 1
+- Enhancing Novel View Synthesis from extremely sparse views w | 0582_[General]_Enhancing Novel View Synthesis from extremely sparse views w.md
+- Extreme Views 3DGS Filter for Novel View Synthesis from Out | 0463_[General]_Extreme Views 3DGS Filter for Novel View Synthesis from Out.md
+- FMGS-Avatar Mesh-Guided 2D Gaussian Splatting with Foundati | 0544_[General]_FMGS-Avatar Mesh-Guided 2D Gaussian Splatting with Foundati.md
+- FastAvatar Instant 3D Gaussian Splatting for Faces from Sin | 0578_[General]_FastAvatar Instant 3D Gaussian Splatting for Faces from Sin.md
+- FastPhysGS Accelerating Physics-based Dynamic 3DGS Simulati | 0291_[General]_FastPhysGS Accelerating Physics-based Dynamic 3DGS Simulati.md
+- FlowHOI Flow-based Semantics-Grounded Generation of Hand-Ob | 0257_[General]_FlowHOI Flow-based Semantics-Grounded Generation of Hand-Ob.md
+- GAINS Gaussian-based Inverse Rendering from Sparse Multi-Vi | 0386_[General]_GAINS Gaussian-based Inverse Rendering from Sparse Multi-Vi.md
+- GEN3D Generating Domain-Free 3D Scenes from a Single Image | 0417_[General]_GEN3D Generating Domain-Free 3D Scenes from a Single Image.md
+- GIFSplat Generative Prior-Guided Iterative Feed-Forward 3D | 0235_[General]_GIFSplat Generative Prior-Guided Iterative Feed-Forward 3D.md
+- GOGS High-Fidelity Geometry and Relighting for Glossy Objec | 0590_[General]_GOGS High-Fidelity Geometry and Relighting for Glossy Objec.md
+- Gaussian Pixel Codec Avatars A Hybrid Representation for Ef | 0366_[General]_Gaussian Pixel Codec Avatars A Hybrid Representation for Ef.md
+- Gaussian Sequences with Multi-Scale Dynamics for 4D Reconstr | 0254_[General]_Gaussian Sequences with Multi-Scale Dynamics for 4D Reconstr.md
+- Gaussian Wardrobe Compositional 3D Gaussian Avatars for Fre | 0208_[General]_Gaussian Wardrobe Compositional 3D Gaussian Avatars for Fre.md
+- GaussianHeadTalk Wobble-Free 3D Talking Heads with Audio Dr | 0383_[General]_GaussianHeadTalk Wobble-Free 3D Talking Heads with Audio Dr.md
+- GaussianSwap Animatable Video Face Swapping with 3D Gaussia | 0332_[General]_GaussianSwap Animatable Video Face Swapping with 3D Gaussia.md
+- Generating Surface for Text-to-3D using 2D Gaussian Splattin | 0496_[General]_Generating Surface for Text-to-3D using 2D Gaussian Splattin.md
+- GeoDiff4D Geometry-Aware Diffusion for 4D Head Avatar Recon | 0225_[General]_GeoDiff4D Geometry-Aware Diffusion for 4D Head Avatar Recon.md
+- HGS Hybrid Gaussian Splatting with Static-Dynamic Decomposi | 0371_[General]_HGS Hybrid Gaussian Splatting with Static-Dynamic Decomposi.md
+- High-Fidelity Simulated Data Generation for Real-World Zero- | 0483_[General]_High-Fidelity Simulated Data Generation for Real-World Zero-.md
+- IDU Incremental Dynamic Update of Existing 3D Virtual Envir | 0579_[General]_IDU Incremental Dynamic Update of Existing 3D Virtual Envir.md
+- InnerGS Internal Scenes Rendering via Factorized 3D Gaussia | 0599_[General]_InnerGS Internal Scenes Rendering via Factorized 3D Gaussia.md
+- InstDrive Instance-Aware 3D Gaussian Splatting for Driving | 0602_[General]_InstDrive Instance-Aware 3D Gaussian Splatting for Driving.md
+- Instant Expressive Gaussian Head Avatar via 3D-Aware Express | 0363_[General]_Instant Expressive Gaussian Head Avatar via 3D-Aware Express.md
+- Interaction-Aware 4D Gaussian Splatting for Dynamic Hand-Obj | 0415_[General]_Interaction-Aware 4D Gaussian Splatting for Dynamic Hand-Obj.md
+- Large Material Gaussian Model for Relightable 3D Generation | 0521_[General]_Large Material Gaussian Model for Relightable 3D Generation.md
+- LiftAvatar Kinematic-Space Completion for Expression-Contro | 0216_[General]_LiftAvatar Kinematic-Space Completion for Expression-Contro.md
+- MVG4D Image Matrix-Based Multi-View and Motion Generation f | 0653_[General]_MVG4D Image Matrix-Based Multi-View and Motion Generation f.md
+- MeSS City Mesh-Guided Outdoor Scene Generation with Cross-V | 0585_[General]_MeSS City Mesh-Guided Outdoor Scene Generation with Cross-V.md
+- MoGaFace Momentum-Guided and Texture-Aware Gaussian Avatars | 0638_[General]_MoGaFace Momentum-Guided and Texture-Aware Gaussian Avatars.md
+- NVSim Novel View Synthesis Simulator for Large Scale Indoor | 0454_[General]_NVSim Novel View Synthesis Simulator for Large Scale Indoor.md
+- NeAR Coupled Neural Asset-Renderer Stack | 0398_[General]_NeAR Coupled Neural Asset-Renderer Stack.md
+- NeeCo Image Synthesis of Novel Instrument States Based on D | 0611_[General]_NeeCo Image Synthesis of Novel Instrument States Based on D.md
+- Nexels Neurally-Textured Surfels for Real-Time Novel View S | 0377_[General]_Nexels Neurally-Textured Surfels for Real-Time Novel View S.md
+- Nighttime Autonomous Driving Scene Reconstruction with Physi | 0256_[General]_Nighttime Autonomous Driving Scene Reconstruction with Physi.md
+- Novel View Synthesis with Gaussian Splatting Impact on Phot | 0613_[General]_Novel View Synthesis with Gaussian Splatting Impact on Phot.md
+- OMEGA-Avatar One-shot Modeling of 360掳 Gaussian Avatars | 0260_[General]_OMEGA-Avatar One-shot Modeling of 360掳 Gaussian Avatars.md
+- Object-Aware 4D Human Motion Generation | 0449_[General]_Object-Aware 4D Human Motion Generation.md
+- Online 3D Gaussian Splatting Modeling with Novel View Select | 0596_[General]_Online 3D Gaussian Splatting Modeling with Novel View Select.md
+- OracleGS Grounding Generative Priors for Sparse-View Gaussi | 0516_[General]_OracleGS Grounding Generative Priors for Sparse-View Gaussi.md
+- PAGS Priority-Adaptive Gaussian Splatting for Dynamic Drivi | 0478_[General]_PAGS Priority-Adaptive Gaussian Splatting for Dynamic Drivi.md
+- PSGS Text-driven Panorama Sliding Scene Generation via Gaus | 0296_[General]_PSGS Text-driven Panorama Sliding Scene Generation via Gaus.md
+- PanoLAM Large Avatar Model for Gaussian Full-Head Synthesis | 0555_[General]_PanoLAM Large Avatar Model for Gaussian Full-Head Synthesis.md
+- Quantile Rendering Efficiently Embedding High-dimensional F | 0349_[General]_Quantile Rendering Efficiently Embedding High-dimensional F.md
+- R3GW Relightable 3D Gaussians for Outdoor Scenes in the Wil | 0214_[General]_R3GW Relightable 3D Gaussians for Outdoor Scenes in the Wil.md
+- ROSGS Relightable Outdoor Scenes With Gaussian Splatting | 0552_[General]_ROSGS Relightable Outdoor Scenes With Gaussian Splatting.md
+- RTR-GS 3D Gaussian Splatting for Inverse Rendering with Rad | 0670_[General]_RTR-GS 3D Gaussian Splatting for Inverse Rendering with Rad.md
+- ReaDy-Go Real-to-Sim Dynamic 3D Gaussian Splatting Simulati | 0263_[General]_ReaDy-Go Real-to-Sim Dynamic 3D Gaussian Splatting Simulati.md
+- Reconstructing 3D Scenes in Native High Dynamic Range | 0425_[General]_Reconstructing 3D Scenes in Native High Dynamic Range.md
+- SharpTimeGS Sharp and Stable Dynamic Gaussian Splatting via | 0288_[General]_SharpTimeGS Sharp and Stable Dynamic Gaussian Splatting via.md
+- Splat-Portrait Generalizing Talking Heads with Gaussian Spl | 0307_[General]_Splat-Portrait Generalizing Talking Heads with Gaussian Spl.md
+- Splatent Splatting Diffusion Latents for Novel View Synthes | 0387_[General]_Splatent Splatting Diffusion Latents for Novel View Synthes.md
+- SplitGaussian Reconstructing Dynamic Scenes via Visual Geom | 0627_[General]_SplitGaussian Reconstructing Dynamic Scenes via Visual Geom.md
+- TR-Gaussians High-fidelity Real-time Rendering of Planar Tr | 0423_[General]_TR-Gaussians High-fidelity Real-time Rendering of Planar Tr.md
+- Toward Fine-Grained Facial Control in 3D Talking Head Genera | 0268_[General]_Toward Fine-Grained Facial Control in 3D Talking Head Genera.md
+- TraceFlow Dynamic 3D Reconstruction of Specular Scenes Driv | 0385_[General]_TraceFlow Dynamic 3D Reconstruction of Specular Scenes Driv.md
+- Triangle Splatting+ Differentiable Rendering with Opaque Tr | 0508_[General]_Triangle Splatting+ Differentiable Rendering with Opaque Tr.md
+- UPGS Unified Pose-aware Gaussian Splatting for Dynamic Scen | 0566_[General]_UPGS Unified Pose-aware Gaussian Splatting for Dynamic Scen.md
+- Unified Sensor Simulation for Autonomous Driving | 0280_[General]_Unified Sensor Simulation for Autonomous Driving.md
+- WildGHand Learning Anti-Perturbation Gaussian Hand Avatars | 0240_[General]_WildGHand Learning Anti-Perturbation Gaussian Hand Avatars.md
+- WorldWarp Propagating 3D Geometry with Asynchronous Video D | 0353_[General]_WorldWarp Propagating 3D Geometry with Asynchronous Video D.md
+- Zero-Shot UAV Navigation in Forests via Relightable 3D Gauss | 0275_[General]_Zero-Shot UAV Navigation in Forests via Relightable 3D Gauss.md

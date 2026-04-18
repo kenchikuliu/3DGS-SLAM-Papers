@@ -1,0 +1,22 @@
+2512.08625.md
+2512.09411.md
+2512.22771.md
+2601.05738.md
+2601.11617.md
+2602.07493.md
+2603.06989.md
+2603.09673.md
+0013_[SLAM]_IG-SLAM Instant Gaussian SLAM.md
+0057_[SLAM]_GSFF-SLAM 3D Semantic Gaussian Splatting SLAM via Feature Field.md
+0070_[SLAM]_Taming the Light Illumination-Invariant Semantic 3DGS-SLAM.md
+0078_[Robotics]_Dex-NeRF Using a Neural Radiance Field to Grasp Transparent Objects.md
+0112_[Robotics]_IGL-Nav Incremental 3D Gaussian Localization for Image-goal Navigati.md
+0153_[SLAM-Supplement]_`CVPR`.md
+0154_[SLAM-Supplement]_`arXiv`.md
+0157_[SLAM-Supplement]_`NIPS`.md
+0168_[SLAM-Supplement]_`arXiv`.md
+0174_[SLAM-Supplement]_`3DV`.md
+0184_[General]_DenoiseSplat Feed-Forward Gaussian Splatting for Noisy 3D S.md
+0189_[General]_ImprovedGS+ A High-Performance C++CUDA Re-Implementation S.md
+0191_[General]_DynamicVGGT Learning Dynamic Point Maps for 4D Scene Recons.md
+0196_[General]_ColonSplat Reconstruction of Peristaltic Motion in Colonosc.md

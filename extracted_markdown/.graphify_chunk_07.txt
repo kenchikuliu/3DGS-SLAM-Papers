@@ -1,0 +1,22 @@
+0371_[General]_HGS Hybrid Gaussian Splatting with Static-Dynamic Decomposi.md
+0374_[General]_Consistent Instance Field for Dynamic Scene Understanding.md
+0375_[General]_GaussianPlant Structure-aligned Gaussian Splatting for 3D R.md
+0382_[General]_Long-LRM++ Preserving Fine Details in Feed-Forward Wide-Cov.md
+0385_[General]_TraceFlow Dynamic 3D Reconstruction of Specular Scenes Driv.md
+0396_[General]_NVGS Neural Visibility for Occlusion Culling in 3D Gaussian.md
+0401_[General]_Observer Actor Active Vision Imitation Learning with Sparse.md
+0402_[General]_RoboArmGS High-Quality Robotic Arm Splatting via Bézier Cur.md
+0408_[General]_RoomPlanner Explicit Layout Planner for Easier LLM-Driven 3.md
+0409_[General]_PhysMorph-GS Differentiable Shape Morphing via Joint Optimi.md
+0411_[General]_One Walk is All You Need Data-Efficient 3D RF Scene Reconst.md
+0412_[General]_Vorion A RISC-V GPU with Hardware-Accelerated 3D Gaussian R.md
+0413_[General]_Optimizing 3D Gaussian Splattering for Mobile GPUs.md
+0416_[General]_Dental3R Geometry-Aware Pairing for Intraoral 3D Reconstruc.md
+0419_[General]_SF-Recon Simplification-Free Lightweight Building Reconstru.md
+0431_[General]_Lumos3D A Single-Forward Framework for Low-Light 3D Scene R.md
+0433_[General]_YoNoSplat You Only Need One Model for Feedforward 3D Gaussi.md
+0434_[General]_GFix Perceptually Enhanced Gaussian Splatting Video Compres.md
+0435_[General]_MUGSQA Novel Multi-Uncertainty-Based Gaussian Splatting Qua.md
+0436_[General]_ConeGS Error-Guided Densification Using Pixel Cones for Imp.md
+0438_[General]_4D3R Motion-Aware Neural Reconstruction and Rendering of Dy.md
+0441_[General]_Real-to-Sim Robot Policy Evaluation with Gaussian Splatting.md

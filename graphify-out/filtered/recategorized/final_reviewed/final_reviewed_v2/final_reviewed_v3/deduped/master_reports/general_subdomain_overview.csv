@@ -1,0 +1,5 @@
+﻿subdomain,paper_count,top_dataset,top_metric,top_concept
+Reconstruction,350,ScanNet,Chamfer,3D Gaussian Splatting (Kerbl et al. 2023)
+Rendering,93,KITTI,Recall,3D Gaussian Splatting (Kerbl et al. 2023)
+Enhancement,42,KITTI,Recall,Medical Imaging Reconstruction with Gaussian Splatting
+Evaluation,29,ScanNet,Chamfer,

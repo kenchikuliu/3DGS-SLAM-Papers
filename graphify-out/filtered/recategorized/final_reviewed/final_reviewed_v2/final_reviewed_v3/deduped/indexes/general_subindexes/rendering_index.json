@@ -1,0 +1,711 @@
+{
+  "domain": "General",
+  "subdomain": "Rendering",
+  "paper_count": 93,
+  "top_datasets": [
+    {
+      "label": "KITTI",
+      "count": 6
+    },
+    {
+      "label": "nuScenes",
+      "count": 6
+    },
+    {
+      "label": "ScanNet",
+      "count": 5
+    },
+    {
+      "label": "HM3D",
+      "count": 3
+    },
+    {
+      "label": "Gibson",
+      "count": 2
+    },
+    {
+      "label": "Aoralscan3 Dental Scan Dataset",
+      "count": 1
+    },
+    {
+      "label": "DeepBlue Tooth Design Dataset",
+      "count": 1
+    },
+    {
+      "label": "Shining3D Tooth Design Dataset",
+      "count": 1
+    },
+    {
+      "label": "EuRoC",
+      "count": 1
+    },
+    {
+      "label": "HDTF Dataset (High-Definition Talking Face)",
+      "count": 1
+    },
+    {
+      "label": "DTU",
+      "count": 1
+    },
+    {
+      "label": "Matterport3D",
+      "count": 1
+    },
+    {
+      "label": "TUM-RGBD",
+      "count": 1
+    }
+  ],
+  "top_metrics": [
+    {
+      "label": "Recall",
+      "count": 5
+    },
+    {
+      "label": "Chamfer",
+      "count": 3
+    },
+    {
+      "label": "LPIPS (Learned Perceptual Image Patch Similarity)",
+      "count": 2
+    },
+    {
+      "label": "PSNR (Peak Signal-to-Noise Ratio)",
+      "count": 2
+    },
+    {
+      "label": "Chamfer Distance (3D Geometry Reconstruction Error)",
+      "count": 1
+    },
+    {
+      "label": "FID (Frechet Inception Distance)",
+      "count": 1
+    },
+    {
+      "label": "Penetration Distance (PD) for Collision Evaluation in Tooth Generation",
+      "count": 1
+    },
+    {
+      "label": "FVMD (Frechet Video Motion Distance)",
+      "count": 1
+    },
+    {
+      "label": "LMD (Landmark Distance) for Talking Head",
+      "count": 1
+    },
+    {
+      "label": "SSIM (Structural Similarity Index)",
+      "count": 1
+    },
+    {
+      "label": "Sync-C (Audio-Visual Sync Confidence Score)",
+      "count": 1
+    }
+  ],
+  "top_concepts": [
+    {
+      "label": "3D Gaussian Splatting (Kerbl et al. 2023)",
+      "count": 2
+    },
+    {
+      "label": "Compositional 3D Scene Generation with Diffusion Models",
+      "count": 1
+    },
+    {
+      "label": "Medical Imaging Reconstruction with Gaussian Splatting",
+      "count": 1
+    },
+    {
+      "label": "Graph Diffusion Model for Compositional Layout Generation",
+      "count": 1
+    },
+    {
+      "label": "Score Distillation Sampling (SDS) for 3D Generation",
+      "count": 1
+    },
+    {
+      "label": "Audio-Driven Talking Head Synthesis with 3DGS",
+      "count": 1
+    },
+    {
+      "label": "COLMAP / Structure-from-Motion (SfM) Initialization",
+      "count": 1
+    },
+    {
+      "label": "Deformable 3D Gaussian Splatting",
+      "count": 1
+    },
+    {
+      "label": "HuBERT Audio Encoder for Speech Features",
+      "count": 1
+    },
+    {
+      "label": "Per-Gaussian Learnable Embeddings for Deformation",
+      "count": 1
+    },
+    {
+      "label": "Tri-plane Encoding for Gaussian Deformation",
+      "count": 1
+    }
+  ],
+  "papers": [
+    {
+      "id": "paper_0247_general_3d_scene_rendering_with_multimodal_gaussian_splatting",
+      "label": "3D Scene Rendering with Multimodal Gaussian Splatting",
+      "source_file": "0247_[General]_3D Scene Rendering with Multimodal Gaussian Splatting.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0675_general_3dgs_lsrlarge_scale_relocation_for_autonomous_driving_based",
+      "label": "3DGS_LSRLarge_Scale Relocation for Autonomous Driving Based",
+      "source_file": "0675_[General]_3DGS_LSRLarge_Scale Relocation for Autonomous Driving Based.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0523_general_4d_driving_scene_generation_with_stereo_forcing",
+      "label": "4D Driving Scene Generation With Stereo Forcing",
+      "source_file": "0523_[General]_4D Driving Scene Generation With Stereo Forcing.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0354_general_4d_gaussian_splatting_as_a_learned_dynamical_system",
+      "label": "4D Gaussian Splatting as a Learned Dynamical System",
+      "source_file": "0354_[General]_4D Gaussian Splatting as a Learned Dynamical System.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0448_general_4d_neural_voxel_splatting_dynamic_scene_rendering_with_voxe",
+      "label": "4D Neural Voxel Splatting Dynamic Scene Rendering with Voxe",
+      "source_file": "0448_[General]_4D Neural Voxel Splatting Dynamic Scene Rendering with Voxe.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0438_general_4d3r_motion_aware_neural_reconstruction_and_rendering_of_dy",
+      "label": "4D3R Motion-Aware Neural Reconstruction and Rendering of Dy",
+      "source_file": "0438_[General]_4D3R Motion-Aware Neural Reconstruction and Rendering of Dy.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0549_general_4dradar_gs_self_supervised_dynamic_driving_scene_reconstruc",
+      "label": "4DRadar-GS Self-Supervised Dynamic Driving Scene Reconstruc",
+      "source_file": "0549_[General]_4DRadar-GS Self-Supervised Dynamic Driving Scene Reconstruc.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0405_general_aegis_preserving_privacy_of_3d_facial_avatars_with_adversar",
+      "label": "AEGIS Preserving privacy of 3D Facial Avatars with Adversar",
+      "source_file": "0405_[General]_AEGIS Preserving privacy of 3D Facial Avatars with Adversar.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0430_general_aha_animating_human_avatars_in_diverse_scenes_with_gaussian",
+      "label": "AHA! Animating Human Avatars in Diverse Scenes with Gaussian",
+      "source_file": "0430_[General]_AHA! Animating Human Avatars in Diverse Scenes with Gaussian.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0573_general_avatarback_back_head_generation_for_complete_3d_avatars_fro",
+      "label": "AvatarBack Back-Head Generation for Complete 3D Avatars fro",
+      "source_file": "0573_[General]_AvatarBack Back-Head Generation for Complete 3D Avatars fro.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0234_general_betterscene_3d_scene_synthesis_with_representation_aligned",
+      "label": "BetterScene 3D Scene Synthesis with Representation-Aligned",
+      "source_file": "0234_[General]_BetterScene 3D Scene Synthesis with Representation-Aligned.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0370_general_broadening_view_synthesis_of_dynamic_scenes_from_constrained",
+      "label": "Broadening View Synthesis of Dynamic Scenes from Constrained",
+      "source_file": "0370_[General]_Broadening View Synthesis of Dynamic Scenes from Constrained.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0493_general_cvd_storm_cross_view_video_diffusion_with_spatial_temporal",
+      "label": "CVD-STORM Cross-View Video Diffusion with Spatial-Temporal",
+      "source_file": "0493_[General]_CVD-STORM Cross-View Video Diffusion with Spatial-Temporal.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0497_general_capture_and_interact_rapid_3d_object_acquisition_and_render",
+      "label": "Capture and Interact Rapid 3D Object Acquisition and Render",
+      "source_file": "0497_[General]_Capture and Interact Rapid 3D Object Acquisition and Render.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0543_general_causal_reasoning_elicits_controllable_3d_scene_generation",
+      "label": "Causal Reasoning Elicits Controllable 3D Scene Generation",
+      "source_file": "0543_[General]_Causal Reasoning Elicits Controllable 3D Scene Generation.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0378_general_computer_vision_training_dataset_generation_for_robotic_envi",
+      "label": "Computer vision training dataset generation for robotic envi",
+      "source_file": "0378_[General]_Computer vision training dataset generation for robotic envi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0374_general_consistent_instance_field_for_dynamic_scene_understanding",
+      "label": "Consistent Instance Field for Dynamic Scene Understanding",
+      "source_file": "0374_[General]_Consistent Instance Field for Dynamic Scene Understanding.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0286_general_constrained_dynamic_gaussian_splatting",
+      "label": "Constrained Dynamic Gaussian Splatting",
+      "source_file": "0286_[General]_Constrained Dynamic Gaussian Splatting.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0437_general_dial_gs_dynamic_instance_aware_reconstruction_for_label_fre",
+      "label": "DIAL-GS Dynamic Instance Aware Reconstruction for Label-fre",
+      "source_file": "0437_[General]_DIAL-GS Dynamic Instance Aware Reconstruction for Label-fre.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0209_general_dm_cfo_a_diffusion_model_for_compositional_3d_tooth_generat",
+      "label": "DM-CFO A Diffusion Model for Compositional 3D Tooth Generat",
+      "source_file": "0209_[General]_DM-CFO A Diffusion Model for Compositional 3D Tooth Generat.md",
+      "alias_count": 1
+    },
+    {
+      "id": "paper_0444_general_dentalsplat_dental_occlusion_novel_view_synthesis_from_spar",
+      "label": "DentalSplat Dental Occlusion Novel View Synthesis from Spar",
+      "source_file": "0444_[General]_DentalSplat Dental Occlusion Novel View Synthesis from Spar.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0547_general_dream3davatar_text_controlled_3d_avatar_reconstruction_from",
+      "label": "Dream3DAvatar Text-Controlled 3D Avatar Reconstruction from",
+      "source_file": "0547_[General]_Dream3DAvatar Text-Controlled 3D Avatar Reconstruction from.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0661_general_dreamscene_3d_gaussian_based_end_to_end_text_to_3d_scene_ge",
+      "label": "DreamScene 3D Gaussian-based End-to-end Text-to-3D Scene Ge",
+      "source_file": "0661_[General]_DreamScene 3D Gaussian-based End-to-end Text-to-3D Scene Ge.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0583_general_drivesplat_decoupled_driving_scene_reconstruction_with_geom",
+      "label": "DriveSplat Decoupled Driving Scene Reconstruction with Geom",
+      "source_file": "0583_[General]_DriveSplat Decoupled Driving Scene Reconstruction with Geom.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0453_general_drivingscene_a_multi_task_online_feed_forward_3d_gaussian_s",
+      "label": "DrivingScene A Multi-Task Online Feed-Forward 3D Gaussian S",
+      "source_file": "0453_[General]_DrivingScene A Multi-Task Online Feed-Forward 3D Gaussian S.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0273_general_dynfoa_generating_first_order_ambisonics_with_conditional_d",
+      "label": "DynFOA Generating First-Order Ambisonics with Conditional D",
+      "source_file": "0273_[General]_DynFOA Generating First-Order Ambisonics with Conditional D.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0459_general_dynapose4d_high_quality_4d_dynamic_content_generation_via_p",
+      "label": "DynaPose4D High-Quality 4D Dynamic Content Generation via P",
+      "source_file": "0459_[General]_DynaPose4D High-Quality 4D Dynamic Content Generation via P.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0522_general_dynamic_novel_view_synthesis_in_high_dynamic_range",
+      "label": "Dynamic Novel View Synthesis in High Dynamic Range",
+      "source_file": "0522_[General]_Dynamic Novel View Synthesis in High Dynamic Range.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0460_general_dynamictree_interactive_real_tree_animation_via_sparse_voxe",
+      "label": "DynamicTree Interactive Real Tree Animation via Sparse Voxe",
+      "source_file": "0460_[General]_DynamicTree Interactive Real Tree Animation via Sparse Voxe.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0191_general_dynamicvggt_learning_dynamic_point_maps_for_4d_scene_recons",
+      "label": "DynamicVGGT Learning Dynamic Point Maps for 4D Scene Recons",
+      "source_file": "0191_[General]_DynamicVGGT Learning Dynamic Point Maps for 4D Scene Recons.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0598_general_eavatar_expression_aware_head_avatar_reconstruction_with_ge",
+      "label": "EAvatar Expression-Aware Head Avatar Reconstruction with Ge",
+      "source_file": "0598_[General]_EAvatar Expression-Aware Head Avatar Reconstruction with Ge.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0193_general_embedtalk_triplane_free_talking_head_synthesis_using_embedd",
+      "label": "EmbedTalk Triplane-Free Talking Head Synthesis using Embedd",
+      "source_file": "0193_[General]_EmbedTalk Triplane-Free Talking Head Synthesis using Embedd.md",
+      "alias_count": 1
+    },
+    {
+      "id": "paper_0582_general_enhancing_novel_view_synthesis_from_extremely_sparse_views_w",
+      "label": "Enhancing Novel View Synthesis from extremely sparse views w",
+      "source_file": "0582_[General]_Enhancing Novel View Synthesis from extremely sparse views w.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0463_general_extreme_views_3dgs_filter_for_novel_view_synthesis_from_out",
+      "label": "Extreme Views 3DGS Filter for Novel View Synthesis from Out",
+      "source_file": "0463_[General]_Extreme Views 3DGS Filter for Novel View Synthesis from Out.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0544_general_fmgs_avatar_mesh_guided_2d_gaussian_splatting_with_foundati",
+      "label": "FMGS-Avatar Mesh-Guided 2D Gaussian Splatting with Foundati",
+      "source_file": "0544_[General]_FMGS-Avatar Mesh-Guided 2D Gaussian Splatting with Foundati.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0578_general_fastavatar_instant_3d_gaussian_splatting_for_faces_from_sin",
+      "label": "FastAvatar Instant 3D Gaussian Splatting for Faces from Sin",
+      "source_file": "0578_[General]_FastAvatar Instant 3D Gaussian Splatting for Faces from Sin.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0291_general_fastphysgs_accelerating_physics_based_dynamic_3dgs_simulati",
+      "label": "FastPhysGS Accelerating Physics-based Dynamic 3DGS Simulati",
+      "source_file": "0291_[General]_FastPhysGS Accelerating Physics-based Dynamic 3DGS Simulati.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0257_general_flowhoi_flow_based_semantics_grounded_generation_of_hand_ob",
+      "label": "FlowHOI Flow-based Semantics-Grounded Generation of Hand-Ob",
+      "source_file": "0257_[General]_FlowHOI Flow-based Semantics-Grounded Generation of Hand-Ob.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0386_general_gains_gaussian_based_inverse_rendering_from_sparse_multi_vi",
+      "label": "GAINS Gaussian-based Inverse Rendering from Sparse Multi-Vi",
+      "source_file": "0386_[General]_GAINS Gaussian-based Inverse Rendering from Sparse Multi-Vi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0417_general_gen3d_generating_domain_free_3d_scenes_from_a_single_image",
+      "label": "GEN3D Generating Domain-Free 3D Scenes from a Single Image",
+      "source_file": "0417_[General]_GEN3D Generating Domain-Free 3D Scenes from a Single Image.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0235_general_gifsplat_generative_prior_guided_iterative_feed_forward_3d",
+      "label": "GIFSplat Generative Prior-Guided Iterative Feed-Forward 3D",
+      "source_file": "0235_[General]_GIFSplat Generative Prior-Guided Iterative Feed-Forward 3D.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0590_general_gogs_high_fidelity_geometry_and_relighting_for_glossy_objec",
+      "label": "GOGS High-Fidelity Geometry and Relighting for Glossy Objec",
+      "source_file": "0590_[General]_GOGS High-Fidelity Geometry and Relighting for Glossy Objec.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0366_general_gaussian_pixel_codec_avatars_a_hybrid_representation_for_ef",
+      "label": "Gaussian Pixel Codec Avatars A Hybrid Representation for Ef",
+      "source_file": "0366_[General]_Gaussian Pixel Codec Avatars A Hybrid Representation for Ef.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0254_general_gaussian_sequences_with_multi_scale_dynamics_for_4d_reconstr",
+      "label": "Gaussian Sequences with Multi-Scale Dynamics for 4D Reconstr",
+      "source_file": "0254_[General]_Gaussian Sequences with Multi-Scale Dynamics for 4D Reconstr.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0208_general_gaussian_wardrobe_compositional_3d_gaussian_avatars_for_fre",
+      "label": "Gaussian Wardrobe Compositional 3D Gaussian Avatars for Fre",
+      "source_file": "0208_[General]_Gaussian Wardrobe Compositional 3D Gaussian Avatars for Fre.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0383_general_gaussianheadtalk_wobble_free_3d_talking_heads_with_audio_dr",
+      "label": "GaussianHeadTalk Wobble-Free 3D Talking Heads with Audio Dr",
+      "source_file": "0383_[General]_GaussianHeadTalk Wobble-Free 3D Talking Heads with Audio Dr.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0332_general_gaussianswap_animatable_video_face_swapping_with_3d_gaussia",
+      "label": "GaussianSwap Animatable Video Face Swapping with 3D Gaussia",
+      "source_file": "0332_[General]_GaussianSwap Animatable Video Face Swapping with 3D Gaussia.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0496_general_generating_surface_for_text_to_3d_using_2d_gaussian_splattin",
+      "label": "Generating Surface for Text-to-3D using 2D Gaussian Splattin",
+      "source_file": "0496_[General]_Generating Surface for Text-to-3D using 2D Gaussian Splattin.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0225_general_geodiff4d_geometry_aware_diffusion_for_4d_head_avatar_recon",
+      "label": "GeoDiff4D Geometry-Aware Diffusion for 4D Head Avatar Recon",
+      "source_file": "0225_[General]_GeoDiff4D Geometry-Aware Diffusion for 4D Head Avatar Recon.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0371_general_hgs_hybrid_gaussian_splatting_with_static_dynamic_decomposi",
+      "label": "HGS Hybrid Gaussian Splatting with Static-Dynamic Decomposi",
+      "source_file": "0371_[General]_HGS Hybrid Gaussian Splatting with Static-Dynamic Decomposi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0483_general_high_fidelity_simulated_data_generation_for_real_world_zero",
+      "label": "High-Fidelity Simulated Data Generation for Real-World Zero-",
+      "source_file": "0483_[General]_High-Fidelity Simulated Data Generation for Real-World Zero-.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0579_general_idu_incremental_dynamic_update_of_existing_3d_virtual_envir",
+      "label": "IDU Incremental Dynamic Update of Existing 3D Virtual Envir",
+      "source_file": "0579_[General]_IDU Incremental Dynamic Update of Existing 3D Virtual Envir.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0599_general_innergs_internal_scenes_rendering_via_factorized_3d_gaussia",
+      "label": "InnerGS Internal Scenes Rendering via Factorized 3D Gaussia",
+      "source_file": "0599_[General]_InnerGS Internal Scenes Rendering via Factorized 3D Gaussia.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0602_general_instdrive_instance_aware_3d_gaussian_splatting_for_driving",
+      "label": "InstDrive Instance-Aware 3D Gaussian Splatting for Driving",
+      "source_file": "0602_[General]_InstDrive Instance-Aware 3D Gaussian Splatting for Driving.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0363_general_instant_expressive_gaussian_head_avatar_via_3d_aware_express",
+      "label": "Instant Expressive Gaussian Head Avatar via 3D-Aware Express",
+      "source_file": "0363_[General]_Instant Expressive Gaussian Head Avatar via 3D-Aware Express.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0415_general_interaction_aware_4d_gaussian_splatting_for_dynamic_hand_obj",
+      "label": "Interaction-Aware 4D Gaussian Splatting for Dynamic Hand-Obj",
+      "source_file": "0415_[General]_Interaction-Aware 4D Gaussian Splatting for Dynamic Hand-Obj.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0521_general_large_material_gaussian_model_for_relightable_3d_generation",
+      "label": "Large Material Gaussian Model for Relightable 3D Generation",
+      "source_file": "0521_[General]_Large Material Gaussian Model for Relightable 3D Generation.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0216_general_liftavatar_kinematic_space_completion_for_expression_contro",
+      "label": "LiftAvatar Kinematic-Space Completion for Expression-Contro",
+      "source_file": "0216_[General]_LiftAvatar Kinematic-Space Completion for Expression-Contro.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0653_general_mvg4d_image_matrix_based_multi_view_and_motion_generation_f",
+      "label": "MVG4D Image Matrix-Based Multi-View and Motion Generation f",
+      "source_file": "0653_[General]_MVG4D Image Matrix-Based Multi-View and Motion Generation f.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0585_general_mess_city_mesh_guided_outdoor_scene_generation_with_cross_v",
+      "label": "MeSS City Mesh-Guided Outdoor Scene Generation with Cross-V",
+      "source_file": "0585_[General]_MeSS City Mesh-Guided Outdoor Scene Generation with Cross-V.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0638_general_mogaface_momentum_guided_and_texture_aware_gaussian_avatars",
+      "label": "MoGaFace Momentum-Guided and Texture-Aware Gaussian Avatars",
+      "source_file": "0638_[General]_MoGaFace Momentum-Guided and Texture-Aware Gaussian Avatars.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0454_general_nvsim_novel_view_synthesis_simulator_for_large_scale_indoor",
+      "label": "NVSim Novel View Synthesis Simulator for Large Scale Indoor",
+      "source_file": "0454_[General]_NVSim Novel View Synthesis Simulator for Large Scale Indoor.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0398_general_near_coupled_neural_asset_renderer_stack",
+      "label": "NeAR Coupled Neural Asset-Renderer Stack",
+      "source_file": "0398_[General]_NeAR Coupled Neural Asset-Renderer Stack.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0611_general_neeco_image_synthesis_of_novel_instrument_states_based_on_d",
+      "label": "NeeCo Image Synthesis of Novel Instrument States Based on D",
+      "source_file": "0611_[General]_NeeCo Image Synthesis of Novel Instrument States Based on D.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0377_general_nexels_neurally_textured_surfels_for_real_time_novel_view_s",
+      "label": "Nexels Neurally-Textured Surfels for Real-Time Novel View S",
+      "source_file": "0377_[General]_Nexels Neurally-Textured Surfels for Real-Time Novel View S.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0256_general_nighttime_autonomous_driving_scene_reconstruction_with_physi",
+      "label": "Nighttime Autonomous Driving Scene Reconstruction with Physi",
+      "source_file": "0256_[General]_Nighttime Autonomous Driving Scene Reconstruction with Physi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0613_general_novel_view_synthesis_with_gaussian_splatting_impact_on_phot",
+      "label": "Novel View Synthesis with Gaussian Splatting Impact on Phot",
+      "source_file": "0613_[General]_Novel View Synthesis with Gaussian Splatting Impact on Phot.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0260_general_omega_avatar_one_shot_modeling_of_360_gaussian_avatars",
+      "label": "OMEGA-Avatar One-shot Modeling of 360掳 Gaussian Avatars",
+      "source_file": "0260_[General]_OMEGA-Avatar One-shot Modeling of 360掳 Gaussian Avatars.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0449_general_object_aware_4d_human_motion_generation",
+      "label": "Object-Aware 4D Human Motion Generation",
+      "source_file": "0449_[General]_Object-Aware 4D Human Motion Generation.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0596_general_online_3d_gaussian_splatting_modeling_with_novel_view_select",
+      "label": "Online 3D Gaussian Splatting Modeling with Novel View Select",
+      "source_file": "0596_[General]_Online 3D Gaussian Splatting Modeling with Novel View Select.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0516_general_oraclegs_grounding_generative_priors_for_sparse_view_gaussi",
+      "label": "OracleGS Grounding Generative Priors for Sparse-View Gaussi",
+      "source_file": "0516_[General]_OracleGS Grounding Generative Priors for Sparse-View Gaussi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0478_general_pags_priority_adaptive_gaussian_splatting_for_dynamic_drivi",
+      "label": "PAGS Priority-Adaptive Gaussian Splatting for Dynamic Drivi",
+      "source_file": "0478_[General]_PAGS Priority-Adaptive Gaussian Splatting for Dynamic Drivi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0296_general_psgs_text_driven_panorama_sliding_scene_generation_via_gaus",
+      "label": "PSGS Text-driven Panorama Sliding Scene Generation via Gaus",
+      "source_file": "0296_[General]_PSGS Text-driven Panorama Sliding Scene Generation via Gaus.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0555_general_panolam_large_avatar_model_for_gaussian_full_head_synthesis",
+      "label": "PanoLAM Large Avatar Model for Gaussian Full-Head Synthesis",
+      "source_file": "0555_[General]_PanoLAM Large Avatar Model for Gaussian Full-Head Synthesis.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0349_general_quantile_rendering_efficiently_embedding_high_dimensional_f",
+      "label": "Quantile Rendering Efficiently Embedding High-dimensional F",
+      "source_file": "0349_[General]_Quantile Rendering Efficiently Embedding High-dimensional F.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0214_general_r3gw_relightable_3d_gaussians_for_outdoor_scenes_in_the_wil",
+      "label": "R3GW Relightable 3D Gaussians for Outdoor Scenes in the Wil",
+      "source_file": "0214_[General]_R3GW Relightable 3D Gaussians for Outdoor Scenes in the Wil.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0552_general_rosgs_relightable_outdoor_scenes_with_gaussian_splatting",
+      "label": "ROSGS Relightable Outdoor Scenes With Gaussian Splatting",
+      "source_file": "0552_[General]_ROSGS Relightable Outdoor Scenes With Gaussian Splatting.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0670_general_rtr_gs_3d_gaussian_splatting_for_inverse_rendering_with_rad",
+      "label": "RTR-GS 3D Gaussian Splatting for Inverse Rendering with Rad",
+      "source_file": "0670_[General]_RTR-GS 3D Gaussian Splatting for Inverse Rendering with Rad.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0263_general_ready_go_real_to_sim_dynamic_3d_gaussian_splatting_simulati",
+      "label": "ReaDy-Go Real-to-Sim Dynamic 3D Gaussian Splatting Simulati",
+      "source_file": "0263_[General]_ReaDy-Go Real-to-Sim Dynamic 3D Gaussian Splatting Simulati.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0425_general_reconstructing_3d_scenes_in_native_high_dynamic_range",
+      "label": "Reconstructing 3D Scenes in Native High Dynamic Range",
+      "source_file": "0425_[General]_Reconstructing 3D Scenes in Native High Dynamic Range.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0288_general_sharptimegs_sharp_and_stable_dynamic_gaussian_splatting_via",
+      "label": "SharpTimeGS Sharp and Stable Dynamic Gaussian Splatting via",
+      "source_file": "0288_[General]_SharpTimeGS Sharp and Stable Dynamic Gaussian Splatting via.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0307_general_splat_portrait_generalizing_talking_heads_with_gaussian_spl",
+      "label": "Splat-Portrait Generalizing Talking Heads with Gaussian Spl",
+      "source_file": "0307_[General]_Splat-Portrait Generalizing Talking Heads with Gaussian Spl.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0387_general_splatent_splatting_diffusion_latents_for_novel_view_synthes",
+      "label": "Splatent Splatting Diffusion Latents for Novel View Synthes",
+      "source_file": "0387_[General]_Splatent Splatting Diffusion Latents for Novel View Synthes.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0627_general_splitgaussian_reconstructing_dynamic_scenes_via_visual_geom",
+      "label": "SplitGaussian Reconstructing Dynamic Scenes via Visual Geom",
+      "source_file": "0627_[General]_SplitGaussian Reconstructing Dynamic Scenes via Visual Geom.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0423_general_tr_gaussians_high_fidelity_real_time_rendering_of_planar_tr",
+      "label": "TR-Gaussians High-fidelity Real-time Rendering of Planar Tr",
+      "source_file": "0423_[General]_TR-Gaussians High-fidelity Real-time Rendering of Planar Tr.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0268_general_toward_fine_grained_facial_control_in_3d_talking_head_genera",
+      "label": "Toward Fine-Grained Facial Control in 3D Talking Head Genera",
+      "source_file": "0268_[General]_Toward Fine-Grained Facial Control in 3D Talking Head Genera.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0385_general_traceflow_dynamic_3d_reconstruction_of_specular_scenes_driv",
+      "label": "TraceFlow Dynamic 3D Reconstruction of Specular Scenes Driv",
+      "source_file": "0385_[General]_TraceFlow Dynamic 3D Reconstruction of Specular Scenes Driv.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0508_general_triangle_splatting_differentiable_rendering_with_opaque_tr",
+      "label": "Triangle Splatting+ Differentiable Rendering with Opaque Tr",
+      "source_file": "0508_[General]_Triangle Splatting+ Differentiable Rendering with Opaque Tr.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0566_general_upgs_unified_pose_aware_gaussian_splatting_for_dynamic_scen",
+      "label": "UPGS Unified Pose-aware Gaussian Splatting for Dynamic Scen",
+      "source_file": "0566_[General]_UPGS Unified Pose-aware Gaussian Splatting for Dynamic Scen.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0280_general_unified_sensor_simulation_for_autonomous_driving",
+      "label": "Unified Sensor Simulation for Autonomous Driving",
+      "source_file": "0280_[General]_Unified Sensor Simulation for Autonomous Driving.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0240_general_wildghand_learning_anti_perturbation_gaussian_hand_avatars",
+      "label": "WildGHand Learning Anti-Perturbation Gaussian Hand Avatars",
+      "source_file": "0240_[General]_WildGHand Learning Anti-Perturbation Gaussian Hand Avatars.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0353_general_worldwarp_propagating_3d_geometry_with_asynchronous_video_d",
+      "label": "WorldWarp Propagating 3D Geometry with Asynchronous Video D",
+      "source_file": "0353_[General]_WorldWarp Propagating 3D Geometry with Asynchronous Video D.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0275_general_zero_shot_uav_navigation_in_forests_via_relightable_3d_gauss",
+      "label": "Zero-Shot UAV Navigation in Forests via Relightable 3D Gauss",
+      "source_file": "0275_[General]_Zero-Shot UAV Navigation in Forests via Relightable 3D Gauss.md",
+      "alias_count": 0
+    }
+  ]
+}

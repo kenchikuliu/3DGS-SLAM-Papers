@@ -1,0 +1,674 @@
+{
+  "domain": "Robotics",
+  "paper_count": 97,
+  "top_datasets": [
+    {
+      "label": "ScanNet",
+      "count": 18
+    },
+    {
+      "label": "Matterport3D",
+      "count": 15
+    },
+    {
+      "label": "Gibson",
+      "count": 14
+    },
+    {
+      "label": "HM3D",
+      "count": 11
+    },
+    {
+      "label": "MP3D",
+      "count": 10
+    },
+    {
+      "label": "7-Scenes",
+      "count": 7
+    },
+    {
+      "label": "KITTI",
+      "count": 6
+    },
+    {
+      "label": "EuRoC",
+      "count": 4
+    },
+    {
+      "label": "DTU",
+      "count": 3
+    },
+    {
+      "label": "nuScenes",
+      "count": 2
+    },
+    {
+      "label": "Replica Dataset",
+      "count": 2
+    },
+    {
+      "label": "Matterport3D Dataset",
+      "count": 2
+    },
+    {
+      "label": "Gibson Dataset",
+      "count": 1
+    },
+    {
+      "label": "7-Scenes Dataset",
+      "count": 1
+    }
+  ],
+  "top_metrics": [
+    {
+      "label": "Recall",
+      "count": 22
+    },
+    {
+      "label": "Chamfer",
+      "count": 14
+    },
+    {
+      "label": "Rotation/Translation Pose Error",
+      "count": 1
+    }
+  ],
+  "top_concepts": [
+    {
+      "label": "Pose Graph Optimization",
+      "count": 8
+    },
+    {
+      "label": "Next-Best-View Planning",
+      "count": 1
+    },
+    {
+      "label": "Control Barrier Function",
+      "count": 1
+    }
+  ],
+  "papers": [
+    {
+      "id": "paper_2209_08409",
+      "label": "2209.08409",
+      "source_file": "2209.08409.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2210_12126",
+      "label": "2210.12126",
+      "source_file": "2210.12126.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2303_00304",
+      "label": "2303.00304",
+      "source_file": "2303.00304.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2303_16739",
+      "label": "2303.16739",
+      "source_file": "2303.16739.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2309_13240",
+      "label": "2309.13240",
+      "source_file": "2309.13240.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2310_00684",
+      "label": "2310.00684",
+      "source_file": "2310.00684.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2310_00685",
+      "label": "2310.00685",
+      "source_file": "2310.00685.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2403_11396",
+      "label": "2403.11396",
+      "source_file": "2403.11396.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2405_01333",
+      "label": "2405.01333",
+      "source_file": "2405.01333.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2405_05526",
+      "label": "2405.05526",
+      "source_file": "2405.05526.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2406_06948",
+      "label": "2406.06948",
+      "source_file": "2406.06948.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2409_20276",
+      "label": "2409.20276",
+      "source_file": "2409.20276.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2410_04680",
+      "label": "2410.04680",
+      "source_file": "2410.04680.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2410_12262",
+      "label": "2410.12262",
+      "source_file": "2410.12262.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2410_20220",
+      "label": "2410.20220",
+      "source_file": "2410.20220.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2412_02249",
+      "label": "2412.02249",
+      "source_file": "2412.02249.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2501_14147",
+      "label": "2501.14147",
+      "source_file": "2501.14147.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2502_05752",
+      "label": "2502.05752",
+      "source_file": "2502.05752.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2502_19592",
+      "label": "2502.19592",
+      "source_file": "2502.19592.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2503_23480",
+      "label": "2503.23480",
+      "source_file": "2503.23480.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2505_11794",
+      "label": "2505.11794",
+      "source_file": "2505.11794.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2506_00225",
+      "label": "2506.00225",
+      "source_file": "2506.00225.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2508_01150",
+      "label": "2508.01150",
+      "source_file": "2508.01150.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2509_01228",
+      "label": "2509.01228",
+      "source_file": "2509.01228.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2509_07500",
+      "label": "2509.07500",
+      "source_file": "2509.07500.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2509_12702",
+      "label": "2509.12702",
+      "source_file": "2509.12702.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2509_23555",
+      "label": "2509.23555",
+      "source_file": "2509.23555.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2510_09962",
+      "label": "2510.09962",
+      "source_file": "2510.09962.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2510_23988",
+      "label": "2510.23988",
+      "source_file": "2510.23988.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2512_03422",
+      "label": "2512.03422",
+      "source_file": "2512.03422.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2512_22771",
+      "label": "2512.22771",
+      "source_file": "2512.22771.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2603_04869v1",
+      "label": "2603.04869v1",
+      "source_file": "2603.04869v1.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0116_robotics_3dgsnav_enhancing_vision_language_model_reasoning_for_object_navigat",
+      "label": "3DGSNav Enhancing Vision-Language Model Reasoning for Object Navigat",
+      "source_file": "0116_[Robotics]_3DGSNav Enhancing Vision-Language Model Reasoning for Object Navigat.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0115_robotics_area3d_active_reconstruction_agent_with_unified_feed_forward_3d_per",
+      "label": "AREA3D Active Reconstruction Agent with Unified Feed-Forward 3D Per",
+      "source_file": "0115_[Robotics]_AREA3D Active Reconstruction Agent with Unified Feed-Forward 3D Per.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0114_robotics_active3d_active_high_fidelity_3d_reconstruction_via_hierarchical_unce",
+      "label": "Active3D Active High-Fidelity 3D Reconstruction via Hierarchical Unce",
+      "source_file": "0114_[Robotics]_Active3D Active High-Fidelity 3D Reconstruction via Hierarchical Unce.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0106_robotics_activegs_active_scene_reconstruction_using_gaussian_splatting",
+      "label": "ActiveGS Active Scene Reconstruction using Gaussian Splatting",
+      "source_file": "0106_[Robotics]_ActiveGS Active Scene Reconstruction using Gaussian Splatting.md",
+      "alias_count": 1
+    },
+    {
+      "id": "paper_0102_robotics_activesplat_high_fidelity_scene_reconstruction_through_active_gaussian_s",
+      "label": "ActiveSplat High-Fidelity Scene Reconstruction through Active Gaussian S",
+      "source_file": "0102_[Robotics]_ActiveSplat High-Fidelity Scene Reconstruction through Active Gaussian S.md",
+      "alias_count": 1
+    },
+    {
+      "id": "paper_0099_robotics_beings_bayesian_embodied_image_goal_navigation_with_gaussian_splatt",
+      "label": "BEINGS Bayesian Embodied Image-goal Navigation with Gaussian Splatt",
+      "source_file": "0099_[Robotics]_BEINGS Bayesian Embodied Image-goal Navigation with Gaussian Splatt.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0094_robotics_clip_fields_weakly_supervised_semantic_fields_for_robotic_memory",
+      "label": "CLIP-Fields Weakly Supervised Semantic Fields for Robotic Memory",
+      "source_file": "0094_[Robotics]_CLIP-Fields Weakly Supervised Semantic Fields for Robotic Memory.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0126_robotics_crossfire_camera_relocalization_on_self_supervised_features_from_an_im",
+      "label": "CROSSFIRE Camera Relocalization On Self-Supervised Features from an Im",
+      "source_file": "0126_[Robotics]_CROSSFIRE Camera Relocalization On Self-Supervised Features from an Im.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0090_robotics_compnerfdyn_learning_multi_object_dynamics_with_compositional_neural_rad",
+      "label": "CompNeRFdyn Learning Multi-Object Dynamics with Compositional Neural Rad",
+      "source_file": "0090_[Robotics]_CompNeRFdyn Learning Multi-Object Dynamics with Compositional Neural Rad.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0141_robotics_dqo_map_dual_quadrics_multi_object_mapping_with_gaussian_splatting",
+      "label": "DQO-MAP Dual Quadrics Multi-Object mapping with Gaussian Splatting",
+      "source_file": "0141_[Robotics]_DQO-MAP Dual Quadrics Multi-Object mapping with Gaussian Splatting.md",
+      "alias_count": 1
+    },
+    {
+      "id": "paper_0078_robotics_dex_nerf_using_a_neural_radiance_field_to_grasp_transparent_objects",
+      "label": "Dex-NeRF Using a Neural Radiance Field to Grasp Transparent Objects",
+      "source_file": "0078_[Robotics]_Dex-NeRF Using a Neural Radiance Field to Grasp Transparent Objects.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0073_robotics_ditto_building_digital_twins_of_articulated_objects_from_interacti",
+      "label": "Ditto Building Digital Twins of Articulated Objects from Interacti",
+      "source_file": "0073_[Robotics]_Ditto Building Digital Twins of Articulated Objects from Interacti.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0117_robotics_dream_slam_dreaming_the_unseen_for_active_slam_in_dynamic_environments",
+      "label": "Dream-SLAM Dreaming the Unseen for Active SLAM in Dynamic Environments",
+      "source_file": "0117_[Robotics]_Dream-SLAM Dreaming the Unseen for Active SLAM in Dynamic Environments.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0140_robotics_dynamicgsg_dynamic_3d_gaussian_scene_graphs_for_environment_adaptation",
+      "label": "DynamicGSG Dynamic 3D Gaussian Scene Graphs for Environment Adaptation",
+      "source_file": "0140_[Robotics]_DynamicGSG Dynamic 3D Gaussian Scene Graphs for Environment Adaptation.md",
+      "alias_count": 1
+    },
+    {
+      "id": "paper_0093_robotics_esdf_sampling_free_obstacle_gradients_and_reactive_planning_in_ne",
+      "label": "ESDF Sampling-free obstacle gradients and reactive planning in Ne",
+      "source_file": "0093_[Robotics]_ESDF Sampling-free obstacle gradients and reactive planning in Ne.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0080_robotics_giga_synergies_between_affordance_and_geometry_6_dof_grasp_detec",
+      "label": "GIGA Synergies Between Affordance and Geometry 6-DoF Grasp Detec",
+      "source_file": "0080_[Robotics]_GIGA Synergies Between Affordance and Geometry 6-DoF Grasp Detec.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0110_robotics_grad_nav_vision_language_model_enabled_visual_drone_navigation_with_g",
+      "label": "GRaD-Nav++ Vision-Language Model Enabled Visual Drone Navigation with G",
+      "source_file": "0110_[Robotics]_GRaD-Nav++ Vision-Language Model Enabled Visual Drone Navigation with G.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0132_robotics_gs_evt_cross_modal_event_camera_tracking_based_on_gaussian_splattin",
+      "label": "GS-EVT Cross-Modal Event Camera Tracking based on Gaussian Splattin",
+      "source_file": "0132_[Robotics]_GS-EVT Cross-Modal Event Camera Tracking based on Gaussian Splattin.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0098_robotics_gs_planner_a_gaussian_splatting_based_planning_framework_for_active_hig",
+      "label": "GS-Planner A Gaussian-Splatting-based Planning Framework for Active Hig",
+      "source_file": "0098_[Robotics]_GS-Planner A Gaussian-Splatting-based Planning Framework for Active Hig.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0122_robotics_gsloc_efficient_camera_pose_refinement_via_3d_gaussian_splatting",
+      "label": "GSLoc Efficient Camera Pose Refinement via 3D Gaussian Splatting",
+      "source_file": "0122_[Robotics]_GSLoc Efficient Camera Pose Refinement via 3D Gaussian Splatting.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0128_robotics_gsloc_visual_localization_with_3d_gaussian_splatting",
+      "label": "GSLoc Visual Localization with 3D Gaussian Splatting",
+      "source_file": "0128_[Robotics]_GSLoc Visual Localization with 3D Gaussian Splatting.md",
+      "alias_count": 1
+    },
+    {
+      "id": "paper_0137_robotics_gsvisloc_generalizable_visual_localization_for_gaussian_splatting_sce",
+      "label": "GSVisLoc Generalizable Visual Localization for Gaussian Splatting Sce",
+      "source_file": "0137_[Robotics]_GSVisLoc Generalizable Visual Localization for Gaussian Splatting Sce.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0107_robotics_gsplatvnm_point_of_view_synthesis_for_visual_navigation_models_using_g",
+      "label": "GSplatVNM Point-of-View Synthesis for Visual Navigation Models Using G",
+      "source_file": "0107_[Robotics]_GSplatVNM Point-of-View Synthesis for Visual Navigation Models Using G.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0097_robotics_gaussnav_gaussian_splatting_for_visual_navigation",
+      "label": "GaussNav Gaussian Splatting for Visual Navigation",
+      "source_file": "0097_[Robotics]_GaussNav Gaussian Splatting for Visual Navigation.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0131_robotics_geomgs_lidar_guided_geometry_aware_gaussian_splatting_for_robot_loc",
+      "label": "GeomGS LiDAR-Guided Geometry-Aware Gaussian Splatting for Robot Loc",
+      "source_file": "0131_[Robotics]_GeomGS LiDAR-Guided Geometry-Aware Gaussian Splatting for Robot Loc.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0077_robotics_grasping_field_learning_implicit_representations_for_human_grasps",
+      "label": "Grasping Field Learning Implicit Representations for Human Grasps",
+      "source_file": "0077_[Robotics]_Grasping Field Learning Implicit Representations for Human Grasps.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0100_robotics_hgs_planner_hierarchical_planning_framework_for_active_scene_reconstruct",
+      "label": "HGS-Planner Hierarchical Planning Framework for Active Scene Reconstruct",
+      "source_file": "0100_[Robotics]_HGS-Planner Hierarchical Planning Framework for Active Scene Reconstruct.md",
+      "alias_count": 1
+    },
+    {
+      "id": "paper_0121_robotics_hgsloc_3dgs_based_heuristic_camera_pose_refinement",
+      "label": "HGSLoc 3DGS-based Heuristic Camera Pose Refinement",
+      "source_file": "0121_[Robotics]_HGSLoc 3DGS-based Heuristic Camera Pose Refinement.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0112_robotics_igl_nav_incremental_3d_gaussian_localization_for_image_goal_navigati",
+      "label": "IGL-Nav Incremental 3D Gaussian Localization for Image-goal Navigati",
+      "source_file": "0112_[Robotics]_IGL-Nav Incremental 3D Gaussian Localization for Image-goal Navigati.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0138_robotics_language_embedded_gaussian_splats_legs_incrementally_building_room_scale_representations_with_a_mob",
+      "label": "Language-Embedded Gaussian Splats (LEGS) Incrementally Building Room-Scale Representations with a Mob",
+      "source_file": "0138_[Robotics]_Language-Embedded Gaussian Splats (LEGS) Incrementally Building Room-Scale Representations with a Mob.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0129_robotics_logs_visual_localization_via_gaussian_splatting_with_fewer_traini",
+      "label": "LoGS Visual Localization via Gaussian Splatting with Fewer Traini",
+      "source_file": "0129_[Robotics]_LoGS Visual Localization via Gaussian Splatting with Fewer Traini.md",
+      "alias_count": 1
+    },
+    {
+      "id": "paper_0118_robotics_loc_nerf_monte_carlo_localization_using_neural_radiance_fields",
+      "label": "Loc-NeRF Monte Carlo Localization using Neural Radiance Fields",
+      "source_file": "0118_[Robotics]_Loc-NeRF Monte Carlo Localization using Neural Radiance Fields.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0085_robotics_local_neural_descriptor_fields_locally_conditioned_object_representations_for_manipulation",
+      "label": "Local Neural Descriptor Fields Locally Conditioned Object Representations for Manipulation",
+      "source_file": "0085_[Robotics]_Local Neural Descriptor Fields Locally Conditioned Object Representations for Manipulation.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0123_robotics_mulan_wc_multi_robot_localization_uncertainty_aware_active_nerf_with",
+      "label": "MULAN-WC Multi-Robot Localization Uncertainty-aware Active NeRF with",
+      "source_file": "0123_[Robotics]_MULAN-WC Multi-Robot Localization Uncertainty-aware Active NeRF with.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0103_robotics_naruto_neural_active_reconstruction_from_uncertain_target_observati",
+      "label": "NARUTO Neural Active Reconstruction from Uncertain Target Observati",
+      "source_file": "0103_[Robotics]_NARUTO Neural Active Reconstruction from Uncertain Target Observati.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0079_robotics_nerf_supervision_learning_dense_object_descriptors_from_neural_radiance_field",
+      "label": "NeRF-Supervision Learning Dense Object Descriptors from Neural Radiance Field",
+      "source_file": "0079_[Robotics]_NeRF-Supervision Learning Dense Object Descriptors from Neural Radiance Field.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0095_robotics_nerf_vins_a_real_time_neural_radiance_field_map_based_visual_inertial",
+      "label": "NeRF-VINS A Real-time Neural Radiance Field Map-based Visual-Inertial",
+      "source_file": "0095_[Robotics]_NeRF-VINS A Real-time Neural Radiance Field Map-based Visual-Inertial.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0089_robotics_nerf_dy_3d_neural_scene_representations_for_visuomotor_control",
+      "label": "NeRF-dy 3D Neural Scene Representations for Visuomotor Control",
+      "source_file": "0089_[Robotics]_NeRF-dy 3D Neural Scene Representations for Visuomotor Control.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0084_robotics_nerf2real_sim2real_transfer_of_vision_guided_bipedal_motion_skills_usi",
+      "label": "NeRF2Real Sim2real Transfer of Vision-guided Bipedal Motion Skills usi",
+      "source_file": "0084_[Robotics]_NeRF2Real Sim2real Transfer of Vision-guided Bipedal Motion Skills usi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0088_robotics_nerflow_neural_radiance_flow_for_4d_view_synthesis_and_video_process",
+      "label": "NeRFlow Neural Radiance Flow for 4D View Synthesis and Video Process",
+      "source_file": "0088_[Robotics]_NeRFlow Neural Radiance Flow for 4D View Synthesis and Video Process.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0133_robotics_neuraloc_visual_localization_in_neural_implicit_map_with_dual_complem",
+      "label": "NeuraLoc Visual Localization in Neural Implicit Map with Dual Complem",
+      "source_file": "0133_[Robotics]_NeuraLoc Visual Localization in Neural Implicit Map with Dual Complem.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0075_robotics_neural_descriptor_fields_se_3_equivariant_object_representations_for_manipulation",
+      "label": "Neural Descriptor Fields SE(3)-Equivariant Object Representations for Manipulation",
+      "source_file": "0075_[Robotics]_Neural Descriptor Fields SE(3)-Equivariant Object Representations for Manipulation.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0076_robotics_neural_motion_fields_encoding_grasp_trajectories_as_implicit_value_functions",
+      "label": "Neural Motion Fields Encoding Grasp Trajectories as Implicit Value Functions",
+      "source_file": "0076_[Robotics]_Neural Motion Fields Encoding Grasp Trajectories as Implicit Value Functions.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0081_robotics_neuralgrasps_learning_implicit_representations_for_grasps_of_multiple_rob",
+      "label": "NeuralGrasps Learning Implicit Representations for Grasps of Multiple Rob",
+      "source_file": "0081_[Robotics]_NeuralGrasps Learning Implicit Representations for Grasps of Multiple Rob.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0120_robotics_nurf_nudging_the_particle_filter_in_radiance_fields_for_robot_vis",
+      "label": "NuRF Nudging the Particle Filter in Radiance Fields for Robot Vis",
+      "source_file": "0120_[Robotics]_NuRF Nudging the Particle Filter in Radiance Fields for Robot Vis.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0083_robotics_objectfolder_2_0_a_multisensory_object_dataset_for_sim2real_transfer",
+      "label": "ObjectFolder 2.0 A Multisensory Object Dataset for Sim2Real Transfer",
+      "source_file": "0083_[Robotics]_ObjectFolder 2.0 A Multisensory Object Dataset for Sim2Real Transfer.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0082_robotics_objectfolder_a_dataset_of_objects_with_implicit_visual_auditory_and_tac",
+      "label": "ObjectFolder A Dataset of Objects with Implicit Visual, Auditory, and Tac",
+      "source_file": "0082_[Robotics]_ObjectFolder A Dataset of Objects with Implicit Visual, Auditory, and Tac.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0091_robotics_pifo_deep_visual_constraints_neural_implicit_models_for_manipula",
+      "label": "PIFO Deep Visual Constraints Neural Implicit Models for Manipula",
+      "source_file": "0091_[Robotics]_PIFO Deep Visual Constraints Neural Implicit Models for Manipula.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0108_robotics_pop_gs_next_best_view_in_3d_gaussian_splatting_with_p_optimality",
+      "label": "POp-GS Next Best View in 3D-Gaussian Splatting with P-Optimality",
+      "source_file": "0108_[Robotics]_POp-GS Next Best View in 3D-Gaussian Splatting with P-Optimality.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0101_robotics_rt_guide_real_time_gaussian_splatting_for_information_driven_explorat",
+      "label": "RT-GuIDE Real-Time Gaussian splatting for Information-Driven Explorat",
+      "source_file": "0101_[Robotics]_RT-GuIDE Real-Time Gaussian splatting for Information-Driven Explorat.md",
+      "alias_count": 1
+    },
+    {
+      "id": "paper_0092_robotics_redsdf_regularized_deep_signed_distance_fields_for_reactive_motion",
+      "label": "RedSDF Regularized Deep Signed Distance Fields for Reactive Motion",
+      "source_file": "0092_[Robotics]_RedSDF Regularized Deep Signed Distance Fields for Reactive Motion.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0074_robotics_relational_ndf_se_3_equivariant_relational_rearrangement_with_neural_descr",
+      "label": "Relational-NDF SE(3)-Equivariant Relational Rearrangement with Neural Descr",
+      "source_file": "0074_[Robotics]_Relational-NDF SE(3)-Equivariant Relational Rearrangement with Neural Descr.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0104_robotics_safer_splat_a_control_barrier_function_for_safe_navigation_with_online_g",
+      "label": "SAFER-Splat A Control Barrier Function for Safe Navigation with Online G",
+      "source_file": "0104_[Robotics]_SAFER-Splat A Control Barrier Function for Safe Navigation with Online G.md",
+      "alias_count": 1
+    },
+    {
+      "id": "paper_0136_robotics_sgloc_semantic_localization_system_for_camera_pose_estimation_from",
+      "label": "SGLoc Semantic Localization System for Camera Pose Estimation from",
+      "source_file": "0136_[Robotics]_SGLoc Semantic Localization System for Camera Pose Estimation from.md",
+      "alias_count": 1
+    },
+    {
+      "id": "paper_0086_robotics_siren_semantic_initialization_free_registration_of_multi_robot_ga",
+      "label": "SIREN Semantic, Initialization-Free Registration of Multi-Robot Ga",
+      "source_file": "0086_[Robotics]_SIREN Semantic, Initialization-Free Registration of Multi-Robot Ga.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0105_robotics_sous_vide_cooking_visual_drone_navigation_policies_in_a_gaussian_splat",
+      "label": "SOUS VIDE Cooking Visual Drone Navigation Policies in a Gaussian Splat",
+      "source_file": "0105_[Robotics]_SOUS VIDE Cooking Visual Drone Navigation Policies in a Gaussian Splat.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0135_robotics_stdloc_from_sparse_to_dense_camera_relocalization_with_scene_speci",
+      "label": "STDLoc From Sparse to Dense Camera Relocalization with Scene-Speci",
+      "source_file": "0135_[Robotics]_STDLoc From Sparse to Dense Camera Relocalization with Scene-Speci.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0139_robotics_silvr_scalable_lidar_visual_radiance_field_reconstruction_with_unc",
+      "label": "SiLVR Scalable Lidar-Visual Radiance Field Reconstruction with Unc",
+      "source_file": "0139_[Robotics]_SiLVR Scalable Lidar-Visual Radiance Field Reconstruction with Unc.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0096_robotics_splat_nav_safe_real_time_robot_navigation_in_gaussian_splatting_maps",
+      "label": "Splat-Nav Safe Real-Time Robot Navigation in Gaussian Splatting Maps",
+      "source_file": "0096_[Robotics]_Splat-Nav Safe Real-Time Robot Navigation in Gaussian Splatting Maps.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0130_robotics_splatloc_3d_gaussian_splatting_based_visual_localization_for_augmente",
+      "label": "SplatLoc 3D Gaussian Splatting-based Visual Localization for Augmente",
+      "source_file": "0130_[Robotics]_SplatLoc 3D Gaussian Splatting-based Visual Localization for Augmente.md",
+      "alias_count": 1
+    },
+    {
+      "id": "paper_0113_robotics_splatsearch_instance_image_goal_navigation_for_mobile_robots_using_3d_ga",
+      "label": "SplatSearch Instance Image Goal Navigation for Mobile Robots using 3D Ga",
+      "source_file": "0113_[Robotics]_SplatSearch Instance Image Goal Navigation for Mobile Robots using 3D Ga.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0119_robotics_the_nerfect_match_exploring_nerf_features_for_visual_localization",
+      "label": "The NeRFect Match Exploring NeRF Features for Visual Localization",
+      "source_file": "0119_[Robotics]_The NeRFect Match Exploring NeRF Features for Visual Localization.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0087_robotics_transplat_surface_embedding_guided_3d_gaussian_splatting_for_transpare",
+      "label": "TranSplat Surface Embedding-guided 3D Gaussian Splatting for Transpare",
+      "source_file": "0087_[Robotics]_TranSplat Surface Embedding-guided 3D Gaussian Splatting for Transpare.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0111_robotics_vista_open_vocabulary_task_relevant_robot_exploration_with_online",
+      "label": "VISTA Open-Vocabulary, Task-Relevant Robot Exploration with Online",
+      "source_file": "0111_[Robotics]_VISTA Open-Vocabulary, Task-Relevant Robot Exploration with Online.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0124_robotics_vrs_nerf_visual_relocalization_with_sparse_neural_radiance_field",
+      "label": "VRS-NeRF Visual Relocalization with Sparse Neural Radiance Field",
+      "source_file": "0124_[Robotics]_VRS-NeRF Visual Relocalization with Sparse Neural Radiance Field.md",
+      "alias_count": 0
+    }
+  ]
+}

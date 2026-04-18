@@ -1,0 +1,156 @@
+# Category Review Packet
+
+## Medium Priority
+
+### 1. 2405.14824
+
+- source file: `2405.14824.md`
+- suggested category: `SLAM`
+- confidence margin: `4`
+- rationale: `slam_score=9, robotics_score=5`
+
+# Camera Relocalization in Shadow-free Neural Radiance Fields Shiyao Xu1,â, Caiyun Liu1,â, Yuantao Chen1,2, Zhenxin Zhu3, Zike Yan1, Yongliang Shi1,â , Hao Zhao1, Guyue Zhou1 Abstractâ Camera relocalization is a crucial problem in computer vision and robotics. Recent advancements in neural radiance fields (NeRFs) have shown promise in synthesizing photo-realistic images. Several works have utilized NeRFs for refining camera poses, but they do not account for lighting changes that can affect scene appearance and shadow regions, causing a degraded pose optimization process. In this paper, we propose a two-staged pipeline that normalizes images with varying lighting and shadow conditions to improve camera relocalization. We implement our scene representation upon a hash-encoded NeRF which significantly boosts up the pose optimization process. To account for the noisy image gradient computing problem in grid-based NeRFs, we further propose a re-devised truncated dynamic low-pass filter (TDLF) and a numerical gradient averaging technique to smoothen the process. Experimental results on several datasets with varying lighting conditions demonstrate that our method achieves state-of
+
+### 2. 2408.12677
+
+- source file: `2408.12677.md`
+- suggested category: `SLAM`
+- confidence margin: `4`
+- rationale: `slam_score=12, robotics_score=8`
+
+# GSFusion: Online RGB-D Mapping Where Gaussian Splatting Meets TSDF Fusion Jiaxin Wei1,3 and Stefan Leutenegger1,2,3 AbstractâTraditional volumetric fusion algorithms preserve the spatial structure of 3D scenes, which is beneficial for many tasks in computer vision and robotics. However, they often lack realism in terms of visualization. Emerging 3D Gaussian splatting bridges this gap, but existing Gaussian-based reconstruction methods often suffer from artifacts and inconsistencies with the underlying 3D structure, and struggle with real-time optimization, unable to provide users with immediate feedback in high quality. One of the bottlenecks arises from the massive amount of Gaussian parameters that need to be updated during optimization. Instead of using 3D Gaussian as a standalone map representation, we incorporate it into a volumetric mapping system to take advantage of geometric information and propose to use a quadtree data structure on images to drastically reduce the number of splats initialized. In this way, we simultaneously generate a compact 3D Gaussian map with fewer artifacts and a volumetric map on the fly. Our method, GSFusion, significantly enhances computation
+
+### 3. 2409.12899
+
+- source file: `2409.12899.md`
+- suggested category: `Robotics`
+- confidence margin: `4`
+- rationale: `robotics_score=6, slam_score=2`
+
+1 LI-GS: Gaussian Splatting with LiDAR Incorporated for Accurate Large-Scale Reconstruction Changjian Jiang1, Ruilan Gao1, Kele Shao1, Yue Wang1, Rong Xiong1, Yu Zhang1,2,∗ Abstract—Large-scale 3D reconstruction is critical in the field of robotics, and the potential of 3D Gaussian Splatting (3DGS) for achieving accurate object-level reconstruction has been demonstrated. However, ensuring geometric accuracy in
+
+### 4. 2509.01228
+
+- source file: `2509.01228.md`
+- suggested category: `Robotics`
+- confidence margin: `4`
+- rationale: `robotics_score=4, slam_score=0`
+
+# OpenMulti: Open-Vocabulary Instance-Level Multi-Agent Distributed Implicit Mapping Jianyu Dou1, Yinan Deng1, Jiahui Wang1, Xingsi Tang1, Yi Yang1 and Yufeng Yue1â AbstractâMulti-agent distributed collaborative mapping provides comprehensive and efficient representations for robots. However, existing approaches lack instance-level awareness and semantic understanding of environments, limiting their effectiveness for downstream applications. To address this issue, we propose OpenMulti, an open-vocabulary instance-level multiagent distributed implicit mapping framework. Specifically, we introduce a Cross-Agent Instance Alignment module, which constructs an Instance Collaborative Graph to ensure consistent instance understanding across agents. To alleviate the degradation of mapping accuracy due to the blind-zone optimization trap, we leverage Cross Rendering Supervision to enhance distributed learning of the scene. Experimental results show that OpenMulti outperforms related algorithms in both finegrained geometric accuracy and zero-shot semantic accuracy. In addition, OpenMulti supports instance-level retrieval tasks, delivering semantic annotations for downstream applications.
+
+### 5. 3746027.3755375
+
+- source file: `3746027.3755375.md`
+- suggested category: `Robotics`
+- confidence margin: `4`
+- rationale: `robotics_score=4, slam_score=0`
+
+. . Latest updates: hps://dl.acm.org/doi/10.1145/3746027.3755375 . . RESEARCH-ARTICLE LL-Gaussian: Low-Light Scene Reconstruction and Enhancement via Gaussian Splaing for Novel View Synthesis
+
+### 6. 2406.06948
+
+- source file: `2406.06948.md`
+- suggested category: `Robotics`
+- confidence margin: `5`
+- rationale: `robotics_score=5, slam_score=0`
+
+Neural Visibility Field for Uncertainty-Driven Active Mapping Shangjie Xue Jesse Dill Pranay Mathur Frank Dellaert Panagiotis Tsiotras Danfei Xu Georgia Institute of Technology
+
+### 7. 2504.10331v3
+
+- source file: `2504.10331v3.md`
+- suggested category: `Robotics`
+- confidence margin: `5`
+- rationale: `robotics_score=5, slam_score=0`
+
+LL-Gaussian: Low-Light Scene Reconstruction and Enhancement via Gaussian Splatting for Novel View Synthesis Hao Sun1,2, Fenggen Yu4, Huiyao Xu3, Tao Zhang5, Changqing Zou1,3† 1Zhejiang Lab 2University of Chinese Academy of Sciences 3State Key Lab of CAD&CG, Zhejiang University 4Simon Fraser University 5Hangzhou Dianzi University
+
+### 8. 2508.17876
+
+- source file: `2508.17876.md`
+- suggested category: `SLAM`
+- confidence margin: `6`
+- rationale: `slam_score=7, robotics_score=1`
+
+JOURNAL OF LATEX CLASS FILES, VOL. 14, NO. 8, AUGUST 2021 1 Camera Pose Refinement via 3D Gaussian Splatting Lulu Hao, Lipu Zhou, Member, IEEE, Zhenzhong Wei, Xu Wang Abstract—Camera pose refinement aims at improving the ac- curacy of initial pose estimation for applications in 3D computer vision. Most refinement approaches rely on 2D-3D correspon- dences with specific descriptors or dedicated networks, requiring
+
+### 9. 2601.00705
+
+- source file: `2601.00705.md`
+- suggested category: `SLAM`
+- confidence margin: `6`
+- rationale: `slam_score=6, robotics_score=0`
+
+RGS-SLAM: Robust Gaussian Splatting SLAM with One-Shot Dense Initialization Wei-Tse Cheng Yen-Jen Chiou Yuan-Fu Yang∗ National Yang Ming Chiao Tung University andy5552555.ii13@nycu.edu.tw, remi.ii13@nycu.edu.tw, yfyangd@nycu.edu.tw Figure 1. Overview of the proposed RGS-SLAM pipeline. The system integrates dense feature matching and multi-view triangulation for
+
+### 10. 2408.03825
+
+- source file: `2408.03825.md`
+- suggested category: `SLAM`
+- confidence margin: `7`
+- rationale: `slam_score=14, robotics_score=7`
+
+# Towards Real-Time Gaussian Splatting: Accelerating 3DGS through Photometric SLAM Yan Song Hu, Dayou Mao, Yuhao Chen, and John Zelek Abstractâ Initial applications of 3D Gaussian Splatting (3DGS) in Visual Simultaneous Localization and Mapping (VS-LAM) demonstrate the generation of high-quality volumetric reconstructions from monocular video streams. However, despite these promising advancements, current 3DGS integrations have reduced tracking performance and lower operating speeds compared to traditional VSLAM. To address these issues, we propose integrating 3DGS with Direct Sparse Odometry, a monocular photometric SLAM system. We have done preliminary experiments showing that using Direct Sparse Odometry point cloud outputs, as opposed to standard structure-frommotion methods, significantly shortens the training time needed to achieve high-quality renders. Reducing 3DGS training time enables the development of 3DGS-integrated SLAM systems that operate in real-time on mobile hardware. These promising initial findings suggest further exploration is warranted in combining traditional VSLAM systems with 3DGS. ## I. INTRODUCTION Visual Simultaneous Localization and Mapping (VSLAM) 
+
+### 11. 2502.13803
+
+- source file: `2502.13803.md`
+- suggested category: `SLAM`
+- confidence margin: `7`
+- rationale: `slam_score=29, robotics_score=22`
+
+# 3D Gaussian Splatting aided Localization for Large and Complex Indoor-Environments Vincent Ress1, Jonas Meyer1,2, Wei Zhang1, David Skuddis1, Uwe Soergel1, Norbert Haala1 1 Institute for Photogrammetry and Geoinformatics, University of Stuttgart, Germany - forename.lastname@ifp.uni-stuttgart.de 2 Institute of Geomatics, University of Applied Sciences and Arts Northwestern Switzerland, Switzerland - jonas.meyer@fhnw.ch Keywords: Dense Reconstruction, Indoor Localization, SLAM, Autonomous Indoor Construction ## Abstract The field of visual localization has been researched for several decades and has meanwhile found many practical applications. Despite the strong progress in this field, there are still challenging situations in which established methods fail. We present an approach to significantly improve the accuracy and reliability of established visual localization methods by adding rendered images. In detail, we first use a modern visual SLAM approach that provides a 3D Gaussian Splatting (3DGS) based map to create reference data. We demonstrate that enriching reference data with images rendered from 3DGS at randomly sampled poses significantly improves the performance of both 
+
+### 12. 2503.09447
+
+- source file: `2503.09447.md`
+- suggested category: `SLAM`
+- confidence margin: `7`
+- rationale: `slam_score=8, robotics_score=1`
+
+Online Language Splatting Saimouli Katragadda1, Cho-Ying Wu2, Yuliang Guo2*, Xinyu Huang2, Guoquan Huang1, Liu Ren2 1University of Delaware, 2Bosch Research North America & Bosch Center for Artificial Intelligence (BCAI) {saimouli,ghuang}@udel.edu {Cho-Ying.Wu,yuliang.guo2,xinyu.huang,liu.ren}@us.bosch.edu https://saimouli.github.io/onlineLang RGB LangSplat
+
+### 13. 2509.00433
+
+- source file: `2509.00433.md`
+- suggested category: `SLAM`
+- confidence margin: `7`
+- rationale: `slam_score=18, robotics_score=11`
+
+# AGS: Accelerating 3D Gaussian Splatting SLAM via CODEC-Assisted Frame Covisibility Detection Houshu He School of Computer Science, Shanghai Jiao Tong University, Shanghai, China h_houshu@sjtu.edu.cn Naifeng Jing Department of Micro-Nano Electronics, Shanghai Jiao Tong University, Shanghai, China sjtuj@sjtu.edu.cn Xiaoyao Liang
+
+### 14. 2310.00685
+
+- source file: `2310.00685.md`
+- suggested category: `Robotics`
+- confidence margin: `8`
+- rationale: `robotics_score=9, slam_score=1`
+
+# Active Implicit Reconstruction Using One-Shot View Planning Hao Huâ Sicong Panâ Liren Jin Marija PopovicÂ´ Maren Bennewitz Abstractâ Active object reconstruction using autonomous robots is gaining great interest. A primary goal in this task is to maximize the information of the object to be reconstructed, given limited on-board resources. Previous view planning methods exhibit inefficiency since they rely on an iterative paradigm based on explicit representations, consisting of (1) planning a path to the next-best view only; and (2) requiring a considerable number of less-gain views in terms of surface coverage. To address these limitations, we propose to integrate implicit representations into the One-Shot View Planning (OSVP). The key idea behind our approach is to use implicit representations to obtain the small missing surface areas instead of observing them with extra views. Therefore, we design a deep neural network, named OSVP, to directly predict a set of views given a dense point cloud refined from an initial sparse observation. To train our OSVP network, we generate supervision labels using dense point clouds refined by implicit representations and set covering op
+
+### 15. 2503.05425
+
+- source file: `2503.05425.md`
+- suggested category: `SLAM`
+- confidence margin: `8`
+- rationale: `slam_score=9, robotics_score=1`
+
+# LiDAR-enhanced 3D Gaussian Splatting Mapping Jian Shen Huai Yuâ Ji Wu Wen Yang Gui-Song Xiaâ Abstractâ This paper introduces LiGSM, a novel LiDARenhanced 3D Gaussian Splatting (3DGS) mapping framework that improves the accuracy and robustness of 3D scene mapping by integrating LiDAR data. LiGSM constructs joint loss from images and LiDAR point clouds to estimate the poses and optimize their extrinsic parameters, enabling dynamic adaptation to variations in sensor alignment. Furthermore, it leverages LiDAR point clouds to initialize 3DGS, providing a denser and more reliable starting points compared to sparse SfM points. In scene rendering, the framework augments standard image-based supervision with depth maps generated from LiDAR projections, ensuring an accurate scene representation in both geometry and photometry. Experiments on public and self-collected datasets demonstrate that LiGSM outperforms comparative methods in pose tracking and scene rendering. ## I. INTRODUCTION 3D Gaussian Splatting (3DGS) is a technology used for 3D scene modeling and rendering, achieving an efficient rendering process by representing the scene as a set of learnable 3D Gaussian functions [1]. 
+
+### 16. 2510.09962
+
+- source file: `2510.09962.md`
+- suggested category: `Robotics`
+- confidence margin: `8`
+- rationale: `robotics_score=19, slam_score=11`
+
+# VG-Mapping: Variation-aware Density Control for Online 3D Gaussian Mapping in Semi-static Scenes Yicheng He1, Jingwen Yu1,2, Guangcheng Chen1 and Hong Zhang1â Life Fellow, IEEE <!-- image--> (a) Semi-static scene <!-- image--> <!-- image--> <!-- image--> (b) Online Updates
+
+### 17. 2602.21644
+
+- source file: `2602.21644.md`
+- suggested category: `SLAM`
+- confidence margin: `8`
+- rationale: `slam_score=13, robotics_score=5`
+
+DAGS-SLAM: Dynamic-Aware 3DGS SLAM via Spatiotemporal Motion Probability and Uncertainty-Aware Scheduling Li Zhang, Yu-An Liu, Xijia Jiang, Conghao Huang, Danyang Li, Yanyong Zhang, Fellow, IEEE Abstract— Mobile robots and AR/IoT devices demand real- time localization and dense reconstruction under tight compute and energy budgets. While 3D Gaussian Splatting (3DGS) enables efficient dense SLAM, dynamic objects and occlusions still degrade tracking and mapping. Existing dynamic 3DGS-

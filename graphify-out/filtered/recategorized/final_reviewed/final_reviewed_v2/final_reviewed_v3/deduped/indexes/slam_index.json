@@ -1,0 +1,1048 @@
+{
+  "domain": "SLAM",
+  "paper_count": 162,
+  "top_datasets": [
+    {
+      "label": "ScanNet",
+      "count": 69
+    },
+    {
+      "label": "TUM-RGBD",
+      "count": 59
+    },
+    {
+      "label": "KITTI",
+      "count": 22
+    },
+    {
+      "label": "EuRoC",
+      "count": 20
+    },
+    {
+      "label": "EuRoC MAV",
+      "count": 8
+    },
+    {
+      "label": "7-Scenes",
+      "count": 6
+    },
+    {
+      "label": "Gibson",
+      "count": 4
+    },
+    {
+      "label": "nuScenes",
+      "count": 2
+    },
+    {
+      "label": "DTU",
+      "count": 2
+    },
+    {
+      "label": "CO3D",
+      "count": 1
+    },
+    {
+      "label": "HM3D",
+      "count": 1
+    },
+    {
+      "label": "Matterport3D",
+      "count": 1
+    }
+  ],
+  "top_metrics": [
+    {
+      "label": "Recall",
+      "count": 20
+    },
+    {
+      "label": "Chamfer",
+      "count": 8
+    }
+  ],
+  "top_concepts": [
+    {
+      "label": "Pose Graph Optimization",
+      "count": 17
+    },
+    {
+      "label": "IMU Integration",
+      "count": 1
+    }
+  ],
+  "papers": [
+    {
+      "id": "paper_2310_06984",
+      "label": "2310.06984",
+      "source_file": "2310.06984.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2312_06741",
+      "label": "2312.06741",
+      "source_file": "2312.06741.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2401_14857",
+      "label": "2401.14857",
+      "source_file": "2401.14857.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2402_08125",
+      "label": "2402.08125",
+      "source_file": "2402.08125.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2402_13255",
+      "label": "2402.13255",
+      "source_file": "2402.13255.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2403_07494",
+      "label": "2403.07494",
+      "source_file": "2403.07494.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2403_11247",
+      "label": "2403.11247",
+      "source_file": "2403.11247.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2403_12535",
+      "label": "2403.12535",
+      "source_file": "2403.12535.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2403_12550",
+      "label": "2403.12550",
+      "source_file": "2403.12550.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2403_19473",
+      "label": "2403.19473",
+      "source_file": "2403.19473.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2403_20159",
+      "label": "2403.20159",
+      "source_file": "2403.20159.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2404_04026",
+      "label": "2404.04026",
+      "source_file": "2404.04026.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2404_06926",
+      "label": "2404.06926",
+      "source_file": "2404.06926.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2405_11129",
+      "label": "2405.11129",
+      "source_file": "2405.11129.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2405_13748",
+      "label": "2405.13748",
+      "source_file": "2405.13748.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2405_14824",
+      "label": "2405.14824",
+      "source_file": "2405.14824.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2406_11766",
+      "label": "2406.11766",
+      "source_file": "2406.11766.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2406_12202",
+      "label": "2406.12202",
+      "source_file": "2406.12202.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2406_16850",
+      "label": "2406.16850",
+      "source_file": "2406.16850.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2407_13338v1",
+      "label": "2407.13338v1",
+      "source_file": "2407.13338v1.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2408_03825",
+      "label": "2408.03825",
+      "source_file": "2408.03825.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2408_05635",
+      "label": "2408.05635",
+      "source_file": "2408.05635.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2408_11966",
+      "label": "2408.11966",
+      "source_file": "2408.11966.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2408_12677",
+      "label": "2408.12677",
+      "source_file": "2408.12677.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2409_20111",
+      "label": "2409.20111",
+      "source_file": "2409.20111.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2410_17084",
+      "label": "2410.17084",
+      "source_file": "2410.17084.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2411_02703",
+      "label": "2411.02703",
+      "source_file": "2411.02703.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2411_12185",
+      "label": "2411.12185",
+      "source_file": "2411.12185.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2412_03263",
+      "label": "2412.03263",
+      "source_file": "2412.03263.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2412_08496v2",
+      "label": "2412.08496v2",
+      "source_file": "2412.08496v2.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2412_09401v3_2",
+      "label": "2412.09401v3 (2)",
+      "source_file": "2412.09401v3 (2).md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2412_09723",
+      "label": "2412.09723",
+      "source_file": "2412.09723.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2412_20056",
+      "label": "2412.20056",
+      "source_file": "2412.20056.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2501_07015",
+      "label": "2501.07015",
+      "source_file": "2501.07015.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2501_08672",
+      "label": "2501.08672",
+      "source_file": "2501.08672.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2501_19319",
+      "label": "2501.19319",
+      "source_file": "2501.19319.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2502_13803",
+      "label": "2502.13803",
+      "source_file": "2502.13803.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2502_15633",
+      "label": "2502.15633",
+      "source_file": "2502.15633.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2503_01646",
+      "label": "2503.01646",
+      "source_file": "2503.01646.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2503_03373",
+      "label": "2503.03373",
+      "source_file": "2503.03373.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2503_05425",
+      "label": "2503.05425",
+      "source_file": "2503.05425.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2503_12572",
+      "label": "2503.12572",
+      "source_file": "2503.12572.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2503_16710",
+      "label": "2503.16710",
+      "source_file": "2503.16710.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2504_03886v1_4",
+      "label": "2504.03886v1 (4)",
+      "source_file": "2504.03886v1 (4).md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2504_04844",
+      "label": "2504.04844",
+      "source_file": "2504.04844.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2505_09915",
+      "label": "2505.09915",
+      "source_file": "2505.09915.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2505_12384",
+      "label": "2505.12384",
+      "source_file": "2505.12384.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2506_06909",
+      "label": "2506.06909",
+      "source_file": "2506.06909.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2506_18678",
+      "label": "2506.18678",
+      "source_file": "2506.18678.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2506_21420",
+      "label": "2506.21420",
+      "source_file": "2506.21420.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2506_23207",
+      "label": "2506.23207",
+      "source_file": "2506.23207.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2507_03737",
+      "label": "2507.03737",
+      "source_file": "2507.03737.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2507_18344",
+      "label": "2507.18344",
+      "source_file": "2507.18344.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2507_19474",
+      "label": "2507.19474",
+      "source_file": "2507.19474.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2507_20854",
+      "label": "2507.20854",
+      "source_file": "2507.20854.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2507_23273",
+      "label": "2507.23273",
+      "source_file": "2507.23273.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2507_23677",
+      "label": "2507.23677",
+      "source_file": "2507.23677.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2508_04597",
+      "label": "2508.04597",
+      "source_file": "2508.04597.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2508_17876",
+      "label": "2508.17876",
+      "source_file": "2508.17876.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2509_00433",
+      "label": "2509.00433",
+      "source_file": "2509.00433.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2509_00741",
+      "label": "2509.00741",
+      "source_file": "2509.00741.md",
+      "alias_count": 1
+    },
+    {
+      "id": "paper_2509_11574",
+      "label": "2509.11574",
+      "source_file": "2509.11574.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2509_13536",
+      "label": "2509.13536",
+      "source_file": "2509.13536.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2509_17864",
+      "label": "2509.17864",
+      "source_file": "2509.17864.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2510_06644",
+      "label": "2510.06644",
+      "source_file": "2510.06644.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2510_12749",
+      "label": "2510.12749",
+      "source_file": "2510.12749.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2510_22600",
+      "label": "2510.22600",
+      "source_file": "2510.22600.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2511_23221",
+      "label": "2511.23221",
+      "source_file": "2511.23221.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2512_08625",
+      "label": "2512.08625",
+      "source_file": "2512.08625.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2512_09411",
+      "label": "2512.09411",
+      "source_file": "2512.09411.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2601_00705",
+      "label": "2601.00705",
+      "source_file": "2601.00705.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2601_05738",
+      "label": "2601.05738",
+      "source_file": "2601.05738.md",
+      "alias_count": 1
+    },
+    {
+      "id": "paper_2601_11617",
+      "label": "2601.11617",
+      "source_file": "2601.11617.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2602_04251",
+      "label": "2602.04251",
+      "source_file": "2602.04251.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2602_06991",
+      "label": "2602.06991",
+      "source_file": "2602.06991.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2602_07493",
+      "label": "2602.07493",
+      "source_file": "2602.07493.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2602_17182",
+      "label": "2602.17182",
+      "source_file": "2602.17182.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2602_20807",
+      "label": "2602.20807",
+      "source_file": "2602.20807.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2602_21644",
+      "label": "2602.21644",
+      "source_file": "2602.21644.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2603_06989",
+      "label": "2603.06989",
+      "source_file": "2603.06989.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2603_09673",
+      "label": "2603.09673",
+      "source_file": "2603.09673.md",
+      "alias_count": 1
+    },
+    {
+      "id": "paper_2603_16844",
+      "label": "2603.16844",
+      "source_file": "2603.16844.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2603_19076v1",
+      "label": "2603.19076v1",
+      "source_file": "2603.19076v1.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2603_20443",
+      "label": "2603.20443",
+      "source_file": "2603.20443.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2603_21055",
+      "label": "2603.21055",
+      "source_file": "2603.21055.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2603_26810",
+      "label": "2603.26810",
+      "source_file": "2603.26810.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_2604_03092v1",
+      "label": "2604.03092v1",
+      "source_file": "2604.03092v1.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_3664647_3680696",
+      "label": "3664647.3680696",
+      "source_file": "3664647.3680696.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0061_slam_4dtam_non_rigid_tracking_and_mapping_via_dynamic_surface_gaussians",
+      "label": "4DTAM Non-Rigid Tracking and Mapping via Dynamic Surface Gaussians",
+      "source_file": "0061_[SLAM]_4DTAM Non-Rigid Tracking and Mapping via Dynamic Surface Gaussians.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0059_slam_add_slam_adaptive_dynamic_dense_slam_with_gaussian_splatting",
+      "label": "ADD-SLAM Adaptive Dynamic Dense SLAM with Gaussian Splatting",
+      "source_file": "0059_[SLAM]_ADD-SLAM Adaptive Dynamic Dense SLAM with Gaussian Splatting.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0026_slam_ag_slam_active_gaussian_splatting_slam",
+      "label": "AG-SLAM Active Gaussian Splatting SLAM",
+      "source_file": "0026_[SLAM]_AG-SLAM Active Gaussian Splatting SLAM.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0008_slam_cg_slam_efficient_dense_rgb_d_slam_in_a_consistent_uncertainty_aware",
+      "label": "CG-SLAM Efficient Dense RGB-D SLAM in a Consistent Uncertainty-aware",
+      "source_file": "0008_[SLAM]_CG-SLAM Efficient Dense RGB-D SLAM in a Consistent Uncertainty-aware.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0022_slam_cartgs_computational_alignment_for_real_time_gaussian_splatting_sla",
+      "label": "CaRtGS Computational Alignment for Real-Time Gaussian Splatting SLA",
+      "source_file": "0022_[SLAM]_CaRtGS Computational Alignment for Real-Time Gaussian Splatting SLA.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0027_slam_dgs_slam_gaussian_splatting_slam_in_dynamic_environment",
+      "label": "DGS-SLAM Gaussian Splatting SLAM in Dynamic Environment",
+      "source_file": "0027_[SLAM]_DGS-SLAM Gaussian Splatting SLAM in Dynamic Environment.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0032_slam_droid_splat_combining_end_to_end_slam_with_3d_gaussian_splatting",
+      "label": "DROID-Splat Combining end-to-end SLAM with 3D Gaussian Splatting",
+      "source_file": "0032_[SLAM]_DROID-Splat Combining end-to-end SLAM with 3D Gaussian Splatting.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0044_slam_densesplat_densifying_gaussian_splatting_slam_with_neural_radiance_prio",
+      "label": "DenseSplat Densifying Gaussian Splatting SLAM with Neural Radiance Prio",
+      "source_file": "0044_[SLAM]_DenseSplat Densifying Gaussian Splatting SLAM with Neural Radiance Prio.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0069_slam_diskchungs_large_scale_3d_gaussian_slam_through_chunk_based_memory_mana",
+      "label": "DiskChunGS Large-Scale 3D Gaussian SLAM Through Chunk-Based Memory Mana",
+      "source_file": "0069_[SLAM]_DiskChunGS Large-Scale 3D Gaussian SLAM Through Chunk-Based Memory Mana.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0054_slam_dy3dgs_slam_monocular_3dgs_slam_system_for_dynamic_environments",
+      "label": "Dy3DGS-SLAM Monocular 3DGS-SLAM System for Dynamic Environments",
+      "source_file": "0054_[SLAM]_Dy3DGS-SLAM Monocular 3DGS-SLAM System for Dynamic Environments.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0049_slam_dynagslam_real_time_gaussian_splatting_slam_for_online_rendering_trac",
+      "label": "DynaGSLAM Real-Time Gaussian-Splatting SLAM for Online Rendering, Trac",
+      "source_file": "0049_[SLAM]_DynaGSLAM Real-Time Gaussian-Splatting SLAM for Online Rendering, Trac.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0007_slam_endogslam_real_time_dense_reconstruction_and_tracking_in_endoscopic_su",
+      "label": "EndoGSLAM Real-Time Dense Reconstruction and Tracking in Endoscopic Su",
+      "source_file": "0007_[SLAM]_EndoGSLAM Real-Time Dense Reconstruction and Tracking in Endoscopic Su.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0053_slam_fgo_slam_enhancing_gaussian_slam_with_globally_consistent_opacity_rad",
+      "label": "FGO-SLAM Enhancing Gaussian SLAM with Globally Consistent Opacity Rad",
+      "source_file": "0053_[SLAM]_FGO-SLAM Enhancing Gaussian SLAM with Globally Consistent Opacity Rad.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0047_slam_fgs_slam_fourier_based_gaussian_splatting_for_real_time_slam_with_spa",
+      "label": "FGS-SLAM Fourier-based Gaussian Splatting for Real-time SLAM with Spa",
+      "source_file": "0047_[SLAM]_FGS-SLAM Fourier-based Gaussian Splatting for Real-time SLAM with Spa.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0034_slam_flashslam_accelerated_rgb_d_slam_for_real_time_3d_scene_reconstruction",
+      "label": "FlashSLAM Accelerated RGB-D SLAM for Real-Time 3D Scene Reconstruction",
+      "source_file": "0034_[SLAM]_FlashSLAM Accelerated RGB-D SLAM for Real-Time 3D Scene Reconstruction.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0043_slam_garad_slam_3d_gaussian_splatting_for_real_time_anti_dynamic_slam",
+      "label": "GARAD-SLAM 3D GAussian splatting for Real-time Anti Dynamic SLAM",
+      "source_file": "0043_[SLAM]_GARAD-SLAM 3D GAussian splatting for Real-time Anti Dynamic SLAM.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0017_slam_gevo_memory_efficient_monocular_visual_odometry_using_gaussians",
+      "label": "GEVO Memory-Efficient Monocular Visual Odometry Using Gaussians",
+      "source_file": "0017_[SLAM]_GEVO Memory-Efficient Monocular Visual Odometry Using Gaussians.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0050_slam_gi_slam_gaussian_inertial_slam",
+      "label": "GI-SLAM Gaussian-Inertial SLAM",
+      "source_file": "0050_[SLAM]_GI-SLAM Gaussian-Inertial SLAM.md",
+      "alias_count": 1
+    },
+    {
+      "id": "paper_0018_slam_glc_slam_gaussian_splatting_slam_with_efficient_loop_closure",
+      "label": "GLC-SLAM Gaussian Splatting SLAM with Efficient Loop Closure",
+      "source_file": "0018_[SLAM]_GLC-SLAM Gaussian Splatting SLAM with Efficient Loop Closure.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0045_slam_gs_gvins_a_tightly_integrated_gnss_visual_inertial_navigation_system",
+      "label": "GS-GVINS A Tightly-integrated GNSS-Visual-Inertial Navigation System",
+      "source_file": "0045_[SLAM]_GS-GVINS A Tightly-integrated GNSS-Visual-Inertial Navigation System.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0001_slam_gs_slam_dense_visual_slam_with_3d_gaussian_splatting",
+      "label": "GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting",
+      "source_file": "0001_[SLAM]_GS-SLAM Dense Visual SLAM with 3D Gaussian Splatting.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0064_slam_gs4_generalizable_sparse_splatting_semantic_slam",
+      "label": "GS4 Generalizable Sparse Splatting Semantic SLAM",
+      "source_file": "0064_[SLAM]_GS4 Generalizable Sparse Splatting Semantic SLAM.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0057_slam_gsff_slam_3d_semantic_gaussian_splatting_slam_via_feature_field",
+      "label": "GSFF-SLAM 3D Semantic Gaussian Splatting SLAM via Feature Field",
+      "source_file": "0057_[SLAM]_GSFF-SLAM 3D Semantic Gaussian Splatting SLAM via Feature Field.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0025_slam_gsorb_slam_gaussian_splatting_slam_benefits_from_orb_features_and_trans",
+      "label": "GSORB-SLAM Gaussian Splatting SLAM benefits from ORB features and Trans",
+      "source_file": "0025_[SLAM]_GSORB-SLAM Gaussian Splatting SLAM benefits from ORB features and Trans.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0029_slam_gassidy_gaussian_splatting_slam_in_dynamic_environments",
+      "label": "Gassidy Gaussian Splatting SLAM in Dynamic Environments",
+      "source_file": "0029_[SLAM]_Gassidy Gaussian Splatting SLAM in Dynamic Environments.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0058_slam_gaus_slam_dense_rgb_d_slam_with_gaussian_surfels",
+      "label": "GauS-SLAM Dense RGB-D SLAM with Gaussian Surfels",
+      "source_file": "0058_[SLAM]_GauS-SLAM Dense RGB-D SLAM with Gaussian Surfels.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0004_slam_gaussian_slam_photo_realistic_dense_slam_with_gaussian_splatting",
+      "label": "Gaussian-SLAM Photo-realistic Dense SLAM with Gaussian Splatting",
+      "source_file": "0004_[SLAM]_Gaussian-SLAM Photo-realistic Dense SLAM with Gaussian Splatting.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0048_slam_gigaslam_large_scale_monocular_slam_with_hierachical_gaussian_splats",
+      "label": "GigaSLAM Large-Scale Monocular SLAM with Hierachical Gaussian Splats",
+      "source_file": "0048_[SLAM]_GigaSLAM Large-Scale Monocular SLAM with Hierachical Gaussian Splats.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0021_slam_go_slam_grounded_object_segmentation_and_localization_with_gaussian",
+      "label": "Go-SLAM Grounded Object Segmentation and Localization with Gaussian",
+      "source_file": "0021_[SLAM]_Go-SLAM Grounded Object Segmentation and Localization with Gaussian.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0033_slam_hi_slam2_geometry_aware_gaussian_slam_for_fast_monocular_scene_recons",
+      "label": "HI-SLAM2 Geometry-Aware Gaussian SLAM for Fast Monocular Scene Recons",
+      "source_file": "0033_[SLAM]_HI-SLAM2 Geometry-Aware Gaussian SLAM for Fast Monocular Scene Recons.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0019_slam_hier_slam_scaling_up_semantics_in_slam_with_a_hierarchically_categoric",
+      "label": "Hier-SLAM Scaling-up Semantics in SLAM with a Hierarchically Categoric",
+      "source_file": "0019_[SLAM]_Hier-SLAM Scaling-up Semantics in SLAM with a Hierarchically Categoric.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0046_slam_hier_slam_neuro_symbolic_semantic_slam_with_a_hierarchically_categoric",
+      "label": "Hier-SLAM++ Neuro-Symbolic Semantic SLAM with a Hierarchically Categoric",
+      "source_file": "0046_[SLAM]_Hier-SLAM++ Neuro-Symbolic Semantic SLAM with a Hierarchically Categoric.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0013_slam_ig_slam_instant_gaussian_slam",
+      "label": "IG-SLAM Instant Gaussian SLAM",
+      "source_file": "0013_[SLAM]_IG-SLAM Instant Gaussian SLAM.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_improving_orb_slam3_performance_in_textureless_environments_mapping_and_localization_in_hospital_corridors",
+      "label": "Improving_Orb-Slam3_Performance_in_Textureless_Environments_Mapping_and_Localization_in_Hospital_Corridors",
+      "source_file": "Improving_Orb-Slam3_Performance_in_Textureless_Environments_Mapping_and_Localization_in_Hospital_Corridors.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0063_slam_leg_slam_language_enhanced_gaussian_splatting_for_real_time_slam",
+      "label": "LEG-SLAM Language-Enhanced Gaussian Splatting for Real-Time SLAM",
+      "source_file": "0063_[SLAM]_LEG-SLAM Language-Enhanced Gaussian Splatting for Real-Time SLAM.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0066_slam_lego_slam_language_embedded_gaussian_optimization_slam",
+      "label": "LEGO-SLAM Language-Embedded Gaussian Optimization SLAM",
+      "source_file": "0066_[SLAM]_LEGO-SLAM Language-Embedded Gaussian Optimization SLAM.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0014_slam_loopsplat_loop_closure_by_registering_3d_gaussian_splats",
+      "label": "LoopSplat Loop Closure by Registering 3D Gaussian Splats,",
+      "source_file": "0014_[SLAM]_LoopSplat Loop Closure by Registering 3D Gaussian Splats,.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0031_slam_magic_slam_multi_agent_gaussian_globally_consistent_slam",
+      "label": "MAGiC-SLAM Multi-Agent Gaussian Globally Consistent SLAM",
+      "source_file": "0031_[SLAM]_MAGiC-SLAM Multi-Agent Gaussian Globally Consistent SLAM.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_md_slam_a_multi_task_deep_learning_based_visual_slam_system_in_dynamic_environments",
+      "label": "MD-SLAM_A_Multi-Task_Deep-Learning-Based_Visual_SLAM_System_in_Dynamic_Environments",
+      "source_file": "MD-SLAM_A_Multi-Task_Deep-Learning-Based_Visual_SLAM_System_in_Dynamic_Environments.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0011_slam_mg_slam_structure_gaussian_slam_with_manhattan_world_hypothesis",
+      "label": "MG-SLAM Structure Gaussian SLAM with Manhattan World Hypothesis",
+      "source_file": "0011_[SLAM]_MG-SLAM Structure Gaussian SLAM with Manhattan World Hypothesis.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_mg_slam_structure_gaussian_splatting_slam_with_manhattan_world_hypothesis_1",
+      "label": "MG-SLAM_Structure_Gaussian_Splatting_SLAM_With_Manhattan_World_Hypothesis (1)",
+      "source_file": "MG-SLAM_Structure_Gaussian_Splatting_SLAM_With_Manhattan_World_Hypothesis (1).md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0038_slam_mgs_slam_monocular_sparse_tracking_and_gaussian_mapping_with_depth_sm",
+      "label": "MGS-SLAM Monocular Sparse Tracking and Gaussian Mapping with Depth Sm",
+      "source_file": "0038_[SLAM]_MGS-SLAM Monocular Sparse Tracking and Gaussian Mapping with Depth Sm.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0020_slam_mgso_monocular_real_time_photometric_slam_with_efficient_3d_gauss",
+      "label": "MGSO Monocular Real-time Photometric SLAM with Efficient 3D Gauss",
+      "source_file": "0020_[SLAM]_MGSO Monocular Real-time Photometric SLAM with Efficient 3D Gauss.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0006_slam_neds_slam_a_novel_neural_explicit_dense_semantic_slam_framework_using",
+      "label": "NEDS-SLAM A Novel Neural Explicit Dense Semantic SLAM Framework using",
+      "source_file": "0006_[SLAM]_NEDS-SLAM A Novel Neural Explicit Dense Semantic SLAM Framework using.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0037_slam_nfl_ba_improving_endoscopic_sla_m_with_near_field_light_bundle_adju",
+      "label": "NFL-BA Improving Endoscopic SLA M with Near-Field Light Bundle Adju",
+      "source_file": "0037_[SLAM]_NFL-BA Improving Endoscopic SLA M with Near-Field Light Bundle Adju.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0055_slam_odhsr_online_dense_3d_reconstruction_of_humans_and_scenes_from_mon",
+      "label": "ODHSR Online Dense 3D Reconstruction of Humans and Scenes from Mon",
+      "source_file": "0055_[SLAM]_ODHSR Online Dense 3D Reconstruction of Humans and Scenes from Mon.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0015_slam_og_mapping_octree_based_structured_3d_gaussians_for_online_dense_mappin",
+      "label": "OG-Mapping Octree-based Structured 3D Gaussians for Online Dense Mappin",
+      "source_file": "0015_[SLAM]_OG-Mapping Octree-based Structured 3D Gaussians for Online Dense Mappin.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0028_slam_ovo_slam_open_vocabulary_online_simultaneous_localization_and_mapping",
+      "label": "OVO-SLAM Open-Vocabulary Online Simultaneous Localization and Mapping",
+      "source_file": "0028_[SLAM]_OVO-SLAM Open-Vocabulary Online Simultaneous Localization and Mapping.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0030_slam_pg_slam_photo_realistic_and_geometry_aware_rgb_d_slam_in_dynamic_env",
+      "label": "PG-SLAM Photo-realistic and Geometry-aware RGB-D SLAM in Dynamic Env",
+      "source_file": "0030_[SLAM]_PG-SLAM Photo-realistic and Geometry-aware RGB-D SLAM in Dynamic Env.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0039_slam_panoslam_panoptic_3d_scene_reconstruction_via_gaussian_slam",
+      "label": "PanoSLAM Panoptic 3D Scene Reconstruction via Gaussian SLAM",
+      "source_file": "0039_[SLAM]_PanoSLAM Panoptic 3D Scene Reconstruction via Gaussian SLAM.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0002_slam_photo_slam_real_time_simultaneous_localization_and_photorealistic_mappi",
+      "label": "Photo-SLAM Real-time Simultaneous Localization and Photorealistic Mappi",
+      "source_file": "0002_[SLAM]_Photo-SLAM Real-time Simultaneous Localization and Photorealistic Mappi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0035_slam_rgbds_slam_a_rgb_d_semantic_dense_slam_based_on_3d_multi_level_pyramid",
+      "label": "RGBDS-SLAM A RGB-D Semantic Dense SLAM Based on 3D Multi Level Pyramid",
+      "source_file": "0035_[SLAM]_RGBDS-SLAM A RGB-D Semantic Dense SLAM Based on 3D Multi Level Pyramid.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0036_slam_rp_slam_real_time_photorealistic_slam_with_efficient_3d_gaussian_spl",
+      "label": "RP-SLAM Real-time Photorealistic SLAM with Efficient 3D Gaussian Spl",
+      "source_file": "0036_[SLAM]_RP-SLAM Real-time Photorealistic SLAM with Efficient 3D Gaussian Spl.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0009_slam_rtg_slam_real_time_3d_reconstruction_at_scale_using_gaussian_splattin",
+      "label": "RTG-SLAM Real-time 3D Reconstruction at Scale using Gaussian Splattin",
+      "source_file": "0009_[SLAM]_RTG-SLAM Real-time 3D Reconstruction at Scale using Gaussian Splattin.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0005_slam_sgs_slam_semantic_gaussian_splatting_for_neural_dense_slam",
+      "label": "SGS-SLAM Semantic Gaussian Splatting For Neural Dense SLAM",
+      "source_file": "0005_[SLAM]_SGS-SLAM Semantic Gaussian Splatting For Neural Dense SLAM.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0071_slam_sing3r_slam_submap_based_indoor_monocular_gaussian_slam_with_3d_reconstr",
+      "label": "SING3R-SLAM Submap-based Indoor Monocular Gaussian SLAM with 3D Reconstr",
+      "source_file": "0071_[SLAM]_SING3R-SLAM Submap-based Indoor Monocular Gaussian SLAM with 3D Reconstr.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0068_slam_splatonic_architectural_support_for_3d_gaussian_splatting_slam_via_spa",
+      "label": "SPLATONIC Architectural Support for 3D Gaussian Splatting SLAM via Spa",
+      "source_file": "0068_[SLAM]_SPLATONIC Architectural Support for 3D Gaussian Splatting SLAM via Spa.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0051_slam_stamics_splat_track_and_map_with_integrated_consistency_and_semanti",
+      "label": "STAMICS Splat, Track And Map with Integrated Consistency and Semanti",
+      "source_file": "0051_[SLAM]_STAMICS Splat, Track And Map with Integrated Consistency and Semanti.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0040_slam_scaffold_slam_structured_3d_gaussians_for_simultaneous_localization_and_ph",
+      "label": "Scaffold-SLAM Structured 3D Gaussians for Simultaneous Localization and Ph",
+      "source_file": "0040_[SLAM]_Scaffold-SLAM Structured 3D Gaussians for Simultaneous Localization and Ph.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0003_slam_splatam_splat_track_map_3d_gaussians_for_dense_rgb_d_slam",
+      "label": "SplaTAM Splat, Track & Map 3D Gaussians for Dense RGB-D SLAM",
+      "source_file": "0003_[SLAM]_SplaTAM Splat, Track & Map 3D Gaussians for Dense RGB-D SLAM.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0010_slam_splat_slam_globally_optimized_rgb_only_slam_with_3d_gaussians",
+      "label": "Splat-SLAM Globally Optimized RGB-only SLAM with 3D Gaussians",
+      "source_file": "0010_[SLAM]_Splat-SLAM Globally Optimized RGB-only SLAM with 3D Gaussians.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0012_slam_tambridge_bridging_frame_centered_tracking_and_3d_gaussian_splatting_f",
+      "label": "TAMBRIDGE Bridging Frame-Centered Tracking and 3D Gaussian Splatting f",
+      "source_file": "0012_[SLAM]_TAMBRIDGE Bridging Frame-Centered Tracking and 3D Gaussian Splatting f.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_tvg_slam_robust_gaussian_splatting_slam_with_tri_view_geometric_constraints_1",
+      "label": "TVG-SLAM_Robust_Gaussian_Splatting_SLAM_With_Tri-View_Geometric_Constraints (1)",
+      "source_file": "TVG-SLAM_Robust_Gaussian_Splatting_SLAM_With_Tri-View_Geometric_Constraints (1).md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0070_slam_taming_the_light_illumination_invariant_semantic_3dgs_slam",
+      "label": "Taming the Light Illumination-Invariant Semantic 3DGS-SLAM",
+      "source_file": "0070_[SLAM]_Taming the Light Illumination-Invariant Semantic 3DGS-SLAM.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0056_slam_tof_splatting_dense_slam_using_sparse_time_of_flight_depth_and_multi_frame",
+      "label": "ToF-Splatting Dense SLAM using Sparse Time-of-Flight Depth and Multi-Frame",
+      "source_file": "0056_[SLAM]_ToF-Splatting Dense SLAM using Sparse Time-of-Flight Depth and Multi-Frame.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_toward_accurate_efficient_and_robust_rgb_d_simultaneous_localization_and_mapping_in_challenging_environments",
+      "label": "Toward_Accurate_Efficient_and_Robust_RGB-D_Simultaneous_Localization_and_Mapping_in_Challenging_Environments",
+      "source_file": "Toward_Accurate_Efficient_and_Robust_RGB-D_Simultaneous_Localization_and_Mapping_in_Challenging_Environments.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0016_slam_udgs_slam_unidepth_assisted_gaussian_splatting_for_monocular_slam",
+      "label": "UDGS-SLAM UniDepth Assisted Gaussian Splatting for Monocular SLAM",
+      "source_file": "0016_[SLAM]_UDGS-SLAM UniDepth Assisted Gaussian Splatting for Monocular SLAM.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0060_slam_up_slam_adaptively_structured_gaussian_slam_with_uncertainty_predict",
+      "label": "UP-SLAM Adaptively Structured Gaussian SLAM with Uncertainty Predict",
+      "source_file": "0060_[SLAM]_UP-SLAM Adaptively Structured Gaussian SLAM with Uncertainty Predict.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0042_slam_vigs_slam_imu_based_large_scale_3d_gaussian_splatting_slam",
+      "label": "VIGS SLAM IMU-based Large-Scale 3D Gaussian Splatting SLAM",
+      "source_file": "0042_[SLAM]_VIGS SLAM IMU-based Large-Scale 3D Gaussian Splatting SLAM.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0072_slam_vigs_slam_visual_inertial_gaussian_splatting_slam",
+      "label": "VIGS-SLAM Visual Inertial Gaussian Splatting SLAM",
+      "source_file": "0072_[SLAM]_VIGS-SLAM Visual Inertial Gaussian Splatting SLAM.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0041_slam_vings_mono_visual_inertial_gaussian_splatting_monocular_slam_in_large_s",
+      "label": "VINGS-Mono Visual-Inertial Gaussian Splatting Monocular SLAM in Large S",
+      "source_file": "0041_[SLAM]_VINGS-Mono Visual-Inertial Gaussian Splatting Monocular SLAM in Large S.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0062_slam_vtgaussian_slam_rgbd_slam_for_large_scale_scenes_with_splatting_view_tied_3d",
+      "label": "VTGaussian-SLAM RGBD SLAM for Large Scale Scenes with Splatting View-Tied 3D",
+      "source_file": "0062_[SLAM]_VTGaussian-SLAM RGBD SLAM for Large Scale Scenes with Splatting View-Tied 3D.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0052_slam_wildgs_slam_monocular_gaussian_splatting_slam_in_dynamic_environments",
+      "label": "WildGS-SLAM Monocular Gaussian Splatting SLAM in Dynamic Environments",
+      "source_file": "0052_[SLAM]_WildGS-SLAM Monocular Gaussian Splatting SLAM in Dynamic Environments.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_ssrn_4514612",
+      "label": "ssrn-4514612",
+      "source_file": "ssrn-4514612.md",
+      "alias_count": 0
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3DGS-SLAM Year Trends</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f5f7f8; color: #132025; }
+    .page { max-width: 1280px; margin: 0 auto; padding: 24px; }
+    .panel { background: #fff; border: 1px solid #d2dde1; border-radius: 8px; padding: 16px; }
+    .panel + .panel { margin-top: 16px; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { padding: 10px 8px; border-bottom: 1px solid #d2dde1; text-align: left; vertical-align: top; }
+    th { color: #55666d; }
+    .stats { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+    .chip { padding: 6px 10px; border: 1px solid #d2dde1; border-radius: 8px; background: #eef3f4; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="panel">
+      <h1 style="margin:0 0 8px;">3DGS-SLAM Year Trends</h1>
+      <div class="stats" id="stats"></div>
+    </div>
+    <div class="panel">
+      <h2 style="margin:0 0 12px;">Counts By Year</h2>
+      <table id="trendTable"></table>
+    </div>
+    <div class="panel">
+      <h2 style="margin:0 0 12px;">Domain Timelines</h2>
+      <table id="domainTrendTable"></table>
+    </div>
+    <div class="panel">
+      <h2 style="margin:0 0 12px;">Year Unknown</h2>
+      <table id="unknownTable"></table>
+    </div>
+  </div>
+  <script>
+    const payload = {"summary": {"graph": "C:\\Users\\Administrator\\Downloads\\3DGS-SLAM-Papers\\graphify-out\\filtered\\recategorized\\final_reviewed\\final_reviewed_v2\\final_reviewed_v3\\deduped\\graphify_final_reviewed_v3_deduped.json", "document_count": 817, "year_resolved_count": 817, "year_unknown_count": 0, "year_range": [2018, 2026]}, "trends": [{"year": 2018, "paper_count": 1, "SLAM": 0, "Robotics": 0, "General": 1, "SLAM-Supplement": 0, "Unknown": 0}, {"year": 2019, "paper_count": 4, "SLAM": 0, "Robotics": 3, "General": 1, "SLAM-Supplement": 0, "Unknown": 0}, {"year": 2020, "paper_count": 5, "SLAM": 2, "Robotics": 3, "General": 0, "SLAM-Supplement": 0, "Unknown": 0}, {"year": 2021, "paper_count": 27, "SLAM": 0, "Robotics": 10, "General": 14, "SLAM-Supplement": 2, "Unknown": 1}, {"year": 2022, "paper_count": 16, "SLAM": 1, "Robotics": 11, "General": 2, "SLAM-Supplement": 1, "Unknown": 1}, {"year": 2023, "paper_count": 57, "SLAM": 14, "Robotics": 10, "General": 30, "SLAM-Supplement": 2, "Unknown": 1}, {"year": 2024, "paper_count": 268, "SLAM": 65, "Robotics": 33, "General": 161, "SLAM-Supplement": 8, "Unknown": 1}, {"year": 2025, "paper_count": 333, "SLAM": 61, "Robotics": 25, "General": 220, "SLAM-Supplement": 24, "Unknown": 3}, {"year": 2026, "paper_count": 106, "SLAM": 19, "Robotics": 2, "General": 85, "SLAM-Supplement": 0, "Unknown": 0}], "unknown": [], "domain_trends": {"SLAM": [{"year": 2020, "paper_count": 2}, {"year": 2022, "paper_count": 1}, {"year": 2023, "paper_count": 14}, {"year": 2024, "paper_count": 65}, {"year": 2025, "paper_count": 61}, {"year": 2026, "paper_count": 19}], "Robotics": [{"year": 2019, "paper_count": 3}, {"year": 2020, "paper_count": 3}, {"year": 2021, "paper_count": 10}, {"year": 2022, "paper_count": 11}, {"year": 2023, "paper_count": 10}, {"year": 2024, "paper_count": 33}, {"year": 2025, "paper_count": 25}, {"year": 2026, "paper_count": 2}], "General": [{"year": 2018, "paper_count": 1}, {"year": 2019, "paper_count": 1}, {"year": 2021, "paper_count": 14}, {"year": 2022, "paper_count": 2}, {"year": 2023, "paper_count": 30}, {"year": 2024, "paper_count": 161}, {"year": 2025, "paper_count": 220}, {"year": 2026, "paper_count": 85}], "SLAM-Supplement": [{"year": 2021, "paper_count": 2}, {"year": 2022, "paper_count": 1}, {"year": 2023, "paper_count": 2}, {"year": 2024, "paper_count": 8}, {"year": 2025, "paper_count": 24}], "Unknown": [{"year": 2021, "paper_count": 1}, {"year": 2022, "paper_count": 1}, {"year": 2023, "paper_count": 1}, {"year": 2024, "paper_count": 1}, {"year": 2025, "paper_count": 3}]}};
+    const stats = document.getElementById('stats');
+    const trendTable = document.getElementById('trendTable');
+    const domainTrendTable = document.getElementById('domainTrendTable');
+    const unknownTable = document.getElementById('unknownTable');
+    stats.innerHTML = [
+      ['documents', payload.summary.document_count],
+      ['year resolved', payload.summary.year_resolved_count],
+      ['year unknown', payload.summary.year_unknown_count],
+      ['range', `${payload.summary.year_range[0] || '-'} to ${payload.summary.year_range[1] || '-'}`]
+    ].map(([label, value]) => `<div class="chip">${label}: ${value}</div>`).join('');
+    trendTable.innerHTML = `
+      <thead><tr><th>Year</th><th>Total</th><th>SLAM</th><th>Robotics</th><th>General</th><th>SLAM-Supplement</th><th>Unknown</th></tr></thead>
+      <tbody>${payload.trends.map(row => `<tr><td>${row.year}</td><td>${row.paper_count}</td><td>${row.SLAM}</td><td>${row.Robotics}</td><td>${row.General}</td><td>${row['SLAM-Supplement']}</td><td>${row.Unknown}</td></tr>`).join('')}</tbody>`;
+    domainTrendTable.innerHTML = `
+      <thead><tr><th>Domain</th><th>Timeline</th></tr></thead>
+      <tbody>${Object.entries(payload.domain_trends).map(([domain, rows]) => `<tr><td>${escapeHtml(domain)}</td><td>${rows.map(row => `${row.year}:${row.paper_count}`).join(' | ')}</td></tr>`).join('')}</tbody>`;
+    unknownTable.innerHTML = `
+      <thead><tr><th>Domain</th><th>Title</th><th>Source</th></tr></thead>
+      <tbody>${payload.unknown.map(row => `<tr><td>${escapeHtml(row.domain)}</td><td>${escapeHtml(row.title)}</td><td>${escapeHtml(row.source_file)}</td></tr>`).join('')}</tbody>`;
+    function escapeHtml(value) {
+      return value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#39;');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,1454 @@
+{
+  "summary": {
+    "graph": "C:\\Users\\Administrator\\Downloads\\3DGS-SLAM-Papers\\graphify-out\\filtered\\recategorized\\final_reviewed\\final_reviewed_v2\\final_reviewed_v3\\deduped\\graphify_final_reviewed_v3_deduped.json",
+    "document_count": 817,
+    "domain_counts": {
+      "SLAM": 162,
+      "Robotics": 97,
+      "General": 514
+    },
+    "general_subdomain_counts": {
+      "Reconstruction": 350,
+      "Rendering": 93,
+      "Enhancement": 42,
+      "Evaluation": 29
+    },
+    "year_summary": {
+      "resolved_count": 817,
+      "unknown_count": 0,
+      "range": [
+        2018,
+        2026
+      ]
+    },
+    "resolved_title_count": 26,
+    "title_review_queue_count": 0
+  },
+  "domain_overview": [
+    {
+      "domain": "SLAM",
+      "paper_count": 162,
+      "top_dataset": "ScanNet",
+      "top_metric": "Recall",
+      "top_concept": "Pose Graph Optimization"
+    },
+    {
+      "domain": "Robotics",
+      "paper_count": 97,
+      "top_dataset": "ScanNet",
+      "top_metric": "Recall",
+      "top_concept": "Pose Graph Optimization"
+    },
+    {
+      "domain": "General",
+      "paper_count": 514,
+      "top_dataset": "ScanNet",
+      "top_metric": "Chamfer",
+      "top_concept": "3D Gaussian Splatting (Kerbl et al. 2023)"
+    }
+  ],
+  "general_subdomain_overview": [
+    {
+      "subdomain": "Reconstruction",
+      "paper_count": 350,
+      "top_dataset": "ScanNet",
+      "top_metric": "Chamfer",
+      "top_concept": "3D Gaussian Splatting (Kerbl et al. 2023)"
+    },
+    {
+      "subdomain": "Rendering",
+      "paper_count": 93,
+      "top_dataset": "KITTI",
+      "top_metric": "Recall",
+      "top_concept": "3D Gaussian Splatting (Kerbl et al. 2023)"
+    },
+    {
+      "subdomain": "Enhancement",
+      "paper_count": 42,
+      "top_dataset": "KITTI",
+      "top_metric": "Recall",
+      "top_concept": "Medical Imaging Reconstruction with Gaussian Splatting"
+    },
+    {
+      "subdomain": "Evaluation",
+      "paper_count": 29,
+      "top_dataset": "ScanNet",
+      "top_metric": "Chamfer",
+      "top_concept": ""
+    }
+  ],
+  "year_overview": [
+    {
+      "year": 2018,
+      "paper_count": 1,
+      "SLAM": 0,
+      "Robotics": 0,
+      "General": 1,
+      "SLAM-Supplement": 0,
+      "Unknown": 0
+    },
+    {
+      "year": 2019,
+      "paper_count": 4,
+      "SLAM": 0,
+      "Robotics": 3,
+      "General": 1,
+      "SLAM-Supplement": 0,
+      "Unknown": 0
+    },
+    {
+      "year": 2020,
+      "paper_count": 5,
+      "SLAM": 2,
+      "Robotics": 3,
+      "General": 0,
+      "SLAM-Supplement": 0,
+      "Unknown": 0
+    },
+    {
+      "year": 2021,
+      "paper_count": 27,
+      "SLAM": 0,
+      "Robotics": 10,
+      "General": 14,
+      "SLAM-Supplement": 2,
+      "Unknown": 1
+    },
+    {
+      "year": 2022,
+      "paper_count": 16,
+      "SLAM": 1,
+      "Robotics": 11,
+      "General": 2,
+      "SLAM-Supplement": 1,
+      "Unknown": 1
+    },
+    {
+      "year": 2023,
+      "paper_count": 57,
+      "SLAM": 14,
+      "Robotics": 10,
+      "General": 30,
+      "SLAM-Supplement": 2,
+      "Unknown": 1
+    },
+    {
+      "year": 2024,
+      "paper_count": 268,
+      "SLAM": 65,
+      "Robotics": 33,
+      "General": 161,
+      "SLAM-Supplement": 8,
+      "Unknown": 1
+    },
+    {
+      "year": 2025,
+      "paper_count": 333,
+      "SLAM": 61,
+      "Robotics": 25,
+      "General": 220,
+      "SLAM-Supplement": 24,
+      "Unknown": 3
+    },
+    {
+      "year": 2026,
+      "paper_count": 106,
+      "SLAM": 19,
+      "Robotics": 2,
+      "General": 85,
+      "SLAM-Supplement": 0,
+      "Unknown": 0
+    }
+  ],
+  "domain_year_overview": {
+    "SLAM": [
+      {
+        "year": 2020,
+        "paper_count": 2
+      },
+      {
+        "year": 2022,
+        "paper_count": 1
+      },
+      {
+        "year": 2023,
+        "paper_count": 14
+      },
+      {
+        "year": 2024,
+        "paper_count": 65
+      },
+      {
+        "year": 2025,
+        "paper_count": 61
+      },
+      {
+        "year": 2026,
+        "paper_count": 19
+      }
+    ],
+    "Robotics": [
+      {
+        "year": 2019,
+        "paper_count": 3
+      },
+      {
+        "year": 2020,
+        "paper_count": 3
+      },
+      {
+        "year": 2021,
+        "paper_count": 10
+      },
+      {
+        "year": 2022,
+        "paper_count": 11
+      },
+      {
+        "year": 2023,
+        "paper_count": 10
+      },
+      {
+        "year": 2024,
+        "paper_count": 33
+      },
+      {
+        "year": 2025,
+        "paper_count": 25
+      },
+      {
+        "year": 2026,
+        "paper_count": 2
+      }
+    ],
+    "General": [
+      {
+        "year": 2018,
+        "paper_count": 1
+      },
+      {
+        "year": 2019,
+        "paper_count": 1
+      },
+      {
+        "year": 2021,
+        "paper_count": 14
+      },
+      {
+        "year": 2022,
+        "paper_count": 2
+      },
+      {
+        "year": 2023,
+        "paper_count": 30
+      },
+      {
+        "year": 2024,
+        "paper_count": 161
+      },
+      {
+        "year": 2025,
+        "paper_count": 220
+      },
+      {
+        "year": 2026,
+        "paper_count": 85
+      }
+    ],
+    "SLAM-Supplement": [
+      {
+        "year": 2021,
+        "paper_count": 2
+      },
+      {
+        "year": 2022,
+        "paper_count": 1
+      },
+      {
+        "year": 2023,
+        "paper_count": 2
+      },
+      {
+        "year": 2024,
+        "paper_count": 8
+      },
+      {
+        "year": 2025,
+        "paper_count": 24
+      }
+    ],
+    "Unknown": [
+      {
+        "year": 2021,
+        "paper_count": 1
+      },
+      {
+        "year": 2022,
+        "paper_count": 1
+      },
+      {
+        "year": 2023,
+        "paper_count": 1
+      },
+      {
+        "year": 2024,
+        "paper_count": 1
+      },
+      {
+        "year": 2025,
+        "paper_count": 3
+      }
+    ]
+  },
+  "top_papers_global": [
+    {
+      "rank": 1,
+      "domain": "General",
+      "year": 2024,
+      "label": "SSR-GS Separating Specular Reflection in Gaussian Splatting",
+      "node_id": "paper_0204_general_ssr_gs_separating_specular_reflection_in_gaussian_splatting",
+      "source_file": "0204_[General]_SSR-GS Separating Specular Reflection in Gaussian Splatting.md",
+      "degree": 18,
+      "alias_count": 1
+    },
+    {
+      "rank": 2,
+      "domain": "General",
+      "year": 2024,
+      "label": "DM-CFO A Diffusion Model for Compositional 3D Tooth Generat",
+      "node_id": "paper_0209_general_dm_cfo_a_diffusion_model_for_compositional_3d_tooth_generat",
+      "source_file": "0209_[General]_DM-CFO A Diffusion Model for Compositional 3D Tooth Generat.md",
+      "degree": 17,
+      "alias_count": 1
+    },
+    {
+      "rank": 3,
+      "domain": "General",
+      "year": 2021,
+      "label": "Multimodal-Prior-Guided Importance Sampling for Hierarchical",
+      "node_id": "paper_0213_general_multimodal_prior_guided_importance_sampling_for_hierarchical",
+      "source_file": "0213_[General]_Multimodal-Prior-Guided Importance Sampling for Hierarchical.md",
+      "degree": 15,
+      "alias_count": 1
+    },
+    {
+      "rank": 4,
+      "domain": "General",
+      "year": 2024,
+      "label": "EmbedTalk Triplane-Free Talking Head Synthesis using Embedd",
+      "node_id": "paper_0193_general_embedtalk_triplane_free_talking_head_synthesis_using_embedd",
+      "source_file": "0193_[General]_EmbedTalk Triplane-Free Talking Head Synthesis using Embedd.md",
+      "degree": 14,
+      "alias_count": 1
+    },
+    {
+      "rank": 5,
+      "domain": "General",
+      "year": 2025,
+      "label": "FTSplat Feed-forward Triangle Splatting Network",
+      "node_id": "paper_0201_general_ftsplat_feed_forward_triangle_splatting_network",
+      "source_file": "0201_[General]_FTSplat Feed-forward Triangle Splatting Network.md",
+      "degree": 13,
+      "alias_count": 1
+    },
+    {
+      "rank": 6,
+      "domain": "General",
+      "year": 2024,
+      "label": "DSA-SRGS Super-Resolution Gaussian Splatting for Dynamic Sp",
+      "node_id": "paper_0207_general_dsa_srgs_super_resolution_gaussian_splatting_for_dynamic_sp",
+      "source_file": "0207_[General]_DSA-SRGS Super-Resolution Gaussian Splatting for Dynamic Sp.md",
+      "degree": 12,
+      "alias_count": 1
+    },
+    {
+      "rank": 7,
+      "domain": "General",
+      "year": 2024,
+      "label": "Active View Selection with Perturbed Gaussian Ensemble for T",
+      "node_id": "paper_0197_general_active_view_selection_with_perturbed_gaussian_ensemble_for_t",
+      "source_file": "0197_[General]_Active View Selection with Perturbed Gaussian Ensemble for T.md",
+      "degree": 11,
+      "alias_count": 1
+    },
+    {
+      "rank": 8,
+      "domain": "General",
+      "year": 2024,
+      "label": "Transforming Omnidirectional RGB-LiDAR data into 3D Gaussian",
+      "node_id": "paper_0200_general_transforming_omnidirectional_rgb_lidar_data_into_3d_gaussian",
+      "source_file": "0200_[General]_Transforming Omnidirectional RGB-LiDAR data into 3D Gaussian.md",
+      "degree": 10,
+      "alias_count": 1
+    },
+    {
+      "rank": 9,
+      "domain": "Robotics",
+      "year": 2024,
+      "label": "ActiveSplat High-Fidelity Scene Reconstruction through Active Gaussian S",
+      "node_id": "paper_0102_robotics_activesplat_high_fidelity_scene_reconstruction_through_active_gaussian_s",
+      "source_file": "0102_[Robotics]_ActiveSplat High-Fidelity Scene Reconstruction through Active Gaussian S.md",
+      "degree": 9,
+      "alias_count": 1
+    },
+    {
+      "rank": 10,
+      "domain": "Robotics",
+      "year": 2024,
+      "label": "Benchmarking Neural Radiance Fields for Autonomous Robots: An Overview",
+      "node_id": "paper_2405_05526",
+      "source_file": "2405.05526.md",
+      "degree": 9,
+      "alias_count": 0,
+      "original_label": "2405.05526"
+    },
+    {
+      "rank": 11,
+      "domain": "SLAM",
+      "year": 2026,
+      "label": "FeatureSLAM: Feature-Enriched 3D Gaussian Splatting SLAM in Real Time",
+      "node_id": "paper_2601_05738",
+      "source_file": "2601.05738.md",
+      "degree": 8,
+      "alias_count": 1,
+      "original_label": "2601.05738"
+    },
+    {
+      "rank": 12,
+      "domain": "Robotics",
+      "year": 2023,
+      "label": "HGS-Planner Hierarchical Planning Framework for Active Scene Reconstruct",
+      "node_id": "paper_0100_robotics_hgs_planner_hierarchical_planning_framework_for_active_scene_reconstruct",
+      "source_file": "0100_[Robotics]_HGS-Planner Hierarchical Planning Framework for Active Scene Reconstruct.md",
+      "degree": 7,
+      "alias_count": 1
+    },
+    {
+      "rank": 13,
+      "domain": "SLAM",
+      "year": 2024,
+      "label": "How NeRFs and 3D Gaussian Splatting are Reshaping SLAM: a Survey",
+      "node_id": "paper_2402_13255",
+      "source_file": "2402.13255.md",
+      "degree": 7,
+      "alias_count": 0,
+      "original_label": "2402.13255"
+    },
+    {
+      "rank": 14,
+      "domain": "Robotics",
+      "year": 2025,
+      "label": "What Is The Best 3D Scene Representation for Robotics? From Geometric to Foundation Models",
+      "node_id": "paper_2512_03422",
+      "source_file": "2512.03422.md",
+      "degree": 7,
+      "alias_count": 0,
+      "original_label": "2512.03422"
+    },
+    {
+      "rank": 15,
+      "domain": "SLAM",
+      "year": 2025,
+      "label": "MCN-SLAM: Multi-Agent Collaborative Neural SLAM with Hybrid Implicit Neural Scene Representation",
+      "node_id": "paper_2506_18678",
+      "source_file": "2506.18678.md",
+      "degree": 6,
+      "alias_count": 0,
+      "original_label": "2506.18678"
+    },
+    {
+      "rank": 16,
+      "domain": "General",
+      "year": 2024,
+      "label": "Scalable Adaptation of 3D Geometric Foundation Models via We",
+      "node_id": "paper_0272_general_scalable_adaptation_of_3d_geometric_foundation_models_via_we",
+      "source_file": "0272_[General]_Scalable Adaptation of 3D Geometric Foundation Models via We.md",
+      "degree": 6,
+      "alias_count": 0
+    },
+    {
+      "rank": 17,
+      "domain": "General",
+      "year": 2025,
+      "label": "WorldMirror Universal 3D World Reconstruction with Any-Prio",
+      "node_id": "paper_0482_general_worldmirror_universal_3d_world_reconstruction_with_any_prio",
+      "source_file": "0482_[General]_WorldMirror Universal 3D World Reconstruction with Any-Prio.md",
+      "degree": 6,
+      "alias_count": 0
+    },
+    {
+      "rank": 18,
+      "domain": "Robotics",
+      "year": 2024,
+      "label": "DynamicGSG Dynamic 3D Gaussian Scene Graphs for Environment Adaptation",
+      "node_id": "paper_0140_robotics_dynamicgsg_dynamic_3d_gaussian_scene_graphs_for_environment_adaptation",
+      "source_file": "0140_[Robotics]_DynamicGSG Dynamic 3D Gaussian Scene Graphs for Environment Adaptation.md",
+      "degree": 5,
+      "alias_count": 1
+    },
+    {
+      "rank": 19,
+      "domain": "SLAM",
+      "year": 2023,
+      "label": "GI-SLAM Gaussian-Inertial SLAM",
+      "node_id": "paper_0050_slam_gi_slam_gaussian_inertial_slam",
+      "source_file": "0050_[SLAM]_GI-SLAM Gaussian-Inertial SLAM.md",
+      "degree": 5,
+      "alias_count": 1
+    },
+    {
+      "rank": 20,
+      "domain": "General",
+      "year": 2025,
+      "label": "GaussTwin Unified Simulation and Correction with Gaussian S",
+      "node_id": "paper_0205_general_gausstwin_unified_simulation_and_correction_with_gaussian_s",
+      "source_file": "0205_[General]_GaussTwin Unified Simulation and Correction with Gaussian S.md",
+      "degree": 5,
+      "alias_count": 1
+    },
+    {
+      "rank": 21,
+      "domain": "Robotics",
+      "year": 2024,
+      "label": "RT-GuIDE Real-Time Gaussian splatting for Information-Driven Explorat",
+      "node_id": "paper_0101_robotics_rt_guide_real_time_gaussian_splatting_for_information_driven_explorat",
+      "source_file": "0101_[Robotics]_RT-GuIDE Real-Time Gaussian splatting for Information-Driven Explorat.md",
+      "degree": 5,
+      "alias_count": 1
+    },
+    {
+      "rank": 22,
+      "domain": "SLAM",
+      "year": 2024,
+      "label": "Customizable Perturbation Synthesis for Robust SLAM Benchmarking",
+      "node_id": "paper_2402_08125",
+      "source_file": "2402.08125.md",
+      "degree": 5,
+      "alias_count": 0,
+      "original_label": "2402.08125"
+    },
+    {
+      "rank": 23,
+      "domain": "SLAM",
+      "year": 2024,
+      "label": "From Perfect to Noisy World Simulation: Customizable Embodied Multi-modal Perturbations for SLAM Robustness Benchmarking",
+      "node_id": "paper_2406_16850",
+      "source_file": "2406.16850.md",
+      "degree": 5,
+      "alias_count": 0,
+      "original_label": "2406.16850"
+    },
+    {
+      "rank": 24,
+      "domain": "Robotics",
+      "year": 2024,
+      "label": "3D Gaussian Splatting in Robotics: A Survey",
+      "node_id": "paper_2410_12262",
+      "source_file": "2410.12262.md",
+      "degree": 5,
+      "alias_count": 0,
+      "original_label": "2410.12262"
+    },
+    {
+      "rank": 25,
+      "domain": "Robotics",
+      "year": 2025,
+      "label": "A Survey on Collaborative SLAM with 3D Gaussian Splatting",
+      "node_id": "paper_2510_23988",
+      "source_file": "2510.23988.md",
+      "degree": 5,
+      "alias_count": 0,
+      "original_label": "2510.23988"
+    },
+    {
+      "rank": 26,
+      "domain": "SLAM",
+      "year": 2026,
+      "label": "Towards Next-Generation SLAM: A Survey on 3DGS-SLAM Focusing on Performance, Robustness, and Future Directions",
+      "node_id": "paper_2602_04251",
+      "source_file": "2602.04251.md",
+      "degree": 5,
+      "alias_count": 0,
+      "original_label": "2602.04251"
+    },
+    {
+      "rank": 27,
+      "domain": "SLAM",
+      "year": 2025,
+      "label": "VTGaussian-SLAM RGBD SLAM for Large Scale Scenes with Splatting View-Tied 3D",
+      "node_id": "paper_0062_slam_vtgaussian_slam_rgbd_slam_for_large_scale_scenes_with_splatting_view_tied_3d",
+      "source_file": "0062_[SLAM]_VTGaussian-SLAM RGBD SLAM for Large Scale Scenes with Splatting View-Tied 3D.md",
+      "degree": 5,
+      "alias_count": 0
+    },
+    {
+      "rank": 28,
+      "domain": "SLAM",
+      "year": 2026,
+      "label": "VarSplat: Uncertainty-aware 3D Gaussian Splatting for Robust RGB-D SLAM",
+      "node_id": "paper_2603_09673",
+      "source_file": "2603.09673.md",
+      "degree": 4,
+      "alias_count": 1,
+      "original_label": "2603.09673"
+    },
+    {
+      "rank": 29,
+      "domain": "Robotics",
+      "year": 2023,
+      "label": "GSLoc Visual Localization with 3D Gaussian Splatting",
+      "node_id": "paper_0128_robotics_gsloc_visual_localization_with_3d_gaussian_splatting",
+      "source_file": "0128_[Robotics]_GSLoc Visual Localization with 3D Gaussian Splatting.md",
+      "degree": 4,
+      "alias_count": 1
+    },
+    {
+      "rank": 30,
+      "domain": "Robotics",
+      "year": 2024,
+      "label": "LoGS Visual Localization via Gaussian Splatting with Fewer Traini",
+      "node_id": "paper_0129_robotics_logs_visual_localization_via_gaussian_splatting_with_fewer_traini",
+      "source_file": "0129_[Robotics]_LoGS Visual Localization via Gaussian Splatting with Fewer Traini.md",
+      "degree": 4,
+      "alias_count": 1
+    },
+    {
+      "rank": 31,
+      "domain": "Robotics",
+      "year": 2023,
+      "label": "Renderable Neural Radiance Map for Visual Navigation",
+      "node_id": "paper_2303_00304",
+      "source_file": "2303.00304.md",
+      "degree": 4,
+      "alias_count": 0,
+      "original_label": "2303.00304"
+    },
+    {
+      "rank": 32,
+      "domain": "Robotics",
+      "year": 2024,
+      "label": "NeRFs in Robotics: A Survey",
+      "node_id": "paper_2405_01333",
+      "source_file": "2405.01333.md",
+      "degree": 4,
+      "alias_count": 0,
+      "original_label": "2405.01333"
+    },
+    {
+      "rank": 33,
+      "domain": "Robotics",
+      "year": 2024,
+      "label": "Multi-robot autonomous 3D reconstruction using Gaussian splatting with Semantic guidance",
+      "node_id": "paper_2412_02249",
+      "source_file": "2412.02249.md",
+      "degree": 4,
+      "alias_count": 0,
+      "original_label": "2412.02249"
+    },
+    {
+      "rank": 34,
+      "domain": "SLAM",
+      "year": 2024,
+      "label": "SLAM3R: Real-Time Dense Scene Reconstruction from Monocular RGB Videos",
+      "node_id": "paper_2412_09401v3_2",
+      "source_file": "2412.09401v3 (2).md",
+      "degree": 4,
+      "alias_count": 0,
+      "original_label": "2412.09401v3 (2)"
+    },
+    {
+      "rank": 35,
+      "domain": "Robotics",
+      "year": 2025,
+      "label": "PINGS: Gaussian Splatting Meets Distance Fields within a Point-Based Implicit Neural Map",
+      "node_id": "paper_2502_05752",
+      "source_file": "2502.05752.md",
+      "degree": 4,
+      "alias_count": 0,
+      "original_label": "2502.05752"
+    },
+    {
+      "rank": 36,
+      "domain": "Robotics",
+      "year": 2025,
+      "label": "Dream-SLAM Dreaming the Unseen for Active SLAM in Dynamic Environments",
+      "node_id": "paper_0117_robotics_dream_slam_dreaming_the_unseen_for_active_slam_in_dynamic_environments",
+      "source_file": "0117_[Robotics]_Dream-SLAM Dreaming the Unseen for Active SLAM in Dynamic Environments.md",
+      "degree": 4,
+      "alias_count": 0
+    },
+    {
+      "rank": 37,
+      "domain": "SLAM",
+      "year": 2024,
+      "label": "GLC-SLAM Gaussian Splatting SLAM with Efficient Loop Closure",
+      "node_id": "paper_0018_slam_glc_slam_gaussian_splatting_slam_with_efficient_loop_closure",
+      "source_file": "0018_[SLAM]_GLC-SLAM Gaussian Splatting SLAM with Efficient Loop Closure.md",
+      "degree": 4,
+      "alias_count": 0
+    },
+    {
+      "rank": 38,
+      "domain": "Robotics",
+      "year": 2023,
+      "label": "GaussNav Gaussian Splatting for Visual Navigation",
+      "node_id": "paper_0097_robotics_gaussnav_gaussian_splatting_for_visual_navigation",
+      "source_file": "0097_[Robotics]_GaussNav Gaussian Splatting for Visual Navigation.md",
+      "degree": 4,
+      "alias_count": 0
+    },
+    {
+      "rank": 39,
+      "domain": "SLAM",
+      "year": 2024,
+      "label": "Gaussian-SLAM Photo-realistic Dense SLAM with Gaussian Splatting",
+      "node_id": "paper_0004_slam_gaussian_slam_photo_realistic_dense_slam_with_gaussian_splatting",
+      "source_file": "0004_[SLAM]_Gaussian-SLAM Photo-realistic Dense SLAM with Gaussian Splatting.md",
+      "degree": 4,
+      "alias_count": 0
+    },
+    {
+      "rank": 40,
+      "domain": "SLAM",
+      "year": 2024,
+      "label": "IG-SLAM Instant Gaussian SLAM",
+      "node_id": "paper_0013_slam_ig_slam_instant_gaussian_slam",
+      "source_file": "0013_[SLAM]_IG-SLAM Instant Gaussian SLAM.md",
+      "degree": 4,
+      "alias_count": 0
+    },
+    {
+      "rank": 41,
+      "domain": "SLAM",
+      "year": 2024,
+      "label": "LoopSplat Loop Closure by Registering 3D Gaussian Splats,",
+      "node_id": "paper_0014_slam_loopsplat_loop_closure_by_registering_3d_gaussian_splats",
+      "source_file": "0014_[SLAM]_LoopSplat Loop Closure by Registering 3D Gaussian Splats,.md",
+      "degree": 4,
+      "alias_count": 0
+    },
+    {
+      "rank": 42,
+      "domain": "General",
+      "year": 2024,
+      "label": "NVSim Novel View Synthesis Simulator for Large Scale Indoor",
+      "node_id": "paper_0454_general_nvsim_novel_view_synthesis_simulator_for_large_scale_indoor",
+      "source_file": "0454_[General]_NVSim Novel View Synthesis Simulator for Large Scale Indoor.md",
+      "degree": 4,
+      "alias_count": 0
+    },
+    {
+      "rank": 43,
+      "domain": "General",
+      "year": 2026,
+      "label": "Off The Grid Detection of Primitives for Feed-Forward 3D Ga",
+      "node_id": "paper_0367_general_off_the_grid_detection_of_primitives_for_feed_forward_3d_ga",
+      "source_file": "0367_[General]_Off The Grid Detection of Primitives for Feed-Forward 3D Ga.md",
+      "degree": 4,
+      "alias_count": 0
+    },
+    {
+      "rank": 44,
+      "domain": "Unknown",
+      "year": 2025,
+      "label": "STAMICS: Splat, Track And Map with Integrated Consistency and Semantics for Dense RGB-D SLAM",
+      "node_id": "paper_0051",
+      "source_file": "0053_[SLAM]_STAMICS Splat, Track And Map with Integrated Consistency and Semantics for Dense RGB-.md",
+      "degree": 4,
+      "alias_count": 0,
+      "original_label": "STAMICS"
+    },
+    {
+      "rank": 45,
+      "domain": "SLAM-Supplement",
+      "year": 2025,
+      "label": "Globally Consistent RGB-D SLAM with 2D Gaussian Splatting",
+      "node_id": "paper_0149_slam_supplement_arxiv",
+      "source_file": "0149_[SLAM-Supplement]_`arXiv`.md",
+      "degree": 4,
+      "alias_count": 0,
+      "original_label": "`arXiv`"
+    },
+    {
+      "rank": 46,
+      "domain": "Robotics",
+      "year": 2023,
+      "label": "NeRF-Enhanced Outpainting for Faithful Field-of-View Extrapolation",
+      "node_id": "paper_2309_13240",
+      "source_file": "2309.13240.md",
+      "degree": 3,
+      "alias_count": 0,
+      "original_label": "2309.13240"
+    },
+    {
+      "rank": 47,
+      "domain": "Robotics",
+      "year": 2024,
+      "label": "Active Neural Mapping at Scale",
+      "node_id": "paper_2409_20276",
+      "source_file": "2409.20276.md",
+      "degree": 3,
+      "alias_count": 0,
+      "original_label": "2409.20276"
+    },
+    {
+      "rank": 48,
+      "domain": "SLAM",
+      "year": 2024,
+      "label": "NeRF and Gaussian Splatting SLAM in the Wild",
+      "node_id": "paper_2412_03263",
+      "source_file": "2412.03263.md",
+      "degree": 3,
+      "alias_count": 0,
+      "original_label": "2412.03263"
+    },
+    {
+      "rank": 49,
+      "domain": "SLAM",
+      "year": 2025,
+      "label": "Deblur Gaussian Splatting SLAM",
+      "node_id": "paper_2503_12572",
+      "source_file": "2503.12572.md",
+      "degree": 3,
+      "alias_count": 0,
+      "original_label": "2503.12572"
+    },
+    {
+      "rank": 50,
+      "domain": "SLAM",
+      "year": 2025,
+      "label": "Large-Scale Gaussian Splatting SLAM",
+      "node_id": "paper_2505_09915",
+      "source_file": "2505.09915.md",
+      "degree": 3,
+      "alias_count": 0,
+      "original_label": "2505.09915"
+    }
+  ],
+  "top_papers_by_domain": [
+    {
+      "rank": 1,
+      "domain": "SLAM",
+      "year": 2026,
+      "label": "FeatureSLAM: Feature-Enriched 3D Gaussian Splatting SLAM in Real Time",
+      "node_id": "paper_2601_05738",
+      "source_file": "2601.05738.md",
+      "degree": 8,
+      "alias_count": 1,
+      "original_label": "2601.05738"
+    },
+    {
+      "rank": 2,
+      "domain": "SLAM",
+      "year": 2024,
+      "label": "How NeRFs and 3D Gaussian Splatting are Reshaping SLAM: a Survey",
+      "node_id": "paper_2402_13255",
+      "source_file": "2402.13255.md",
+      "degree": 7,
+      "alias_count": 0,
+      "original_label": "2402.13255"
+    },
+    {
+      "rank": 3,
+      "domain": "SLAM",
+      "year": 2025,
+      "label": "MCN-SLAM: Multi-Agent Collaborative Neural SLAM with Hybrid Implicit Neural Scene Representation",
+      "node_id": "paper_2506_18678",
+      "source_file": "2506.18678.md",
+      "degree": 6,
+      "alias_count": 0,
+      "original_label": "2506.18678"
+    },
+    {
+      "rank": 4,
+      "domain": "SLAM",
+      "year": 2023,
+      "label": "GI-SLAM Gaussian-Inertial SLAM",
+      "node_id": "paper_0050_slam_gi_slam_gaussian_inertial_slam",
+      "source_file": "0050_[SLAM]_GI-SLAM Gaussian-Inertial SLAM.md",
+      "degree": 5,
+      "alias_count": 1
+    },
+    {
+      "rank": 5,
+      "domain": "SLAM",
+      "year": 2024,
+      "label": "Customizable Perturbation Synthesis for Robust SLAM Benchmarking",
+      "node_id": "paper_2402_08125",
+      "source_file": "2402.08125.md",
+      "degree": 5,
+      "alias_count": 0,
+      "original_label": "2402.08125"
+    },
+    {
+      "rank": 6,
+      "domain": "SLAM",
+      "year": 2024,
+      "label": "From Perfect to Noisy World Simulation: Customizable Embodied Multi-modal Perturbations for SLAM Robustness Benchmarking",
+      "node_id": "paper_2406_16850",
+      "source_file": "2406.16850.md",
+      "degree": 5,
+      "alias_count": 0,
+      "original_label": "2406.16850"
+    },
+    {
+      "rank": 7,
+      "domain": "SLAM",
+      "year": 2026,
+      "label": "Towards Next-Generation SLAM: A Survey on 3DGS-SLAM Focusing on Performance, Robustness, and Future Directions",
+      "node_id": "paper_2602_04251",
+      "source_file": "2602.04251.md",
+      "degree": 5,
+      "alias_count": 0,
+      "original_label": "2602.04251"
+    },
+    {
+      "rank": 8,
+      "domain": "SLAM",
+      "year": 2025,
+      "label": "VTGaussian-SLAM RGBD SLAM for Large Scale Scenes with Splatting View-Tied 3D",
+      "node_id": "paper_0062_slam_vtgaussian_slam_rgbd_slam_for_large_scale_scenes_with_splatting_view_tied_3d",
+      "source_file": "0062_[SLAM]_VTGaussian-SLAM RGBD SLAM for Large Scale Scenes with Splatting View-Tied 3D.md",
+      "degree": 5,
+      "alias_count": 0
+    },
+    {
+      "rank": 9,
+      "domain": "SLAM",
+      "year": 2026,
+      "label": "VarSplat: Uncertainty-aware 3D Gaussian Splatting for Robust RGB-D SLAM",
+      "node_id": "paper_2603_09673",
+      "source_file": "2603.09673.md",
+      "degree": 4,
+      "alias_count": 1,
+      "original_label": "2603.09673"
+    },
+    {
+      "rank": 10,
+      "domain": "SLAM",
+      "year": 2024,
+      "label": "SLAM3R: Real-Time Dense Scene Reconstruction from Monocular RGB Videos",
+      "node_id": "paper_2412_09401v3_2",
+      "source_file": "2412.09401v3 (2).md",
+      "degree": 4,
+      "alias_count": 0,
+      "original_label": "2412.09401v3 (2)"
+    },
+    {
+      "rank": 11,
+      "domain": "SLAM",
+      "year": 2024,
+      "label": "GLC-SLAM Gaussian Splatting SLAM with Efficient Loop Closure",
+      "node_id": "paper_0018_slam_glc_slam_gaussian_splatting_slam_with_efficient_loop_closure",
+      "source_file": "0018_[SLAM]_GLC-SLAM Gaussian Splatting SLAM with Efficient Loop Closure.md",
+      "degree": 4,
+      "alias_count": 0
+    },
+    {
+      "rank": 12,
+      "domain": "SLAM",
+      "year": 2024,
+      "label": "Gaussian-SLAM Photo-realistic Dense SLAM with Gaussian Splatting",
+      "node_id": "paper_0004_slam_gaussian_slam_photo_realistic_dense_slam_with_gaussian_splatting",
+      "source_file": "0004_[SLAM]_Gaussian-SLAM Photo-realistic Dense SLAM with Gaussian Splatting.md",
+      "degree": 4,
+      "alias_count": 0
+    },
+    {
+      "rank": 13,
+      "domain": "SLAM",
+      "year": 2024,
+      "label": "IG-SLAM Instant Gaussian SLAM",
+      "node_id": "paper_0013_slam_ig_slam_instant_gaussian_slam",
+      "source_file": "0013_[SLAM]_IG-SLAM Instant Gaussian SLAM.md",
+      "degree": 4,
+      "alias_count": 0
+    },
+    {
+      "rank": 14,
+      "domain": "SLAM",
+      "year": 2024,
+      "label": "LoopSplat Loop Closure by Registering 3D Gaussian Splats,",
+      "node_id": "paper_0014_slam_loopsplat_loop_closure_by_registering_3d_gaussian_splats",
+      "source_file": "0014_[SLAM]_LoopSplat Loop Closure by Registering 3D Gaussian Splats,.md",
+      "degree": 4,
+      "alias_count": 0
+    },
+    {
+      "rank": 15,
+      "domain": "SLAM",
+      "year": 2024,
+      "label": "NeRF and Gaussian Splatting SLAM in the Wild",
+      "node_id": "paper_2412_03263",
+      "source_file": "2412.03263.md",
+      "degree": 3,
+      "alias_count": 0,
+      "original_label": "2412.03263"
+    },
+    {
+      "rank": 16,
+      "domain": "SLAM",
+      "year": 2025,
+      "label": "Deblur Gaussian Splatting SLAM",
+      "node_id": "paper_2503_12572",
+      "source_file": "2503.12572.md",
+      "degree": 3,
+      "alias_count": 0,
+      "original_label": "2503.12572"
+    },
+    {
+      "rank": 17,
+      "domain": "SLAM",
+      "year": 2025,
+      "label": "Large-Scale Gaussian Splatting SLAM",
+      "node_id": "paper_2505_09915",
+      "source_file": "2505.09915.md",
+      "degree": 3,
+      "alias_count": 0,
+      "original_label": "2505.09915"
+    },
+    {
+      "rank": 18,
+      "domain": "SLAM",
+      "year": 2025,
+      "label": "S3LAM: Surfel Splatting SLAM for Geometrically Accurate Tracking and Mapping",
+      "node_id": "paper_2507_20854",
+      "source_file": "2507.20854.md",
+      "degree": 3,
+      "alias_count": 0,
+      "original_label": "2507.20854"
+    },
+    {
+      "rank": 19,
+      "domain": "SLAM",
+      "year": 2025,
+      "label": "Gaussian-plus-SDF SLAM: High-fidelity 3D Reconstruction at 150+ fps",
+      "node_id": "paper_2509_11574",
+      "source_file": "2509.11574.md",
+      "degree": 3,
+      "alias_count": 0,
+      "original_label": "2509.11574"
+    },
+    {
+      "rank": 20,
+      "domain": "SLAM",
+      "year": 2025,
+      "label": "Robust 3DGS-based SLAM via Adaptive Kernel Smoothing",
+      "node_id": "paper_2511_23221",
+      "source_file": "2511.23221.md",
+      "degree": 3,
+      "alias_count": 0,
+      "original_label": "2511.23221"
+    },
+    {
+      "rank": 1,
+      "domain": "Robotics",
+      "year": 2024,
+      "label": "ActiveSplat High-Fidelity Scene Reconstruction through Active Gaussian S",
+      "node_id": "paper_0102_robotics_activesplat_high_fidelity_scene_reconstruction_through_active_gaussian_s",
+      "source_file": "0102_[Robotics]_ActiveSplat High-Fidelity Scene Reconstruction through Active Gaussian S.md",
+      "degree": 9,
+      "alias_count": 1
+    },
+    {
+      "rank": 2,
+      "domain": "Robotics",
+      "year": 2024,
+      "label": "Benchmarking Neural Radiance Fields for Autonomous Robots: An Overview",
+      "node_id": "paper_2405_05526",
+      "source_file": "2405.05526.md",
+      "degree": 9,
+      "alias_count": 0,
+      "original_label": "2405.05526"
+    },
+    {
+      "rank": 3,
+      "domain": "Robotics",
+      "year": 2023,
+      "label": "HGS-Planner Hierarchical Planning Framework for Active Scene Reconstruct",
+      "node_id": "paper_0100_robotics_hgs_planner_hierarchical_planning_framework_for_active_scene_reconstruct",
+      "source_file": "0100_[Robotics]_HGS-Planner Hierarchical Planning Framework for Active Scene Reconstruct.md",
+      "degree": 7,
+      "alias_count": 1
+    },
+    {
+      "rank": 4,
+      "domain": "Robotics",
+      "year": 2025,
+      "label": "What Is The Best 3D Scene Representation for Robotics? From Geometric to Foundation Models",
+      "node_id": "paper_2512_03422",
+      "source_file": "2512.03422.md",
+      "degree": 7,
+      "alias_count": 0,
+      "original_label": "2512.03422"
+    },
+    {
+      "rank": 5,
+      "domain": "Robotics",
+      "year": 2024,
+      "label": "DynamicGSG Dynamic 3D Gaussian Scene Graphs for Environment Adaptation",
+      "node_id": "paper_0140_robotics_dynamicgsg_dynamic_3d_gaussian_scene_graphs_for_environment_adaptation",
+      "source_file": "0140_[Robotics]_DynamicGSG Dynamic 3D Gaussian Scene Graphs for Environment Adaptation.md",
+      "degree": 5,
+      "alias_count": 1
+    },
+    {
+      "rank": 6,
+      "domain": "Robotics",
+      "year": 2024,
+      "label": "RT-GuIDE Real-Time Gaussian splatting for Information-Driven Explorat",
+      "node_id": "paper_0101_robotics_rt_guide_real_time_gaussian_splatting_for_information_driven_explorat",
+      "source_file": "0101_[Robotics]_RT-GuIDE Real-Time Gaussian splatting for Information-Driven Explorat.md",
+      "degree": 5,
+      "alias_count": 1
+    },
+    {
+      "rank": 7,
+      "domain": "Robotics",
+      "year": 2024,
+      "label": "3D Gaussian Splatting in Robotics: A Survey",
+      "node_id": "paper_2410_12262",
+      "source_file": "2410.12262.md",
+      "degree": 5,
+      "alias_count": 0,
+      "original_label": "2410.12262"
+    },
+    {
+      "rank": 8,
+      "domain": "Robotics",
+      "year": 2025,
+      "label": "A Survey on Collaborative SLAM with 3D Gaussian Splatting",
+      "node_id": "paper_2510_23988",
+      "source_file": "2510.23988.md",
+      "degree": 5,
+      "alias_count": 0,
+      "original_label": "2510.23988"
+    },
+    {
+      "rank": 9,
+      "domain": "Robotics",
+      "year": 2023,
+      "label": "GSLoc Visual Localization with 3D Gaussian Splatting",
+      "node_id": "paper_0128_robotics_gsloc_visual_localization_with_3d_gaussian_splatting",
+      "source_file": "0128_[Robotics]_GSLoc Visual Localization with 3D Gaussian Splatting.md",
+      "degree": 4,
+      "alias_count": 1
+    },
+    {
+      "rank": 10,
+      "domain": "Robotics",
+      "year": 2024,
+      "label": "LoGS Visual Localization via Gaussian Splatting with Fewer Traini",
+      "node_id": "paper_0129_robotics_logs_visual_localization_via_gaussian_splatting_with_fewer_traini",
+      "source_file": "0129_[Robotics]_LoGS Visual Localization via Gaussian Splatting with Fewer Traini.md",
+      "degree": 4,
+      "alias_count": 1
+    },
+    {
+      "rank": 11,
+      "domain": "Robotics",
+      "year": 2023,
+      "label": "Renderable Neural Radiance Map for Visual Navigation",
+      "node_id": "paper_2303_00304",
+      "source_file": "2303.00304.md",
+      "degree": 4,
+      "alias_count": 0,
+      "original_label": "2303.00304"
+    },
+    {
+      "rank": 12,
+      "domain": "Robotics",
+      "year": 2024,
+      "label": "NeRFs in Robotics: A Survey",
+      "node_id": "paper_2405_01333",
+      "source_file": "2405.01333.md",
+      "degree": 4,
+      "alias_count": 0,
+      "original_label": "2405.01333"
+    },
+    {
+      "rank": 13,
+      "domain": "Robotics",
+      "year": 2024,
+      "label": "Multi-robot autonomous 3D reconstruction using Gaussian splatting with Semantic guidance",
+      "node_id": "paper_2412_02249",
+      "source_file": "2412.02249.md",
+      "degree": 4,
+      "alias_count": 0,
+      "original_label": "2412.02249"
+    },
+    {
+      "rank": 14,
+      "domain": "Robotics",
+      "year": 2025,
+      "label": "PINGS: Gaussian Splatting Meets Distance Fields within a Point-Based Implicit Neural Map",
+      "node_id": "paper_2502_05752",
+      "source_file": "2502.05752.md",
+      "degree": 4,
+      "alias_count": 0,
+      "original_label": "2502.05752"
+    },
+    {
+      "rank": 15,
+      "domain": "Robotics",
+      "year": 2025,
+      "label": "Dream-SLAM Dreaming the Unseen for Active SLAM in Dynamic Environments",
+      "node_id": "paper_0117_robotics_dream_slam_dreaming_the_unseen_for_active_slam_in_dynamic_environments",
+      "source_file": "0117_[Robotics]_Dream-SLAM Dreaming the Unseen for Active SLAM in Dynamic Environments.md",
+      "degree": 4,
+      "alias_count": 0
+    },
+    {
+      "rank": 16,
+      "domain": "Robotics",
+      "year": 2023,
+      "label": "GaussNav Gaussian Splatting for Visual Navigation",
+      "node_id": "paper_0097_robotics_gaussnav_gaussian_splatting_for_visual_navigation",
+      "source_file": "0097_[Robotics]_GaussNav Gaussian Splatting for Visual Navigation.md",
+      "degree": 4,
+      "alias_count": 0
+    },
+    {
+      "rank": 17,
+      "domain": "Robotics",
+      "year": 2023,
+      "label": "NeRF-Enhanced Outpainting for Faithful Field-of-View Extrapolation",
+      "node_id": "paper_2309_13240",
+      "source_file": "2309.13240.md",
+      "degree": 3,
+      "alias_count": 0,
+      "original_label": "2309.13240"
+    },
+    {
+      "rank": 18,
+      "domain": "Robotics",
+      "year": 2024,
+      "label": "Active Neural Mapping at Scale",
+      "node_id": "paper_2409_20276",
+      "source_file": "2409.20276.md",
+      "degree": 3,
+      "alias_count": 0,
+      "original_label": "2409.20276"
+    },
+    {
+      "rank": 19,
+      "domain": "Robotics",
+      "year": 2026,
+      "label": "3DGSNav Enhancing Vision-Language Model Reasoning for Object Navigat",
+      "node_id": "paper_0116_robotics_3dgsnav_enhancing_vision_language_model_reasoning_for_object_navigat",
+      "source_file": "0116_[Robotics]_3DGSNav Enhancing Vision-Language Model Reasoning for Object Navigat.md",
+      "degree": 3,
+      "alias_count": 0
+    },
+    {
+      "rank": 20,
+      "domain": "Robotics",
+      "year": 2025,
+      "label": "GSVisLoc Generalizable Visual Localization for Gaussian Splatting Sce",
+      "node_id": "paper_0137_robotics_gsvisloc_generalizable_visual_localization_for_gaussian_splatting_sce",
+      "source_file": "0137_[Robotics]_GSVisLoc Generalizable Visual Localization for Gaussian Splatting Sce.md",
+      "degree": 3,
+      "alias_count": 0
+    },
+    {
+      "rank": 1,
+      "domain": "General",
+      "year": 2024,
+      "label": "SSR-GS Separating Specular Reflection in Gaussian Splatting",
+      "node_id": "paper_0204_general_ssr_gs_separating_specular_reflection_in_gaussian_splatting",
+      "source_file": "0204_[General]_SSR-GS Separating Specular Reflection in Gaussian Splatting.md",
+      "degree": 18,
+      "alias_count": 1
+    },
+    {
+      "rank": 2,
+      "domain": "General",
+      "year": 2024,
+      "label": "DM-CFO A Diffusion Model for Compositional 3D Tooth Generat",
+      "node_id": "paper_0209_general_dm_cfo_a_diffusion_model_for_compositional_3d_tooth_generat",
+      "source_file": "0209_[General]_DM-CFO A Diffusion Model for Compositional 3D Tooth Generat.md",
+      "degree": 17,
+      "alias_count": 1
+    },
+    {
+      "rank": 3,
+      "domain": "General",
+      "year": 2021,
+      "label": "Multimodal-Prior-Guided Importance Sampling for Hierarchical",
+      "node_id": "paper_0213_general_multimodal_prior_guided_importance_sampling_for_hierarchical",
+      "source_file": "0213_[General]_Multimodal-Prior-Guided Importance Sampling for Hierarchical.md",
+      "degree": 15,
+      "alias_count": 1
+    },
+    {
+      "rank": 4,
+      "domain": "General",
+      "year": 2024,
+      "label": "EmbedTalk Triplane-Free Talking Head Synthesis using Embedd",
+      "node_id": "paper_0193_general_embedtalk_triplane_free_talking_head_synthesis_using_embedd",
+      "source_file": "0193_[General]_EmbedTalk Triplane-Free Talking Head Synthesis using Embedd.md",
+      "degree": 14,
+      "alias_count": 1
+    },
+    {
+      "rank": 5,
+      "domain": "General",
+      "year": 2025,
+      "label": "FTSplat Feed-forward Triangle Splatting Network",
+      "node_id": "paper_0201_general_ftsplat_feed_forward_triangle_splatting_network",
+      "source_file": "0201_[General]_FTSplat Feed-forward Triangle Splatting Network.md",
+      "degree": 13,
+      "alias_count": 1
+    },
+    {
+      "rank": 6,
+      "domain": "General",
+      "year": 2024,
+      "label": "DSA-SRGS Super-Resolution Gaussian Splatting for Dynamic Sp",
+      "node_id": "paper_0207_general_dsa_srgs_super_resolution_gaussian_splatting_for_dynamic_sp",
+      "source_file": "0207_[General]_DSA-SRGS Super-Resolution Gaussian Splatting for Dynamic Sp.md",
+      "degree": 12,
+      "alias_count": 1
+    },
+    {
+      "rank": 7,
+      "domain": "General",
+      "year": 2024,
+      "label": "Active View Selection with Perturbed Gaussian Ensemble for T",
+      "node_id": "paper_0197_general_active_view_selection_with_perturbed_gaussian_ensemble_for_t",
+      "source_file": "0197_[General]_Active View Selection with Perturbed Gaussian Ensemble for T.md",
+      "degree": 11,
+      "alias_count": 1
+    },
+    {
+      "rank": 8,
+      "domain": "General",
+      "year": 2024,
+      "label": "Transforming Omnidirectional RGB-LiDAR data into 3D Gaussian",
+      "node_id": "paper_0200_general_transforming_omnidirectional_rgb_lidar_data_into_3d_gaussian",
+      "source_file": "0200_[General]_Transforming Omnidirectional RGB-LiDAR data into 3D Gaussian.md",
+      "degree": 10,
+      "alias_count": 1
+    },
+    {
+      "rank": 9,
+      "domain": "General",
+      "year": 2024,
+      "label": "Scalable Adaptation of 3D Geometric Foundation Models via We",
+      "node_id": "paper_0272_general_scalable_adaptation_of_3d_geometric_foundation_models_via_we",
+      "source_file": "0272_[General]_Scalable Adaptation of 3D Geometric Foundation Models via We.md",
+      "degree": 6,
+      "alias_count": 0
+    },
+    {
+      "rank": 10,
+      "domain": "General",
+      "year": 2025,
+      "label": "WorldMirror Universal 3D World Reconstruction with Any-Prio",
+      "node_id": "paper_0482_general_worldmirror_universal_3d_world_reconstruction_with_any_prio",
+      "source_file": "0482_[General]_WorldMirror Universal 3D World Reconstruction with Any-Prio.md",
+      "degree": 6,
+      "alias_count": 0
+    },
+    {
+      "rank": 11,
+      "domain": "General",
+      "year": 2025,
+      "label": "GaussTwin Unified Simulation and Correction with Gaussian S",
+      "node_id": "paper_0205_general_gausstwin_unified_simulation_and_correction_with_gaussian_s",
+      "source_file": "0205_[General]_GaussTwin Unified Simulation and Correction with Gaussian S.md",
+      "degree": 5,
+      "alias_count": 1
+    },
+    {
+      "rank": 12,
+      "domain": "General",
+      "year": 2024,
+      "label": "NVSim Novel View Synthesis Simulator for Large Scale Indoor",
+      "node_id": "paper_0454_general_nvsim_novel_view_synthesis_simulator_for_large_scale_indoor",
+      "source_file": "0454_[General]_NVSim Novel View Synthesis Simulator for Large Scale Indoor.md",
+      "degree": 4,
+      "alias_count": 0
+    },
+    {
+      "rank": 13,
+      "domain": "General",
+      "year": 2026,
+      "label": "Off The Grid Detection of Primitives for Feed-Forward 3D Ga",
+      "node_id": "paper_0367_general_off_the_grid_detection_of_primitives_for_feed_forward_3d_ga",
+      "source_file": "0367_[General]_Off The Grid Detection of Primitives for Feed-Forward 3D Ga.md",
+      "degree": 4,
+      "alias_count": 0
+    },
+    {
+      "rank": 14,
+      "domain": "General",
+      "year": 2025,
+      "label": "3D Gaussian Flats Hybrid 2D3D Photometric Scene Reconstruc",
+      "node_id": "paper_0536_general_3d_gaussian_flats_hybrid_2d3d_photometric_scene_reconstruc",
+      "source_file": "0536_[General]_3D Gaussian Flats Hybrid 2D3D Photometric Scene Reconstruc.md",
+      "degree": 3,
+      "alias_count": 0
+    },
+    {
+      "rank": 15,
+      "domain": "General",
+      "year": 2021,
+      "label": "Accurate and Complete Surface Reconstruction from 3D Gaussia",
+      "node_id": "paper_0556_general_accurate_and_complete_surface_reconstruction_from_3d_gaussia",
+      "source_file": "0556_[General]_Accurate and Complete Surface Reconstruction from 3D Gaussia.md",
+      "degree": 3,
+      "alias_count": 0
+    },
+    {
+      "rank": 16,
+      "domain": "General",
+      "year": 2025,
+      "label": "Chorus Multi-Teacher Pretraining for Holistic 3D Gaussian S",
+      "node_id": "paper_0358_general_chorus_multi_teacher_pretraining_for_holistic_3d_gaussian_s",
+      "source_file": "0358_[General]_Chorus Multi-Teacher Pretraining for Holistic 3D Gaussian S.md",
+      "degree": 3,
+      "alias_count": 0
+    },
+    {
+      "rank": 17,
+      "domain": "General",
+      "year": 2026,
+      "label": "FlowHOI Flow-based Semantics-Grounded Generation of Hand-Ob",
+      "node_id": "paper_0257_general_flowhoi_flow_based_semantics_grounded_generation_of_hand_ob",
+      "source_file": "0257_[General]_FlowHOI Flow-based Semantics-Grounded Generation of Hand-Ob.md",
+      "degree": 3,
+      "alias_count": 0
+    },
+    {
+      "rank": 18,
+      "domain": "General",
+      "year": 2025,
+      "label": "G3Splat Geometrically Consistent Generalizable Gaussian Spl",
+      "node_id": "paper_0360_general_g3splat_geometrically_consistent_generalizable_gaussian_spl",
+      "source_file": "0360_[General]_G3Splat Geometrically Consistent Generalizable Gaussian Spl.md",
+      "degree": 3,
+      "alias_count": 0
+    },
+    {
+      "rank": 19,
+      "domain": "General",
+      "year": 2024,
+      "label": "GALA Guided Attention with Language Alignment for Open Voca",
+      "node_id": "paper_0594_general_gala_guided_attention_with_language_alignment_for_open_voca",
+      "source_file": "0594_[General]_GALA Guided Attention with Language Alignment for Open Voca.md",
+      "degree": 3,
+      "alias_count": 0
+    },
+    {
+      "rank": 20,
+      "domain": "General",
+      "year": 2024,
+      "label": "GSPlane Concise and Accurate Planar Reconstruction via Stru",
+      "node_id": "paper_0469_general_gsplane_concise_and_accurate_planar_reconstruction_via_stru",
+      "source_file": "0469_[General]_GSPlane Concise and Accurate Planar Reconstruction via Stru.md",
+      "degree": 3,
+      "alias_count": 0
+    }
+  ]
+}

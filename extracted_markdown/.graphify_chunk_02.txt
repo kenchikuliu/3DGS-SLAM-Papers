@@ -1,0 +1,22 @@
+0100_[Robotics]_HGS-Planner Hierarchical Planning Framework for Active Scene Reconstruct.md
+0101_[Robotics]_RT-GuIDE Real-Time Gaussian splatting for Information-Driven Explorat.md
+0102_[Robotics]_ActiveSplat High-Fidelity Scene Reconstruction through Active Gaussian S.md
+0104_[Robotics]_SAFER-Splat A Control Barrier Function for Safe Navigation with Online G.md
+0105_[Robotics]_SOUS VIDE Cooking Visual Drone Navigation Policies in a Gaussian Splat.md
+0106_[Robotics]_ActiveGS Active Scene Reconstruction using Gaussian Splatting.md
+0107_[Robotics]_GSplatVNM Point-of-View Synthesis for Visual Navigation Models Using G.md
+0110_[Robotics]_GRaD-Nav++ Vision-Language Model Enabled Visual Drone Navigation with G.md
+0113_[Robotics]_SplatSearch Instance Image Goal Navigation for Mobile Robots using 3D Ga.md
+0114_[Robotics]_Active3D Active High-Fidelity 3D Reconstruction via Hierarchical Unce.md
+0117_[Robotics]_Dream-SLAM Dreaming the Unseen for Active SLAM in Dynamic Environments.md
+0118_[Robotics]_Loc-NeRF Monte Carlo Localization using Neural Radiance Fields.md
+0121_[Robotics]_HGSLoc 3DGS-based Heuristic Camera Pose Refinement.md
+0123_[Robotics]_MULAN-WC Multi-Robot Localization Uncertainty-aware Active NeRF with.md
+0124_[Robotics]_VRS-NeRF Visual Relocalization with Sparse Neural Radiance Field.md
+0126_[Robotics]_CROSSFIRE Camera Relocalization On Self-Supervised Features from an Im.md
+0128_[Robotics]_GSLoc Visual Localization with 3D Gaussian Splatting.md
+0129_[Robotics]_LoGS Visual Localization via Gaussian Splatting with Fewer Traini.md
+0130_[Robotics]_SplatLoc 3D Gaussian Splatting-based Visual Localization for Augmente.md
+0131_[Robotics]_GeomGS LiDAR-Guided Geometry-Aware Gaussian Splatting for Robot Loc.md
+0132_[Robotics]_GS-EVT Cross-Modal Event Camera Tracking based on Gaussian Splattin.md
+0133_[Robotics]_NeuraLoc Visual Localization in Neural Implicit Map with Dual Complem.md

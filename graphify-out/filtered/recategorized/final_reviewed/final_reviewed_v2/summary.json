@@ -1,0 +1,21 @@
+{
+  "manual_override_count_v2": 17,
+  "category_sizes": [
+    {
+      "category": "General",
+      "document_count": 513
+    },
+    {
+      "category": "SLAM",
+      "document_count": 166
+    },
+    {
+      "category": "Robotics",
+      "document_count": 99
+    },
+    {
+      "category": "SLAM-Supplement",
+      "document_count": 37
+    }
+  ]
+}

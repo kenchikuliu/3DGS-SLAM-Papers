@@ -1,0 +1,25 @@
+{
+  "graph": "C:\\Users\\Administrator\\Downloads\\3DGS-SLAM-Papers\\graphify-out\\filtered\\recategorized\\final_reviewed\\final_reviewed_v2\\final_reviewed_v3\\deduped\\graphify_final_reviewed_v3_deduped.json",
+  "document_count": 817,
+  "domain_counts": {
+    "SLAM": 162,
+    "Robotics": 97,
+    "General": 514
+  },
+  "general_subdomain_counts": {
+    "Reconstruction": 350,
+    "Rendering": 93,
+    "Enhancement": 42,
+    "Evaluation": 29
+  },
+  "year_summary": {
+    "resolved_count": 817,
+    "unknown_count": 0,
+    "range": [
+      2018,
+      2026
+    ]
+  },
+  "resolved_title_count": 26,
+  "title_review_queue_count": 0
+}

@@ -1,0 +1,210 @@
+{
+  "total_rows": 144,
+  "priority_counts": {
+    "high": 23,
+    "medium": 17,
+    "low": 104
+  },
+  "top_high_priority": [
+    {
+      "id": "paper_2407_19323v6_4",
+      "label": "2407.19323v6 (4)",
+      "source_file": "2407.19323v6 (4).md",
+      "old_category": "Unknown",
+      "new_category": "General",
+      "rationale": "default_general slam=0, robotics=0",
+      "confidence_margin": "0",
+      "review_priority": "high"
+    },
+    {
+      "id": "paper_2508_03077v1",
+      "label": "2508.03077v1",
+      "source_file": "2508.03077v1.md",
+      "old_category": "Unknown",
+      "new_category": "General",
+      "rationale": "default_general slam=0, robotics=0",
+      "confidence_margin": "0",
+      "review_priority": "high"
+    },
+    {
+      "id": "paper_2602_18322v1_1",
+      "label": "2602.18322v1 (1)",
+      "source_file": "2602.18322v1 (1).md",
+      "old_category": "Unknown",
+      "new_category": "General",
+      "rationale": "default_general slam=0, robotics=0",
+      "confidence_margin": "0",
+      "review_priority": "high"
+    },
+    {
+      "id": "paper_2602_18322v1",
+      "label": "2602.18322v1",
+      "source_file": "2602.18322v1.md",
+      "old_category": "Unknown",
+      "new_category": "General",
+      "rationale": "default_general slam=0, robotics=0",
+      "confidence_margin": "0",
+      "review_priority": "high"
+    },
+    {
+      "id": "paper_2603_04869v1",
+      "label": "2603.04869v1",
+      "source_file": "2603.04869v1.md",
+      "old_category": "Unknown",
+      "new_category": "Robotics",
+      "rationale": "mixed_scores robotics=4, slam=4",
+      "confidence_margin": "0",
+      "review_priority": "high"
+    },
+    {
+      "id": "paper_2603_26599v1_1",
+      "label": "2603.26599v1 (1)",
+      "source_file": "2603.26599v1 (1).md",
+      "old_category": "Unknown",
+      "new_category": "General",
+      "rationale": "default_general slam=0, robotics=1",
+      "confidence_margin": "0",
+      "review_priority": "high"
+    },
+    {
+      "id": "paper_2603_26599v1",
+      "label": "2603.26599v1",
+      "source_file": "2603.26599v1.md",
+      "old_category": "Unknown",
+      "new_category": "General",
+      "rationale": "default_general slam=0, robotics=1",
+      "confidence_margin": "0",
+      "review_priority": "high"
+    },
+    {
+      "id": "paper_illumination_refinement_via_textual_cues_a_prompt_driven_approach_for_low_light_nerf_enhancement",
+      "label": "Illumination_Refinement_via_Textual_Cues_A_Prompt-Driven_Approach_for_Low-Light_NeRF_Enhancement",
+      "source_file": "Illumination_Refinement_via_Textual_Cues_A_Prompt-Driven_Approach_for_Low-Light_NeRF_Enhancement.md",
+      "old_category": "Unknown",
+      "new_category": "General",
+      "rationale": "default_general slam=0, robotics=0",
+      "confidence_margin": "0",
+      "review_priority": "high"
+    },
+    {
+      "id": "paper_2506_06909",
+      "label": "2506.06909",
+      "source_file": "2506.06909.md",
+      "old_category": "Unknown",
+      "new_category": "Robotics",
+      "rationale": "robotics_score=6, slam_score=5",
+      "confidence_margin": "1",
+      "review_priority": "high"
+    },
+    {
+      "id": "paper_improving_orb_slam3_performance_in_textureless_environments_mapping_and_localization_in_hospital_corridors",
+      "label": "Improving_Orb-Slam3_Performance_in_Textureless_Environments_Mapping_and_Localization_in_Hospital_Corridors",
+      "source_file": "Improving_Orb-Slam3_Performance_in_Textureless_Environments_Mapping_and_Localization_in_Hospital_Corridors.md",
+      "old_category": "Unknown",
+      "new_category": "SLAM",
+      "rationale": "slam_score=14, robotics_score=13",
+      "confidence_margin": "1",
+      "review_priority": "high"
+    },
+    {
+      "id": "paper_2403_20159",
+      "label": "2403.20159",
+      "source_file": "2403.20159.md",
+      "old_category": "Unknown",
+      "new_category": "SLAM-Supplement",
+      "rationale": "supplement_score=2",
+      "confidence_margin": "2",
+      "review_priority": "high"
+    },
+    {
+      "id": "paper_2410_17084",
+      "label": "2410.17084",
+      "source_file": "2410.17084.md",
+      "old_category": "Unknown",
+      "new_category": "SLAM-Supplement",
+      "rationale": "supplement_score=2",
+      "confidence_margin": "2",
+      "review_priority": "high"
+    },
+    {
+      "id": "paper_2412_08496v2",
+      "label": "2412.08496v2",
+      "source_file": "2412.08496v2.md",
+      "old_category": "Unknown",
+      "new_category": "SLAM-Supplement",
+      "rationale": "supplement_score=2",
+      "confidence_margin": "2",
+      "review_priority": "high"
+    },
+    {
+      "id": "paper_2502_19592",
+      "label": "2502.19592",
+      "source_file": "2502.19592.md",
+      "old_category": "Unknown",
+      "new_category": "SLAM-Supplement",
+      "rationale": "supplement_score=2",
+      "confidence_margin": "2",
+      "review_priority": "high"
+    },
+    {
+      "id": "paper_2503_12572",
+      "label": "2503.12572",
+      "source_file": "2503.12572.md",
+      "old_category": "Unknown",
+      "new_category": "SLAM-Supplement",
+      "rationale": "supplement_score=2",
+      "confidence_margin": "2",
+      "review_priority": "high"
+    },
+    {
+      "id": "paper_2512_08625",
+      "label": "2512.08625",
+      "source_file": "2512.08625.md",
+      "old_category": "Unknown",
+      "new_category": "SLAM-Supplement",
+      "rationale": "supplement_score=2",
+      "confidence_margin": "2",
+      "review_priority": "high"
+    },
+    {
+      "id": "paper_2512_22771",
+      "label": "2512.22771",
+      "source_file": "2512.22771.md",
+      "old_category": "Unknown",
+      "new_category": "Robotics",
+      "rationale": "robotics_score=4, slam_score=2",
+      "confidence_margin": "2",
+      "review_priority": "high"
+    },
+    {
+      "id": "paper_2603_20443",
+      "label": "2603.20443",
+      "source_file": "2603.20443.md",
+      "old_category": "Unknown",
+      "new_category": "SLAM-Supplement",
+      "rationale": "supplement_score=2",
+      "confidence_margin": "2",
+      "review_priority": "high"
+    },
+    {
+      "id": "paper_2310_06984",
+      "label": "2310.06984",
+      "source_file": "2310.06984.md",
+      "old_category": "Unknown",
+      "new_category": "SLAM",
+      "rationale": "slam_score=8, robotics_score=5",
+      "confidence_margin": "3",
+      "review_priority": "high"
+    },
+    {
+      "id": "paper_2401_14857",
+      "label": "2401.14857",
+      "source_file": "2401.14857.md",
+      "old_category": "Unknown",
+      "new_category": "Robotics",
+      "rationale": "robotics_score=12, slam_score=9",
+      "confidence_margin": "3",
+      "review_priority": "high"
+    }
+  ]
+}

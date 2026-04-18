@@ -1,0 +1,22 @@
+0570_[General]_Scale-GS Efficient Scalable Gaussian Splatting via Redundan.md
+0571_[General]_ARGS Advanced Regularization on Aligning Gaussians over the.md
+0572_[General]_DrivingGaussian++ Towards Realistic Reconstruction and Edit.md
+0573_[General]_AvatarBack Back-Head Generation for Complete 3D Avatars fro.md
+0574_[General]_Realistic and Controllable 3D Gaussian-Guided Object Editing.md
+0579_[General]_IDU Incremental Dynamic Update of Existing 3D Virtual Envir.md
+0582_[General]_Enhancing Novel View Synthesis from extremely sparse views w.md
+0591_[General]_From Slices to Structures Unsupervised 3D Reconstruction of.md
+0592_[General]_D^3-Talker Dual-Branch Decoupled Deformation Fields for Few.md
+0593_[General]_Reconstruction Using the Invisible Intuition from NIR and M.md
+0594_[General]_GALA Guided Attention with Language Alignment for Open Voca.md
+0599_[General]_InnerGS Internal Scenes Rendering via Factorized 3D Gaussia.md
+0601_[General]_Improving Densification in 3D Gaussian Splatting for High-Fi.md
+0602_[General]_InstDrive Instance-Aware 3D Gaussian Splatting for Driving.md
+0603_[General]_ComplicitSplat Downstream Models are Vulnerable to Blackbox.md
+0605_[General]_EntropyGS An Efficient Entropy Coding on 3D Gaussian Splatt.md
+0607_[General]_Semantic-aware DropSplat Adaptive Pruning of Redundant Gaus.md
+0612_[General]_Touch-Augmented Gaussian Splatting for Enhanced 3D Scene Rec.md
+0613_[General]_Novel View Synthesis with Gaussian Splatting Impact on Phot.md
+0615_[General]_Fading the Digital Ink A Universal Black-Box Attack Framewo.md
+0616_[General]_3D Gaussian Representations with Motion Trajectory Field for.md
+0617_[General]_3DGS-VBench A Comprehensive Video Quality Evaluation Benchm.md

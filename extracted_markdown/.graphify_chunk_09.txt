@@ -1,0 +1,22 @@
+0503_[General]_ROI-GS Interest-based Local Quality 3D Gaussian Splatting.md
+0504_[General]_LOBE-GS Load-Balanced and Efficient 3D Gaussian Splatting f.md
+0506_[General]_LLM-Powered Code Analysis and Optimization for Gaussian Spla.md
+0521_[General]_Large Material Gaussian Model for Relightable 3D Generation.md
+0525_[General]_BiTAA A Bi-Task Adversarial Attack for Object Detection and.md
+0527_[General]_WaveletGaussian Wavelet-domain Diffusion for Sparse-view 3D.md
+0530_[General]_From Restoration to Reconstruction Rethinking 3D Gaussian S.md
+0531_[General]_FGGS-LiDAR Ultra-Fast, GPU-Accelerated Simulation from Gene.md
+0533_[General]_SPFSplatV2 Efficient Self-Supervised Pose-Free 3D Gaussian.md
+0534_[General]_MedGS Gaussian Splatting for Multi-Modal 3D Medical Imaging.md
+0535_[General]_ST-GS Vision-Based 3D Semantic Occupancy Prediction with Sp.md
+0537_[General]_RadarGaussianDet3D An Efficient and Effective Gaussian-base.md
+0540_[General]_FingerSplat Contactless Fingerprint 3D Reconstruction and G.md
+0543_[General]_Causal Reasoning Elicits Controllable 3D Scene Generation.md
+0545_[General]_Plug-and-Play PDE Optimization for 3D Gaussian Splatting To.md
+0549_[General]_4DRadar-GS Self-Supervised Dynamic Driving Scene Reconstruc.md
+0551_[General]_Segmentation-Driven Initialization for Sparse-view 3D Gaussi.md
+0552_[General]_ROSGS Relightable Outdoor Scenes With Gaussian Splatting.md
+0558_[General]_3DOF+Quantization 3DGS quantization for large scenes with l.md
+0562_[General]_SSGaussian Semantic-Aware and Structure-Preserving 3D Style.md
+0565_[General]_2D Gaussian Splatting with Semantic Alignment for Image Inpa.md
+0567_[General]_SWAGSplatting Semantic-guided Water-scene Augmented Gaussia.md

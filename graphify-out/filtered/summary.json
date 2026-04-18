@@ -1,0 +1,30 @@
+{
+  "source_markdown_count": 815,
+  "node_count_before": 983,
+  "edge_count_before": 11264,
+  "node_count_after": 953,
+  "edge_count_after": 1644,
+  "removed_target_count": 25,
+  "largest_categories": [
+    {
+      "category": "General",
+      "document_count": 501
+    },
+    {
+      "category": "Unknown",
+      "document_count": 144
+    },
+    {
+      "category": "SLAM",
+      "document_count": 68
+    },
+    {
+      "category": "Robotics",
+      "document_count": 65
+    },
+    {
+      "category": "SLAM-Supplement",
+      "document_count": 37
+    }
+  ]
+}

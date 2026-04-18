@@ -1,0 +1,386 @@
+0006_[SLAM]_NEDS-SLAM A Novel Neural Explicit Dense Semantic SLAM Framework using.md
+0007_[SLAM]_EndoGSLAM Real-Time Dense Reconstruction and Tracking in Endoscopic Su.md
+0009_[SLAM]_RTG-SLAM Real-time 3D Reconstruction at Scale using Gaussian Splattin.md
+0015_[SLAM]_OG-Mapping Octree-based Structured 3D Gaussians for Online Dense Mappin.md
+0016_[SLAM]_UDGS-SLAM UniDepth Assisted Gaussian Splatting for Monocular SLAM.md
+0017_[SLAM]_GEVO Memory-Efficient Monocular Visual Odometry Using Gaussians.md
+0018_[SLAM]_GLC-SLAM Gaussian Splatting SLAM with Efficient Loop Closure.md
+0019_[SLAM]_Hier-SLAM Scaling-up Semantics in SLAM with a Hierarchically Categoric.md
+0020_[SLAM]_MGSO Monocular Real-time Photometric SLAM with Efficient 3D Gauss.md
+0021_[SLAM]_Go-SLAM Grounded Object Segmentation and Localization with Gaussian.md
+0022_[SLAM]_CaRtGS Computational Alignment for Real-Time Gaussian Splatting SLA.md
+0025_[SLAM]_GSORB-SLAM Gaussian Splatting SLAM benefits from ORB features and Trans.md
+0027_[SLAM]_DGS-SLAM Gaussian Splatting SLAM in Dynamic Environment.md
+0028_[SLAM]_OVO-SLAM Open-Vocabulary Online Simultaneous Localization and Mapping.md
+0030_[SLAM]_PG-SLAM Photo-realistic and Geometry-aware RGB-D SLAM in Dynamic Env.md
+0031_[SLAM]_MAGiC-SLAM Multi-Agent Gaussian Globally Consistent SLAM.md
+0035_[SLAM]_RGBDS-SLAM A RGB-D Semantic Dense SLAM Based on 3D Multi Level Pyramid.md
+0038_[SLAM]_MGS-SLAM Monocular Sparse Tracking and Gaussian Mapping with Depth Sm.md
+0039_[SLAM]_PanoSLAM Panoptic 3D Scene Reconstruction via Gaussian SLAM.md
+0042_[SLAM]_VIGS SLAM IMU-based Large-Scale 3D Gaussian Splatting SLAM.md
+0043_[SLAM]_GARAD-SLAM 3D GAussian splatting for Real-time Anti Dynamic SLAM.md
+0046_[SLAM]_Hier-SLAM++ Neuro-Symbolic Semantic SLAM with a Hierarchically Categoric.md
+0047_[SLAM]_FGS-SLAM Fourier-based Gaussian Splatting for Real-time SLAM with Spa.md
+0050_[SLAM]_GI-SLAM Gaussian-Inertial SLAM.md
+0051_[SLAM]_STAMICS Splat, Track And Map with Integrated Consistency and Semanti.md
+0053_[SLAM]_FGO-SLAM Enhancing Gaussian SLAM with Globally Consistent Opacity Rad.md
+0054_[SLAM]_Dy3DGS-SLAM Monocular 3DGS-SLAM System for Dynamic Environments.md
+0061_[SLAM]_4DTAM Non-Rigid Tracking and Mapping via Dynamic Surface Gaussians.md
+0069_[SLAM]_DiskChunGS Large-Scale 3D Gaussian SLAM Through Chunk-Based Memory Mana.md
+0071_[SLAM]_SING3R-SLAM Submap-based Indoor Monocular Gaussian SLAM with 3D Reconstr.md
+0076_[Robotics]_Neural Motion Fields Encoding Grasp Trajectories as Implicit Value Functions.md
+0081_[Robotics]_NeuralGrasps Learning Implicit Representations for Grasps of Multiple Rob.md
+0082_[Robotics]_ObjectFolder A Dataset of Objects with Implicit Visual, Auditory, and Tac.md
+0083_[Robotics]_ObjectFolder 2.0 A Multisensory Object Dataset for Sim2Real Transfer.md
+0085_[Robotics]_Local Neural Descriptor Fields Locally Conditioned Object Representations for Manipulation.md
+0087_[Robotics]_TranSplat Surface Embedding-guided 3D Gaussian Splatting for Transpare.md
+0089_[Robotics]_NeRF-dy 3D Neural Scene Representations for Visuomotor Control.md
+0092_[Robotics]_RedSDF Regularized Deep Signed Distance Fields for Reactive Motion.md
+0093_[Robotics]_ESDF Sampling-free obstacle gradients and reactive planning in Ne.md
+0094_[Robotics]_CLIP-Fields Weakly Supervised Semantic Fields for Robotic Memory.md
+0095_[Robotics]_NeRF-VINS A Real-time Neural Radiance Field Map-based Visual-Inertial.md
+0097_[Robotics]_GaussNav Gaussian Splatting for Visual Navigation.md
+0098_[Robotics]_GS-Planner A Gaussian-Splatting-based Planning Framework for Active Hig.md
+0099_[Robotics]_BEINGS Bayesian Embodied Image-goal Navigation with Gaussian Splatt.md
+0100_[Robotics]_HGS-Planner Hierarchical Planning Framework for Active Scene Reconstruct.md
+0101_[Robotics]_RT-GuIDE Real-Time Gaussian splatting for Information-Driven Explorat.md
+0102_[Robotics]_ActiveSplat High-Fidelity Scene Reconstruction through Active Gaussian S.md
+0104_[Robotics]_SAFER-Splat A Control Barrier Function for Safe Navigation with Online G.md
+0105_[Robotics]_SOUS VIDE Cooking Visual Drone Navigation Policies in a Gaussian Splat.md
+0106_[Robotics]_ActiveGS Active Scene Reconstruction using Gaussian Splatting.md
+0107_[Robotics]_GSplatVNM Point-of-View Synthesis for Visual Navigation Models Using G.md
+0110_[Robotics]_GRaD-Nav++ Vision-Language Model Enabled Visual Drone Navigation with G.md
+0113_[Robotics]_SplatSearch Instance Image Goal Navigation for Mobile Robots using 3D Ga.md
+0114_[Robotics]_Active3D Active High-Fidelity 3D Reconstruction via Hierarchical Unce.md
+0117_[Robotics]_Dream-SLAM Dreaming the Unseen for Active SLAM in Dynamic Environments.md
+0118_[Robotics]_Loc-NeRF Monte Carlo Localization using Neural Radiance Fields.md
+0121_[Robotics]_HGSLoc 3DGS-based Heuristic Camera Pose Refinement.md
+0123_[Robotics]_MULAN-WC Multi-Robot Localization Uncertainty-aware Active NeRF with.md
+0124_[Robotics]_VRS-NeRF Visual Relocalization with Sparse Neural Radiance Field.md
+0126_[Robotics]_CROSSFIRE Camera Relocalization On Self-Supervised Features from an Im.md
+0128_[Robotics]_GSLoc Visual Localization with 3D Gaussian Splatting.md
+0129_[Robotics]_LoGS Visual Localization via Gaussian Splatting with Fewer Traini.md
+0130_[Robotics]_SplatLoc 3D Gaussian Splatting-based Visual Localization for Augmente.md
+0131_[Robotics]_GeomGS LiDAR-Guided Geometry-Aware Gaussian Splatting for Robot Loc.md
+0132_[Robotics]_GS-EVT Cross-Modal Event Camera Tracking based on Gaussian Splattin.md
+0133_[Robotics]_NeuraLoc Visual Localization in Neural Implicit Map with Dual Complem.md
+0136_[Robotics]_SGLoc Semantic Localization System for Camera Pose Estimation from.md
+0140_[Robotics]_DynamicGSG Dynamic 3D Gaussian Scene Graphs for Environment Adaptation.md
+0141_[Robotics]_DQO-MAP Dual Quadrics Multi-Object mapping with Gaussian Splatting.md
+0147_[SLAM-Supplement]_`arXiv`.md
+0148_[SLAM-Supplement]_`IROS`.md
+0149_[SLAM-Supplement]_`arXiv`.md
+0151_[SLAM-Supplement]_`RSS`.md
+0152_[SLAM-Supplement]_`arXiv`.md
+0159_[SLAM-Supplement]_`arXiv`.md
+0161_[SLAM-Supplement]_`RAL`.md
+0166_[SLAM-Supplement]_`arXiv`.md
+0170_[SLAM-Supplement]_`RAl`.md
+0171_[SLAM-Supplement]_`arXiv`.md
+0173_[SLAM-Supplement]_`arXiv`.md
+0176_[SLAM-Supplement]_`arXiv`.md
+0177_[SLAM-Supplement]_`IEEE International Conference on Image Processing`.md
+0179_[SLAM-Supplement]_`CoRL`.md
+0180_[SLAM-Supplement]_`ICML`.md
+0183_[General]_X-GS An Extensible Open Framework Unifying 3DGS Architectur.md
+0187_[General]_SurgCalib Gaussian Splatting-Based Hand-Eye Calibration for.md
+0188_[General]_Where, What, Why Toward Explainable 3D-GS Watermarking.md
+0190_[General]_Spherical-GOF Geometry-Aware Panoramic Gaussian Opacity Fie.md
+0193_[General]_EmbedTalk Triplane-Free Talking Head Synthesis using Embedd.md
+0197_[General]_Active View Selection with Perturbed Gaussian Ensemble for T.md
+0199_[General]_VG3S Visual Geometry Grounded Gaussian Splatting for Semant.md
+0200_[General]_Transforming Omnidirectional RGB-LiDAR data into 3D Gaussian.md
+0201_[General]_FTSplat Feed-forward Triangle Splatting Network.md
+0205_[General]_GaussTwin Unified Simulation and Correction with Gaussian S.md
+0206_[General]_GloSplat Joint Pose-Appearance Optimization for Faster and.md
+0207_[General]_DSA-SRGS Super-Resolution Gaussian Splatting for Dynamic Sp.md
+0208_[General]_Gaussian Wardrobe Compositional 3D Gaussian Avatars for Fre.md
+0209_[General]_DM-CFO A Diffusion Model for Compositional 3D Tooth Generat.md
+0211_[General]_Intrinsic Geometry-Appearance Consistency Optimization for S.md
+0213_[General]_Multimodal-Prior-Guided Importance Sampling for Hierarchical.md
+0215_[General]_SemGS Feed-Forward Semantic 3D Gaussian Splatting from Spar.md
+0217_[General]_Sparse View Distractor-Free Gaussian Splatting.md
+0218_[General]_FLICKER A Fine-Grained Contribution-Aware Accelerator for R.md
+0220_[General]_Decoupling Motion and Geometry in 4D Gaussian Splatting.md
+0222_[General]_Zero-Shot Robotic Manipulation via 3D Gaussian Splatting-Enh.md
+0228_[General]_SR3R Rethinking Super-Resolution 3D Reconstruction With Fee.md
+0231_[General]_GSTurb Gaussian Splatting for Atmospheric Turbulence Mitiga.md
+0232_[General]_Sapling-NeRF Geo-Localised Sapling Reconstruction in Forest.md
+0234_[General]_BetterScene 3D Scene Synthesis with Representation-Aligned.md
+0237_[General]_Interactive Augmented Reality-enabled Outdoor Scene Visualiz.md
+0239_[General]_Monocular Endoscopic Tissue 3D Reconstruction with Multi-Lev.md
+0242_[General]_Large-scale Photorealistic Outdoor 3D Scene Reconstruction f.md
+0247_[General]_3D Scene Rendering with Multimodal Gaussian Splatting.md
+0253_[General]_Learnable Multi-level Discrete Wavelet Transforms for 3D Gau.md
+0254_[General]_Gaussian Sequences with Multi-Scale Dynamics for 4D Reconstr.md
+0256_[General]_Nighttime Autonomous Driving Scene Reconstruction with Physi.md
+0259_[General]_LatentAM Real-Time, Large-Scale Latent Gaussian Attention M.md
+0261_[General]_GR-Diffusion 3D Gaussian Representation Meets Diffusion in.md
+0263_[General]_ReaDy-Go Real-to-Sim Dynamic 3D Gaussian Splatting Simulati.md
+0267_[General]_CompSplat Compression-aware 3D Gaussian Splatting for Real-.md
+0268_[General]_Toward Fine-Grained Facial Control in 3D Talking Head Genera.md
+0270_[General]_Analysis of Converged 3D Gaussian Splatting Solutions Densi.md
+0272_[General]_Scalable Adaptation of 3D Geometric Foundation Models via We.md
+0275_[General]_Zero-Shot UAV Navigation in Forests via Relightable 3D Gauss.md
+0277_[General]_Uncertainty-Aware 4D Gaussian Splatting for Monocular Occlud.md
+0282_[General]_Nix and Fix Targeting 1000x Compression of 3D Gaussian Spla.md
+0289_[General]_SoMA A Real-to-Sim Neural Simulator for Robotic Soft-body M.md
+0290_[General]_Intellectual Property Protection for 3D Gaussian Splatting A.md
+0304_[General]_DiffStyle3D Consistent 3D Gaussian Stylization via Attentio.md
+0305_[General]_Fast Converging 3D Gaussian Splatting for 1-Minute Reconstru.md
+0306_[General]_UniMGS Unifying Mesh and 3D Gaussian Splatting with Single-.md
+0307_[General]_Splat-Portrait Generalizing Talking Heads with Gaussian Spl.md
+0308_[General]_ExoGS A 4D Real-to-Sim-to-Real Framework for Scalable Manip.md
+0309_[General]_LoD-Structured 3D Gaussian Splatting for Streaming Video Rec.md
+0314_[General]_ThermoSplat Cross-Modal 3D Gaussian Splatting with Feature.md
+0315_[General]_LL-GaussianImage Efficient Image Representation for Zero-sh.md
+0317_[General]_SplatBus A Gaussian Splatting Viewer Framework via GPU Inte.md
+0319_[General]_Structured Image-based Coding for Efficient Gaussian Splatti.md
+0320_[General]_Rig-Aware 3D Reconstruction of Vehicle Undercarriages using.md
+0321_[General]_GaussExplorer 3D Gaussian Splatting for Embodied Exploratio.md
+0323_[General]_GaussianTrimmer Online Trimming Boundaries for 3DGS Segment.md
+0324_[General]_Active Semantic Mapping of Horticultural Environments Using.md
+0326_[General]_Thinking Like Van Gogh Structure-Aware Style Transfer via F.md
+0331_[General]_GS-DMSR Dynamic Sensitive Multi-scale Manifold Enhancement.md
+0334_[General]_SCAR-GS Spatial Context Attention for Residuals in Progress.md
+0337_[General]_A High-Fidelity Digital Twin for Robotic Manipulation Based.md
+0339_[General]_360-GeoGS Geometrically Consistent Feed-Forward 3D Gaussian.md
+0344_[General]_SV-GS Sparse View 4D Reconstruction with Skeleton-Driven Ga.md
+0346_[General]_Splatwizard A Benchmark Toolkit for 3D Gaussian Splatting C.md
+0347_[General]_Improved 3D Gaussian Splatting of Unknown Spacecraft Structu.md
+0350_[General]_Nebula Enable City-Scale 3D Gaussian Splatting in Virtual R.md
+0352_[General]_HyGE-Occ Hybrid View-Transformation with 3D Gaussian and Ed.md
+0368_[General]_VLA-AN An Efficient and Onboard Vision-Language-Action Fram.md
+0369_[General]_MVGSR Multi-View Consistent 3D Gaussian Super-Resolution vi.md
+0371_[General]_HGS Hybrid Gaussian Splatting with Static-Dynamic Decomposi.md
+0374_[General]_Consistent Instance Field for Dynamic Scene Understanding.md
+0375_[General]_GaussianPlant Structure-aligned Gaussian Splatting for 3D R.md
+0382_[General]_Long-LRM++ Preserving Fine Details in Feed-Forward Wide-Cov.md
+0385_[General]_TraceFlow Dynamic 3D Reconstruction of Specular Scenes Driv.md
+0396_[General]_NVGS Neural Visibility for Occlusion Culling in 3D Gaussian.md
+0401_[General]_Observer Actor Active Vision Imitation Learning with Sparse.md
+0402_[General]_RoboArmGS High-Quality Robotic Arm Splatting via Bézier Cur.md
+0408_[General]_RoomPlanner Explicit Layout Planner for Easier LLM-Driven 3.md
+0409_[General]_PhysMorph-GS Differentiable Shape Morphing via Joint Optimi.md
+0411_[General]_One Walk is All You Need Data-Efficient 3D RF Scene Reconst.md
+0412_[General]_Vorion A RISC-V GPU with Hardware-Accelerated 3D Gaussian R.md
+0413_[General]_Optimizing 3D Gaussian Splattering for Mobile GPUs.md
+0416_[General]_Dental3R Geometry-Aware Pairing for Intraoral 3D Reconstruc.md
+0419_[General]_SF-Recon Simplification-Free Lightweight Building Reconstru.md
+0431_[General]_Lumos3D A Single-Forward Framework for Low-Light 3D Scene R.md
+0433_[General]_YoNoSplat You Only Need One Model for Feedforward 3D Gaussi.md
+0434_[General]_GFix Perceptually Enhanced Gaussian Splatting Video Compres.md
+0435_[General]_MUGSQA Novel Multi-Uncertainty-Based Gaussian Splatting Qua.md
+0436_[General]_ConeGS Error-Guided Densification Using Pixel Cones for Imp.md
+0438_[General]_4D3R Motion-Aware Neural Reconstruction and Rendering of Dy.md
+0441_[General]_Real-to-Sim Robot Policy Evaluation with Gaussian Splatting.md
+0442_[General]_CaRF Enhancing Multi-View Consistency in Referring 3D Gauss.md
+0446_[General]_Object-Centric 3D Gaussian Splatting for Strawberry Plant Re.md
+0451_[General]_6D Channel Knowledge Map Construction via Bidirectional Wire.md
+0454_[General]_NVSim Novel View Synthesis Simulator for Large Scale Indoor.md
+0455_[General]_LagMemo Language 3D Gaussian Splatting Memory for Multi-mod.md
+0456_[General]_EndoWave Rational-Wavelet 4D Gaussian Splatting for Endosco.md
+0457_[General]_Gen-LangSplat Generalized Language Gaussian Splatting with.md
+0461_[General]_Towards Physically Executable 3D Gaussian for Embodied Navig.md
+0469_[General]_GSPlane Concise and Accurate Planar Reconstruction via Stru.md
+0470_[General]_2DGS-R Revisiting the Normal Consistency Regularization in.md
+0471_[General]_GS2POSE Marry Gaussian Splatting to 6D Object Pose Estimati.md
+0473_[General]_GaussGym An open-source real-to-sim framework for learning.md
+0478_[General]_PAGS Priority-Adaptive Gaussian Splatting for Dynamic Drivi.md
+0483_[General]_High-Fidelity Simulated Data Generation for Real-World Zero-.md
+0484_[General]_Towards Efficient 3D Gaussian Human Avatar Compression A Pr.md
+0485_[General]_Opacity-Gradient Driven Density Control for Compact and Effi.md
+0490_[General]_Visibility-Aware Densification for 3D Gaussian Splatting in.md
+0494_[General]_PrismGS Physically-Grounded Anti-Aliasing for High-Fidelity.md
+0496_[General]_Generating Surface for Text-to-3D using 2D Gaussian Splattin.md
+0497_[General]_Capture and Interact Rapid 3D Object Acquisition and Render.md
+0499_[General]_SketchPlan Diffusion Based Drone Planning From Human Sketch.md
+0502_[General]_GaussianMorphing Mesh-Guided 3D Gaussians for Semantic-Awar.md
+0503_[General]_ROI-GS Interest-based Local Quality 3D Gaussian Splatting.md
+0504_[General]_LOBE-GS Load-Balanced and Efficient 3D Gaussian Splatting f.md
+0506_[General]_LLM-Powered Code Analysis and Optimization for Gaussian Spla.md
+0521_[General]_Large Material Gaussian Model for Relightable 3D Generation.md
+0525_[General]_BiTAA A Bi-Task Adversarial Attack for Object Detection and.md
+0527_[General]_WaveletGaussian Wavelet-domain Diffusion for Sparse-view 3D.md
+0530_[General]_From Restoration to Reconstruction Rethinking 3D Gaussian S.md
+0531_[General]_FGGS-LiDAR Ultra-Fast, GPU-Accelerated Simulation from Gene.md
+0533_[General]_SPFSplatV2 Efficient Self-Supervised Pose-Free 3D Gaussian.md
+0534_[General]_MedGS Gaussian Splatting for Multi-Modal 3D Medical Imaging.md
+0535_[General]_ST-GS Vision-Based 3D Semantic Occupancy Prediction with Sp.md
+0537_[General]_RadarGaussianDet3D An Efficient and Effective Gaussian-base.md
+0540_[General]_FingerSplat Contactless Fingerprint 3D Reconstruction and G.md
+0543_[General]_Causal Reasoning Elicits Controllable 3D Scene Generation.md
+0545_[General]_Plug-and-Play PDE Optimization for 3D Gaussian Splatting To.md
+0549_[General]_4DRadar-GS Self-Supervised Dynamic Driving Scene Reconstruc.md
+0551_[General]_Segmentation-Driven Initialization for Sparse-view 3D Gaussi.md
+0552_[General]_ROSGS Relightable Outdoor Scenes With Gaussian Splatting.md
+0558_[General]_3DOF+Quantization 3DGS quantization for large scenes with l.md
+0562_[General]_SSGaussian Semantic-Aware and Structure-Preserving 3D Style.md
+0565_[General]_2D Gaussian Splatting with Semantic Alignment for Image Inpa.md
+0567_[General]_SWAGSplatting Semantic-guided Water-scene Augmented Gaussia.md
+0570_[General]_Scale-GS Efficient Scalable Gaussian Splatting via Redundan.md
+0571_[General]_ARGS Advanced Regularization on Aligning Gaussians over the.md
+0572_[General]_DrivingGaussian++ Towards Realistic Reconstruction and Edit.md
+0573_[General]_AvatarBack Back-Head Generation for Complete 3D Avatars fro.md
+0574_[General]_Realistic and Controllable 3D Gaussian-Guided Object Editing.md
+0579_[General]_IDU Incremental Dynamic Update of Existing 3D Virtual Envir.md
+0582_[General]_Enhancing Novel View Synthesis from extremely sparse views w.md
+0591_[General]_From Slices to Structures Unsupervised 3D Reconstruction of.md
+0592_[General]_D^3-Talker Dual-Branch Decoupled Deformation Fields for Few.md
+0593_[General]_Reconstruction Using the Invisible Intuition from NIR and M.md
+0594_[General]_GALA Guided Attention with Language Alignment for Open Voca.md
+0599_[General]_InnerGS Internal Scenes Rendering via Factorized 3D Gaussia.md
+0601_[General]_Improving Densification in 3D Gaussian Splatting for High-Fi.md
+0602_[General]_InstDrive Instance-Aware 3D Gaussian Splatting for Driving.md
+0603_[General]_ComplicitSplat Downstream Models are Vulnerable to Blackbox.md
+0605_[General]_EntropyGS An Efficient Entropy Coding on 3D Gaussian Splatt.md
+0607_[General]_Semantic-aware DropSplat Adaptive Pruning of Redundant Gaus.md
+0612_[General]_Touch-Augmented Gaussian Splatting for Enhanced 3D Scene Rec.md
+0613_[General]_Novel View Synthesis with Gaussian Splatting Impact on Phot.md
+0615_[General]_Fading the Digital Ink A Universal Black-Box Attack Framewo.md
+0616_[General]_3D Gaussian Representations with Motion Trajectory Field for.md
+0617_[General]_3DGS-VBench A Comprehensive Video Quality Evaluation Benchm.md
+0621_[General]_Refining Gaussian Splatting A Volumetric Densification Appr.md
+0622_[General]_UGOD Uncertainty-Guided Differentiable Opacity and Soft Dro.md
+0626_[General]_Surf3R Rapid Surface Reconstruction from Sparse RGB Views i.md
+0627_[General]_SplitGaussian Reconstructing Dynamic Scenes via Visual Geom.md
+0631_[General]_RobustGS Unified Boosting of Feedforward 3D Gaussian Splatt.md
+0634_[General]_PMGS Reconstruction of Projectile Motion across Large Spati.md
+0640_[General]_SeqAffordSplat Scene-level Sequential Affordance Reasoning.md
+0644_[General]_MultiEditor Controllable Multimodal Object Editing for Driv.md
+0645_[General]_Decomposing Densification in Gaussian Splatting for Faster 3.md
+0654_[General]_PS-GS Gaussian Splatting for Multi-View Photometric Stereo.md
+0657_[General]_Appearance Harmonization via Bilateral Grid Prediction with.md
+0665_[General]_BRUM Robust 3D Vehicle Reconstruction from 360 Sparse Image.md
+0668_[General]_3DGAA Realistic and Robust 3D Gaussian-based Adversarial At.md
+0674_[General]_D-FCGS Feedforward Compression of Dynamic Gaussian Splattin.md
+0678_[General]_ArmGS Composite Gaussian Appearance Refinement for Modeling.md
+0679_[General]_AvatarMakeup Realistic Makeup Transfer for 3D Animatable He.md
+2209.08409.md
+2303.16739.md
+2309.13240.md
+2310.00684.md
+2310.00685.md
+2310.06984.md
+2401.14857.md
+2403.07494.md
+2403.11396.md
+2403.12535.md
+2404.04026.md
+2404.06926.md
+2405.11129.md
+2405.13748.md
+2405.14824.md
+2406.11766.md
+2406.12202.md
+2408.03825.md
+2408.12677.md
+2409.20276.md
+2410.04680.md
+2411.12185.md
+2412.02249.md
+2412.03263.md
+2412.20056.md
+2501.07015.md
+2501.14147.md
+2501.19319.md
+2502.13803.md
+2502.15633.md
+2502.19592.md
+2503.03373.md
+2503.05425.md
+2503.23480.md
+2504.04844.md
+2505.09915.md
+2505.12384.md
+2506.23207.md
+2507.16144.md
+2507.18344.md
+2507.19474.md
+2507.23273.md
+2509.00741.md
+2509.01228.md
+2509.13536.md
+2510.06644.md
+2510.09962.md
+2510.23988.md
+2511.13571.md
+2511.23221.md
+2512.08625.md
+2512.09411.md
+2512.22771.md
+2601.05738.md
+2601.11617.md
+2602.07493.md
+2603.06989.md
+2603.09673.md
+0013_[SLAM]_IG-SLAM Instant Gaussian SLAM.md
+0057_[SLAM]_GSFF-SLAM 3D Semantic Gaussian Splatting SLAM via Feature Field.md
+0070_[SLAM]_Taming the Light Illumination-Invariant Semantic 3DGS-SLAM.md
+0078_[Robotics]_Dex-NeRF Using a Neural Radiance Field to Grasp Transparent Objects.md
+0112_[Robotics]_IGL-Nav Incremental 3D Gaussian Localization for Image-goal Navigati.md
+0153_[SLAM-Supplement]_`CVPR`.md
+0154_[SLAM-Supplement]_`arXiv`.md
+0157_[SLAM-Supplement]_`NIPS`.md
+0168_[SLAM-Supplement]_`arXiv`.md
+0174_[SLAM-Supplement]_`3DV`.md
+0184_[General]_DenoiseSplat Feed-Forward Gaussian Splatting for Noisy 3D S.md
+0189_[General]_ImprovedGS+ A High-Performance C++CUDA Re-Implementation S.md
+0191_[General]_DynamicVGGT Learning Dynamic Point Maps for 4D Scene Recons.md
+0196_[General]_ColonSplat Reconstruction of Peristaltic Motion in Colonosc.md
+0204_[General]_SSR-GS Separating Specular Reflection in Gaussian Splatting.md
+0219_[General]_HeroGS Hierarchical Guidance for Robust 3D Gaussian Splatti.md
+0226_[General]_Prune Wisely, Reconstruct Sharply Compact 3D Gaussian Splat.md
+0244_[General]_Spatial-Temporal State Propagation Autoregressive Model for.md
+0294_[General]_Radioactive 3D Gaussian Ray Tracing for Tomographic Reconstr.md
+0296_[General]_PSGS Text-driven Panorama Sliding Scene Generation via Gaus.md
+0299_[General]_Self-Supervised Slice-to-Volume Reconstruction with Gaussian.md
+0353_[General]_WorldWarp Propagating 3D Geometry with Asynchronous Video D.md
+0355_[General]_SplatBright Generalizable Low-Light Scene Reconstruction fr.md
+0358_[General]_Chorus Multi-Teacher Pretraining for Holistic 3D Gaussian S.md
+0361_[General]_FLEG Feed-Forward Language Embedded Gaussian Splatting from.md
+0373_[General]_Spherical Voronoi Directional Appearance as a Differentiabl.md
+0377_[General]_Nexels Neurally-Textured Surfels for Real-Time Novel View S.md
+0406_[General]_PEGS Physics-Event Enhanced Large Spatiotemporal Motion Rec.md
+0407_[General]_SPAGS Sparse-View Articulated Object Reconstruction from Si.md
+0410_[General]_Gradient-Driven Natural Selection for Compact 3D Gaussian Sp.md
+0417_[General]_GEN3D Generating Domain-Free 3D Scenes from a Single Image.md
+0424_[General]_Neo Real-Time On-Device 3D Gaussian Splatting with Reuse-an.md
+0427_[General]_3D Gaussian and Diffusion-Based Gaze Redirection.md
+0428_[General]_RealisticDreamer Guidance Score Distillation for Few-shot G.md
+0440_[General]_3D Gaussian Point Encoders.md
+0443_[General]_Improving Multi-View Reconstruction via Texture-Guided Gauss.md
+0444_[General]_DentalSplat Dental Occlusion Novel View Synthesis from Spar.md
+0449_[General]_Object-Aware 4D Human Motion Generation.md
+0453_[General]_DrivingScene A Multi-Task Online Feed-Forward 3D Gaussian S.md
+0458_[General]_Region-Adaptive Learned Hierarchical Encoding for 3D Gaussia.md
+0459_[General]_DynaPose4D High-Quality 4D Dynamic Content Generation via P.md
+0460_[General]_DynamicTree Interactive Real Tree Animation via Sparse Voxe.md
+0476_[General]_GauSSmart Enhanced 3D Reconstruction through 2D Foundation.md
+0488_[General]_LTGS Long-Term Gaussian Scene Chronology From Sparse View U.md
+0513_[General]_Proxy-GS Efficient 3D Gaussian Splatting via Proxy Mesh.md
+0528_[General]_Seeing Through Reflections Advancing 3D Scene Reconstructio.md
+0538_[General]_Zero-Shot Visual Grounding in 3D Gaussians via View Retrieva.md
+0541_[General]_GS-Scale Unlocking Large-Scale 3D Gaussian Splatting Traini.md
+0544_[General]_FMGS-Avatar Mesh-Guided 2D Gaussian Splatting with Foundati.md
+0548_[General]_Beyond Averages Open-Vocabulary 3D Scene Understanding with.md
+0560_[General]_Visibility-Aware Language Aggregation for Open-Vocabulary Se.md
+0568_[General]_MarkSplatter Generalizable Watermarking for 3D Gaussian Spl.md
+0577_[General]_ColorGS High-fidelity Surgical Scene Reconstruction with Co.md
+0584_[General]_Image-Conditioned 3D Gaussian Splat Quantization.md
+0586_[General]_Zero-shot Volumetric CT Super-Resolution using 3D Gaussian S.md
+0595_[General]_Distilled-3DGSDistilled 3D Gaussian Splatting.md
+0635_[General]_GR-Gaussian Graph-Based Radiative Gaussian Splatting for Sp.md
+0646_[General]_RaGS Unleashing 3D Gaussian Splatting from 4D Radar and Mon.md
+0650_[General]_Learning Efficient and Generalizable Human Representation wi.md
+0653_[General]_MVG4D Image Matrix-Based Multi-View and Motion Generation f.md
+0662_[General]_PCR-GS COLMAP-Free 3D Gaussian Splatting via Pose Co-Regula.md
+0666_[General]_Dark-EvGS Event Camera as an Eye for Radiance Field in the.md
+0670_[General]_RTR-GS 3D Gaussian Splatting for Inverse Rendering with Rad.md
+0672_[General]_LighthouseGS Indoor Structure-aware 3D Gaussian Splatting f.md
+0675_[General]_3DGS_LSRLarge_Scale Relocation for Autonomous Driving Based.md
+0677_[General]_InterGSEdit Interactive 3D Gaussian Splatting Editing with.md
+0683_[General]_GDGS 3D Gaussian Splatting Via Geometry-Guided Initializati.md
+2506.21420.md
+2509.00433.md
+2602.20807.md

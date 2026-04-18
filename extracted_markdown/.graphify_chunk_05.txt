@@ -1,0 +1,22 @@
+0239_[General]_Monocular Endoscopic Tissue 3D Reconstruction with Multi-Lev.md
+0242_[General]_Large-scale Photorealistic Outdoor 3D Scene Reconstruction f.md
+0247_[General]_3D Scene Rendering with Multimodal Gaussian Splatting.md
+0253_[General]_Learnable Multi-level Discrete Wavelet Transforms for 3D Gau.md
+0254_[General]_Gaussian Sequences with Multi-Scale Dynamics for 4D Reconstr.md
+0256_[General]_Nighttime Autonomous Driving Scene Reconstruction with Physi.md
+0259_[General]_LatentAM Real-Time, Large-Scale Latent Gaussian Attention M.md
+0261_[General]_GR-Diffusion 3D Gaussian Representation Meets Diffusion in.md
+0263_[General]_ReaDy-Go Real-to-Sim Dynamic 3D Gaussian Splatting Simulati.md
+0267_[General]_CompSplat Compression-aware 3D Gaussian Splatting for Real-.md
+0268_[General]_Toward Fine-Grained Facial Control in 3D Talking Head Genera.md
+0270_[General]_Analysis of Converged 3D Gaussian Splatting Solutions Densi.md
+0272_[General]_Scalable Adaptation of 3D Geometric Foundation Models via We.md
+0275_[General]_Zero-Shot UAV Navigation in Forests via Relightable 3D Gauss.md
+0277_[General]_Uncertainty-Aware 4D Gaussian Splatting for Monocular Occlud.md
+0282_[General]_Nix and Fix Targeting 1000x Compression of 3D Gaussian Spla.md
+0289_[General]_SoMA A Real-to-Sim Neural Simulator for Robotic Soft-body M.md
+0290_[General]_Intellectual Property Protection for 3D Gaussian Splatting A.md
+0304_[General]_DiffStyle3D Consistent 3D Gaussian Stylization via Attentio.md
+0305_[General]_Fast Converging 3D Gaussian Splatting for 1-Minute Reconstru.md
+0306_[General]_UniMGS Unifying Mesh and 3D Gaussian Splatting with Single-.md
+0307_[General]_Splat-Portrait Generalizing Talking Heads with Gaussian Spl.md

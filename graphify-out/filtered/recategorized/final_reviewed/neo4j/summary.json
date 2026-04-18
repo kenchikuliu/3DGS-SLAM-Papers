@@ -1,0 +1,7 @@
+{
+  "input_graph": "C:\\Users\\Administrator\\Downloads\\3DGS-SLAM-Papers\\graphify-out\\filtered\\recategorized\\final_reviewed\\graphify_final_reviewed.json",
+  "node_rows": 953,
+  "edge_rows": 1644,
+  "hyperedge_member_rows": 829,
+  "neo4j_dir": "C:\\Users\\Administrator\\Downloads\\3DGS-SLAM-Papers\\graphify-out\\filtered\\recategorized\\final_reviewed\\neo4j"
+}

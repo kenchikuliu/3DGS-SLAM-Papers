@@ -1,0 +1,329 @@
+{
+  "domain": "General",
+  "subdomain": "Enhancement",
+  "paper_count": 42,
+  "top_datasets": [
+    {
+      "label": "KITTI",
+      "count": 5
+    },
+    {
+      "label": "ScanNet",
+      "count": 4
+    },
+    {
+      "label": "DTU",
+      "count": 2
+    },
+    {
+      "label": "DSA-15 Clinical Dataset (Digital Subtraction Angiography)",
+      "count": 1
+    },
+    {
+      "label": "DSA-28 Clinical Dataset (Digital Subtraction Angiography)",
+      "count": 1
+    },
+    {
+      "label": "nuScenes",
+      "count": 1
+    },
+    {
+      "label": "EuRoC",
+      "count": 1
+    }
+  ],
+  "top_metrics": [
+    {
+      "label": "Recall",
+      "count": 5
+    },
+    {
+      "label": "Chamfer",
+      "count": 4
+    },
+    {
+      "label": "PSNR (Peak Signal-to-Noise Ratio)",
+      "count": 1
+    },
+    {
+      "label": "SSIM (Structural Similarity Index)",
+      "count": 1
+    }
+  ],
+  "top_concepts": [
+    {
+      "label": "Medical Imaging Reconstruction with Gaussian Splatting",
+      "count": 1
+    },
+    {
+      "label": "3D Gaussian Splatting (Kerbl et al. 2023)",
+      "count": 1
+    },
+    {
+      "label": "Multi-Fidelity Texture Learning Module with Confidence-Aware SR Weighting",
+      "count": 1
+    },
+    {
+      "label": "Radiative Gaussian Splatting (R2-Gaussian)",
+      "count": 1
+    },
+    {
+      "label": "Super-Resolution Integration into Gaussian Splatting Optimization",
+      "count": 1
+    }
+  ],
+  "papers": [
+    {
+      "id": "paper_0660_general_adaptive_3d_gaussian_splatting_video_streaming",
+      "label": "Adaptive 3D Gaussian Splatting Video Streaming",
+      "source_file": "0660_[General]_Adaptive 3D Gaussian Splatting Video Streaming.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0659_general_adaptive_3d_gaussian_splatting_video_streaming_visual_salie",
+      "label": "Adaptive 3D Gaussian Splatting Video Streaming Visual Salie",
+      "source_file": "0659_[General]_Adaptive 3D Gaussian Splatting Video Streaming Visual Salie.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0348_general_airgs_real_time_4d_gaussian_streaming_for_free_viewpoint_vi",
+      "label": "AirGS Real-Time 4D Gaussian Streaming for Free-Viewpoint Vi",
+      "source_file": "0348_[General]_AirGS Real-Time 4D Gaussian Streaming for Free-Viewpoint Vi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0657_general_appearance_harmonization_via_bilateral_grid_prediction_with",
+      "label": "Appearance Harmonization via Bilateral Grid Prediction with",
+      "source_file": "0657_[General]_Appearance Harmonization via Bilateral Grid Prediction with.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0678_general_armgs_composite_gaussian_appearance_refinement_for_modeling",
+      "label": "ArmGS Composite Gaussian Appearance Refinement for Modeling",
+      "source_file": "0678_[General]_ArmGS Composite Gaussian Appearance Refinement for Modeling.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0679_general_avatarmakeup_realistic_makeup_transfer_for_3d_animatable_he",
+      "label": "AvatarMakeup Realistic Makeup Transfer for 3D Animatable He",
+      "source_file": "0679_[General]_AvatarMakeup Realistic Makeup Transfer for 3D Animatable He.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0267_general_compsplat_compression_aware_3d_gaussian_splatting_for_real",
+      "label": "CompSplat Compression-aware 3D Gaussian Splatting for Real-",
+      "source_file": "0267_[General]_CompSplat Compression-aware 3D Gaussian Splatting for Real-.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0603_general_complicitsplat_downstream_models_are_vulnerable_to_blackbox",
+      "label": "ComplicitSplat Downstream Models are Vulnerable to Blackbox",
+      "source_file": "0603_[General]_ComplicitSplat Downstream Models are Vulnerable to Blackbox.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0674_general_d_fcgs_feedforward_compression_of_dynamic_gaussian_splattin",
+      "label": "D-FCGS Feedforward Compression of Dynamic Gaussian Splattin",
+      "source_file": "0674_[General]_D-FCGS Feedforward Compression of Dynamic Gaussian Splattin.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0207_general_dsa_srgs_super_resolution_gaussian_splatting_for_dynamic_sp",
+      "label": "DSA-SRGS Super-Resolution Gaussian Splatting for Dynamic Sp",
+      "source_file": "0207_[General]_DSA-SRGS Super-Resolution Gaussian Splatting for Dynamic Sp.md",
+      "alias_count": 1
+    },
+    {
+      "id": "paper_0184_general_denoisesplat_feed_forward_gaussian_splatting_for_noisy_3d_s",
+      "label": "DenoiseSplat Feed-Forward Gaussian Splatting for Noisy 3D S",
+      "source_file": "0184_[General]_DenoiseSplat Feed-Forward Gaussian Splatting for Noisy 3D S.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0572_general_drivinggaussian_towards_realistic_reconstruction_and_edit",
+      "label": "DrivingGaussian++ Towards Realistic Reconstruction and Edit",
+      "source_file": "0572_[General]_DrivingGaussian++ Towards Realistic Reconstruction and Edit.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0641_general_enhanced_velocity_field_modeling_for_gaussian_video_reconstr",
+      "label": "Enhanced Velocity Field Modeling for Gaussian Video Reconstr",
+      "source_file": "0641_[General]_Enhanced Velocity Field Modeling for Gaussian Video Reconstr.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0512_general_exgs_extreme_3d_gaussian_compression_with_diffusion_priors",
+      "label": "ExGS Extreme 3D Gaussian Compression with Diffusion Priors",
+      "source_file": "0512_[General]_ExGS Extreme 3D Gaussian Compression with Diffusion Priors.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0434_general_gfix_perceptually_enhanced_gaussian_splatting_video_compres",
+      "label": "GFix Perceptually Enhanced Gaussian Splatting Video Compres",
+      "source_file": "0434_[General]_GFix Perceptually Enhanced Gaussian Splatting Video Compres.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0331_general_gs_dmsr_dynamic_sensitive_multi_scale_manifold_enhancement",
+      "label": "GS-DMSR Dynamic Sensitive Multi-scale Manifold Enhancement",
+      "source_file": "0331_[General]_GS-DMSR Dynamic Sensitive Multi-scale Manifold Enhancement.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0588_general_gsfix3d_diffusion_guided_repair_of_novel_views_in_gaussian",
+      "label": "GSFix3D Diffusion-Guided Repair of Novel Views in Gaussian",
+      "source_file": "0588_[General]_GSFix3D Diffusion-Guided Repair of Novel Views in Gaussian.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0476_general_gaussmart_enhanced_3d_reconstruction_through_2d_foundation",
+      "label": "GauSSmart Enhanced 3D Reconstruction through 2D Foundation",
+      "source_file": "0476_[General]_GauSSmart Enhanced 3D Reconstruction through 2D Foundation.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0655_general_high_fidelity_3d_gaussian_inpainting_preserving_multi_view",
+      "label": "High-fidelity 3D Gaussian Inpainting preserving multi-view",
+      "source_file": "0655_[General]_High-fidelity 3D Gaussian Inpainting preserving multi-view.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0192_general_holi_spatial_evolving_video_streams_into_holistic_3d_spatia",
+      "label": "Holi-Spatial Evolving Video Streams into Holistic 3D Spatia",
+      "source_file": "0192_[General]_Holi-Spatial Evolving Video Streams into Holistic 3D Spatia.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_illumination_refinement_via_textual_cues_a_prompt_driven_approach_for_low_light_nerf_enhancement",
+      "label": "Illumination_Refinement_via_Textual_Cues_A_Prompt-Driven_Approach_for_Low-Light_NeRF_Enhancement",
+      "source_file": "Illumination_Refinement_via_Textual_Cues_A_Prompt-Driven_Approach_for_Low-Light_NeRF_Enhancement.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0546_general_improving_3d_gaussian_splatting_compression_by_scene_adaptiv",
+      "label": "Improving 3D Gaussian Splatting Compression by Scene-Adaptiv",
+      "source_file": "0546_[General]_Improving 3D Gaussian Splatting Compression by Scene-Adaptiv.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0677_general_intergsedit_interactive_3d_gaussian_splatting_editing_with",
+      "label": "InterGSEdit Interactive 3D Gaussian Splatting Editing with",
+      "source_file": "0677_[General]_InterGSEdit Interactive 3D Gaussian Splatting Editing with.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0316_general_ll_gaussianmap_zero_shot_low_light_image_enhancement_via_2d",
+      "label": "LL-GaussianMap Zero-shot Low-Light Image Enhancement via 2D",
+      "source_file": "0316_[General]_LL-GaussianMap Zero-shot Low-Light Image Enhancement via 2D.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0330_general_layergs_decomposition_and_inpainting_of_layered_3d_human_av",
+      "label": "LayerGS Decomposition and Inpainting of Layered 3D Human Av",
+      "source_file": "0330_[General]_LayerGS Decomposition and Inpainting of Layered 3D Human Av.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0309_general_lod_structured_3d_gaussian_splatting_for_streaming_video_rec",
+      "label": "LoD-Structured 3D Gaussian Splatting for Streaming Video Rec",
+      "source_file": "0309_[General]_LoD-Structured 3D Gaussian Splatting for Streaming Video Rec.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0369_general_mvgsr_multi_view_consistent_3d_gaussian_super_resolution_vi",
+      "label": "MVGSR Multi-View Consistent 3D Gaussian Super-Resolution vi",
+      "source_file": "0369_[General]_MVGSR Multi-View Consistent 3D Gaussian Super-Resolution vi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0489_general_mono4deditor_text_driven_4d_scene_editing_from_monocular_vi",
+      "label": "Mono4DEditor Text-Driven 4D Scene Editing from Monocular Vi",
+      "source_file": "0489_[General]_Mono4DEditor Text-Driven 4D Scene Editing from Monocular Vi.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0644_general_multieditor_controllable_multimodal_object_editing_for_driv",
+      "label": "MultiEditor Controllable Multimodal Object Editing for Driv",
+      "source_file": "0644_[General]_MultiEditor Controllable Multimodal Object Editing for Driv.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0282_general_nix_and_fix_targeting_1000x_compression_of_3d_gaussian_spla",
+      "label": "Nix and Fix Targeting 1000x Compression of 3D Gaussian Spla",
+      "source_file": "0282_[General]_Nix and Fix Targeting 1000x Compression of 3D Gaussian Spla.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0406_general_pegs_physics_event_enhanced_large_spatiotemporal_motion_rec",
+      "label": "PEGS Physics-Event Enhanced Large Spatiotemporal Motion Rec",
+      "source_file": "0406_[General]_PEGS Physics-Event Enhanced Large Spatiotemporal Motion Rec.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0318_general_potr_post_training_3dgs_compression",
+      "label": "POTR Post-Training 3DGS Compression",
+      "source_file": "0318_[General]_POTR Post-Training 3DGS Compression.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0381_general_prior_enhanced_gaussian_splatting_for_dynamic_scene_reconstr",
+      "label": "Prior-Enhanced Gaussian Splatting for Dynamic Scene Reconstr",
+      "source_file": "0381_[General]_Prior-Enhanced Gaussian Splatting for Dynamic Scene Reconstr.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0278_general_pseudo_view_enhancement_via_confidence_fusion_for_unposed_sp",
+      "label": "Pseudo-View Enhancement via Confidence Fusion for Unposed Sp",
+      "source_file": "0278_[General]_Pseudo-View Enhancement via Confidence Fusion for Unposed Sp.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0574_general_realistic_and_controllable_3d_gaussian_guided_object_editing",
+      "label": "Realistic and Controllable 3D Gaussian-Guided Object Editing",
+      "source_file": "0574_[General]_Realistic and Controllable 3D Gaussian-Guided Object Editing.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0228_general_sr3r_rethinking_super_resolution_3d_reconstruction_with_fee",
+      "label": "SR3R Rethinking Super-Resolution 3D Reconstruction With Fee",
+      "source_file": "0228_[General]_SR3R Rethinking Super-Resolution 3D Reconstruction With Fee.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0554_general_splatfill_3d_scene_inpainting_via_depth_guided_gaussian_spl",
+      "label": "SplatFill 3D Scene Inpainting via Depth-Guided Gaussian Spl",
+      "source_file": "0554_[General]_SplatFill 3D Scene Inpainting via Depth-Guided Gaussian Spl.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0656_general_streamme_simplify_3d_gaussian_avatar_within_live_stream",
+      "label": "StreamME Simplify 3D Gaussian Avatar within Live Stream",
+      "source_file": "0656_[General]_StreamME Simplify 3D Gaussian Avatar within Live Stream.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0612_general_touch_augmented_gaussian_splatting_for_enhanced_3d_scene_rec",
+      "label": "Touch-Augmented Gaussian Splatting for Enhanced 3D Scene Rec",
+      "source_file": "0612_[General]_Touch-Augmented Gaussian Splatting for Enhanced 3D Scene Rec.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0484_general_towards_efficient_3d_gaussian_human_avatar_compression_a_pr",
+      "label": "Towards Efficient 3D Gaussian Human Avatar Compression A Pr",
+      "source_file": "0484_[General]_Towards Efficient 3D Gaussian Human Avatar Compression A Pr.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0262_general_variation_aware_flexible_3d_gaussian_editing",
+      "label": "Variation-aware Flexible 3D Gaussian Editing",
+      "source_file": "0262_[General]_Variation-aware Flexible 3D Gaussian Editing.md",
+      "alias_count": 0
+    },
+    {
+      "id": "paper_0283_general_vecset_edit_unleashing_pre_trained_lrm_for_mesh_editing_fro",
+      "label": "VecSet-Edit Unleashing Pre-trained LRM for Mesh Editing fro",
+      "source_file": "0283_[General]_VecSet-Edit Unleashing Pre-trained LRM for Mesh Editing fro.md",
+      "alias_count": 0
+    }
+  ]
+}

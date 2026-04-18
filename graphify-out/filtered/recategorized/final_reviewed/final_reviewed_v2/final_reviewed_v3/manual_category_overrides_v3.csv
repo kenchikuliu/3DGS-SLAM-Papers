@@ -1,0 +1,26 @@
+﻿id,reviewed_category,reason
+paper_2503_03373,SLAM,Direct sparse odometry with continuous Gaussian maps is odometry/localization.
+paper_2403_12535,SLAM,Explicitly an RGBD SLAM system.
+paper_2508_01150,Robotics,Open-vocabulary dense mapping for robotic/VR-AR scene interaction.
+paper_2503_16710,SLAM,Explicitly 4D Gaussian Splatting SLAM.
+paper_2512_01296,General,Efficient reconstruction with Gaussian surfels is reconstruction-centric.
+paper_2509_12702,Robotics,Multi-robot neural implicit mapping under communication constraints.
+paper_2510_12749,SLAM,Panoptic odometry / tracking / rendering for urban scenes fits SLAM.
+paper_2604_03092v1,SLAM,Monocular SLAM with feed-forward Gaussian splatting.
+paper_2406_12202,SLAM,Fast global localization on NeRF maps is localization-focused.
+paper_2408_04268,General,Evaluation paper comparing reconstruction approaches.
+paper_2511_13571,General,"3DGS optimization framework, not SLAM/robotics-specific."
+paper_2510_23988,Robotics,Survey on collaborative multi-robot SLAM with 3DGS.
+paper_2510_06644,SLAM,Explicitly real-time 3DGS SLAM.
+paper_2509_00741,SLAM,DyPho-SLAM is clearly SLAM.
+paper_2309_13240,Robotics,Field-of-view extrapolation motivated by robotic navigation.
+paper_2310_00684,Robotics,View planning for unknown-object reconstruction with autonomous robots.
+paper_2412_20056,SLAM,GSplatLoc is camera localization.
+paper_2503_23480,Robotics,Indoor localization for mobile robots in known maps.
+paper_2503_01646,SLAM,OpenGS-SLAM is explicitly dense semantic SLAM.
+paper_2602_17182,SLAM,NRGS-SLAM is explicitly non-rigid SLAM.
+paper_tvg_slam_robust_gaussian_splatting_slam_with_tri_view_geometric_constraints_1,SLAM,TVG-SLAM is explicitly SLAM.
+paper_2507_23677,SLAM,Stereo 3DGS SLAM for outdoor urban scenes.
+paper_2506_21420,SLAM,EndoFlow-SLAM is explicitly endoscopic SLAM.
+paper_2509_00741v1_4,SLAM,Duplicate DyPho-SLAM entry.
+paper_2502_05752,Robotics,Implicit neural map representation for robotics-oriented mapping/localization.
