@@ -12,6 +12,12 @@ Citation note: this skeleton should be completed using only papers already prese
 
 Recent 3D Gaussian Splatting based SLAM systems have improved dense mapping, reconstruction fidelity, and rendering quality, but their evaluation is still dominated by generic academic benchmarks that do not adequately reflect industrial deployment conditions. In practical industrial environments, three degradation factors frequently co-occur: large textureless surfaces, low and spatially varying illumination, and dynamic interference from personnel, vehicles, doors, and moving machinery. Existing works have addressed parts of this problem, including dense 3DGS-SLAM, low-light visual degradation, and dynamic-scene Gaussian SLAM, yet these factors are rarely integrated into a unified benchmark targeted at industrial operation. To address this gap, we present an industrial complex-environment benchmark for SLAM and 3DGS-based mapping systems. The benchmark organizes representative industrial scenes under controlled texture, illumination, and dynamic condition levels, and provides trajectory ground truth, condition-aware metadata, and optional dynamic annotations and reference geometry. We define three evaluation tracks covering tracking robustness, dense mapping quality, and degradation-aware robustness analysis. The benchmark is designed to expose failure boundaries rather than only report global averages, and to support both classical SLAM baselines and recent 3DGS-based systems in a common industrial evaluation protocol.
 
+## Contribution Bullets
+
+- We define an industrial complex-environment benchmark centered on three coupled degradation axes: texture scarcity, illumination degradation, and dynamic interference.
+- We design a condition-aware data and metadata protocol with trajectory ground truth, structured scene-condition labels, and optional dynamic and geometric annotations.
+- We propose a three-track evaluation suite that separates tracking quality, mapping quality, and degradation-aware robustness analysis for both classical SLAM and 3DGS-based systems.
+
 ## 1. Introduction
 
 Simultaneous localization and mapping has long served as a core capability for robotic navigation, inspection, and scene reconstruction. More recently, 3D Gaussian Splatting based SLAM systems have substantially improved the quality of dense scene representation by coupling camera tracking with explicit Gaussian-based mapping and high-fidelity rendering. Representative systems such as GS-SLAM, Photo-SLAM, Gaussian-SLAM, and SplaTAM demonstrate that 3DGS-based representations can support accurate localization together with dense reconstruction and view synthesis, making them increasingly relevant to downstream robotic and industrial tasks.
@@ -25,6 +31,10 @@ Despite this progress, existing evaluations are still fragmented. Some systems e
 In this work, we address this gap by designing an industrial complex-environment benchmark for SLAM and 3DGS-based mapping systems. The benchmark organizes representative industrial scenes under structured condition labels, including texture level, illumination level, and dynamic level, and pairs them with trajectory ground truth, synchronized sensor data, and optional dynamic annotations and reconstruction references. Rather than relying on global averages alone, we define three complementary evaluation tracks covering tracking robustness, dense mapping quality, and degradation-aware robustness analysis. This design supports fair comparison between classical SLAM methods and recent 3DGS-based systems while exposing the operational boundaries that matter in real industrial environments.
 
 Our main contributions are threefold. First, we propose a benchmark-oriented dataset design tailored to industrial complex environments, with explicit control over textureless, low-light, and dynamic-scene conditions. Second, we define a condition-aware evaluation protocol that separates tracking quality, mapping quality, and robustness under degradation, including dynamic contamination analysis for non-static scenes. Third, we provide a unified evaluation scaffold that supports both classical SLAM baselines and recent 3DGS-based systems, making it possible to compare them under the same industrial operating assumptions.
+
+### Figure Placeholder
+
+Figure 1: Benchmark overview. Show four industrial scene types, three degradation axes, and three benchmark tracks in one summary diagram.
 
 ## 2. Related Work
 
@@ -48,6 +58,10 @@ Beyond dense mapping alone, recent work also explores how Gaussian or neural sce
 
 Taken together, the current literature provides strong ingredients for an industrial benchmark, but not yet the benchmark itself. 3DGS-SLAM papers provide system-level advances in joint tracking, mapping, and rendering. Hard-condition SLAM papers reveal the importance of weak texture and challenging sensing conditions. Low-light papers emphasize photometric degradation as a measurable variable, while dynamic-scene Gaussian SLAM papers show that non-static content must be handled as both a tracking and mapping problem. Robotics-facing localization papers further demonstrate the need to evaluate scene representations in terms of downstream operational value. What remains missing is a unified, condition-aware benchmark that combines these difficulty sources under one industrial protocol with explicit condition labels, trajectory ground truth, reconstruction references, and robustness-oriented reporting.
 
+### Table Placeholder
+
+Table 1: Related-work comparison. Columns can include method family, tracking support, dense mapping support, low-light focus, dynamic-scene focus, loop handling, and industrial relevance.
+
 ## 3. Benchmark Design
 
 Existing SLAM and 3DGS-SLAM benchmarks mainly emphasize generic indoor or outdoor reconstruction quality, while the operational conditions encountered in industrial inspection, plant maintenance, warehouse autonomy, and equipment-room navigation are substantially harsher. In particular, three degradation factors appear repeatedly in real deployments: large textureless surfaces, low and spatially non-uniform illumination, and dynamic interference caused by personnel, AGVs, forklifts, doors, or moving machinery. Although these factors have been discussed separately across prior SLAM, dense mapping, low-light reconstruction, and dynamic-scene papers, they are rarely integrated into a single controlled benchmark tailored to industrial deployment.
@@ -59,6 +73,26 @@ The benchmark is built around four design principles. First, degradations must b
 We organize the dataset around four representative industrial scene types: a metal corridor, a storage aisle under reduced illumination, an equipment-room passage, and an AGV or forklift traffic corridor. These scenes are selected to capture common deployment difficulties in industrial inspection and robotic navigation: repeated structures, weak local texture, narrow free space, hard shadows, reflective surfaces, and intermittent occlusion by moving agents.
 
 For each scene, we define a controlled subset of condition combinations over three axes: texture level, illumination level, and dynamic level. Rather than exhaustively enumerating all combinations, we prioritize representative difficult subsets, such as low-texture with dark illumination, or low-texture with dark illumination and medium dynamic interference. This keeps the benchmark focused on practically relevant failure modes.
+
+### Dataset Statistics Placeholder
+
+Insert final dataset statistics here after collection:
+
+- number of scenes
+- number of conditions
+- number of routes
+- total capture duration
+- total trajectory length
+- sensor configuration summary
+- annotation availability summary
+
+### Table Placeholder
+
+Table 2: Dataset composition. Rows can be scenes or condition groups. Columns can include scene type, texture level, illumination level, dynamic level, route count, sequence count, GT availability, and dynamic-mask availability.
+
+### Figure Placeholder
+
+Figure 2: Scene-condition matrix. Visualize which combinations of texture, light, and dynamic severity are covered by the dataset.
 
 ## 4. Problem Formulation
 
@@ -72,6 +106,20 @@ For tracking, a method estimates a pose sequence that should approximate the gro
 
 Industrial deployment requires more than average-case accuracy. A method should remain stable as texture decreases, illumination worsens, and dynamic interference increases. We therefore define robustness in a condition-aware manner and evaluate it through grouped metrics such as ATE under low-texture sequences, reconstruction quality under dark sequences, and dynamic contamination ratio in non-static scenes.
 
+### Equation Placeholder
+
+Add final notation and metric equations here:
+
+- pose trajectory definition
+- condition tuple definition
+- tracking error terms
+- mapping quality terms
+- dynamic contamination ratio
+
+### Figure Placeholder
+
+Figure 3: Evaluation formulation overview. Show the flow from multimodal observations to trajectory, map, and grouped robustness metrics.
+
 ## 5. Experiments
 
 We evaluate methods on the proposed industrial complex-environment benchmark using three tracks: tracking, mapping, and robustness. Tracking quality is measured by ATE, RPE, track-loss statistics, relocalization success, and loop-closure success. Mapping quality is measured by Chamfer distance, accuracy, completeness, and optional rendering metrics for methods that support view synthesis. Robustness is evaluated by grouping performance over texture, illumination, and dynamic condition levels, and by measuring dynamic contamination in reconstructed maps.
@@ -82,6 +130,60 @@ Results should be reported at four granularities: per-route, per-condition, per-
 
 The experiments section should include at least four main comparison tables: overall tracking comparison, overall mapping comparison, condition-aware robustness comparison, and efficiency analysis. In addition, ablations should be included for texture robustness, low-light robustness, and dynamic-scene handling. Qualitative results should focus on explaining metric behavior rather than only showing visually pleasing outputs.
 
+### Benchmark Tracks
+
+#### 5.1 Industrial-Track
+
+Report:
+
+- ATE
+- RPE
+- lost count
+- lost duration ratio
+- relocalization success
+- loop-closure success
+
+#### 5.2 Industrial-Map
+
+Report:
+
+- Chamfer distance
+- accuracy
+- completeness
+- optional PSNR
+- optional SSIM
+- optional LPIPS
+
+#### 5.3 Industrial-Robust
+
+Report:
+
+- success rate by condition
+- grouped ATE by texture level
+- grouped ATE by illumination level
+- grouped ATE by dynamic level
+- grouped map quality by condition
+- dynamic contamination ratio
+
+### Table Placeholders
+
+Table 3: Overall tracking comparison.  
+Table 4: Overall mapping comparison.  
+Table 5: Condition-aware robustness comparison.  
+Table 6: Efficiency comparison.
+
+### Ablation Placeholders
+
+Ablation A: texture robustness module or setting.  
+Ablation B: low-light handling module or preprocessing.  
+Ablation C: dynamic-scene handling module or masking strategy.
+
+### Figure Placeholders
+
+Figure 4: Qualitative tracking and mapping results across representative scenes.  
+Figure 5: Failure cases in textureless, low-light, and dynamic conditions.  
+Figure 6: Condition-wise trend plots for tracking and mapping metrics.
+
 ## 6. Conclusion Skeleton
 
 In this paper, we proposed a condition-aware industrial benchmark for SLAM and 3DGS-based mapping systems. The benchmark targets three deployment-critical degradation axes: texture scarcity, illumination degradation, and dynamic interference. By pairing structured condition metadata with trajectory ground truth, optional dynamic annotations, and dense reconstruction references, the benchmark supports unified evaluation of tracking, mapping, and degradation robustness. We expect this benchmark to provide a more realistic measure of deployment readiness for industrial inspection, navigation, and reconstruction systems than generic academic evaluation alone.
@@ -91,3 +193,4 @@ In this paper, we proposed a condition-aware industrial benchmark for SLAM and 3
 - Add venue-style citations using [INDUSTRIAL_CITATION_TO_SECTION_MAP.md](C:\Users\Administrator\Downloads\3DGS-SLAM-Papers\INDUSTRIAL_CITATION_TO_SECTION_MAP.md)
 - Keep final literature claims inside the repository citation policy defined in [INDUSTRIAL_CITATION_POLICY.md](C:\Users\Administrator\Downloads\3DGS-SLAM-Papers\INDUSTRIAL_CITATION_POLICY.md)
 - Expand each section with exact metric formulas and dataset statistics after the first captured sequences are available
+- Convert the candidate list in `INDUSTRIAL_BIB_CANDIDATES.md` into the final `.bib` file used by the paper template
